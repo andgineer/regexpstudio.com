@@ -1,0 +1,13 @@
+:BASE regexpf.hlp
+:TITLE Expression Régulière pour Delphi
+1 A propos=tregexpr_about@regexpf.hlp
+1 Question Légale=tregexpr_disclaimer@regexpf.hlp
+1 Quoi de Neuf=tregexpr_whats_new@regexpf.hlp
+1 Installation et liste de fichier=tregexpr_installation@regexpf.hlp
+1 Comment ça Fonctionne=tregexpr_how_it_works@regexpf.hlp
+1 Syntaxe des Expressions Régulières=tregexpr_syntax@regexpf.hlp
+1 Interface de TRegExpr=tregexpr_interface@regexpf.hlp
+1 Projet Demo (TestRExp)=tregexpr_testrexp@regexpf.hlp
+1 Exemple: Décorateur HyperLinks=tregexpr_decorator@regexpf.hlp
+1 FAQ=tregexpr_faq@regexpf.hlp
+1 Auteur=tregexpr_author@regexpf.hlp

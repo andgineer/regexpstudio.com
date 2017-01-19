@@ -1,0 +1,14 @@
+:Base mkreExpr.hlp
+:Title TmkReExpr - Regular Expressions
+1 Overviews
+2 All Classes=List_Overview
+2 Hierarchical Overview=Hierarchy_Overview
+2 Unit Overview=Unit_Overview
+1 Units
+2 mkregex.pas=unit_mkregex.pas
+2 mkStrUtils.pas=unit_mkStrUtils.pas
+1 Classes
+2 ERegularExpression=class__ERegularExpression
+2 TmkreExpr=class__TmkreExpr
+1 Routines
+2 mkConvertDos2Ux=gproc__mkConvertDos2Ux

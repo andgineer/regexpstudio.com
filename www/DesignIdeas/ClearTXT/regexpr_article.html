@@ -1,0 +1,574 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<head>
+	<title>Инструкция по регулярным выражениям</title>
+	<link rel=stylesheet type="text/css" href="help.css">
+</head>
+<html>
+<body>
+<h1>Инструкция по регулярным выражениям</h1>
+<p><small style="font-size: 9px;">Оригинальный текст этого
+раздела справки принадлежит перу <a href="mailto:anso@mail.ru" class="EXTERNAL">Андрея Сорокина</a>,
+реализация регулярных выражений в ClearTXT поддерживается его бесплатно распространяемым
+модулем. Сам модуль, а так же последнее описание его работы можно найти
+<a href="http://anso.virtualave.net/RegExpRu/" class="EXTERNAL">здесь</a>.</small></p>
+<h2>Элементарный пример</h2>
+<p>Самое простое приложение регулярных выражений - ординарная замена.
+Вы можете заменить все вхождения &laquo;ААА&raquo; на &laquo;ббб&raquo;. В ClearTXT это сделаем
+так: Открываем список регулярных выражений из меню</p>
+<img src="images/regexpr_mnu.gif" border="0" alt="" width="340" height="165">
+<p><br>Открывается список введенных в программу регулярных выражений, в данный момент
+он пуст. Жмем &laquo;Добавить...&raquo;.</p>
+<img src="images/reg_list_empty.gif" border="0" alt="" width="345" height="260">
+<p><br>Открывается редактор регулярных выражений. На рисунке ниже показаны
+описания его частей.</p>
+<img src="images/regexpr_descr.gif" border="0" alt="" width="370" height="250">
+<p>В простейшем случае замены &laquo;ААА&raquo; на &laquo;ббб&raquo; введем
+наши данные, напишем тестовый текст и нажмем &laquo;тест&raquo;. Получится
+следующее:</p>
+<img src="images/regexpr_test_0.gif" width="370" height="250" border="0" alt="">
+<p>Все наши &laquo;ААА&raquo; превратились в &laquo;ббб&raquo;. Отлично!
+Нажимаем &laquo;Ок&raquo;. Теперь в списке доступных регулярных выражений появилась
+запись &laquo;Test&raquo;.</p>
+<h2>Способы применения</h2>
+<p>Если поставить галочку нашему правилу &laquo;Test&raquo; на вкладке &laquo;Исходник&raquo;,
+этот шаблон будет применяться <strong>ко всем открываемым текстам</strong>
+(до их загрузки в редактор). Если поставить правилу галочку на вкладке
+&laquo;HTML&raquo;, правило будет применяться ко всем текстам,
+после их штатного преобразования в HTML/XML (до загрузки в редактор
+HTML-кода). Порядок применения правил можно изменять в произвольном порядке.</p>
+<p>Так же в редакторе исходного текста и в редакторе HTML есть кнопка
+с выпадающим списком, в котором отображаются все введенные регулярные выражения.
+Если выбрать пункт в выпадающем меню, соответствующее правило будет применено
+к выделению или ко всему тексту, если ничего не выделено.</p>
+<img src="images/regmenu.gif" width="314" height="115" border="0" alt=""><br><br>
+<h2>Случаи посложнее</h2>
+<h3>Поиск неотображаемых/специальных символов</h3>
+<p>Теперь, когда мы в общем разобрались с технической стороной дела,
+перейдем собственно к тому, для чего и созданы регулярные выражения:
+сложным заменам. Но перед этим упомянем об одном символе - &laquo;\&raquo;,
+в регулярных выражениях они имеет особый смысл, следующий за ним символ(ы)
+воспринимается как спецсимволы. Если Вы хотите использовать символ
+&laquo;\&raquo;, следует повторить его дважды, вот так: &laquo;\\&raquo;</p>
+<p>Такое использование символа &laquo;\&raquo; называется
+&laquo;Escape-последовательности&raquo; и используется во многих языках (C,
+Perl...). Любой символ может быть представлен своей <strong>численной</strong>
+&laquo;Escape-последовательностью&raquo;, например пробел можно
+записать как &laquo;<span class="escape">\x20</span>&raquo;, а большую русскую &laquo;Ц&raquo; как &laquo;<span class="escape">\x96</span>&raquo;.</p>
+<p>Есть так же несколько стандартных буквенных последовательностей:</p>
+<table border="0" cellpadding="3" cellspacing="0" class="variants">
+<tr><th colspan="2">Escape-последовательности: СИМВОЛЫ</th></tr>
+<tr>
+	<td><span class="escape">\xNN</span></td>
+	<td>Cимвол с шестнадцатеричным кодом NN</td>
+</tr>
+<tr>
+	<td><span class="escape">\t</span></td>
+	<td>табуляция (HT/TAB), можно также <span class="escape">\x09</span></td>
+</tr>
+<tr>
+	<td><span class="escape">\n</span></td>
+	<td>новая строка (NL), можно также <span class="escape">\x0a</span></td>
+</tr>
+<tr>
+	<td><span class="escape">\r</span></td>
+	<td>возврат каретки (CR), можно также <span class="escape">\x0d</span></td>
+</tr>
+</table>
+<br><p>В генерируемом программой HTML строки разделены последовательностью
+&laquo;\r\n&raquo;, в исходных текстах возможны различные варианты, но
+наиболее часто используется &laquo;\r\n&raquo; или &laquo;\n&raquo;.</p>
+<table border="0" cellpadding="3" cellspacing="0"class="example">
+<tr><th colspan="2">Примеры:</th></tr>
+<tr>
+	<td><span class="escape">foo\x20bar</span></td>
+	<td>находит &laquo;foo bar&raquo; (обратите внимание на пробел посередине)</td>
+</tr>
+<tr>
+	<td><span class="escape">\tfoobar</span></td>
+	<td>находит &laquo;foobar&raquo; предшествуемый табуляцией</td>
+</tr>
+<tr>
+	<td><span class="escape">foobar\r\nfoo</span></td>
+	<td>находит &laquo;foobar<br>foo&raquo; (с разрывом строки)</td>
+</tr>
+</table>
+<a name="pere"></a><h3>Поиск &laquo;одного из&raquo; - перечни</h3>
+<p>Вы можете определить перечень, заключив символы в <span class="escape">[]</span>. Перечень будет
+совпадать с любым <strong>одним</strong> символом, перечисленным в нем.</p> 
+<p>Если первый символ перечня (сразу после &laquo;<span class="escape">[</span>&raquo;) - &laquo;<span class="escape">^</span>&raquo;, то такой перечень совпадает с любым символом, не перечисленным в перечне.</p>
+<table border="0" cellpadding="3" cellspacing="0"class="example">
+<tr><th colspan="2">Примеры:</th></tr>
+<tr>
+	<td><span class="escape">foob[aeiou]r</span></td>
+	<td>находит &laquo;foobar&raquo;, &laquo;foober&raquo; и т.д. но не &laquo;foobbr&raquo;, &laquo;foobcr&raquo;</td>
+</tr>
+<tr>
+	<td><span class="escape">foob[^aeiou]r</span></td>
+	<td>находит &laquo;foobbr&raquo;, &laquo;foobcr&raquo; и т.д.. но не &laquo;foobar&raquo;, &laquo;foober&raquo;</td>
+</tr>
+</table><br>
+<p>Внутри перечня символ "-" может быть использован для определения <strong>диапазонов</strong>
+символов, например a-z представляет все символы между "a" и "z", включительно.</p> 
+<p>Если Вам необходимо включить в перечень сам символ &laquo;<span class="escape">-</span>&raquo;, поместите его в начало
+или конец перечня или предварите &laquo;<span class="escape">\</span>&raquo;. Если Вам необходимо поместить в перечень сам
+символ &laquo;<span class="escape">]</span>&raquo;, поместите его в самое начало или предварите &laquo;<span class="escape">\</span>&raquo;.</p>
+<table border="0" cellpadding="3" cellspacing="0"class="example">
+<tr><th colspan="2">Примеры:</th></tr>
+<tr>
+	<td><span class="escape">[-az]</span></td>
+	<td>&laquo;a&raquo;, &laquo;z&raquo; и &laquo;-&raquo;</td>
+</tr>
+<tr>
+	<td><span class="escape">[az-]</span></td>
+	<td>&laquo;a&raquo;, &laquo;z&raquo; и &laquo;-&raquo;</td>
+</tr>
+<tr>
+	<td><span class="escape">[a\-z]</span></td>
+	<td>&laquo;a&raquo;, &laquo;z&raquo; и &laquo;-&raquo;</td>
+</tr>
+<tr>
+	<td><span class="escape">[a-z]</span></td>
+	<td>все 26 малых латинских букв от &laquo;a&raquo; до &laquo;z&raquo;</td>
+</tr>
+<tr>
+	<td><span class="escape">[\n-\x0D]</span></td>
+	<td>#10, #11, #12, #13</td>
+</tr>
+<tr>
+	<td><span class="escape">[\d-t]</span></td>
+	<td>цифра, &laquo;-&raquo; или &laquo;t&raquo;</td>
+</tr>
+<tr>
+	<td><span class="escape">[]-a]</span></td>
+	<td>символ из диапазона &laquo;]&raquo;..&laquo;a&raquo;</td>
+</tr>
+</table><br><br>
+<p>Помимо стандартных символов или их комбинаций в регулярных
+выражениях используются &laquo;метасимволы&raquo;.</p>
+<h2>Метасимволы</h2>
+<p>Метасимволы - это специальные символы, являющиеся важнейшим понятием
+в регулярных выражениях. Существует несколько групп метасимволов.</p>
+<ul>
+	<li>Разделители строк (начало строки, конец строки и т.п.)</li>
+	<li>Стандартные перечни символов (цифры, буквы и цифры и т.п.)</li>
+	<li>Границы слов (показывают, что вхождение должно быть на границе слова)</li>
+	<li>Повторения (указывает, сколько раз должна присутствовать последовательность)</li>
+	<li>Варианты (позволяет указать набор масок, с любой из которых должен совпадать текст)</li>
+	<li>Подвыражения (используются при замене)</li>
+	<li>Обратные ссылки (способ обратиться к подвыражениям при поиске)</li>
+</ul>
+<a name="dividers"></a><h3>Метасимволы - разделители строк и границы</h3>
+<table border="0" cellpadding="3" cellspacing="0" class="variants">
+<tr><th colspan="2">Разделители и границы</th></tr>
+<tr>
+	<td><span class="escape">^</span></td>
+	<td>начало строки</td>
+</tr>
+<tr>
+	<td><span class="escape">$</span></td>
+	<td>конец строки</td>
+</tr>
+<tr>
+	<td><span class="escape">\A</span></td>
+	<td>начало текста</td>
+</tr>
+<tr>
+	<td><span class="escape">\Z</span></td>
+	<td>конец текста</td>
+</tr>
+<tr>
+	<td><span class="escape">\b</span></td>
+	<td>Совпадает на границе слова</td>
+</tr>
+<tr>
+	<td><span class="escape">\B</span></td>
+	<td>Совпадает НЕ на границе слова</td>
+</tr>
+</table>
+<br>
+<p>Разделители строк интерпретируются так, как это рекомендовано на
+<a href="http://www.unicode.org/unicode/reports/tr18/" class="EXTERNAL"
+title="Статья о разделителях строк на unicode.org">www.unicode.org</a>:</p>
+<p>&laquo;<span class="escape">^</span>&raquo; совпадает с началом входного текста, а также
+с точкой непосредственно следующей после <span class="escape">\x0D\x0A</span>, <span class="escape">\x0A</span> или <span class="escape">\x0D</span>. Обратите
+внимание, что он не совпадает в промежутке внутри последовательности \x0D\x0A.</p>
+<p>&laquo;<span class="escape">$</span>&raquo; совпадает с концом входного текста, а также с точкой непосредственно
+предшествующей <span class="escape">\x0D\x0A</span>, <span class="escape">\x0A</span> или <span class="escape">\x0D</span>. Обратите внимание, что он не
+совпадает в промежутке внутри последовательности <span class="escape">\x0D\x0A</span>.</p>
+<p>Граница слова (<span class="escape">\b</span>) это точка между двумя символами, один из которых
+ удовлетворяет <span class="escape">\w</span> (см. <a href="#stset" title="Перейти чуть ниже - к главе Стандартные перечни символов">далее</a>), а другой - <span class="escape">\W</span> (в любом порядке),
+ при этом перед началом и после конца строки подразумевается <span class="escape">\W</span>.</p>
+<table border="0" cellpadding="3" cellspacing="0"class="example">
+<tr><th colspan="2">Примеры:</th></tr>
+<tr>
+	<td><span class="escape">^Torry</span></td>
+	<td>Находит все строки в тексте, начинающиеся словом &laquo;Torry&raquo;</td>
+</tr>
+<tr>
+	<td><span class="escape">\bМоре</span></td>
+	<td>Находит все слова, начинающиеся символами &laquo;Море&raquo;. Слова будут найдены и
+	в начале строк, и в середине.</td>
+</tr>
+<tr>
+	<td><span class="escape">^%20$</span></td>
+	<td>Находит все строки в тексте, состоящие из единственного пробела</td>
+</tr>
+</table>
+<a name="stset"></a><h3>Метасимволы - стандартные перечни символов</h3>
+<table border="0" cellpadding="3" cellspacing="0" class="variants">
+<tr><th colspan="2">Стандартные перечни символов</th></tr>
+<tr>
+	<td><span class="escape">.</span> (точка)</td>
+	<td>Любой символ</td>
+</tr>
+<tr>
+	<td><span class="escape">\w</span></td>
+	<td>буквенно-цифровой символ или "_"</td>
+</tr>
+<tr>
+	<td><span class="escape">\W</span></td>
+	<td>не <span class="escape">\w</span></td>
+</tr>
+<tr>
+	<td><span class="escape">\d</span></td>
+	<td>цифровой символ</td>
+</tr>
+<tr>
+	<td><span class="escape">\D</span></td>
+	<td>не <span class="escape">\d</span></td>
+</tr>
+<tr>
+	<td><span class="escape">\s</span></td>
+	<td>любой "пробельный" символ: <span class="escape">[\x20\t\n\r\f]</span></td>
+</tr>
+<tr>
+	<td><span class="escape">\S</span></td>
+	<td>не <span class="escape">\s</span></td>
+</tr>
+</table><br>
+<p>Метасимвол &laquo;<span class="escape">.</span>&raquo; по умолчанию совпадает
+с любым символом, однако, если Вы выключите модификатор
+<span class="escape">s</span> (<span class="escape">(?-s)</span>, синтаксис см.
+<a href="#option" title="Перейти к синаксису и описанию модификаторов">ниже</a>), то &laquo;<span class="escape">.</span>&raquo; не будет совпадать с
+разделителями строк.</p>
+<p>Стандартные перечни <span class="escape">\w</span>, <span class="escape">\d</span>
+и <span class="escape">\s</span> можно использовать и внутри <strong>перечней
+символов (см. <a href="#pere" title="Перейти к описанию перечней символов ([a-zTr])">выше</a>)</strong></p>
+<table border="0" cellpadding="3" cellspacing="0"class="example">
+<tr><th colspan="2">Примеры:</th></tr>
+<tr>
+	<td><span class="escape">foob\dr</span></td>
+	<td>находит &laquo;foob1r&raquo;, &laquo;foob6r&raquo; но не &laquo;foobar&raquo;, &laquo;foobbr&raquo;</td>
+</tr>
+<tr>
+	<td><span class="escape">foob[\w\s]r</span></td>
+	<td>находит &laquo;foobar&raquo;, &laquo;foob r&raquo;, &laquo;foobbr&raquo; но не &laquo;foob1r&raquo;, &laquo;foob=r&raquo;</td>
+</tr>
+<tr>
+	<td><span class="escape">\+\d (\d\d\d) \d\d\d-\d\d-\d\d</span></td>
+	<td>Находит телефон в формате &laquo;+7 (095) 555-55-55&raquo;</td>
+</tr>
+</table><br>
+<h3>Метасимволы - повторения</h3>
+<p>После любого элемента регулярного выражения может следовать очень важный тип
+метасимвола - <strong>повторитель</strong>. Используя их Вы можете определить
+число допустимых повторений предшествующего символа, метасимвола или подвыражения.</p>
+<table border="0" cellpadding="3" cellspacing="0" class="variants">
+<tr><th colspan="2">Указание числа вхождений</th></tr>
+<tr>
+	<td width="70"><span class="escape">*</span></td>
+	<td>ноль или более раз (м.б. &laquo;жадным&raquo;), то же что <span class="escape">{0,}</span></td>
+</tr>
+<tr>
+	<td><span class="escape">+</span></td>
+	<td>один или более раз (м.б. &laquo;жадным&raquo;), то же что <span class="escape">{1,}</span></td>
+</tr>
+<tr>
+	<td><span class="escape">?</span></td>
+	<td>ноль или один раз (м.б. &laquo;жадным&raquo;), то же что <span class="escape">{0,1}</span></td>
+</tr>
+<tr>
+	<td><span class="escape">{n}</span></td>
+	<td>точно n раз (м.б. &laquo;жадным&raquo;)</td>
+</tr>
+<tr>
+	<td><span class="escape">{n,}</span></td>
+	<td>не менее n раз (м.б. &laquo;жадным&raquo;)</td>
+</tr>
+<tr>
+	<td><span class="escape">{n,m}</span></td>
+	<td>не менее n но не более m раз (м.б. &laquo;жадным&raquo;)</td>
+</tr>
+<tr>
+	<td><span class="escape">*?</span></td>
+	<td>ноль или более раз (&laquo;не жадный&raquo;), то же что <span class="escape">{0,}?</span></td>
+</tr>
+<tr>
+	<td><span class="escape">+?</span></td>
+	<td>один или более раз (&laquo;не жадный&raquo;), то же что <span class="escape">{1,}?</span></td>
+</tr>
+<tr>
+	<td><span class="escape">??</span></td>
+	<td>ноль или один раз (&laquo;не жадный&raquo;), то же что <span class="escape">{0,1}?</span></td>
+</tr>
+<tr>
+	<td><span class="escape">{n}?</span></td>
+	<td>точно n раз (&laquo;не жадный&raquo;)</td>
+</tr>
+<tr>
+	<td><span class="escape">{n,}?</span></td>
+	<td>не менее n раз (&laquo;не жадный&raquo;)</td>
+</tr>
+<tr>
+	<td><span class="escape">{n,m}?</span></td>
+	<td>не менее n но не более m раз (&laquo;не жадный&raquo;)</td>
+</tr>
+</table>
+<p>Т.о. <span class="escape">{n,m}</span> задает минимум n повторов и максимум - m.
+Повторитель <span class="escape">{n}</span> эквивалентен <span class="escape">{n,n}</span>
+и задает точно n повторов. Повторитель <span class="escape">{n,}</span> задает
+минимум n повторов. Теоретически величина параметров n и m не ограничена,
+но рекомендуется не задавать большие значения, поскольку в некоторых ситуациях
+это может потребовать существенных затрат времени и ОЗУ при обработке такого
+повторителя. </p>
+<p>Небольшое пояснение по поводу &laquo;жадности&raquo;. &laquo;Жадные&raquo;
+варианты повторителей пытаются захватить как можно большую часть входного
+текста, в то время как &laquo;не жадные&raquo; - как можно меньшую. Например,
+<span class="escape">b+</span> как и <span class="escape">b*</span> примененные
+к входной строке &laquo;abbbbc&raquo; найдут &laquo;bbbb&raquo;, в то время как
+<span class="escape">b+?</span> найдет только &laquo;b&raquo;, а
+<span class="escape">b*?</span> - вообще - пустую строку;
+<span class="escape">b{2,3}?</span> найдет &laquo;bb&raquo;, в то время как
+<span class="escape">b{2,3}</span> найдет &laquo;bbb&raquo;.</p> 
+<p>По умолчанию в ClearTXT все повторители являются нежадными, но пользуясь
+модификатором <span class="escape">(?g)</span> (подробно <a href="option" title="Перейти к синаксису и описанию модификаторов">ниже</a>) можно
+некоторые из них заставить работать в жадном режиме.</p>
+<table border="0" cellpadding="3" cellspacing="0"class="example">
+<tr><th colspan="2">Примеры:</th></tr>
+<tr>
+	<td><span class="escape">foob.*r</span></td>
+	<td>находит &laquo;foobar&raquo;, &laquo;foobalkjdflkj9r&raquo; и &laquo;foobr&raquo;</td>
+</tr>
+<tr>
+	<td><span class="escape">foob.+r</span></td>
+	<td>находит &laquo;foobar&raquo;, &laquo;foobalkjdflkj9r&raquo; но не &laquo;foobr&raquo;</td>
+</tr>
+<tr>
+	<td><span class="escape">foob.?r</span></td>
+	<td>находит &laquo;foobar&raquo;, &laquo;foobbr&raquo; и &laquo;foobr&raquo; но не &laquo;foobalkj9r&raquo;</td>
+</tr>
+<tr>
+	<td><span class="escape">fooba{2}r</span></td>
+	<td>находит &laquo;foobaar&raquo;</td>
+</tr>
+<tr>
+	<td><span class="escape">fooba{2,}r</span></td>
+	<td>находит &laquo;foobaar&raquo;, &laquo;foobaaar&raquo;, &laquo;foobaaaar&raquo; и т.д.</td>
+</tr>
+<tr>
+	<td><span class="escape">fooba{2,3}r</span></td>
+	<td>находит &laquo;foobaar&raquo;, или &laquo;foobaaar&raquo; но не &laquo;foobaaaar&raquo;</td>
+</tr>
+<tr>
+	<td nowrap><span class="escape">((\+\d )?\(\d{3}\) )?(\d{3}(-\d\d){2})</span></td>
+	<td>Находит номера телефонов в форматах &laquo;+7 (095) 555-55-55&raquo;,
+	&laquo;(095) 555-55-55&raquo;, &laquo;555-55-55&raquo;. Это сложный
+	пример, и в нем используется группировка скобками. Подробнее о применении скобок см.
+	<a href="skob" title="Перейти к описанию работы со скобками">ниже</a></td>
+</tr>
+<tr>
+	<td nowrap><span class="escape">(?g)(&lt;p&gt;[^-].{5,59}&lt;/p&gt;(\r\n)){4,}</span></td>
+	<td>Этот пример найдет нам стихи - цепочки (из 4-х и более) следующих друг за другом коротких
+	(от шести до шестидесяти символов) параграфов. Такой вид (много коротких
+	параграфов) характерен, например, для стихов. Первый знак не должен быть длинным тире,
+	так как серии коротких параграфов характерны и для диалогов, а нам диалоги не нужны.
+	Обратите внимание, что пришлось использовать модификатор жадности, так как в
+	&laquo;не жадном&raquo; режиме мы бы нашли только четыре первых строфы.</td>
+</tr>
+</table><br>
+<h3>Метасимволы - варианты</h3>
+<p>Вы можете определить перечень <strong>вариантов</strong>, используя метасимвол <span class="escape">|</span>
+для их разделения, например <span class="escape">fee|fie|foe</span> найдет
+&laquo;fee&raquo; или &laquo;fie&raquo; или &laquo;foe&raquo;,
+(так же как <span class="escape">f(e|i|o)e</span>). В качестве первого
+варианта воспринимается все от предыдущего метасимвола
+<span class="escape">(</span> или <span class="escape">[</span> или от начала
+выражения до первого метасимвола <span class="escape">|</span>,
+в качестве последнего - все от последнего <span class="escape">|</span> до
+конца выражения или до ближайшего метасимвола <span class="escape">)</span>.
+Обычно, чтобы не запутаться, набор вариантов всегда заключают в скобки,
+даже если без этого можно было бы обойтись.</p>
+<p>Варианты пробуются начиная с первого и попытки завершаются
+сразу же как удастся подобрать такой при котором совпадет вся последующая часть
+выражения. Это означает, что варианты не обязательно обеспечат
+&laquo;жадное&raquo; поведение. Например, если применить выражение
+<span class="escape">foo|foot</span> ко входной строке &laquo;barefoot&raquo;,
+то будет найдено &laquo;foo&raquo; так это первый вариант
+который позволил совпасть всему выражению.</p>
+<p>Обратите внимание, что метасимвол <span class="escape">|</span> воспринимается
+как обычный символ внутри перечней символов, например,
+<span class="escape">[fee|fie|foe]</span> означает ровно то же самое что и
+<span class="escape">[feio|]</span>.</p> 
+<table border="0" cellpadding="3" cellspacing="0"class="example">
+<tr><th colspan="2">Примеры:</th></tr>
+<tr>
+	<td><span class="escape">foo(bar|foo)</span></td>
+	<td>находит &laquo;foobar&raquo; или &laquo;foofoo&raquo;</td>
+</tr>
+<tr>
+	<td nowrap><span class="escape">&lt;(p|div)&gt;.*&lt;/(p|div)&gt;</span></td>
+	<td>найдет все корректно закрытые параграфы. Так же найдутся
+	и включения вида &lt;p&gt;TEXT&lt;/div&gt;, так что
+	это выражение можно применять только на однородном тексте. Как альтернативный
+	вариант можно предположить
+	<span class="escape">(&lt;div&gt;.*&lt;/div&gt;|&lt;p&gt;.*&lt;/p&gt;)</span>
+	<br>Заметьте,	что применив то же выражение в жадном режиме
+	<span class="escape">(?g)&lt;(p|div)&gt;.*&lt;/(p|div)&gt;</span> мы не
+	найдем ничего полезного.</td>
+</tr>
+</table>
+<h3>Метасимволы - подвыражения</h3>
+<p>У скобок в регулярных выражениях двоякая функция</p>
+<ol type="1">
+	<li>Скобки позволяют группировать элементы (аналогично математическому использованию)</li>
+	<li>Скобки выделяют в исходном тексте <strong>подвыражения</strong>, на которые можно
+	ссылаться при замене.</li>
+</ol>
+<p>Вы можете обратиться к любому подвыражению в <strong>строке замены</strong>
+используя его номер. Подвыражения нумеруются слева направо, в порядке появления
+открывающих скобок. Ссылка осуществляется в виде <span class="escape">$N</span>,
+где N-номер. Можно использовать номера больше 9-и (в отличие от Perl).</p>
+<table border="0" cellpadding="3" cellspacing="0"class="example">
+<tr><th colspan="2">Примеры группировки:</th></tr>
+<tr>
+	<td><span class="escape">(foobar){8,10}</span></td>
+	<td>находит строку содержащую 8, 9 или 10 копий &laquo;foobar&raquo;</td>
+</tr>
+<tr>
+	<td><span class="escape">foob([0-9]|a+)r</span></td>
+	<td>находит &laquo;foob0r&raquo;, &laquo;foob1r&raquo; , &laquo;foobar&raquo;, &laquo;foobaar&raquo;, &laquo;foobaar&raquo; и т.д.</td>
+</tr></table><br>
+<table border="0" cellpadding="3" cellspacing="0"class="example">
+<tr><th colspan="4">Примеры замены:</th></tr>
+<tr>
+	<td><span class="escape">&lt;p&gt;(.*)&lt;/p&gt;</span></td>
+	<td>&gt;&gt;</td>
+	<td><span class="escape">&lt;div&gt;$1&lt;/div&gt;</span></span></td>
+	<td>Заменит все параграфы на разделы</td>
+</tr>
+<tr>
+	<td><span class="escape">((\+\d )?\(\d{3}\) )?(\d{3}(-\d\d){2})</span></td>
+	<td>&gt;&gt;</td>
+	<td><span class="escape">$3</span></td>
+	<td>Найдет в любом телефонном номере вида &laquo;+7 (095) 555-55-55&raquo; последнюю
+	часть &laquo;555-55-55&raquo;</td>
+</tr>
+<tr>
+	<td><span class="escape">(?g)([\s\(]|\A|&lt;br&gt;)(http://|ftp://|https://)([^\s\)"'&lt;&gt;]+)</span></td>
+	<td>&gt;&gt;</td>
+	<td><span class="escape">$1&lt;a href="$2$3"&gt;$2$3&lt;/a></span></td>
+	<td>Такая замена преобразует все URL, встреченные в тексте, в
+	гиперссылки.</td>
+</tr>
+<tr>
+	<td><span class="escape">(?g)([\s\(]|\A|&lt;br&gt;)(www.)([^\s\)"'&lt;&gt;]+)</span></td>
+	<td>&gt;&gt;</td>
+	<td><span class="escape">$1&lt;a href="http://$2$3"$target>$2$3&lt;/a&gt;</span></td>
+	<td>Преобразует все строки типа www.domain.root в гиперссылки</td>
+</tr>
+</table>
+<h3>Метасимволы - обратные ссылки</h3> 
+<p>Метасимволы от <span class="escape">\1</span> до <span class="escape">\9</span>
+воспринимаются как обратные ссылки. <span class="escape">\N</span> совпадает с
+ранее найденным подвыражением <span class="escape">#N</span>. В отличие от случая с
+заменой, где используются переменные <span class="escape">$N</span>,
+обратные ссылки можно применять в выражении поиска.</p>
+<table border="0" cellpadding="3" cellspacing="0"class="example">
+<tr><th colspan="2">Примеры группировки:</th></tr>
+<tr>
+	<td><span class="escape">(.)\1+</span></td>
+	<td>находит &laquo;aaaa&raquo; и &laquo;cc&raquo;</td>
+</tr>
+<tr>
+	<td><span class="escape">(.+)\1+</span></td>
+	<td>также находит &laquo;abab&raquo; и &laquo;123123&raquo;</td>
+</tr>
+<tr>
+	<td><span class="escape">(['"]?)(\d+)\1</span></td>
+	<td>находит &laquo;"13"&raquo; (в дв.кавычках), или &laquo;'4'&raquo;
+	(в один.кавычках) или 77 (без кавычек)</td>
+</tr>
+</table>
+<a name="option"></a><h3>Модификаторы</h3>
+<p>Модификаторы служат для изменения режимов работы регулярных выражений.
+Они вводятся в виде (?imsgr-imsgr). Если модификатор вписан после
+минуса - он отключается, если нет - включается. Модификаторы подвержены
+группировке (в Perl нет), можно применить модификатор для отдельного
+участка выражения (см. пример).</p>
+<table border="0" cellpadding="3" cellspacing="0" class="variants">
+<tr><th colspan="2">Модификаторы</th></tr>
+<tr>
+	<td width="20"><span class="escape">i</span></td>
+	<td>Регистро-независимый режим. Использует выбранный в ОС язык по умолчанию. По умолчанию выключено.</td>
+</tr>
+<tr>
+	<td width="20"><span class="escape">m</span></td>
+	<td>Воспринимать входной текст как многострочный, при этом метасимволы
+	<span class="escape">^</span> и <span class="escape">$</span> будут совпадать
+	не только в начале и конце текста в целом, но и в начале и в конце
+	всех имеющихся в тексте строк (см. также <a href="#dividers">Разделители строк</a>).
+	По умолчанию включено.
+</td>
+</tr>
+<tr>
+	<td width="20"><span class="escape">s</span></td>
+	<td>Воспринимать входной текст как одну строку. При этом метасимвол
+	<span class="escape">.</span> совпадает с любым символом, если же этот
+	модификатор выключен, то он не совпадает с разделителями строк
+	(см.также <a href="#stset">Стандартные перечни символов</a>). По умолчанию
+	включено.  
+</td>
+</tr>
+<tr>
+	<td width="20"><span class="escape">g</span></td>
+	<td>Включая его Вы переключаете все повторители в &laquo;жадный&raquo; режим.
+	По умолчанию выключено.</td>
+</tr>
+<tr>
+	<td width="20"><span class="escape">r</span></td>
+	<td>Модификатор предназначенный для русского языка. Если включен, то диапазоны
+	вида а-я включают также букву 'ё', А-Я включают 'Ё', а а-Я включает вообще
+	все русские буквы. По умолчанию включено.</td>
+</tr>
+</table><br>
+<table border="0" cellpadding="3" cellspacing="0"class="example">
+<tr><th colspan="2">Примеры группировки:</th></tr>
+<tr>
+	<td><span class="escape">(?i)Saint-Petersburg</span></td>
+	<td>находит &laquo;Saint-petersburg&raquo; и &laquo;Saint-Petersburg&raquo;</td>
+</tr>
+<tr>
+	<td><span class="escape">(?i)Saint-(?-i)Petersburg</span></td>
+	<td>находит &laquo;Saint-Petersburg&raquo; но не &laquo;Saint-petersburg&raquo;</td>
+</tr>
+<tr>
+	<td><span class="escape">(?i)(Saint-)?Petersburg</span></td>
+	<td>находит &laquo;Saint-petersburg&raquo; и &laquo;saint-petersburg&raquo;</td>
+</tr>
+<tr>
+	<td><span class="escape">((?i)Saint-)?Petersburg</span></td>
+	<td>находит &laquo;saint-Petersburg&raquo;, но не &laquo;saint-petersburg&raquo;</td>
+</tr>
+</table>
+<br>
+<p>Дополнительные примеры Вы можете увидеть, установив скин XMLPro, вместе
+с ним устанавливается набор регулярных выражений, предназначенных для работы
+с XML.</p>
+<br><br>
+<p><br>Подробнее о скинах можно узнать в разделе <a href="skin.html">Используем скины</a>.<br>
+О преобразовании текста внутри программы см. раздел <a href="concept.html">Концепция - понимаем процесс преобразования</a><br>
+Про особенности разработки XML см. <a href="xml.html">Подготовка XML</a>.
+</p>
+</body>
+</html>

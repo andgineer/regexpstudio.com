@@ -1,0 +1,202 @@
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+From:    Martin Waldenburg <Martin.Waldenburg@t-online.de>
+To:      anso@mail.ru <anso@mail.ru>
+Date:    Friday, August 2, 2002, 8:20:22 PM
+Subject: TRegExpr UniCode
+Files:   <none>
+--====----====----====----====----====----====----====----====----====----===--
+Hi,
+
+maybe you will have some use for a fast insensitive comparision of 
+WideChars.
+Only tested with Kylix.
+
+Martin
+
+
+unit WideCharCompare;
+
+interface
+
+uses
+  {$IfDef Windows}
+  Windows, SysUtils, Classes, Controls;
+  {$EndIf}
+
+  {$IfDef Linux}
+  SysUtils, Types, Classes, Libc;
+  {$EndIf}
+
+function CompareWideCharI(WC1, WC2: WideChar): Boolean;
+ 
+function WideLowerChar(const aWideChar: WideChar): WideChar;
+
+implementation
+
+type
+  TmwWideChar = array[0..1] of Char;
+  TmwWidePair = array[0..1] of WideChar;
+  PmwWidePairSubList = ^TmwWidePairSubList;
+  TmwWidePairSubList = array[0..0] of TmwWidePair;
+
+  TmwSubListItem = packed record
+    Sub: PmwWidePairSubList;
+    Count: Integer;
+  end;
+
+  TmwWidePairList = class(TObject)
+  private
+    fCount: Integer;
+    fLargest: WideChar;
+    fList: array[#0..#255] of TmwSubListItem;
+    fSmallest: WideChar;
+    function Compare(C1, C2: WideChar): Integer;
+    procedure Insert(C: WideChar; Index: Integer);
+    function GetContent(Index: WideChar): WideChar;
+  public
+    procedure Add(C: WideChar);
+    property Content[Index: WideChar]: WideChar read GetContent; default;
+  end;
+
+var
+  PairList: TmwWidePairList;
+
+procedure InitTables;
+var
+  I: Char;
+  J: WideChar;
+begin
+  for J := Low(WideChar) to High(WideChar) do
+  begin
+      {$IFDEF LINUX}
+    if IsAlpha(Integer(J)) <> 0 then
+      {$ENDIF}
+      {$IFDEF MSWINDOWS}
+    if IsCharAlpha(J) then
+      {$ENDIF}
+      if WideLowerCase(J)[1] <> J then PairList.Add(J);
+  end;
+end;
+
+function WideLowerChar(const aWideChar: WideChar): WideChar;
+begin
+  Result:= PairList[aWideChar];
+end;
+
+function CompareWideCharI(WC1, WC2: WideChar): Boolean;
+var
+  Val: Boolean;
+begin
+  Result:= True;
+  if WC1 <> WC2 then
+    Result:= PairList[WC1] = PairList[WC2];
+end;
+
+{ TmwWidePairList }
+procedure TmwWidePairList.Add(C: WideChar);
+var
+  aKey: Char;
+  SubList: PmwWidePairSubList;
+  SubCount: Integer;
+  First, Last, I: Integer;
+  Larger: ByteBool;
+begin
+  aKey:= TmwWideChar(C)[0];
+  SubCount:= fList[aKey].Count;
+  I:= 0;
+  if SubCount > 0 then
+  begin
+    SubList:= fList[aKey].Sub;
+    First:=0;
+    Last:= SubCount-1;
+    Larger:= False;
+    while First<=Last do
+    begin
+      I:=(First+Last)shr 1;
+      Case Compare(C, SubList[I][0]) of
+        -1:
+          begin
+            Last:=I-1;
+            Larger:=False;
+          end;
+        0: Exit;
+        1:
+          begin
+            First:=I+1;
+            Larger:=True;
+          end;
+      end;
+    end;
+    Case Larger of
+      True: Insert(C, I+1);
+      False: Insert(C, I);
+    end;
+  end else Insert(C, 0);
+end;
+
+function TmwWidePairList.Compare(C1, C2: WideChar): Integer;
+begin
+  Result:= 0;
+  if C1 < C2 then Result:= -1 else
+    if C1 > C2 then Result:= 1;
+end;
+
+function TmwWidePairList.GetContent(Index: WideChar): WideChar;
+var
+  aKey: Char;
+  SubList: PmwWidePairSubList;
+  SubCount: Integer;
+  First, Last, Temp: Integer;
+begin
+  Result:= Index;
+  if (Index < fSmallest) or (Index > fLargest) then Exit;
+  aKey:= TmwWideChar(Index)[0];
+  SubCount:= fList[aKey].Count;
+  if SubCount > 0 then
+  begin
+    First:= 0;
+    Last:= SubCount -1;
+    SubList:= fList[aKey].Sub;
+    while First <= Last do
+    begin
+      Temp:= (First + Last) div 2;
+      case Compare(Index, SubList[Temp][0]) of
+       1: First:= Temp +1;
+       0:
+         begin
+           Result:= SubList[Temp][1];
+           Exit;
+         end;
+       -1: Last:= Temp-1;
+      end;
+    end;
+  end;
+end;
+
+procedure TmwWidePairList.Insert(C: WideChar; Index: Integer);
+var
+  aKey: Char;
+begin
+  if Ord(fSmallest) = 0 then fSmallest:= C;
+  fLargest:= C;
+  aKey:= TmwWideChar(C)[0];
+  ReallocMem(fList[aKey].Sub, (fList[aKey].Count +1) * SizeOf(TmwWidePair));
+  if Index < fList[aKey].Count then
+    System.Move(fList[aKey].Sub[Index], fList[aKey].Sub[Index + 1],
+      (fList[aKey].Count - Index) * SizeOf(TmwWidePair));
+  fList[aKey].Sub[Index][0] := C;
+  fList[aKey].Sub[Index][1] := WideLowerCase(C)[1];
+  inc(fList[aKey].Count);
+end;
+
+initialization
+  PairList:= TmwWidePairList.Create;
+  InitTables;
+
+finalization
+  PairList.Free;
+end.
+
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+

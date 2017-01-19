@@ -1,0 +1,200 @@
+<html><head><meta name="generator" content="Help & Manual 2.6.3"><title>How it works</title></head>
+<body background="niceblue.gif" bgcolor="#FFFFFF">
+<small><table width="100%"><tr><td align="right"><a href="tregexpr_installation.htm"><img src="1arrow4.gif" border="0"></a><a href="tregexpr_syntax.htm"><img src="1arrow5.gif" border="0"></a></td></tr></small><table width="100%" border="0" cellspacing="0" cellpadding="3" bgcolor="#C6E7FF"><tr><td align="left">
+<font face="Arial" size="4" color="#000000"><font face="Arial" size="4" color="#0000FF"><b>How it works</b></font><font face="Arial" size="5" color="#000000"><font face="Arial" size="5" color="#0000FF"><b>
+<br>
+</b></font></font></font>
+
+</td></tr></table><br>
+
+<font face="Arial" size="3" color="#000000">
+<br>
+<font face="Arial" size="3" color="#0000FF"><b>Simple illustrations</b></font><font face="Arial" size="3" color="#000000">
+<br>
+
+<br>
+If You don't familiar with regular expression, please, take a look at the <a href="tregexpr_syntax.htm">syntax</a> topic.
+<br>
+
+<br>
+
+<br>
+<b>Using global routins</b>
+<br>
+ It's simple but not very flexible and effective way
+<br>
+
+<br>
+<table border="0" cellpadding="0" cellspacing="0"><tr valign="TOP"><td width="12"></td><td><font face="Arial" size="3" color="#000000"><font face="Arial" size="3" color="#7F0000"><b>ExecRegExpr ('\d{3}-(\d{2}-\d{2}|\d{4})', 'Phone: 555-1234')</b></font></font></font><font face="Arial" size="3" color="#000000">;
+&nbsp;<br>
+</font></td></tr><tr valign="top"><td></td><td><font face="Arial" size="3" color="#000000"></font></td></tr></table><font face="Arial" size="3" color="#000000">   returns True
+<br>
+<table border="0" cellpadding="0" cellspacing="0"><tr valign="TOP"><td width="12"></td><td><font face="Arial" size="3" color="#000000"><font face="Arial" size="3" color="#7F0000"><b>ExecRegExpr ('^\d{3}-(\d{2}-\d{2}|\d{4})', 'Phone: 555-1234')</b></font></font></font><font face="Arial" size="3" color="#000000">;
+&nbsp;<br>
+</font></td></tr><tr valign="top"><td></td><td><font face="Arial" size="3" color="#000000"></font></td></tr></table><font face="Arial" size="3" color="#000000">   returns False, because there are some symbols before phone number and we using '^' metasymbol (BeginningOfLine)
+<br>
+<table border="0" cellpadding="0" cellspacing="0"><tr valign="TOP"><td width="12"></td><td><font face="Arial" size="3" color="#000000"><font face="Arial" size="3" color="#7F0000"><b>ReplaceRegExpr (</b></font></font></font><font face="Arial" size="3" color="#000000"><font face="Arial" size="3" color="#7F0000"><b>'product', 'Take a look at product. product is the best !', 'TRegExpr'</b></font></font><font face="Arial" size="3" color="#000000"><font face="Arial" size="3" color="#7F0000"><b>)</b></font></font><font face="Arial" size="3" color="#000000"><font face="Arial" size="3" color="#7F0000"><b>;</b></font></font><font face="Arial" size="3" color="#000000">
+&nbsp;<br>
+</font></td></tr><tr valign="top"><td></td><td><font face="Arial" size="3" color="#000000"></font></td></tr></table><font face="Arial" size="3" color="#000000">   returns 'Take a look at TRegExpr. TRegExpr is the best !'; ;)
+<br>
+
+<br>
+
+<br>
+<b>Using TRegExpr class
+<br>
+</b> You have all power of the library
+<br>
+
+<br>
+// This simple function extracts all email from input string
+<br>
+// and places list of this emails into result string
+<br>
+<font face="Arial" size="3" color="#7F0000"><b>function ExtractEmails (const AInputString : string) : string;
+<br>
+const
+<br>
+&nbsp;&nbsp;&nbsp;EmailRE = '[_a-zA-Z\d\-\.]+@[_a-zA-Z\d\-]+(\.[_a-zA-Z\d\-]+)+'
+<br>
+var
+<br>
+&nbsp;&nbsp;&nbsp;r : TRegExpr;
+<br>
+begin
+<br>
+&nbsp;&nbsp;&nbsp;Result := '';
+<br>
+&nbsp;&nbsp;&nbsp;r := TRegExpr.Create;</b></font></font><font face="Arial" size="3" color="#000000"> // Create object<font face="Arial" size="3" color="#7F0000"><b>
+<br>
+&nbsp;&nbsp;&nbsp;try</b></font></font><font face="Arial" size="3" color="#000000"> // ensure memory clean-up<font face="Arial" size="3" color="#7F0000"><b>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;r.Expression := EmailRE;
+<br>
+</b></font></font><font face="Arial" size="3" color="#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Assign r.e. source code. It will be compiled when nessesary
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// (for example when Exec called). If there are errors in r.e.
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// run-time execption will be raised during r.e. compilation
+<br>
+<font face="Arial" size="3" color="#7F0000"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if r.Exec (AInputString) then
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REPEAT
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Result := Result + r.Match [0] + ', ';
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UNTIL not r.ExecNext;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;finally r.Free;
+<br>
+&nbsp;&nbsp;&nbsp;end;
+<br>
+end;
+<br>
+begin
+<br>
+&nbsp;&nbsp;&nbsp;ExctractEmails ('My e-mails is anso@mail.ru and anso@usa.net');
+<br>
+</b></font></font><font face="Arial" size="3" color="#000000">&nbsp;&nbsp;&nbsp;// returns 'anso@mail.ru, anso@usa.net, '
+<br>
+<font face="Arial" size="3" color="#7F0000"><b>end.
+<br>
+</b></font></font><font face="Arial" size="3" color="#000000">// Note: compilation of r.e. performed during Expression assignment
+<br>
+// take some time, so if You will use this function many times
+<br>
+// it will be useless overhead.
+<br>
+// You can significant optimize this if You will create TRegExpr
+<br>
+// and precompile expression during programm initialization.
+<br>
+
+<br>
+
+<br>
+// This simple example extracts phone number and
+<br>
+// parse it into parts (City and Country code, internal number).
+<br>
+// Then it substitutes this parts into template.
+<br>
+<font face="Arial" size="3" color="#7F0000"><b>function ParsePhone (const AInputString, ATemplate : string) : string;</b></font></font><font face="Arial" size="3" color="#000000"><font face="Arial" size="3" color="#7F0000"><b>
+<br>
+</b></font></font><font face="Arial" size="3" color="#000000"><font face="Arial" size="3" color="#7F0000"><b>const
+<br>
+&nbsp;&nbsp;&nbsp;IntPhoneRE = </b></font></font><font face="Arial" size="3" color="#000000"><font face="Arial" size="3" color="#7F0000"><b>'(\+\d *)?(\(\d+\) *)?\d+(-\d*)*'</b></font></font><font face="Arial" size="3" color="#000000"><font face="Arial" size="3" color="#7F0000"><b>;</b></font></font><font face="Arial" size="3" color="#000000"><font face="Arial" size="3" color="#7F0000"><b>
+<br>
+</b></font></font><font face="Arial" size="3" color="#000000"><font face="Arial" size="3" color="#7F0000"><b>var
+<br>
+&nbsp;&nbsp;&nbsp;r : TRegExpr;
+<br>
+begin
+<br>
+&nbsp;&nbsp;&nbsp;r := TRegExpr.Create;</b></font></font><font face="Arial" size="3" color="#000000"> // Create object<font face="Arial" size="3" color="#7F0000"><b>
+<br>
+&nbsp;&nbsp;&nbsp;try</b></font></font><font face="Arial" size="3" color="#000000"> // ensure memory release<font face="Arial" size="3" color="#7F0000"><b>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;r.Expression := </b></font></font><font face="Arial" size="3" color="#000000"><font face="Arial" size="3" color="#7F0000"><b>IntPhoneRE</b></font></font><font face="Arial" size="3" color="#000000"><font face="Arial" size="3" color="#7F0000"><b>;
+<br>
+</b></font></font><font face="Arial" size="3" color="#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Assign r.e. source code. It will be compiled when nessesary
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// (for example when Exec called). If there are errors in r.e.
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// run-time execption will be raised during r.e. compilation
+<br>
+<font face="Arial" size="3" color="#7F0000"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></font></font><font face="Arial" size="3" color="#000000"><font face="Arial" size="3" color="#7F0000"><b>if r.Exec (</b></font></font><font face="Arial" size="3" color="#000000"><font face="Arial" size="3" color="#7F0000"><b>AInputString</b></font></font><font face="Arial" size="3" color="#000000"><font face="Arial" size="3" color="#7F0000"><b>)
+<br>
+</b></font></font><font face="Arial" size="3" color="#000000"><font face="Arial" size="3" color="#7F0000"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></font></font><font face="Arial" size="3" color="#000000"><font face="Arial" size="3" color="#7F0000"><b>then </b></font></font><font face="Arial" size="3" color="#000000"><font face="Arial" size="3" color="#7F0000"><b>Result := r.Substitute (ATemplate)
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else Result := '';</b></font></font><font face="Arial" size="3" color="#000000"><font face="Arial" size="3" color="#7F0000"><b>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;finally r.Free;
+<br>
+&nbsp;&nbsp;&nbsp;end;
+<br>
+end;
+<br>
+</b></font></font><font face="Arial" size="3" color="#000000"><font face="Arial" size="3" color="#7F0000"><b>begin
+<br>
+&nbsp;&nbsp;&nbsp;ParsePhone ('Phone of AlkorSoft (project PayCash) is +7(812) 329-44-69',
+<br>
+&nbsp;&nbsp;&nbsp;'Zone code $1, city code $2. Whole phone number is $&amp;.');
+<br>
+</b></font></font><font face="Arial" size="3" color="#000000">&nbsp;&nbsp;&nbsp;// returns 'Zone code +7, city code (812) . Whole phone number is +7(812) 329-44-69.'
+<br>
+<font face="Arial" size="3" color="#7F0000"><b>end.</b></font></font><font face="Arial" size="3" color="#000000"><font face="Arial" size="3" color="#7F0000"><b>
+<br>
+
+<br>
+
+<br>
+</b></font></font><font face="Arial" size="3" color="#000000">
+<br>
+<font face="Arial" size="3" color="#0000FF"><b>More complex illustrations</b></font></font><font face="Arial" size="3" color="#000000">
+<br>
+
+<br>
+You can find more complex illustrations of using TRegExpr in project <a href="tregexpr_testrexp.htm">TestRExp.dpr</a> and <a href="tregexpr_decorator.htm">HyperLinkDecorator.pas</a>.
+<br>
+See also my small articles at <a href="http://www.delphi3000.com/member.asp?ID=1300" TARGET="_top">Delphi3000.com</A> (English) and <a href="http://delphi.vitpc.com/mastering/strings_birds_eye_view.htm" TARGET="_top">Delphi Kingdom</A> (Russian).
+<br>
+
+<br>
+
+<br>
+<font face="Arial" size="3" color="#0000FF"><b>Detailed explanation</b></font></font><font face="Arial" size="3" color="#000000">
+<br>
+
+<br>
+Please, see TRegExpr interface <a href="tregexpr_interface.htm">description</a>.
+<br>
+
+<br>
+</font></font>
+
+<small><table width="100%"><tr><td align="right"><a href="tregexpr_installation.htm"><img src="1arrow4.gif" border="0"></a><a href="tregexpr_syntax.htm"><img src="1arrow5.gif" border="0"></a></td></tr></small>
+
+<script>     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){                 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');      ga('create', 'UA-90368520-1', 'auto');     ga('send', 'pageview');  </script>
+
+</body></html>

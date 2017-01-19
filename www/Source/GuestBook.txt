@@ -1,0 +1,360 @@
+2003.12.15 Yaroslav Romanchenko (SAGE), Russia 
+Спасибо Вам за прекрасную библиотеку TRegExpr для Delphi.
+
+2003.11.27 Passeggieri Filippo, Italy
+I really like TRegExpr!!!! many compliments for that great components! 
+You really did a good job!
+Many Thanks Andrey.
+
+2003.11.24 Hans J. Klarskov Mortensen, Denmark
+I have just stumled into your Regular Expression for Delphi. What a
+gorgeous find!
+
+2003.10.27 Fabian, Germany
+I am using your RegExpr Component for a long time now with pleasure
+
+2003.10.22 Петр Плеханов, Russia
+  Я по поводу сабжа. Просто хочу сказать Вам огромное спасибо!!! :)
+
+2003.09.15 Sebastian, Germany
+Such good open source thingies must be supported ;-)
+
+2003.08.20 Bryan Ashby
+Thanks for the great code and your help!
+
+2003.07.20 Daniele Teti, Italy
+Hi, your is a valuable work.
+TRegExpr is a great Class...
+
+2003.07.04 David Lang, Austria
+I've been using your Delphi regular expressions package, and find it 
+extremely powerful.  I thank you for your efforts.
+
+2003.06.26 Fernando Leandro Fernandes, Brasil
+I'm very excited for
+using regular expressions in my projects... it's a very powerful tool
+
+2003.06.21 Arjuna Diaz, USA
+I've been using your regexp package in my personal software for a while now,
+whenever I need broad matching capabilities. Great job! Very easy to use.  Also,
+I used to work at Bell Labs, so I'm a little familiar with stuff.
+
+2003.05.12 Martin Barrowcliff, USA
+I have your test-reg exp program. Very nice, you will soon be a top programmer in your country.
+You are also ex military, as I am.
+
+2003.03.02 Craig Manley, Netherlands
+I'm a Perl and Delphi programmer and therefore find your class very useful.
+
+2002.10.06 Tom Corcoran
+I am using your Regular expression unit in Delphi, superb stuff, thank you.
+
+2002.09.29 Jelmer Vos, Netherlands
+It is very nice to see that you are still working with TRegExpr. I think it
+is the best in the world for Delphi. Good work!
+
+2002.08.13 Celso Rossi, Brasil
+Im a dephi programmer and find the TRegExpr on the web. It is a Excelent
+Interface and work Fine !.
+
+2002.07.26 Ekki Plicht, Germany
+big thanks for the TRegExp class... it's really fantastic and works very 
+nicely. Good work!
+
+2002.06.14 Riccardo Zorn, Italy
+I am using your regexp component and put it on 3 different
+projects. it's great, congratulations.
+
+2002.05.07 Richard.
+well done on the TRegExp package you created. It looks
+very good !.
+
+2002.05.30 Markus Dauberschmidt, Germany
+I started using your TRegExpr unit some days ago to use regular expression
+string replacements in my application.
+Let me point out what a powerful class you've written! I'am really impressed
+Siemens Business Services GmbH & Co. OHG
+
+2002.04.29 Udo Weik, Germany
+greetings from Germany! I'm just testing TRegExpr. Thanxs
+for that wonderful component!
+
+2002.04.12 Guru Ramnath Kathiresan
+I been using your component for the past 10 months and i'm
+very satisfied withit...
+
+2002.04.10 Matthias Fichtner
+thanks again for your great RegEx implementation. I use it
+so often, I wouldn't know what to do without it. :)
+
+2002.03.20 Damien Mangin, France
+thank's a lot for your amazing work with the TRegExpr library !
+I spent hours trying to embed perl into Delphi program (embedded-perl),
+before trying your implementation, which works just fine !
+
+2002.02.26 Bruno Zeitoun, France
+I found your TRegExpr  very usefull
+
+2002.02.04 Thor Asmund 
+Your implementation is just the right way to do it! 
+I am very pleased that you have taken the time to make the only, I think, regexp
+component for delphi that supports not only matching but also substitution. I
+have been using your library in various applicaitons, for instance a GUI
+Search/Replace tool (that replaces in files in subdirectories) and a homepage
+image grabber!!
+
+2002.01.24 Piero Longhetto, Italy
+i've just finished to download
+your TRegExp class for delphi and i thing it's very well done.
+
+2002.01.16 Craig Peterson
+We are using RegExpr in the new version of our product, Beyond Compare 2.0
+and would be very happy to give you a free license as thanks for your great 
+component.
+
+2001.12.24 Martin Fuller, UK
+I have used your TRegExpr to do some simple parsing of Delphi code.  Thank you!  It is easy to use
+and your demo application is very helpful.  All the expressions I needed worked perfectly.
+
+2001.12.11 Tobias Theune, Germany
+i was looking for a regular expression for urls and email and found
+your routines. its working pretty good
+
+2001.11.15 Jelmer Vos, Netherlands
+I just want to say that TRegExpr is great. It is so functional why does 
+Borland put TRegExpr default in Delphi?  Is is so cool for a programmer.
+I do not send such e-mails, but for this I do, because I just want to say
+thanks! :)
+And I hope that you are developing TRegExpr in de future so it will even
+greater and better.
+If someone ask me for a good RegEx component/unit for Delphi I wil alway
+give your homepage! :)
+
+2001.10.26 John Hocking
+Thanks for the great component you have provided. I have used version 0.938 with
+success.
+
+2001.10.18 Gerald Nunn, Canada
+I've been looking at your regexp component and it looks very nice.
+
+2001.10.16 Sony Arianto Kurniawan, Indonesia
+Thanks for your great regex library for delphi. I'm using it in my 
+application and perhaps i always use it in all of my app ;) Many of my app 
+is get data from internet and parse it, so i think your regexpr is powerful 
+:)))
+
+2001.10.15 Jim McKay, Oakland, Ca.
+I just wanted to say thanks.  RegExpr is 
+ very nice, great help file, great demo.  I happy as hell!
+
+2001.09.27 Bernie
+Thank you for the excellent regular expression object for Delphi and
+Builder. I have compiled and the example in Delphi and enjoyed testing it. 
+
+2001.09.24 Rendenbach Marc, Germany
+since a few weeks i use your TRegExpr Class for Delphi. Really great
+stuff
+
+2000.09.06 Oland, Russia
+Спасибо. Очень много интересной информации.
+
+2000.09.03 David Gerrald, USA
+Keep Up the good work!
+
+2001.08.29 Armando de la Torre
+thank you for creating such a great library.
+
+2001.08.10 Janus N. Tondering, DK
+ Your component works great and is easy to use (if
+you know regexp). 
+
+2001.08.06 Dave Hughes, UK
+thank you so much for releasing a freeware regular expression 
+library, especially one so feature packed, fast and reliable as this one (I'd 
+written one myself - but it was a bit buggy and used a horribly slow and 
+complicated recursive algorithm - yuck!).
+
+2001.06.29 Jeremy Echols
+I've downloaded and have been using your TRegExpr object, and it's actually 
+working very well. 
+thanks for your great regular expressions class.
+
+2001.06.14 Naguschewski Andreas, Germany
+TRegExpr - TREMENDOUSLY INGENIOUS!
+thx for offering your work for free, man. it's great!
+
+2001.06.09 Miroslav Vracevic
+I think that your TRegExpr is pretty cool!
+
+2001.05.16 Aaron Chan
+Your TRegExpr is great!
+
+2001.05.04 Riccardo Zanelli, Italy
+Great stuff this Tregexpr!
+Do you need an Italian translation of the Help file?
+I may volounteer...! ;-)
+
+2001.04.09 Anatoly, Russia
+Big thank, man!
+
+2001.03.19 Dennis Gurock
+Thank you for TRegExpr. It is very very very usefull :) Keep up the good
+work.
+
+2001.03.13 Andrew Fedorov, Russia
+TRegExpr is very userful component. Thank you.
+
+2001.03.12 Peter Furlan, Germany
+Thank you a lot for AudioInfo... it works nice!
+
+2001.03.02 Uncle BNC, Russia
+Большое спасибо за TRegExpr!!!
+С такой штукой жизнь(работа в смысле) программера становится намного легче!
+
+2001.03.01 Martin Ledoux, Quebec, Canada
+Thank's a lot for this very good class, this is a very usefull and
+powerfull one. I have big projects with this one.
+By using this class I think the least I can do is to translate it in
+french.
+
+2001.02.25 shukaiyong, China
+   Your TRegExpr is very useful, Thanks.
+
+2001.01.12 Ivan Tugoy, Russia
+меня не перестает удивлять
+ваш модуль по работе с регулярными выражениями. Спасибо большое за это почти
+совершенство, которое спасает уйму времени и в некоторых случаях вообще
+незаменимо. Да здравствует perl и object pascal. Меня признаться всегда
+удивляло почему borland в свое время сам не сделал такой вот компонент.
+
+2001.01.30 Kit Eason
+I'm using TRegExp in a shareware utility I am writing.
+Many thanks for this brilliant component!
+
+2001.01.20 Diego Calp, Argentina
+Your work is excellent, congratulations! I'm working with Excel 
+DDE connection, parsing strings like 
+        '[BUDGET.XLS]Main table'!R10C10:R30C12,
+piece of cake with your library!! 
+
+2000.12.29 Matthew Winter
+I have just started to make use of the Regular Expression package,
+and I have to say. Excellent work.
+
+2000.12.28 Kire Mrceski, Yugoslavia
+thanks
+
+2000.12.27 Atli Bjцrgvin Oddsson, Iceland
+Like your Delphi Regular expression component a lot! 
+Easy to use and comes with good examples. This should be 
+included with standard Delphi! :)
+
+2000.12.05 Rob McCormack
+  Let me say how much I like
+  your TRegExpr. Excellent!
+
+2000.11.12 Knud Ole Reffstrup, Denmark
+I am writing you to inform you about the use I have made of your
+TRegExpr-unit for Delphi.
+I am a teacher. The Danish teachers in Computer Science have just 
+held their annual meeting, and I held a presentation, where I introduced 
+the subject Regular Expressions with examples from Perl, Delphi (using 
+your unit) and JavaScript.
+I find your unit very versatile and easy to use. The fact that it is
+distributed as a unit and not a component to be installed in the
+Delphi-system makes it particularly attractive.
+
+2000.09.20 Dod 
+veryveryvrey nice job !!! :-) Since I
+discovered Perl, I did a lot of things because of regexp but with no
+Graphical interface...just batch mode, but now I'll be able to go back
+to Delphi with that lovely RegExp library, agin many thanx for having
+making it !
+
+2000.09.13 Heikko Webers
+I like your component !
+
+2000.08.26 Jon Smith
+Finally - I would like to thank you again for a most excellent component!
+It is truly a joy to use and solves a very troublesome programming problem
+with ease and elegance.
+
+2000.08.12 Edan P.
+After searching for a good regular expression parser on the net, I came 
+across your component, and was very impressed. It got everything I need, and 
+its just a unit that can easily be added to my project.
+
+2000.07.09 Andrew, Europe
+TRegExpr was a first toolkit I used to solve some string handling problems 
+and I found it powerfull enough for that case.
+Generally TRegExpr is stable and very usefull. Thank you.
+
+2000.06.21 Terry Thomas, USA
+Das Vadonia!
+Sorry, I can't spell in Russian but "Hello" from Atlanta, Georgia in the USA.
+I am just learning Delphi 3 and am amazed with what you are able to do in a few 
+lines of code!
+You have a lot of skill and knowledge and I wish you well.<BR>
+Sperseba / Thank You
+
+2000.06.07 Ramanujan M.S.S, India
+Thanks for the nice component. 
+It will save hours of coding for searching 
+things out from the strings. Great  thought.
+
+2000.06.03 Moisey Oysgelt, USA
+I'm evaluating you TregExpr.
+You did a grate job with this component. Thank you for doing this job.
+
+2000.04.27 Simeon Lilov, Bulgaria
+I used TRegExpt to make a DLL and now I use this DLL in Progress 4GL. And it works just fine! I
+did'n encounter any problems yet.
+I like TRgExpr very much! You have done great work!
+
+2000.04.09 Gerard Cote, Canada
+Hello Andrey,
+I'm glad to (Virtually) meet you on the net. It's like
+a great trip for me to the far from America but nevertheless
+dreamed of Russia ans St-Petersbourg.
+I found your work very useful to me. I already teached Unix 
+and the Grep like utilities and will undoubtedly find some 
+utility for your Rgrepexe tools as I am learning Delphi to 
+support my back end engine on my new NT Internet Web server,
+which will be used for teaching support. so I will have to 
+analyse open responses to many exams... and your tool will 
+be welcome then.
+
+2000.04.05 Joe Ward
+I want to say that this is a great library.  Thanks!
+
+2000.03.28 Basri
+Thank you for your Delphi implementation of
+RegExpr. An excellent work.
+
+2000.03.22 Yvon Labbee
+I took your TAudio library it works fine so Thank you. 
+
+2000.03.21 Zlatka, Russia
+Have downloaded your Regular Expression component. :)
+It's a perfectly new thing for me :( , but how much easier
+my work could be if I had had it earlier!
+
+2000.03.20 Martin Baur, Switzerland
+Hi Andrey
+Fine homepage ... nice look ... everything that's needed is there.
+And of course thank you for your honorable mention of me in your help file ... 
+I was not aware that I did earn this .. :-)
+Anyway, I was always lurking for some thing like TRegExpr in native Delphi 
+code ... you gave it to us and this is what need some honorable metion.
+
+2000.03.08 Stephan Klimek, Munic, Germany
+You did a hell of a job for integrating this
+little perlish things ;-)
+
+2000.02.24 Vlad, Russia
+I try to write this on c many years ago :)
+but my small attempt forgotten a long time :)
+thanks for sources and examples :)
+
+2000.02.22 chenbm, Fuzhou, China
+Thank Your' regular expressions unit!! 

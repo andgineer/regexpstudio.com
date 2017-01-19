@@ -1,0 +1,42 @@
+A.ts {
+	FONT-SIZE: 12px
+}
+.date_hot_news {
+	FONT-SIZE: 12px
+}
+A.hot_news {
+	FONT-SIZE: 12px; TEXT-DECORATION: none
+}
+TD {
+	FONT-SIZE: 12px
+}
+A.header {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px
+}
+TD.bgin {
+	BACKGROUND: #ffffff
+}
+TD.bgin2 {
+	BACKGROUND: #f0f0f0
+}
+INPUT.reg {
+	BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; FONT-SIZE: 10px; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid
+}
+SELECT.reg {
+	BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; FONT-SIZE: 10px; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid
+}
+SMALL {
+	FONT-SIZE: 11px
+}
+H3 {
+	FONT-SIZE: 12px; MARGIN: 0px 0px 5px; COLOR: #990000; TEXT-ALIGN: center
+}
+H4 {
+	FONT-SIZE: 12px
+}
+A.our {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #ffffff; TEXT-DECORATION: none
+}
+.onblue {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 3px; BACKGROUND: #7da7d9; PADDING-BOTTOM: 3px; COLOR: #ffffff; PADDING-TOP: 3px
+}

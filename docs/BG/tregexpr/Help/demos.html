@@ -1,0 +1,311 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<HEAD>
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Windows-1251">
+  <meta name="Content-Language" content="bulgarian">
+  <TITLE>&Iuml;&eth;&egrave;&igrave;&aring;&eth;&egrave; &ccedil;&agrave; &egrave;&ccedil;&iuml;&icirc;&euml;&ccedil;&acirc;&agrave;&iacute;&aring;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;���������� ���������,perl,regexp,Delphi,Pascal,FreePascal,Kylix,Libraries,VCL,CLX,Tools,files utils</TITLE>
+  <!--  TRegExpr Regular Expressions (r.e. RegExpr regexp tregexpr), egrep perl unix; delphi pascal FreePascal Kylix freeware component Andrey Sorokin -->
+  <meta name="home_url" content="http://regexpstudio.com/">
+  <meta name="GENERATOR" content="Help & Manual">
+  <LINK REL="stylesheet" HREF="../../../styles/default.css" TYPE="text/css">
+  <meta name="description" content=" delphi pascal FreePascal Kylix freeware components: regular expressions (r.e. RegExpr regexp tregexpr), egrep perl unix; Andrey V. Sorokin">
+  <meta name="abstract" content=" TRegExpr Regular Expressions (r.e. RegExpr regexp tregexpr), egrep perl unix; Andrey V. Sorokin">
+  <meta name="keywords" content=" TRegExpr Regular Expressions (r.e. RegExpr regexp tregexpr), egrep perl unix; delphi pascal FreePascal Kylix freeware component Andrey V. Sorokin">
+  <META NAME="distribution" CONTENT="world">
+  <meta name="audience" content="all">
+  <meta name="robots" content="index,all">
+  <meta name="revisit" content="30 days">
+  <meta name="revisit-after" content="30 days">
+  <meta name="site-created" content="01-01-2004">
+  <META NAME="author" CONTENT="RegExpStudio.com, Andrey V. Sorokin, Saint Petersburg, Russia.">
+  <META NAME="copyright" CONTENT="Copyright &copy; RegExpStudio.com, Andrey V. Sorokin, Saint Petersburg, Russia. All rights reserved">
+</HEAD>
+  
+<BODY bgcolor=#FFFFFF leftmargin="0" topmargin="0" marginwidth="0" 
+      marginheight="0">
+
+<TABLE bgColor=#0054a6 cellspacing="2" cellpadding="2" border="0" 
+       width="780">
+<TR>
+  <TD align="left"><div class="MainTitle"><a href="http://regexpstudio.com"
+   title="" class="MainTitle"><span class="MainTitle">RegExp Studio</span></a>
+<br>TRegExpr v.0.942 - Delphi Regular Expressions
+<br><img src="../../../imgs/0.gif" width="1" height="15" alt=""><br>
+</div></TD>
+  <TD align="right"><DIV class=LangSwitch>Bulgarian<BR></DIV>
+  <A class=LangSwitch
+   href="../../../tregexpr/Help/about.html">English</A><BR>
+  <A class=LangSwitch
+   href="../../../FR/tregexpr/Help/about.html">French</A><BR>
+  <A class=LangSwitch
+   href="../../../DE/tregexpr/Help/about.html">German</A><BR>
+  <A class=LangSwitch
+   href="../../../ru/tregexpr/Help/about.html">Russian</A><BR>
+  <A class=LangSwitch
+   href="../../../ES/tregexpr/Help/about.html">Spanish</A>
+  </TD>
+</TR>
+</TABLE>
+
+<TABLE height=1 cellSpacing=0 cellPadding=0 width=780 bgColor="white" border=0>
+<TR><TD><IMG height=1 alt="" src="../../../imgs/0.gif" width=1 border=0></TD></TR>
+</TABLE>
+
+
+<TABLE width="780" height=24 cellspacing="2" cellpadding="2" border="0"
+  bgColor=#0054a6>
+<TR>
+  <TD><img src="../../../imgs/HomeSmall.gif" alt="About TRegExpr" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="about.html">��������������</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../../imgs/0.gif" width=5 border=0></TD>
+  <TD><img src="../../../imgs/DownloadsSmall.gif" alt="Installation" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="installation.html">�����������</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../../imgs/0.gif" width=5 border=0></TD>
+  <TD><img src="../../../imgs/RegExpSyntaxSmall.gif" alt="Regular Expressions Syntax" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="regexp_syntax.html">���������</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../../imgs/0.gif" width=5 border=0></TD>
+  <TD><img src="../../../imgs/TRegExprInterfaceSmall.gif" alt="TRegExpr Interface" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="tregexpr_interface.html">���������</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../../imgs/0.gif" width=5 border=0></TD>
+  <TD><img src="../../../imgs/FAQSmall.gif" alt="FAQ" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="faq.html">����</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../../imgs/0.gif" width=5 border=0></TD>
+  <TD><img src="../../../imgs/DemosSmall.gif" alt="TRegExpr usage demos" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="demos.html">����</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../../imgs/0.gif" width=5 border=0></TD>
+  <TD><IMG src="../../../imgs/AnSoHomePageSmall.gif" alt="Author" height=16 width=18 border=0></TD>
+  <TD><A class=top_menu href="author.html">�����</A></TD>
+
+  <TD width="100%">&nbsp;</TD>
+</TR>
+</TABLE>
+
+
+
+<TABLE cellSpacing=14 cellPadding=0 width=779 bgColor="white" border=0>
+<TR>
+  <TD vAlign=top width=769 height="100%">
+
+
+<span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:12pt; color:#0000FF"><b>&#207;&#240;&#232;&#236;&#229;&#240;&#232; &#231;&#224; &#232;&#231;&#239;&#238;&#235;&#231;&#226;&#224;&#237;&#229;</b></span><span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:12pt; color:#010100"><b>
+<br>
+</b></span></span></span></span></span></span>
+
+
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#0000FF"><b>&#207;&#240;&#238;&#241;&#242;&#232; &#239;&#240;&#232;&#236;&#229;&#240;&#232;</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+&#192;&#234;&#238; &#237;&#229; &#241;&#242;&#229; &#231;&#224;&#239;&#238;&#231;&#237;&#224;&#242;&#232; &#241; Regular Expressions, &#236;&#238;&#230;&#229;&#242;&#229; &#228;&#224; &#239;&#240;&#238;&#247;&#229;&#242;&#229;&#242;&#229; &#236;&#238;&#229;&#242;&#238; &#238;&#239;&#232;&#241;&#224;&#237;&#232;&#229;&#242;&#238; &#237;&#224; &#242;&#229;&#245;&#237;&#232;&#255; </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=regexp_syntax.html>&ntilde;&egrave;&iacute;&ograve;&agrave;&ecirc;&ntilde;&egrave;&ntilde;</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">.
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>&#200;&#231;&#239;&#238;&#235;&#231;&#226;&#224;&#237;&#229; &#237;&#224; &#227;&#235;&#238;&#225;&#224;&#235;&#237;&#232;&#242;&#229; &#239;&#240;&#238;&#246;&#229;&#228;&#243;&#240;&#232;</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+ &#210;&#238;&#226;&#224; &#229; &#237;&#224;&#233;-&#239;&#240;&#238;&#241;&#242;&#232;&#255;&#242;, &#237;&#238; &#237;&#229; &#237;&#224;&#233;-&#227;&#250;&#226;&#234;&#224;&#226;&#232;&#255;&#242; &#232; &#229;&#244;&#229;&#234;&#242;&#232;&#226;&#229;&#237; &#237;&#224;&#247;&#232;&#237;:
+<br>
+
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="12"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#7F0000"><b>ExecRegExpr ('\d{3}-(\d{2}-\d{2}|\d{4})', 'Phone: 555-1234')</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">;
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="12"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">   &#226;&#240;&#250;&#249;&#224; True
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="12"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#7F0000"><b>ExecRegExpr ('^\d{3}-(\d{2}-\d{2}|\d{4})', 'Phone: 555-1234')</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">;
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="12"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">   &#226;&#240;&#250;&#249;&#224; False, &#231;&#224;&#249;&#238;&#242;&#238; &#232;&#236;&#224; &#241;&#232;&#236;&#226;&#238;&#235;&#232; &#239;&#240;&#229;&#228;&#232; &#241;&#224;&#236;&#232;&#255; &#242;&#229;&#235;&#229;&#244;&#238;&#237;&#229;&#237; &#237;&#238;&#236;&#229;&#240;, &#224; &#237;&#232;&#229; &#232;&#231;&#239;&#238;&#235;&#231;&#226;&#224;&#236;&#229; &#236;&#229;&#242;&#224;&#241;&#232;&#236;&#226;&#238;&#235;&#224; '^' (BeginningOfLine)
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="12"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#7F0000"><b>ReplaceRegExpr ('product', 'Take a look at product. product is the best !', 'TRegExpr');</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="12"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">   &#226;&#240;&#250;&#249;&#224; 'Take a look at TRegExpr. TRegExpr is the best !'   ;)
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>&#200;&#231;&#239;&#238;&#235;&#231;&#226;&#224;&#237;&#229; &#237;&#224; &#238;&#225;&#229;&#234;&#242;&#232; &#238;&#242; &#234;&#235;&#224;&#241; TRegExpr
+<br>
+</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> &#210;&#238;&#226;&#224; &#228;&#224;&#226;&#224; &#226; &#240;&#250;&#246;&#229;&#242;&#229; &#226;&#232; &#236;&#238;&#249;&#237;&#238;&#241;&#242;&#242;&#224; &#237;&#224; &#246;&#255;&#235;&#224;&#242;&#224; &#225;&#232;&#225;&#235;&#232;&#238;&#242;&#229;&#234;&#224;.
+<br>
+
+<br>
+// &#210;&#224;&#231;&#232; &#239;&#240;&#238;&#241;&#242;&#224; &#244;&#243;&#237;&#234;&#246;&#232;&#255; &#232;&#231;&#226;&#235;&#232;&#247;&#224; &#226;&#241;&#232;&#247;&#234;&#232; e-mail &#224;&#228;&#240;&#229;&#241;&#232; &#238;&#242; &#226;&#245;&#238;&#228;&#237;&#232;&#255; &#241;&#242;&#240;&#232;&#237;&#227;
+<br>
+// &#232; &#226;&#240;&#250;&#249;&#224; &#242;&#229;&#245;&#237;&#232;&#255;&#242; &#241;&#239;&#232;&#241;&#250;&#234; &#226; &#240;&#229;&#231;&#243;&#235;&#242;&#224;&#237;&#242;&#237;&#232;&#255; &#241;&#242;&#240;&#232;&#237;&#227;
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#7F0000"><b>function ExtractEmails (const AInputString : string) : string;
+<br>
+const
+<br>
+</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#7F0000"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EmailRE = '[_a-zA-Z\d\-\.]+@[_a-zA-Z\d\-]+(\.[_a-zA-Z\d\-]+)+'
+<br>
+var
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;r : TRegExpr;
+<br>
+begin
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Result := ";
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;r := TRegExpr.Create;</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> // &#209;&#250;&#231;&#228;&#224;&#226;&#224;&#236;&#229; &#238;&#225;&#229;&#234;&#242;&#224;</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#7F0000"><b>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> // &#227;&#224;&#240;&#224;&#237;&#242;&#232;&#240;&#224; &#238;&#241;&#226;&#238;&#225;&#238;&#230;&#228;&#224;&#226;&#224;&#237;&#229;&#242;&#238; &#237;&#224; &#239;&#224;&#236;&#229;&#242;&#242;&#224;</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#7F0000"><b>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;r.Expression := EmailRE;
+<br>
+</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// &#239;&#240;&#232; &#242;&#238;&#226;&#224; &#239;&#240;&#232;&#241;&#226;&#238;&#255;&#226;&#224;&#237;&#229; RE &#241;&#229; &#234;&#238;&#236;&#239;&#232;&#235;&#232;&#240;&#224; &#224;&#226;&#242;&#238;&#236;&#224;&#242;&#232;&#247;&#237;&#238;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// &#224;&#234;&#238; &#232;&#236;&#224; &#227;&#240;&#229;&#248;&#234;&#224;, &#226;&#250;&#231;&#237;&#232;&#234;&#226;&#224; Exception
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#7F0000"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if r.Exec (AInputString) then
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REPEAT
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Result := Result + r.Match [0] + ', ';
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UNTIL not r.ExecNext;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;finally r.Free;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end;
+<br>
+end;
+<br>
+begin
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ExctractEmails ('My e-mails is anso@mail.ru and anso@usa.net');
+<br>
+</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// &#226;&#240;&#250;&#249;&#224; 'anso@mail.ru, anso@usa.net, '
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#7F0000"><b>end.
+<br>
+</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">// &#199;&#224;&#225;&#229;&#235;&#229;&#230;&#234;&#224;: &#234;&#238;&#236;&#239;&#232;&#235;&#232;&#240;&#224;&#237;&#229;&#242;&#238; &#237;&#224; RE &#239;&#240;&#232; &#239;&#240;&#232;&#241;&#226;&#238;&#255;&#226;&#224;&#237;&#229;&#242;&#238; &#233; 
+<br>
+// &#238;&#242;&#237;&#229;&#236;&#224; &#226;&#240;&#229;&#236;&#229;. &#199;&#224;&#242;&#238;&#226;&#224; &#224;&#234;&#238; &#232;&#231;&#239;&#238;&#235;&#231;&#226;&#224;&#242;&#229; &#242;&#224;&#231;&#232; &#244;&#243;&#237;&#234;&#246;&#232;&#255; &#236;&#237;&#238;&#227;&#238;&#234;&#240;&#224;&#242;&#237;&#238;,
+<br>
+// &#249;&#229; &#241;&#229; &#239;&#238;&#235;&#243;&#247;&#232; &#231;&#237;&#224;&#247;&#232;&#242;&#229;&#235;&#237;&#238; &#231;&#224;&#225;&#224;&#226;&#255;&#237;&#229;.
+<br>
+// &#199;&#237;&#224;&#247;&#232;&#242;&#229;&#235;&#237;&#238; &#238;&#239;&#242;&#232;&#236;&#232;&#231;&#232;&#240;&#224;&#237;&#229; &#241;&#229; &#239;&#238;&#241;&#242;&#232;&#227;&#224; &#224;&#234;&#238; &#239;&#238;-&#240;&#224;&#237;&#238; &#241;&#250;&#231;&#228;&#224;&#228;&#229;&#242;&#229;
+<br>
+// TRegExpr &#232; &#238;&#249;&#229; &#239;&#240;&#232; &#232;&#237;&#232;&#246;&#232;&#224;&#235;&#232;&#231;&#232;&#240;&#224;&#237;&#229;&#242;&#238; &#234;&#238;&#236;&#239;&#232;&#235;&#232;&#240;&#224;&#242;&#229; RE.
+<br>
+
+<br>
+
+<br>
+// &#210;&#238;&#231;&#232; &#239;&#240;&#238;&#241;&#242; &#239;&#240;&#232;&#236;&#229;&#240; &#232;&#231;&#226;&#235;&#232;&#247;&#224; &#242;&#229;&#235;&#229;&#244;&#238;&#237;&#229;&#237; &#237;&#238;&#236;&#229;&#240; &#238;&#242; &#226;&#245;&#238;&#228;&#255;&#249;&#232;&#255; &#241;&#242;&#240;&#232;&#237;&#227;
+<br>
+// &#232; &#227;&#238; &#240;&#224;&#231;&#228;&#229;&#235;&#255; &#237;&#224; &#241;&#250;&#241;&#242;&#224;&#226;&#237;&#232; &#247;&#224;&#241;&#242;&#232; (&#234;&#238;&#228; &#237;&#224; &#241;&#242;&#240;&#224;&#237;&#224;&#242;&#224;, &#237;&#224; &#227;&#240;&#224;&#228;&#224; &#232; &#226;&#250;&#242;&#240;&#229;&#248;&#229;&#237; &#237;&#238;&#236;&#229;&#240;).
+<br>
+// &#209;&#235;&#229;&#228; &#242;&#238;&#226;&#224; &#242;&#229;&#231;&#232; &#247;&#224;&#241;&#242;&#232; &#241;&#229; &#239;&#238;&#241;&#242;&#224;&#226;&#255;&#242; &#226; &#248;&#224;&#225;&#235;&#238;&#237;.
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#7F0000"><b>function ParsePhone (const AInputString, ATemplate : string) : string;
+<br>
+const
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IntPhoneRE = '(\+\d *)?(\(\d+\) *)?\d+(-\d*)*';
+<br>
+var
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;r : TRegExpr;
+<br>
+begin
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;r := TRegExpr.Create;</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> // &#209;&#250;&#231;&#228;&#224;&#226;&#224;&#236;&#229; &#238;&#225;&#229;&#234;&#242;&#224;</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#7F0000"><b>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> // &#227;&#224;&#240;&#224;&#237;&#242;&#232;&#240;&#224; &#238;&#241;&#226;&#238;&#225;&#238;&#230;&#228;&#224;&#226;&#224;&#237;&#229; &#237;&#224; &#239;&#224;&#236;&#229;&#242;&#242;&#224;</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#7F0000"><b>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;r.Expression := IntPhoneRE;
+<br>
+</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// &#207;&#240;&#232;&#241;&#226;&#238;&#255;&#226;&#224; &#241;&#238;&#240;&#241;-&#234;&#238;&#228;&#224; &#237;&#224; RE. &#210;&#238;&#233; &#249;&#229; &#225;&#250;&#228;&#229; &#234;&#238;&#236;&#239;&#232;&#235;&#232;&#240;&#224;&#237; &#239;&#240;&#232; &#237;&#229;&#238;&#225;&#245;&#238;&#228;&#232;&#236;&#238;&#241;&#242;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// (&#237;&#224;&#239;&#240;&#232;&#236;&#229;&#240; &#224;&#234;&#238; &#241;&#229; &#232;&#231;&#226;&#232;&#234;&#224; Exec). &#192;&#234;&#238; &#226; RE &#232;&#236;&#224; &#227;&#240;&#229;&#248;&#234;&#232;,
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// &#249;&#229; &#226;&#250;&#231;&#237;&#232;&#234;&#237;&#229; run-time exception &#239;&#240;&#232; &#234;&#238;&#236;&#239;&#232;&#235;&#224;&#246;&#232;&#255;&#242;&#224; &#236;&#243;
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#7F0000"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if r.Exec (AInputString)
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;then Result := r.Substitute (ATemplate)
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else Result := ";
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;finally r.Free;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end;
+<br>
+end;
+<br>
+begin
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ParsePhone ('Phone of AlkorSoft (project PayCash) is +7(812) 329-44-69',
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'Zone code $1, city code $2. Whole phone number is $&amp;.');
+<br>
+</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// &#226;&#240;&#250;&#249;&#224; 'Zone code +7, city code (812) . Whole phone number is +7(812) 329-44-69.'
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#7F0000"><b>end.
+<br>
+
+<br>
+
+<br>
+</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#0000FF"><b>&#207;&#238;-&#241;&#235;&#238;&#230;&#237;&#232; &#239;&#240;&#232;&#236;&#229;&#240;&#232;</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+&#204;&#238;&#230;&#229; &#228;&#224; &#237;&#224;&#236;&#229;&#240;&#232;&#242;&#229; &#239;&#238;-&#241;&#235;&#238;&#230;&#237;&#232; &#239;&#240;&#232;&#236;&#229;&#240;&#232; &#237;&#224; &#232;&#231;&#239;&#238;&#235;&#231;&#226;&#224;&#237;&#229; &#237;&#224; TRegExpr &#226; &#239;&#240;&#238;&#229;&#234;&#242;&#224; </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><u>TestRExp.dpr</u></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> &#232; </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=hyperlinksdecorator.html>HyperLinkDecorator.pas</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">.
+<br>
+&#194;&#232;&#230;&#242;&#229; &#232; &#241;&#242;&#224;&#242;&#232;&#255;&#242;&#224; &#236;&#232; &#226; </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href="http://www.delphi3000.com/member.asp?ID=1300',`',1)" target="_blank">Delphi3000.com</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> (&#237;&#224; &#224;&#237;&#227;&#235;&#232;&#233;&#241;&#234;&#232; &#229;&#231;&#232;&#234;) &#232; </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href="http://delphi.vitpc.com/mastering/strings_birds_eye_view.htm',`',1)" target="_blank">Delphi Kingdom</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">  (&#237;&#224; &#240;&#243;&#241;&#234;&#232; &#229;&#231;&#232;&#234;).
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#0000FF"><b>&#196;&#229;&#242;&#224;&#233;&#235;&#237;&#238; &#238;&#239;&#232;&#241;&#224;&#237;&#232;&#229;</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+&#194;&#232;&#230;&#242;&#229; </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=tregexpr_interface.html>&iuml;&uacute;&euml;&iacute;&icirc;&ograve;&icirc; &icirc;&iuml;&egrave;&ntilde;&agrave;&iacute;&egrave;&aring;</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> &#237;&#224; &#232;&#237;&#242;&#229;&#240;&#244;&#229;&#233;&#241;&#224; &#237;&#224; TRegExpr.
+<br>
+
+<br>
+</span></span></span></span></span></span>
+
+  </TD>
+  <TD vAlign=top align=left bgColor="white" height="100%"
+       width=10>
+  </TD>
+</TR>
+</TABLE><BR><BR>
+
+<TABLE height=1 cellSpacing=0 cellPadding=0 width=780 bgColor=#0054a6 
+       border=0>
+<TR>
+  <TD><IMG height=1 alt="" src="../../../imgs/0.gif" width=1 border=0></TD>
+</TR>
+</TABLE>
+
+<TABLE height=70 cellSpacing=2 cellPadding=0 width=779 bgColor="white"
+       border=0>
+<TR>
+  <TD align=right width=2><IMG src="../../../imgs/0.gif" width=2 height=1 border=0></TD>
+  <TD vAlign=top align=left width="100%"><P class=pageauthor><I>&copy;&nbsp;<A 
+      class=pageauthor href="http://regexpstudio.com/">2004 Andrey V. Sorokin</A></I>,
+      Saint Petersburg, Russia
+      <BR><A class=pageauthor href="mailto:anso@mail.ru">anso@mail.ru</A>
+      <BR><A class=pageauthor href="http://regexpstudio.com/">RegExpStudio.com</A></P></TD>
+  <TD vAlign=top align=right width=468><A href="http://www.helpandmanual.com"
+      target="_blank"><img src="../../../tregexpr/Help/hmad468x60.gif" width="468" height="60"
+      border="0" alt="Help&Manual - the best help authoring tool!"></A></TD>
+  <TD align=right width=4><IMG src="../imgs/0.gif" width=4 height=1 border=0></TD>
+</TR>
+</TABLE><BR>
+
+</body>
+</html>

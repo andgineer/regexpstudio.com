@@ -1,0 +1,31 @@
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+From:    Jonathan Rowell <bigrat18@hotmail.com>
+To:      anso@mail.ru <anso@mail.ru>
+Date:    Friday, November 18, 2005, 6:00:22 PM
+Subject: TRegExpr
+Files:   Сообщение.html
+--====----====----====----====----====----====----====----====----====----===--
+Hi Andrey!
+
+I have downloaded your TRegExpr and switched on the Unicode flag and got the following error :-
+
+  Around line 224 regdummy is declared as Char and not as REChar;
+
+I have also compiled the Unit with the Free Pascal Compiler version 2.0.0 and got the following errors :-
+
+Three occurences where an REChar is incremented by inc() at 1664 inc(reganch), 2338 inc (RangeBeg); and
+2346 inc (RangeBeg); (all approx line numbers)
+
+The FPC compiler also complains about the $OPTIMIZATION directive.
+I have compiled your source both under Windows and Linux with the 2.0.0 compiler.
+
+and finally the "uses Windows" needs to be $IFDEFed out when on Linux.
+
+I'll let you know if I have any run-time problems as well, but so far the Unicode version on Windows works well.
+
+greetings from Germany
+
+BigRat
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+

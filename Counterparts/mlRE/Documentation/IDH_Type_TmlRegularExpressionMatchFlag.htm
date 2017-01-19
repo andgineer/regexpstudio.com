@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Time2HELP 1.0; Standard Template">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+<TITLE>TmlRegularExpressionMatchFlag Type</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF"><Font Face="Verdana">
+<BASEFONT NAME="verdana" Size="2">
+<TABLE BGCOLOR="#FFFF00" BORDER="0" WIDTH="100%">
+<TR>
+<TD><Font Color="#000000F"><B>TmlRegularExpressionMatchFlag Type</B></Font></TD></TR></Table><P><B>Unit</B><Br><A HREF="IDH_Unit_mlRegularExpression.htm">mlRegularExpression</A><P><B>Declaration</B><Br><PRE>TmlRegularExpressionMatchFlag = ( mfCaseInsensitive, mfLongestMatch, mfAllMatches, mfStartOnly,
+                                  mfFinishOnly, mfOverlapMatches);</PRE><Font Face="Verdana"><P><B>Description</B><Br>Possible flags governing Regular Expression Matching.
+<p>   Combining mfAllMatches with mvOverlapMatches may result in a large number of results.
+<br>   Combinging mfStartOnly with mfFinishOnly requires that the entire line match the expression.
+<p>   mfStartOnly can be specified by begining the Regular Expression with '^'
+<br>   mfFinishOnly can be specified by ending the Regular Expression with '$'
+<br>
+<br>
+<br>
+<TABLE BGCOLOR="#000000" BORDER="0" cellspacing=2 WIDTH="100%">
+<TR>
+<TD><Font Color="#FFFFFF"><B>Values</B></Font></TD></TR></Table>
+<Table BGCOLOR="#EEEEEE" CellSpacing="1" Width="100%">
+<TR>
+<TD><Font Color=Blue>mfCaseInsensitive&nbsp;</Font></TD>
+<TD>Matches don't depend on case
+<br>(default case is case sensitive)</TD></TR>
+<TR>
+<TD><Font Color=Blue>mfLongestMatch&nbsp;</Font></TD>
+<TD>Find the longest possible match to the RE
+<br>(default is to find the
+                        shortest)</TD></TR>
+<TR>
+<TD><Font Color=Blue>mfAllMatches&nbsp;</Font></TD>
+<TD>Find all matches
+<br>(default is to find only the first)</TD></TR>
+<TR>
+<TD><Font Color=Blue>mfStartOnly&nbsp;</Font></TD>
+<TD>Only match at the start of the string
+<br>(default is to find a match
+                     anywhere)</TD></TR>
+<TR>
+<TD><Font Color=Blue>mfFinishOnly&nbsp;</Font></TD>
+<TD>Match must terminate at the end of the string
+<br>(default is to permit a
+                      match finishing anywhere)</TD></TR>
+<TR>
+<TD><Font Color=Blue>mfOverlapMatches&nbsp;</Font></TD>
+<TD>Allow overlapping matches to be returned
+<br>(default is to return
+                          matches which do not overlap </TD></TR></Table>

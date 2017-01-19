@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<regularExpressions>
+ <regularExpression id="1" name="the name">
+  <description/>
+  <comment/>
+  <expression>((\.|,)|r)*mp\d</expression>
+  <category>Internet</category>
+  <category>Numerals</category>
+
+  <testCase Modifiers="i">
+   <subject>
+    <substring repeatCount="7">123.mprgt.mfwefewrfgerwfq3wff343efr43</substring>
+    <substring>.mp4</substring>
+    <substring fileName="c:\1.txt"/>
+   </subject>
+
+   <match position="13" length="2">
+    <capturedSubstring/>
+    <capturedSubstring/>
+   </match>
+   <match>
+    <capturedSubstring/>
+    <capturedSubstring/>
+   </match>
+
+   <substitution>
+    <template/>
+    <result/>
+   </substitution>
+   <substitution>
+    <template/>
+    <result/>
+   </substitution>
+
+   <replace>
+    <template/>
+    <result/>
+   </replace>
+   <replace>
+    <template/>
+    <result/>
+   </replace>
+  </testCase>
+
+  <testCase Modifiers="i">
+   <subject>
+    <substring repeatCount="7">123.mprgt.mfwefewrfgerwfq3wff343efr43</substring>
+    <substring>.mp4</substring>
+   </subject>
+
+   <substitution>
+    <template/>
+    <result/>
+   </substitution>
+   <substitution>
+    <template/>
+    <result/>
+   </substitution>
+
+   <replace>
+    <template/>
+    <result/>
+   </replace>
+   <replace>
+    <template/>
+    <result/>
+   </replace>
+  </testCase>
+
+ </regularExpression>
+
+ <regularExpression name="the name">
+  <description/>
+  <comment/>
+  <expression>((\.|,)|r)*mp\d</expression>
+  <category>Internet</category>
+  <category>Numerals</category>
+
+  <testCase Modifiers="i">
+   <subject>
+    <substring repeatCount="7">123.mprgt.mfwefewrfgerwfq3wff343efr43</substring>
+    <substring>.mp4</substring>
+   </subject>
+
+   <substitution>
+    <template/>
+    <result/>
+   </substitution>
+   <substitution>
+    <template/>
+    <result/>
+   </substitution>
+
+   <replace>
+    <template/>
+    <result/>
+   </replace>
+   <replace>
+    <template/>
+    <result/>
+   </replace>
+  </testCase>
+
+ </regularExpression>
+</regularExpressions>

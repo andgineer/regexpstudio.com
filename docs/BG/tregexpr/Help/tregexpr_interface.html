@@ -1,0 +1,601 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<HEAD>
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Windows-1251">
+  <meta name="Content-Language" content="bulgarian">
+  <TITLE>&Egrave;&iacute;&ograve;&aring;&eth;&ocirc;&aring;&eacute;&ntilde; &iacute;&agrave; TRegExpr&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;���������� ���������,perl,regexp,Delphi,Pascal,FreePascal,Kylix,Libraries,VCL,CLX,Tools,files utils</TITLE>
+  <!--  TRegExpr Regular Expressions (r.e. RegExpr regexp tregexpr), egrep perl unix; delphi pascal FreePascal Kylix freeware component Andrey Sorokin -->
+  <meta name="home_url" content="http://regexpstudio.com/">
+  <meta name="GENERATOR" content="Help & Manual">
+  <LINK REL="stylesheet" HREF="../../../styles/default.css" TYPE="text/css">
+  <meta name="description" content=" delphi pascal FreePascal Kylix freeware components: regular expressions (r.e. RegExpr regexp tregexpr), egrep perl unix; Andrey V. Sorokin">
+  <meta name="abstract" content=" TRegExpr Regular Expressions (r.e. RegExpr regexp tregexpr), egrep perl unix; Andrey V. Sorokin">
+  <meta name="keywords" content=" TRegExpr Regular Expressions (r.e. RegExpr regexp tregexpr), egrep perl unix; delphi pascal FreePascal Kylix freeware component Andrey V. Sorokin">
+  <META NAME="distribution" CONTENT="world">
+  <meta name="audience" content="all">
+  <meta name="robots" content="index,all">
+  <meta name="revisit" content="30 days">
+  <meta name="revisit-after" content="30 days">
+  <meta name="site-created" content="01-01-2004">
+  <META NAME="author" CONTENT="RegExpStudio.com, Andrey V. Sorokin, Saint Petersburg, Russia.">
+  <META NAME="copyright" CONTENT="Copyright &copy; RegExpStudio.com, Andrey V. Sorokin, Saint Petersburg, Russia. All rights reserved">
+</HEAD>
+  
+<BODY bgcolor=#FFFFFF leftmargin="0" topmargin="0" marginwidth="0" 
+      marginheight="0">
+
+<TABLE bgColor=#0054a6 cellspacing="2" cellpadding="2" border="0" 
+       width="780">
+<TR>
+  <TD align="left"><div class="MainTitle"><a href="http://regexpstudio.com"
+   title="" class="MainTitle"><span class="MainTitle">RegExp Studio</span></a>
+<br>TRegExpr v.0.942 - Delphi Regular Expressions
+<br><img src="../../../imgs/0.gif" width="1" height="15" alt=""><br>
+</div></TD>
+  <TD align="right"><DIV class=LangSwitch>Bulgarian<BR></DIV>
+  <A class=LangSwitch
+   href="../../../tregexpr/Help/about.html">English</A><BR>
+  <A class=LangSwitch
+   href="../../../FR/tregexpr/Help/about.html">French</A><BR>
+  <A class=LangSwitch
+   href="../../../DE/tregexpr/Help/about.html">German</A><BR>
+  <A class=LangSwitch
+   href="../../../ru/tregexpr/Help/about.html">Russian</A><BR>
+  <A class=LangSwitch
+   href="../../../ES/tregexpr/Help/about.html">Spanish</A>
+  </TD>
+</TR>
+</TABLE>
+
+<TABLE height=1 cellSpacing=0 cellPadding=0 width=780 bgColor="white" border=0>
+<TR><TD><IMG height=1 alt="" src="../../../imgs/0.gif" width=1 border=0></TD></TR>
+</TABLE>
+
+
+<TABLE width="780" height=24 cellspacing="2" cellpadding="2" border="0"
+  bgColor=#0054a6>
+<TR>
+  <TD><img src="../../../imgs/HomeSmall.gif" alt="About TRegExpr" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="about.html">��������������</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../../imgs/0.gif" width=5 border=0></TD>
+  <TD><img src="../../../imgs/DownloadsSmall.gif" alt="Installation" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="installation.html">�����������</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../../imgs/0.gif" width=5 border=0></TD>
+  <TD><img src="../../../imgs/RegExpSyntaxSmall.gif" alt="Regular Expressions Syntax" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="regexp_syntax.html">���������</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../../imgs/0.gif" width=5 border=0></TD>
+  <TD><img src="../../../imgs/TRegExprInterfaceSmall.gif" alt="TRegExpr Interface" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="tregexpr_interface.html">���������</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../../imgs/0.gif" width=5 border=0></TD>
+  <TD><img src="../../../imgs/FAQSmall.gif" alt="FAQ" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="faq.html">����</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../../imgs/0.gif" width=5 border=0></TD>
+  <TD><img src="../../../imgs/DemosSmall.gif" alt="TRegExpr usage demos" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="demos.html">����</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../../imgs/0.gif" width=5 border=0></TD>
+  <TD><IMG src="../../../imgs/AnSoHomePageSmall.gif" alt="Author" height=16 width=18 border=0></TD>
+  <TD><A class=top_menu href="author.html">�����</A></TD>
+
+  <TD width="100%">&nbsp;</TD>
+</TR>
+</TABLE>
+
+
+
+<TABLE cellSpacing=14 cellPadding=0 width=779 bgColor="white" border=0>
+<TR>
+  <TD vAlign=top width=769 height="100%">
+
+
+<span style="font-family:Helvetica,Arial; font-size:14pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:14pt; color:#0000FF"><b>&#200;&#237;&#242;&#229;&#240;&#244;&#229;&#233;&#241; &#237;&#224; TRegExpr</b></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>
+<br>
+</b></span></span></span></span></span></span>
+
+
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#0000FF"><b>
+<br>
+&#207;&#243;&#225;&#235;&#232;&#247;&#237;&#232; &#236;&#229;&#242;&#238;&#228;&#232; &#232; &#241;&#226;&#238;&#233;&#241;&#242;&#226;&#224; &#237;&#224; TRegExpr</b></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">:
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>property Expression</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : string
+<br>
+&#207;&#240;&#229;&#228;&#241;&#242;&#224;&#226;&#235;&#255;&#226;&#224; &#241;&#224;&#236;&#232;&#255;&#242; RE.
+<br>
+&#209; &#246;&#229;&#235; &#238;&#239;&#242;&#232;&#236;&#232;&#231;&#224;&#246;&#232;&#255;, &#239;&#240;&#232;&#241;&#226;&#238;&#255;&#226;&#224;&#242;&#229; RE &#237;&#224; &#242;&#238;&#226;&#224; &#241;&#226;&#238;&#233;&#241;&#242;&#226;&#238;, TRegExpr &#224;&#226;&#242;&#238;&#236;&#224;&#242;&#232;&#247;&#237;&#238; &#227;&#238; &#234;&#238;&#236;&#239;&#232;&#235;&#232;&#240;&#224; &#226; '&#208;-&#234;&#238;&#228;' (&#204;&#238;&#230;&#229; &#228;&#224; &#227;&#238; &#226;&#232;&#228;&#232;&#242;&#229; &#241; &#239;&#238;&#236;&#238;&#249;&#242;&#224; &#237;&#224; &#236;&#229;&#242;&#238;&#228;&#224; Dump) &#232; &#227;&#238; &#231;&#224;&#239;&#232;&#241;&#226;&#224; &#226;&#250;&#226;  &#226;&#250;&#242;&#240;&#229;&#248;&#237;&#232;&#242;&#229; &#241;&#232; &#241;&#242;&#240;&#243;&#234;&#242;&#243;&#240;&#232;. &#200;&#241;&#242;&#232;&#237;&#241;&#234;&#238; [&#240;&#229;]&#234;&#238;&#236;&#239;&#232;&#235;&#232;&#240;&#224;&#237;&#229; &#241;&#229; &#239;&#240;&#224;&#226;&#232; &#241;&#224;&#236;&#238; &#234;&#238;&#227;&#224;&#242;&#238; &#226;&#250;&#231;&#237;&#232;&#234;&#237;&#229; &#237;&#243;&#230;&#228;&#224; &#238;&#242; &#242;&#238;&#226;&#224; </span></span></span><span style="font-family:Times New Roman; font-size:10pt; color:#000000"><span style="font-family:Times New Roman; font-size:10pt; color:#010100">&#150;</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> &#239;&#240;&#232; &#232;&#231;&#226;&#232;&#234;&#226;&#224;&#237;&#229; &#237;&#224; Exec[Next], Substitute, Dump &#232; &#242;.&#237;. &#232; &#241;&#224;&#236;&#238; &#224;&#234;&#238; &#241;&#224;&#236;&#232;&#255;&#242; &#232;&#231;&#240;&#224;&#231; &#232;&#235;&#232; &#228;&#240;&#243;&#227;&#238; &#241;&#226;&#238;&#233;&#241;&#242;&#226;&#238;, &#226;&#235;&#232;&#255;&#229;&#249;&#232; &#226;&#250;&#240;&#245;&#243; &#208;-&#234;&#238;&#228;&#224; &#225;&#250;&#228;&#224;&#242; &#239;&#240;&#238;&#236;&#229;&#237;&#229;&#237;&#232; &#241;&#235;&#229;&#228; &#239;&#238;&#241;&#235;&#229;&#228;&#237;&#224;&#242;&#224; [&#240;&#229;]&#234;&#238;&#236;&#239;&#232;&#235;&#224;&#246;&#232;&#255;.
+<br>
+&#194; &#241;&#235;&#243;&#247;&#224;&#233; &#237;&#224; &#227;&#240;&#229;&#248;&#234;&#224; &#239;&#240;&#232; [&#240;&#229;]&#234;&#238;&#236;&#239;&#232;&#235;&#232;&#240;&#224;&#237;&#229;, &#241;&#229; &#232;&#231;&#226;&#232;&#234;&#226;&#224; &#236;&#229;&#242;&#238;&#228;&#250;&#242; Error (&#239;&#238; &#239;&#238;&#228;&#240;&#224;&#231;&#225;&#232;&#240;&#224;&#237;&#229; &#236;&#229;&#242;&#238;&#228;&#250;&#242; Error &#239;&#240;&#229;&#228;&#232;&#231;&#226;&#232;&#234;&#226;&#224; &#232;&#231;&#234;&#235;&#254;&#247;&#229;&#237;&#232;&#229; </span></span></span><span style="font-family:Times New Roman; font-size:10pt; color:#000000"><span style="font-family:Times New Roman; font-size:10pt; color:#010100">&#150;</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> &#226;&#232;&#230; &#239;&#238;-&#228;&#238;&#235;&#243;)
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>property ModifierStr</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : string
+<br>
+&#199;&#224; &#239;&#240;&#238;&#226;&#229;&#240;&#234;&#224;/&#243;&#241;&#242;&#224;&#237;&#238;&#226;&#255;&#226;&#224;&#237;&#229; &#237;&#224; &#241;&#242;&#238;&#233;&#237;&#238;&#241;&#242;&#232;&#242;&#229; &#237;&#224; </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=bjs_ys.html>&igrave;&icirc;&auml;&egrave;&ocirc;&egrave;&ecirc;&agrave;&ograve;&icirc;&eth;&egrave;&ograve;&aring; &iacute;&agrave; RE</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">. &#212;&#238;&#240;&#236;&#224;&#242;&#250;&#242; &#237;&#224; &#241;&#242;&#240;&#232;&#237;&#227;&#224; &#229; &#239;&#238;&#228;&#238;&#225;&#229;&#237; &#237;&#224; &#242;&#238;&#231;&#232; &#239;&#240;&#232; &#236;&#238;&#228;&#232;&#244;&#232;&#234;&#224;&#242;&#238;&#240;&#232;&#242;&#229; </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=5o226t.html>(?ismx-ismx)</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">. &#205;&#224;&#239;&#240;&#232;&#236;&#229;&#240;, ModifierStr := 'i-x' &#249;&#229; &#226;&#234;&#235;&#254;&#247;&#232; &#236;&#238;&#228;&#232;&#244;&#232;&#234;&#224;&#242;&#238;&#240;&#224; /i, &#249;&#229; &#232;&#231;&#234;&#235;&#254;&#247;&#232; /x &#232; &#237;&#255;&#236;&#224; &#228;&#224; &#239;&#240;&#238;&#236;&#229;&#237;&#232; &#238;&#241;&#242;&#224;&#237;&#224;&#235;&#232;&#242;&#229;.
+<br>
+&#192;&#234;&#238; &#241;&#229; &#238;&#239;&#232;&#242;&#224;&#242;&#229; &#228;&#224; &#231;&#224;&#228;&#224;&#228;&#229;&#242;&#229; &#237;&#229;&#239;&#238;&#231;&#237;&#224;&#242; &#236;&#238;&#228;&#232;&#244;&#232;&#234;&#224;&#242;&#238;&#240;, &#249;&#229; &#241;&#229; &#232;&#231;&#226;&#232;&#234;&#224; &#236;&#229;&#242;&#238;&#228;&#250;&#242; Error (&#239;&#238; &#239;&#238;&#228;&#240;&#224;&#231;&#225;&#232;&#240;&#224;&#237;&#229; &#236;&#229;&#242;&#238;&#228;&#250;&#242; Error &#239;&#240;&#229;&#228;&#232;&#231;&#226;&#232;&#234;&#226;&#224; &#232;&#231;&#234;&#235;&#254;&#247;&#229;&#237;&#232;&#229; ERegExpr).
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>property ModifierI</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : boolean
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=dmn52y.html>&Igrave;&icirc;&auml;&egrave;&ocirc;&egrave;&ecirc;&agrave;&ograve;&icirc;&eth; /i</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> </span></span></span><span style="font-family:Times New Roman; font-size:10pt; color:#000000"><span style="font-family:Times New Roman; font-size:10pt; color:#010100">&#150;</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> &#239;&#240;&#238;&#226;&#229;&#240;&#234;&#224; &#225;&#229;&#231; &#238;&#242;&#247;&#232;&#242;&#224;&#237;&#229; &#227;&#235;&#224;&#226;&#237;&#232;/&#236;&#224;&#235;&#234;&#232; &#225;&#243;&#234;&#226;&#232;. &#207;&#240;&#232;&#229;&#236;&#224; &#237;&#224;&#247;&#224;&#235;&#237;&#224; &#241;&#242;&#238;&#233;&#237;&#238;&#241;&#242; &#238;&#242; </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=indetcg35.html>RegExprModifierI</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">.
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>property ModifierR</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : boolean
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=dmn537.html>&Igrave;&icirc;&auml;&egrave;&ocirc;&egrave;&ecirc;&agrave;&ograve;&icirc;&eth; /r</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> </span></span></span><span style="font-family:Times New Roman; font-size:10pt; color:#000000"><span style="font-family:Times New Roman; font-size:10pt; color:#010100">&#150;</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> &#232;&#231;&#239;&#238;&#235;&#231;&#226;&#224;&#237;&#229; &#237;&#224; &#228;&#232;&#224;&#239;&#224;&#231;&#238;&#237;&#232; &#231;&#224; &#240;&#243;&#241;&#234;&#232; &#229;&#231;&#232;&#234;. &#207;&#240;&#232;&#229;&#236;&#224; &#237;&#224;&#247;&#224;&#235;&#237;&#224; &#241;&#242;&#238;&#233;&#237;&#238;&#241;&#242; &#238;&#242; </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=indetcg35.html>RegExprModifierR</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">.
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>property ModifierS</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : boolean
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=dmn538.html>&Igrave;&icirc;&auml;&egrave;&ocirc;&egrave;&ecirc;&agrave;&ograve;&icirc;&eth; /s</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> - '.' &#241;&#250;&#226;&#239;&#224;&#228;&#224; &#241; &#226;&#241;&#229;&#234;&#232; &#241;&#232;&#236;&#226;&#238;&#235; (&#232;&#237;&#224;&#247;&#229; &#237;&#229; &#241;&#250;&#226;&#239;&#224;&#228;&#224; &#241; </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=_hlqzt.html>LineSeparators</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> &#232; </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=indcj_mwd.html>LinePairedSeparator</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">). &#207;&#240;&#232;&#229;&#236;&#224; &#237;&#224;&#247;&#224;&#235;&#237;&#224; &#241;&#242;&#238;&#233;&#237;&#238;&#241;&#242; &#238;&#242; </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=indetcg35.html>RegExprModifierS</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">.
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>property ModifierG</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : boolean;
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=dmn52w.html>&Igrave;&icirc;&auml;&egrave;&ocirc;&egrave;&ecirc;&agrave;&ograve;&icirc;&eth; /g</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> - &#232;&#231;&#234;&#235;&#254;&#247;&#226;&#224;&#237;&#229;&#242;&#238; &#237;&#224; /g &#239;&#240;&#229;&#226;&#234;&#235;&#254;&#247;&#226;&#224; &#226;&#241;&#232;&#247;&#234;&#232; &#238;&#239;&#229;&#240;&#224;&#246;&#232;&#232; &#226; "&#237;&#229;&#230;&#224;&#228;&#229;&#237;" &#241;&#242;&#232;&#235; &#242;&#224;&#234;&#224;, &#247;&#229; &#224;&#234;&#238; ModifierG = False, &#242;&#238; &#226;&#241;&#232;&#247;&#234;&#232; '*' &#240;&#224;&#225;&#238;&#242;&#255;&#242; &#234;&#224;&#242;&#238; '*?', &#226;&#241;&#232;&#247;&#234;&#232; '+' &#234;&#224;&#242;&#238; '+?' &#232; &#242;.&#237;. &#207;&#240;&#232;&#229;&#236;&#224; &#237;&#224;&#247;&#224;&#235;&#237;&#224; &#241;&#242;&#238;&#233;&#237;&#238;&#241;&#242; &#238;&#242; </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=indetcg35.html>RegExprModifierG</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">.
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>property ModifierM</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : boolean;
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=dmn532.html>&Igrave;&icirc;&auml;&egrave;&ocirc;&egrave;&ecirc;&agrave;&ograve;&icirc;&eth; /m</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> - &#242;&#240;&#229;&#242;&#232;&#240;&#224; &#241;&#242;&#240;&#232;&#237;&#227;&#224; &#234;&#224;&#242;&#238; &#241;&#250;&#241;&#242;&#224;&#226;&#229;&#237; &#238;&#242; &#236;&#237;&#238;&#227;&#238; &#240;&#229;&#228;&#238;&#226;&#229;. &#210;.&#229;. &#231;&#224;&#228;&#224;&#226;&#224; &#231;&#224; `^' &#232; `$' &#226;&#236;&#229;&#241;&#242;&#238; &#228;&#224; &#241;&#250;&#226;&#239;&#224;&#228;&#224;&#242; &#241;&#250;&#241; &#241;&#224;&#236;&#238;&#242;&#238; &#237;&#224;&#247;&#224;&#235;&#238; &#232;&#235;&#232; &#234;&#240;&#224;&#233; &#237;&#224; &#241;&#242;&#240;&#232;&#237;&#227;&#224;, &#228;&#224; &#241;&#250;&#226;&#239;&#224;&#228;&#224;&#242; &#241; &#237;&#224;&#247;&#224;&#235;&#238;&#242;&#238; &#232; &#234;&#240;&#224;&#255; &#237;&#224; &#226;&#241;&#255;&#234;&#232; &#240;&#229;&#228; &#226;&#250;&#242;&#240;&#229; &#226; &#241;&#224;&#236;&#232;&#255; &#241;&#242;&#240;&#232;&#237;&#227;. &#207;&#240;&#232;&#229;&#236;&#224; &#237;&#224;&#247;&#224;&#235;&#237;&#224; &#241;&#242;&#238;&#233;&#237;&#238;&#241;&#242; &#238;&#242; </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=indetcg35.html>RegExprModifierM</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">.
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>property ModifierX</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : boolean;
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=dmn53_.html>&Igrave;&icirc;&auml;&egrave;&ocirc;&egrave;&ecirc;&agrave;&ograve;&icirc;&eth; /x</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> </span></span></span><span style="font-family:Times New Roman; font-size:10pt; color:#000000"><span style="font-family:Times New Roman; font-size:10pt; color:#010100">&#150;</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> eXtended &#241;&#232;&#237;&#242;&#224;&#234;&#241;&#232;&#241;. &#207;&#240;&#232;&#229;&#236;&#224; &#237;&#224;&#247;&#224;&#235;&#237;&#224; &#241;&#242;&#238;&#233;&#237;&#238;&#241;&#242; &#238;&#242; </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=indetcg35.html>RegExprModifierX</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">.
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>function Exec</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> (const AInputString : string) : boolean;
+<br>
+&#207;&#240;&#238;&#226;&#229;&#240;&#234;&#224; &#231;&#224; &#241;&#250;&#226;&#239;&#224;&#228;&#229;&#237;&#232;&#229; &#237;&#224; RE  &#241; &#226;&#245;&#238;&#228;&#237;&#232;&#255; &#241;&#242;&#240;&#232;&#237;&#227; AInputString
+<br>
+!!! Exec &#231;&#224;&#239;&#224;&#231;&#226;&#224; AInputString &#226; &#241;&#226;&#238;&#233;&#241;&#242;&#226;&#238;&#242;&#238; InputString
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>function ExecNext</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : boolean;
+<br>
+&#242;&#250;&#240;&#241;&#232; &#231;&#224; &#241;&#235;&#229;&#228;&#226;&#224;&#249;&#238; &#241;&#250;&#226;&#239;&#224;&#228;&#229;&#237;&#232;&#229;:
+<br>
+   Exec (AString); ExecNext;
+<br>
+&#240;&#224;&#225;&#238;&#242;&#232; &#239;&#238; &#241;&#250;&#249;&#232;&#255; &#237;&#224;&#247;&#232;&#237;, &#234;&#224;&#234;&#242;&#238;
+<br>
+   Exec (AString);
+<br>
+    if MatchLen [0] = 0 then ExecPos (MatchPos [0] + 1) 
+<br>
+    else ExecPos (MatchPos [0] + MatchLen [0]);
+<br>
+ &#237;&#238; &#229; &#228;&#238;&#241;&#242;&#224; &#239;&#238;-&#239;&#240;&#238;&#241;&#242;&#238; &#231;&#224; &#240;&#224;&#231;&#225;&#232;&#240;&#224;&#237;&#229; !
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>function ExecPos</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> (AOffset: integer = 1) : boolean;
+<br>
+&#210;&#250;&#240;&#241;&#232; &#231;&#224; &#241;&#250;&#226;&#239;&#224;&#228;&#229;&#237;&#232;&#229; &#237;&#224; RE &#241; &#226;&#245;&#238;&#228;&#237;&#232;&#255; &#241;&#242;&#240;&#232;&#237;&#227;, &#231;&#224;&#239;&#238;&#247;&#226;&#224;&#233;&#234;&#232; &#238;&#242; &#239;&#238;&#231;&#232;&#246;&#232;&#255; AOffset
+<br>
+(AOffset=1 </span></span></span><span style="font-family:Times New Roman; font-size:10pt; color:#000000"><span style="font-family:Times New Roman; font-size:10pt; color:#010100">&#150;</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> &#239;&#250;&#240;&#226;&#232;&#255;&#242; &#241;&#232;&#236;&#226;&#238;&#235; &#237;&#224; InputString)
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>property InputString</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : string;
+<br>
+&#242;&#229;&#234;&#243;&#249;&#232;&#255;&#242; &#226;&#245;&#238;&#228;&#229;&#237; &#241;&#242;&#240;&#232;&#237;&#227; (&#239;&#240;&#232;&#241;&#226;&#238;&#229;&#237; &#255;&#226;&#237;&#238; &#232;&#235;&#232; &#238;&#242; &#239;&#238;&#241;&#235;&#229;&#228;&#237;&#232;&#255; Exec).
+<br>
+&#241;&#255;&#234;&#238; &#239;&#240;&#232;&#241;&#226;&#238;&#255;&#226;&#224;&#237;&#229; &#237;&#224; &#241;&#242;&#240;&#232;&#237;&#227; &#237;&#224; &#242;&#238;&#226;&#224; &#241;&#226;&#238;&#233;&#241;&#242;&#226;&#238; &#232;&#231;&#242;&#240;&#232;&#226;&#224; &#241;&#242;&#238;&#233;&#237;&#238;&#241;&#242;&#232;&#242;&#229; &#237;&#224; &#241;&#226;&#238;&#233;&#241;&#242;&#226;&#224;&#242;&#224; Match* !
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>function Substitute</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> (const ATemplate : string) : string;
+<br>
+&#194;&#240;&#250;&#249;&#224; &#241;&#242;&#240;&#232;&#237;&#227;&#224; Atemplate, &#226; &#234;&#238;&#233;&#242;&#238; '$&amp;' &#232;&#235;&#232; '$0' &#229; &#231;&#224;&#236;&#229;&#237;&#229;&#237;&#238; &#241; &#246;&#229;&#235;&#232;&#255; RE, &#224; '$n' &#241;&#229; &#231;&#224;&#236;&#229;&#237;&#255; &#241; &#239;&#238;&#228;&#232;&#231;&#240;&#224;&#231;&#224; &#241; &#237;&#238;&#236;&#229;&#240; n.
+<br>
+&#209;&#235;&#229;&#228; &#226;&#229;&#240;&#241;&#232;&#255; v.0.929 &#241;&#229; &#232;&#231;&#239;&#238;&#235;&#231;&#226;&#224; '$' &#226;&#236;&#229;&#241;&#242;&#238; '\' (&#231;&#224; &#225;&#250;&#228;&#229;&#249;&#232; &#240;&#224;&#231;&#248;&#232;&#240;&#229;&#237;&#232;&#255; &#232; &#231;&#224; &#239;&#238;-&#227;&#238;&#235;&#255;&#236;&#224; Perl-&#241;&#250;&#226;&#236;&#229;&#241;&#242;&#232;&#236;&#238;&#241;&#242;) &#232; &#239;&#240;&#232;&#229;&#236;&#224; &#239;&#238;&#226;&#229;&#247;&#229; &#238;&#242; &#229;&#228;&#237;&#224; &#246;&#232;&#244;&#240;&#224;.
+<br>
+&#192;&#234;&#238; &#232;&#241;&#234;&#224;&#242;&#229; &#228;&#224; &#231;&#224;&#239;&#232;&#248;&#229;&#242;&#229; &#239;&#240;&#238;&#241;&#242;&#238; &#241;&#232;&#236;&#226;&#238;&#235;&#232;&#242;&#229; '$' &#232;&#235;&#232; '\', &#231;&#224;&#239;&#232;&#248;&#229;&#242;&#229; &#239;&#240;&#229;&#228; &#242;&#255;&#245; '\'
+<br>
+&#207;&#240;&#232;&#236;&#229;&#240;: '1\$ is $2\\rub\\' -&gt; '1$ is &lt;Match[2]&gt;\rub\'
+<br>
+&#192;&#234;&#238; &#232;&#241;&#234;&#224;&#242;&#229; &#228;&#224; &#231;&#224;&#239;&#232;&#248;&#229;&#242;&#229; &#238;&#225;&#232;&#234;&#237;&#238;&#226;&#229;&#237;&#224; &#246;&#232;&#244;&#240;&#224; &#241;&#235;&#229;&#228; '$n', &#249;&#229; &#242;&#240;&#255;&#225;&#226;&#224; &#228;&#224; &#231;&#224;&#227;&#240;&#224;&#228;&#232;&#242;&#229; n &#241; &#244;&#232;&#227;&#243;&#240;&#237;&#232; &#241;&#234;&#238;&#225;&#232; '{}'.
+<br>
+&#207;&#240;&#232;&#236;&#229;&#240;: 'a$12bc' -&gt; 'a&lt;Match[12]&gt;bc', a${1}2bc' -&gt; 'a&lt;Match[1]&gt;2bc'.
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>procedure Split</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> (AInputStr : string; APieces : TStrings);
+<br>
+&#208;&#224;&#231;&#228;&#229;&#235;&#255; AInputStr &#237;&#224; &#239;&#224;&#240;&#247;&#229;&#242;&#224; &#226; APieces &#241;&#239;&#238;&#240;&#229;&#228; &#241;&#240;&#229;&#249;&#224;&#237;&#229;&#242;&#238; &#237;&#224; RE. &#200;&#231;&#239;&#238;&#235;&#231;&#226;&#224; Exec [Next].
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>function Replace</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> (AInputStr : RegExprString;  const AReplaceStr : RegExprString;  AUseSubstitution : boolean = False) : RegExprString;
+<br>
+&#194;&#240;&#250;&#249;&#224; AinputStr, &#226; &#234;&#238;&#233;&#242;&#238; &#241;&#240;&#229;&#249;&#224;&#237;&#232;&#255;&#242;&#224; &#237;&#224; RE &#241;&#224; &#231;&#224;&#236;&#229;&#237;&#229;&#237;&#232; &#241; AreplaceStr. &#192;&#234;&#238; AUseSubstitution &#229; true, &#242;&#238;&#227;&#224;&#226;&#224; AReplaceStr &#249;&#229; &#241;&#229; &#232;&#231;&#239;&#238;&#235;&#231;&#226;&#224; &#234;&#224;&#242;&#238; &#248;&#224;&#225;&#235;&#238;&#237; &#231;&#224; &#236;&#229;&#242;&#238;&#228;&#232;&#242;&#229; Substitution.
+<br>
+&#207;&#240;&#232;&#236;&#229;&#240;:
+<br>
+  Expression := '({-i}block|var)\s*\(\s*([^ ]*)\s*\)\s*';
+<br>
+  Replace ('BLOCK( test1)', 'def "$1" value "$2"', True);
+<br>
+   &#249;&#229; &#226;&#250;&#240;&#237;&#229;:  def 'BLOCK' value 'test1'
+<br>
+  Replace ('BLOCK( test1)', 'def "$1" value "$2"', False)
+<br>
+   &#249;&#229; &#226;&#250;&#240;&#237;&#229;:  def "$1" value "$2"
+<br>
+&#200;&#231;&#239;&#238;&#235;&#231;&#226;&#224; Exec[Next]
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>function ReplaceRegExpr</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> (const ARegExpr, AInputStr, AReplaceStr : string; AUseSubstitution : boolean = False) : string;
+<br>
+&#194;&#240;&#250;&#249;&#224; AinputStr, &#226; &#234;&#238;&#233;&#242;&#238; &#241;&#240;&#229;&#249;&#224;&#237;&#232;&#255;&#242;&#224; &#237;&#224; RE &#241;&#224; &#231;&#224;&#236;&#229;&#237;&#229;&#237;&#232; &#241; AreplaceStr. &#192;&#234;&#238; AUseSubstitution &#229; true, &#242;&#238;&#227;&#224;&#226;&#224; AReplaceStr &#249;&#229; &#241;&#229; &#232;&#231;&#239;&#238;&#235;&#231;&#226;&#224; &#234;&#224;&#242;&#238; &#248;&#224;&#225;&#235;&#238;&#237; &#231;&#224; &#236;&#229;&#242;&#238;&#228;&#232;&#242;&#229; Substitution.
+<br>
+&#207;&#240;&#232;&#236;&#229;&#240;:
+<br>
+ ReplaceRegExpr ('({-i}block|var)\s*\(\s*([^ ]*)\s*\)\s*',
+<br>
+  'BLOCK( test1)', 'def "$1" value "$2"', True)
+<br>
+    &#249;&#229; &#226;&#250;&#240;&#237;&#229;:  def 'BLOCK' value 'test1'
+<br>
+ ReplaceRegExpr ('({-i}block|var)\s*\(\s*([^ ]*)\s*\)\s*',
+<br>
+  'BLOCK( test1)', 'def "$1" value "$2"')
+<br>
+    &#249;&#229; &#226;&#250;&#240;&#237;&#229;:  def "$1" value "$2"
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>property SubExprMatchCount</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : integer; // ReadOnly
+<br>
+&#194;&#240;&#250;&#249;&#224; &#225;&#240;&#238;&#255; &#237;&#224; &#239;&#238;&#228;&#232;&#231;&#240;&#224;&#231;&#232;&#242;&#229;, &#237;&#224;&#236;&#229;&#240;&#229;&#237;&#232; &#239;&#240;&#232; &#239;&#238;&#241;&#235;&#229;&#228;&#237;&#238;&#242;&#238; &#232;&#231;&#226;&#232;&#234;&#226;&#224;&#237;&#229; &#237;&#224; Exec*.
+<br>
+&#192;&#234;&#238; &#237;&#255;&#236;&#224; &#239;&#238;&#228;&#232;&#231;&#240;&#224;&#231;&#232;, &#224; &#229; &#237;&#224;&#236;&#229;&#240;&#229;&#237; &#241;&#224;&#236;&#238; &#246;&#229;&#235;&#232;&#255;&#242; &#232;&#231;&#240;&#224;&#231; (Exec* &#229; &#226;&#250;&#240;&#237;&#224;&#235;&#224; True), &#242;&#238; SubExprMatchCount=0, &#224; &#224;&#234;&#238; &#237;&#229; &#241;&#224; &#237;&#224;&#236;&#229;&#240;&#229;&#237;&#232; &#237;&#232;&#242;&#238; &#239;&#238;&#228;&#232;&#231;&#240;&#224;&#231;&#232;, &#237;&#232;&#242;&#238; &#246;&#229;&#235;&#232;&#255;  RE (Exec* &#229; &#226;&#250;&#240;&#237;&#224;&#235;&#224; false), &#242;&#238; SubExprMatchCount=-1.
+<br>
+&#199;&#224;&#225;&#229;&#235;&#229;&#230;&#229;&#242;&#229;, &#247;&#229; &#237;&#255;&#234;&#238;&#232; &#239;&#238;&#228;&#232;&#231;&#240;&#224;&#231;&#232; &#236;&#238;&#230;&#229; &#232; &#228;&#224; &#237;&#229; &#225;&#250;&#228;&#224;&#242; &#237;&#224;&#236;&#229;&#240;&#229;&#237;&#232; &#232; &#231;&#224; &#242;&#255;&#245; MathPos=MatchLen= -1 &#232; Match=''.
+<br>
+&#207;&#240;&#232;&#236;&#229;&#240;: &#200;&#231;&#240;&#224;&#231; := '(1)?2(3)?';
+<br>
+ Exec ('123'): SubExprMatchCount=2, Match[0]='123', [1]='1', [2]='3' 
+<br>
+ Exec ('12'): SubExprMatchCount=1, Match[0]='12', [1]='1'
+<br>
+ Exec ('23'): SubExprMatchCount=2, Match[0]='23', [1]=", [2]='3'
+<br>
+ Exec ('2'): SubExprMatchCount=0, Match[0]='2'
+<br>
+ Exec ('7') - &#226;&#240;&#250;&#249;&#224; False: SubExprMatchCount=-1
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>property MatchPos</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> [Idx : integer] : integer; // ReadOnly
+<br>
+&#239;&#238;&#231;&#232;&#246;&#232;&#255; &#237;&#224; &#237;&#224;&#236;&#229;&#240;&#229;&#237;&#232;&#255; &#239;&#238;&#228;&#232;&#231;&#240;&#224;&#231;. #Idx &#229; &#237;&#238;&#236;&#229;&#240;&#224; &#237;&#224; &#239;&#238;&#228;&#232;&#231;&#240;&#224;&#231;&#224; &#226; &#239;&#238;&#241;&#235;&#229;&#228;&#237;&#232;&#255; &#241;&#242;&#240;&#232;&#237;&#227; &#237;&#224; Exec*. &#207;&#250;&#240;&#226;&#232;&#255;&#242; &#239;&#238;&#228;&#232;&#231;&#240;&#224;&#231; &#232;&#236;&#224; Idx=1, &#239;&#238;&#241;&#235;&#229;&#228;&#237;&#232;&#255; - MatchCount, &#246;&#229;&#235;&#232;&#255; &#232;&#231;&#240;&#224;&#231; &#232;&#236;&#224; Idx=0.
+<br>
+&#194;&#240;&#250;&#249;&#224; -1 &#224;&#234;&#238; &#226; &#232;&#231;&#240;&#224;&#231;&#224; &#237;&#255;&#236;&#224; &#242;&#224;&#234;&#250;&#226; &#239;&#238;&#228;&#232;&#231;&#240;&#224;&#231; &#232;&#235;&#232; &#224;&#234;&#238; &#242;&#238;&#233; &#237;&#229; &#229; &#237;&#224;&#236;&#229;&#240;&#229;&#237;.
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>property MatchLen</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> [Idx : integer] : integer; // ReadOnly
+<br>
+&#228;&#250;&#235;&#230;&#232;&#237;&#224; &#237;&#224; &#237;&#224;&#236;&#229;&#240;&#229;&#237;&#232;&#255; &#239;&#238;&#228;&#232;&#231;&#240;&#224;&#231;. #Idx &#229; &#237;&#238;&#236;&#229;&#240;&#224; &#237;&#224; &#239;&#238;&#228;&#232;&#231;&#240;&#224;&#231;&#224; &#226; &#239;&#238;&#241;&#235;&#229;&#228;&#237;&#232;&#255; &#241;&#242;&#240;&#232;&#237;&#227; &#237;&#224; Exec*. &#207;&#250;&#240;&#226;&#232;&#255;&#242; &#239;&#238;&#228;&#232;&#231;&#240;&#224;&#231; &#232;&#236;&#224; Idx=1, &#239;&#238;&#241;&#235;&#229;&#228;&#237;&#232;&#255; - MatchCount, &#246;&#229;&#235;&#232;&#255; &#232;&#231;&#240;&#224;&#231; &#232;&#236;&#224; Idx=0.
+<br>
+&#194;&#240;&#250;&#249;&#224; -1 &#224;&#234;&#238; &#226; &#232;&#231;&#240;&#224;&#231;&#224; &#237;&#255;&#236;&#224; &#242;&#224;&#234;&#250;&#226; &#239;&#238;&#228;&#232;&#231;&#240;&#224;&#231; &#232;&#235;&#232; &#224;&#234;&#238; &#242;&#238;&#233; &#237;&#229; &#229; &#237;&#224;&#236;&#229;&#240;&#229;&#237;.
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>property Match</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> [Idx : integer] : string; // ReadOnly
+<br>
+== copy (InputString, MatchPos [Idx], MatchLen [Idx])
+<br>
+&#194;&#240;&#250;&#249;&#224; '' &#224;&#234;&#238; &#226; &#232;&#231;&#240;&#224;&#231;&#224; &#237;&#255;&#236;&#224; &#242;&#224;&#234;&#250;&#226; &#239;&#238;&#228;&#232;&#231;&#240;&#224;&#231; &#232;&#235;&#232; &#224;&#234;&#238; &#242;&#238;&#233; &#237;&#229; &#229; &#237;&#224;&#236;&#229;&#240;&#229;&#237;.
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>function LastError</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : integer;
+<br>
+&#194;&#240;&#250;&#249;&#224; &#237;&#238;&#236;&#229;&#240;&#224; &#237;&#224; &#239;&#238;&#241;&#235;&#229;&#228;&#237;&#224;&#242;&#224; &#227;&#240;&#229;&#248;&#234;&#224; &#232;&#235;&#232; 0 &#224;&#234;&#238; &#237;&#255;&#236;&#224; &#227;&#240;&#229;&#248;&#234;&#232; (&#237;&#229;&#232;&#231;&#239;&#238;&#235;&#231;&#226;&#224;&#229;&#236; &#224;&#234;&#238; &#236;&#229;&#242;&#238;&#228;&#250;&#242; Error &#227;&#229;&#237;&#229;&#240;&#232;&#240;&#224; &#232;&#231;&#234;&#235;&#254;&#247;&#229;&#237;&#232;&#229;) &#232; &#243;&#241;&#242;&#224;&#237;&#238;&#226;&#255;&#226;&#224; &#226;&#250;&#242;&#240;&#229;&#248;&#237;&#232;&#255; &#241;&#242;&#224;&#242;&#243;&#241; &#226; 0 (&#237;&#255;&#236;&#224; &#227;&#240;&#229;&#248;&#234;&#232;).
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>function ErrorMsg</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> (AErrorID : integer) : string; virtual;
+<br>
+&#194;&#240;&#250;&#249;&#224; &#241;&#250;&#238;&#225;&#249;&#229;&#237;&#232;&#229; &#231;&#224; &#227;&#240;&#229;&#248;&#234;&#224; &#241; &#237;&#238;&#236;&#229;&#240; = AErrorID.
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>property CompilerErrorPos</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : integer; // ReadOnly
+<br>
+&#194;&#240;&#250;&#249;&#224; &#239;&#238;&#231;&#232;&#246;&#232;&#255;&#242;&#224; &#226; &#232;&#231;&#240;&#224;&#231;&#224;, &#234;&#250;&#228;&#229;&#242;&#238; &#234;&#238;&#236;&#239;&#232;&#235;&#224;&#242;&#238;&#240;&#250;&#242; &#229; &#241;&#239;&#240;&#255;&#235;.
+<br>
+&#207;&#238;&#235;&#229;&#231;&#237;&#238; &#239;&#240;&#232; &#228;&#232;&#224;&#227;&#237;&#238;&#241;&#242;&#232;&#234;&#224; &#237;&#224; &#227;&#240;&#229;&#248;&#234;&#232;
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>property SpaceChars</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : RegExprString
+<br>
+&#209;&#250;&#228;&#250;&#240;&#230;&#224; &#241;&#232;&#236;&#226;&#238;&#235;&#232;&#242;&#229;, &#242;&#240;&#229;&#242;&#232;&#240;&#224;&#237;&#232; &#234;&#224;&#242;&#238; \s (&#232;&#237;&#232;&#246;&#232;&#224;&#235;&#232;&#231;&#232;&#240;&#224; &#241;&#229; &#241; &#227;&#235;&#238;&#225;&#224;&#235;&#237;&#224;&#242;&#224; &#234;&#238;&#237;&#241;&#242;&#224;&#237;&#242;&#224; RegExprSpaceChars.
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>property WordChars</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : RegExprString;
+<br>
+&#209;&#250;&#228;&#250;&#240;&#230;&#224; &#241;&#232;&#236;&#226;&#238;&#235;&#232;&#242;&#229;, &#242;&#240;&#229;&#242;&#232;&#240;&#224;&#237;&#232; &#234;&#224;&#242;&#238; \w (&#232;&#237;&#232;&#246;&#232;&#224;&#235;&#232;&#231;&#232;&#240;&#224; &#241;&#229; &#241; &#227;&#235;&#238;&#225;&#224;&#235;&#237;&#224;&#242;&#224; &#234;&#238;&#237;&#241;&#242;&#224;&#237;&#242;&#224;   RegExprWordChars.
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>property LineSeparators</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : RegExprString
+<br>
+&#240;&#224;&#231;&#228;&#229;&#235;&#232;&#242;&#229;&#235;&#232;&#242;&#229; &#237;&#224; &#240;&#229;&#228;&#238;&#226;&#229; (&#234;&#224;&#242;&#238; \n &#226; Unix), (&#232;&#237;&#232;&#246;&#232;&#224;&#235;&#232;&#231;&#232;&#240;&#224; &#241;&#229; &#241; &#227;&#235;&#238;&#225;&#224;&#235;&#237;&#224;&#242;&#224; &#234;&#238;&#237;&#241;&#242;&#224;&#237;&#242;&#224; RegExprLineSeparators.
+<br>
+&#194;&#232;&#230; &#241;&#250;&#249;&#238; </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=idha88fzy.html>&ccedil;&agrave; &eth;&agrave;&ccedil;&auml;&aring;&euml;&egrave;&ograve;&aring;&euml;&egrave;&ograve;&aring;</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>property LinePairedSeparator</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : RegExprString
+<br>
+&#241;&#228;&#226;&#238;&#229;&#237;&#232; &#240;&#224;&#231;&#228;&#229;&#235;&#232;&#242;&#229;&#235;&#232; &#237;&#224; &#240;&#229;&#228;&#238;&#226;&#229; (&#234;&#224;&#242;&#238; \r\n &#226; DOS &#232; Windows).
+<br>
+&#210;&#240;&#255;&#225;&#226;&#224; &#228;&#224; &#241;&#250;&#228;&#250;&#240;&#230;&#224; &#242;&#238;&#247;&#237;&#238; &#228;&#226;&#224; &#241;&#232;&#236;&#226;&#238;&#235;&#224; &#232;&#235;&#232; &#228;&#224; &#237;&#229; &#241;&#250;&#228;&#250;&#240;&#230;&#224; &#237;&#232;&#249;&#238; (&#232;&#237;&#232;&#246;&#232;&#224;&#235;&#232;&#231;&#232;&#240;&#224; &#241;&#229; &#241; &#227;&#235;&#238;&#225;&#224;&#235;&#237;&#224;&#242;&#224; &#234;&#238;&#237;&#241;&#242;&#224;&#237;&#242;&#224; RegExprLinePairedSeparator).
+<br>
+&#194;&#232;&#230; &#241;&#250;&#249;&#238; </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=idha88fzy.html>&ccedil;&agrave; &eth;&agrave;&ccedil;&auml;&aring;&euml;&egrave;&ograve;&aring;&euml;&egrave;&ograve;&aring;</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+&#205;&#224;&#239;&#240;&#232;&#236;&#229;&#240;, &#224;&#234;&#238; &#232;&#236;&#224;&#242;&#229; &#237;&#243;&#230;&#228;&#224; &#238;&#242; Unix-&#241;&#242;&#232;&#235;, &#231;&#224;&#228;&#224;&#233;&#242;&#229; LineSeparators := #$a (&#241;&#232;&#236;&#226;&#238;&#235; &#231;&#224; &#237;&#238;&#226; &#240;&#229;&#228;) &#232; LinePairedSeparator := '' (&#239;&#240;&#224;&#231;&#229;&#237; &#241;&#242;&#240;&#232;&#237;&#227;), &#224; &#224;&#234;&#238; &#232;&#241;&#234;&#224;&#242;&#229; &#228;&#224; &#238;&#225;&#240;&#224;&#225;&#238;&#242;&#226;&#224;&#242;&#229; &#240;&#224;&#231;&#228;&#229;&#235;&#232;&#242;&#229;&#235;&#255; \x0D\x0A, &#237;&#238; &#237;&#229; \x0D &#232;&#235;&#232; \x0A, &#231;&#224;&#228;&#224;&#233;&#242;&#229; LineSeparators := '' (&#239;&#240;&#224;&#231;&#229;&#237; &#241;&#242;&#240;&#232;&#237;&#227;) &#232; LinePairedSeparator := #$d#$a.
+<br>
+
+<br>
+&#207;&#238; &#239;&#238;&#228;&#240;&#224;&#231;&#225;&#232;&#240;&#224;&#237;&#229; &#241;&#229; &#232;&#231;&#239;&#238;&#235;&#231;&#226;&#224; '&#241;&#236;&#229;&#241;&#229;&#237;' &#240;&#229;&#230;&#232;&#236; (&#228;&#229;&#244;&#232;&#237;&#232;&#240;&#224;&#237; &#226; &#227;&#235;&#238;&#225;&#224;&#235;&#237;&#232;&#242;&#229; &#234;&#238;&#237;&#241;&#242;&#224;&#237;&#242;&#232; RegExprLine[Paired]Separator[s]): LineSeparators := #$d#$a; LinePairedSeparator := $#d#$a. &#196;&#229;&#233;&#241;&#242;&#226;&#232;&#229;&#242;&#238; &#237;&#224; &#242;&#238;&#231;&#232; &#240;&#229;&#230;&#232;&#236; &#229; &#239;&#238;&#228;&#240;&#238;&#225;&#237;&#238; &#238;&#225;&#255;&#241;&#237;&#229;&#237;&#238; &#226; &#240;&#224;&#231;&#228;&#229;&#235;&#224;, &#234;&#224;&#241;&#224;&#229;&#249; </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=idha88fzy.html>&ntilde;&egrave;&iacute;&ograve;&agrave;&ecirc;&ntilde;&egrave;&ntilde;&agrave;</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">.
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>class function InvertCaseFunction</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">  (const Ch : REChar) : REChar;
+<br>
+&#202;&#238;&#237;&#226;&#229;&#240;&#242;&#232;&#240;&#224; Ch &#226; &#227;&#238;&#240;&#229;&#237; &#240;&#229;&#227;&#232;&#241;&#242;&#250;&#240; (&#224;&#234;&#238; &#229; &#225;&#232;&#235; &#226; &#228;&#238;&#235;&#229;&#237;) &#232;&#235;&#232; &#226; &#228;&#238;&#235;&#229;&#237; &#240;&#229;&#227;&#232;&#241;&#242;&#250;&#240; (&#224;&#234;&#238; &#229; &#225;&#232;&#235; &#226; &#227;&#238;&#240;&#229;&#237;), &#234;&#224;&#242;&#238; &#232;&#231;&#239;&#238;&#235;&#231;&#226;&#224; &#241;&#232;&#241;&#242;&#229;&#236;&#237;&#232;&#242;&#229; &#237;&#224;&#241;&#242;&#240;&#238;&#233;&#234;&#232;.
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>property InvertCase</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : TRegExprInvertCaseFunction;
+<br>
+&#192;&#234;&#238; &#232;&#241;&#234;&#224;&#242;&#229; &#228;&#224; &#240;&#224;&#225;&#238;&#242;&#232;&#242;&#229; &#241;&#250;&#241; &#231;&#224;&#226;&#232;&#241;&#232;&#236;&#238;&#241;&#242; &#238;&#242; &#240;&#229;&#227;&#232;&#241;&#242;&#250;&#240;&#224; &#237;&#224; &#241;&#232;&#236;&#226;&#238;&#235;&#232;&#242;&#229;, &#243;&#241;&#242;&#224;&#237;&#238;&#226;&#229;&#242;&#229; &#242;&#238;&#226;&#224; &#241;&#226;&#238;&#233;&#241;&#242;&#226;&#238; &#228;&#224; &#241;&#238;&#247;&#232; RegExprInvertCaseFunction (&#239;&#238; &#239;&#238;&#228;&#240;&#224;&#231;&#225;&#232;&#240;&#224;&#237;&#229; &#241;&#238;&#247;&#232; InvertCaseFunction)
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>procedure Compile</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">;
+<br>
+[&#208;&#229;]&#234;&#238;&#236;&#239;&#232;&#235;&#232;&#240;&#224; RE. &#207;&#238;&#235;&#229;&#231;&#237;&#224; &#231;&#224; &#240;&#229;&#228;&#224;&#234;&#242;&#238;&#240;&#232;, &#232;&#231;&#239;&#238;&#235;&#231;&#226;&#224;&#249;&#232; RE &#226; GUI (&#231;&#224; &#239;&#240;&#238;&#226;&#229;&#240;&#234;&#224; &#237;&#224; &#226;&#224;&#235;&#232;&#228;&#237;&#238;&#241;&#242;&#242;&#224; &#237;&#224; &#226;&#241;&#232;&#247;&#234;&#232; &#241;&#226;&#238;&#233;&#241;&#242;&#226;&#224;).
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>function Dump</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : string;
+<br>
+&#239;&#238;&#234;&#224;&#231;&#226;&#224; &#234;&#238;&#236;&#239;&#232;&#235;&#232;&#240;&#224;&#237;&#232;&#255;&#242; &#232;&#231;&#240;&#224;&#231; &#226; &#239;&#238;-&#239;&#238;&#228;&#240;&#238;&#225;&#229;&#237; &#226;&#232;&#228;.
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>class function VersionMajor</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">: integer;
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>class function VersionMinor</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">: integer;
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">&#194;&#240;&#250;&#249;&#224;&#242; &#227;&#235;&#224;&#226;&#237;&#224;&#242;&#224; &#232; &#226;&#242;&#238;&#240;&#238;&#241;&#242;&#229;&#239;&#229;&#237;&#237;&#224;&#242;&#224; &#226;&#229;&#240;&#241;&#232;&#255;, &#237;&#224;&#239;&#240;&#232;&#236;&#229;&#240; &#231;&#224; v. 0.944 VersionMajor = 0 &#232; VersionMinor = 944
+<br>
+
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#0000FF"><b>&#195;&#235;&#238;&#225;&#224;&#235;&#237;&#232; &#234;&#238;&#237;&#241;&#242;&#224;&#237;&#242;&#232;
+<br>
+</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+&#209;&#242;&#238;&#233;&#237;&#238;&#241;&#242;&#232; &#239;&#238; &#239;&#238;&#228;&#240;&#224;&#231;&#225;&#232;&#240;&#224;&#237;&#229; &#237;&#224; &#236;&#238;&#228;&#232;&#244;&#232;&#234;&#224;&#242;&#238;&#240;&#232;&#242;&#229;:
+<br>
+  </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>RegExprModifierI</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#7F0000"><b> </b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">: boolean = False;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=5ai8o7.html>TRegExpr.ModifierI</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+  </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>RegExprModifierR</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : boolean = True;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=idh4wt7gx.html>TRegExpr.ModifierR</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+  </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>RegExprModifierS</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : boolean = True;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=j8z3ca.html>TRegExpr.ModifierS</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#800000">  </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>RegExprModifierG</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : boolean = True;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=_x9b8d.html>TRegExpr.ModifierG</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#800000">  </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>RegExprModifierM</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : boolean = False;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=chip_x.html>TRegExpr.ModifierM</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#800000">  </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>RegExprModifierX</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : boolean = False;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=id_a4plzc.html>TRegExpr.ModifierX</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#7F0000"><b>  </b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>RegExprSpaceChars</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : RegExprString = ' '#$9#$A#$D#$C;
+<br>
+  // &#241;&#242;&#238;&#233;&#237;&#238;&#241;&#242; &#239;&#238; &#239;&#238;&#228;&#240;&#224;&#231;&#225;&#232;&#240;&#224;&#237;&#229; &#231;&#224; &#241;&#226;&#238;&#233;&#241;&#242;&#226;&#238;&#242;&#238; SpaceChars
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#800000">  </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>RegExprWordChars</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#800000"> </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">: RegExprString =
+<br>
+    '0123456789'
+<br>
+  + 'abcdefghijklmnopqrstuvwxyz'
+<br>
+  + 'ABCDEFGHIJKLMNOPQRSTUVWXYZ_';
+<br>
+  // &#241;&#242;&#238;&#233;&#237;&#238;&#241;&#242; &#239;&#238; &#239;&#238;&#228;&#240;&#224;&#231;&#225;&#232;&#240;&#224;&#237;&#229; &#231;&#224; &#241;&#226;&#238;&#233;&#241;&#242;&#226;&#238;&#242;&#238; WordChars
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#800000">  </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>RegExprLineSeparators</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : RegExprString =
+<br>
+   #$d#$a{$IFDEF UniCode}#$b#$c#$2028#$2029#$85{$ENDIF};
+<br>
+  // &#241;&#242;&#238;&#233;&#237;&#238;&#241;&#242; &#239;&#238; &#239;&#238;&#228;&#240;&#224;&#231;&#225;&#232;&#240;&#224;&#237;&#229; &#231;&#224; &#241;&#226;&#238;&#233;&#241;&#242;&#226;&#238;&#242;&#238; LineSeparators
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#800000">  </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>RegExprLinePairedSeparator</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : RegExprString =
+<br>
+   #$d#$a;
+<br>
+  // &#241;&#242;&#238;&#233;&#237;&#238;&#241;&#242; &#239;&#238; &#239;&#238;&#228;&#240;&#224;&#231;&#225;&#232;&#240;&#224;&#237;&#229; &#231;&#224; &#241;&#226;&#238;&#233;&#241;&#242;&#226;&#238;&#242;&#238; LinePairedSeparator
+<br>
+
+<br>
+  </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>RegExprInvertCaseFunction</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : TRegExprInvertCaseFunction = TRegExpr.InvertCaseFunction; 
+<br>
+  // &#241;&#242;&#238;&#233;&#237;&#238;&#241;&#242; &#239;&#238; &#239;&#238;&#228;&#240;&#224;&#231;&#225;&#232;&#240;&#224;&#237;&#229; &#231;&#224; &#241;&#226;&#238;&#233;&#241;&#242;&#226;&#238;&#242;&#238; InvertCase
+<br>
+
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#0000FF"><b>&#207;&#238;&#235;&#229;&#231;&#237;&#232; &#227;&#235;&#238;&#225;&#224;&#235;&#237;&#232; &#244;&#243;&#237;&#234;&#246;&#232;&#232;</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>function ExecRegExpr</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> (const ARegExpr, AInputStr : string) : boolean;
+<br>
+&#226;&#240;&#250;&#249;&#224; &#232;&#241;&#242;&#232;&#237;&#224; &#224;&#234;&#238; &#226; &#241;&#242;&#240;&#232;&#237;&#227;&#224; AInputString &#241;&#229; &#238;&#242;&#234;&#240;&#232;&#229; &#241;&#250;&#226;&#239;&#224;&#228;&#229;&#237;&#232;&#229; &#237;&#224; &#232;&#231;&#240;&#224;&#231;&#224; ARegExpr
+<br>
+! &#224;&#234;&#238; &#226; AregExpr &#232;&#236;&#224; &#241;&#232;&#237;&#242;&#224;&#234;&#242;&#232;&#247;&#237;&#232; &#227;&#240;&#229;&#248;&#234;&#232;, &#227;&#229;&#237;&#229;&#240;&#232;&#240;&#224; &#232;&#231;&#234;&#235;&#254;&#247;&#229;&#237;&#232;&#229;
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>procedure SplitRegExpr</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> (const ARegExpr, AInputStr : string; APieces : TStrings);
+<br>
+&#240;&#224;&#231;&#228;&#229;&#235;&#255; AInputStr &#237;&#224; &#239;&#224;&#240;&#247;&#229;&#242;&#224; &#226; APieces &#241;&#239;&#238;&#240;&#229;&#228; &#241;&#240;&#229;&#249;&#224;&#237;&#232;&#255;&#242;&#224; &#237;&#224; ARegExpr
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>function ReplaceRegExpr</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> (const ARegExpr, AInputStr, AReplaceStr : string) : string;
+<br>
+&#194;&#240;&#250;&#249;&#224; AinputStr, &#234;&#224;&#242;&#238; &#241;&#240;&#229;&#249;&#224;&#237;&#232;&#255;&#242;&#224; &#237;&#224; &#232;&#231;&#240;&#224;&#231;&#224; ARegExpr &#241;&#224; &#231;&#224;&#236;&#229;&#237;&#229;&#237;&#232; &#241; AReplaceStr
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>function QuoteRegExprMetaChars</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> (const AStr : string) : string;
+<br>
+&#199;&#224;&#236;&#229;&#237;&#255; &#226;&#241;&#232;&#247;&#234;&#232; &#236;&#229;&#242;&#224;&#241;&#232;&#236;&#226;&#238;&#235;&#232; &#241; &#242;&#255;&#245;&#237;&#224;&#242;&#224; &#225;&#229;&#231;&#238;&#239;&#224;&#241;&#237;&#224; &#244;&#238;&#240;&#236;&#224;, &#237;&#224;&#239;&#240;&#232;&#236;&#229;&#240; 'abc$cd.(' &#241;&#229; &#234;&#238;&#237;&#226;&#229;&#240;&#242;&#232;&#240;&#224; &#226; 'abc\$cd\.\('
+<br>
+&#210;&#224;&#231;&#232; &#244;&#243;&#237;&#234;&#246;&#232;&#255; &#229; &#239;&#238;&#235;&#229;&#231;&#237;&#224; &#239;&#240;&#232; &#224;&#226;&#242;&#238;&#236;&#224;&#242;&#232;&#247;&#237;&#238; &#227;&#229;&#237;&#229;&#240;&#232;&#240;&#224;&#237;&#229; &#237;&#224; &#232;&#231;&#240;&#224;&#231;&#232; &#238;&#242; &#239;&#238;&#242;&#240;&#229;&#225;&#232;&#242;&#229;&#235;&#241;&#234;&#232; &#226;&#245;&#238;&#228;
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>function RegExprSubExpressions</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> (const ARegExpr : string;
+<br>
+    ASubExprs : TStrings; AExtendedSyntax : boolean = False) : integer;
+<br>
+&#207;&#240;&#224;&#226;&#232; &#241;&#239;&#232;&#241;&#250;&#234; &#237;&#224; &#239;&#238;&#228;&#232;&#231;&#240;&#224;&#231;&#232;&#242;&#229;, &#237;&#224;&#236;&#229;&#240;&#229;&#237;&#232; &#226; RE ARegExpr
+<br>
+&#194; ASubExps &#226;&#241;&#255;&#234;&#224; &#241;&#242;&#238;&#233;&#237;&#238;&#241;&#242; &#239;&#240;&#229;&#228;&#241;&#242;&#224;&#226;&#235;&#255;&#226;&#224; &#239;&#238;&#228;&#232;&#231;&#240;&#224;&#231;, &#238;&#242; &#239;&#250;&#240;&#226;&#232;&#255; &#228;&#238; &#239;&#238;&#241;&#235;&#229;&#228;&#237;&#232;&#255;, &#226;&#250;&#226; &#244;&#238;&#240;&#236;&#224;&#242;:
+<br>
+  String </span></span></span><span style="font-family:Times New Roman; font-size:10pt; color:#000000"><span style="font-family:Times New Roman; font-size:10pt; color:#010100">&#150;</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> &#242;&#229;&#234;&#241;&#242; &#237;&#224; &#239;&#238;&#228;&#232;&#231;&#240;&#224;&#231;&#224; (&#225;&#229;&#231; '()')
+<br>
+  low word &#237;&#224; Object </span></span></span><span style="font-family:Times New Roman; font-size:10pt; color:#000000"><span style="font-family:Times New Roman; font-size:10pt; color:#010100">&#150;</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> &#241;&#242;&#224;&#240;&#242;&#238;&#226;&#224; &#239;&#238;&#231;&#232;&#246;&#232;&#255; &#226;  ARegExpr, &#226;&#234;&#235;. '(' &#224;&#234;&#238; &#241;&#250;&#249;&#229;&#241;&#242;&#226;&#243;&#226;&#224;! (&#239;&#250;&#240;&#226;&#224;&#242;&#224; &#239;&#238;&#231;&#232;&#246;&#232;&#255; &#229; 1)
+<br>
+  high word &#237;&#224; Object - &#228;&#250;&#235;&#230;&#232;&#237;&#224;&#242;&#224;, &#226;&#234;&#235;. '(' &#232; ')' &#224;&#234;&#238; &#241;&#250;&#249;&#229;&#241;&#242;&#226;&#243;&#226;&#224;&#242;!
+<br>
+  AExtendedSyntax </span></span></span><span style="font-family:Times New Roman; font-size:10pt; color:#000000"><span style="font-family:Times New Roman; font-size:10pt; color:#010100">&#150;</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> &#242;&#240;&#255;&#225;&#226;&#224; &#228;&#224; &#229; True &#224;&#234;&#238; &#236;&#238;&#228;&#232;&#244;&#232;&#234;&#224;&#242;&#238;&#240;&#250;&#242; /x &#229; &#226;&#234;&#235;&#254;&#247;&#229;&#237; &#239;&#240;&#232; &#232;&#231;&#239;&#238;&#235;&#231;&#226;&#224;&#237;&#229;&#242;&#238; &#237;&#224; RE.
+<br>
+&#207;&#238;&#235;&#229;&#231;&#237;&#224; &#231;&#224; &#240;&#229;&#228;&#224;&#234;&#242;&#238;&#240;&#232; &#237;&#224; RE &#226; GUI &#232; &#242;.&#237;. (&#207;&#240;&#232;&#236;&#229;&#240; &#231;&#224; &#232;&#231;&#239;&#238;&#235;&#231;&#226;&#224;&#237;&#229; &#232;&#236;&#224; &#226; &#239;&#240;&#238;&#229;&#234;&#242;&#224; </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=tregexpr_testrexp.html>TestRExp.dpr</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">)
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>&#208;&#229;&#231;&#243;&#235;&#242;&#224;&#242;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#199;&#237;&#224;&#247;&#229;&#237;&#232;&#229;
+<br>
+</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>0</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#211;&#241;&#239;&#229;&#245;. &#205;&#255;&#236;&#224; &#237;&#224;&#236;&#229;&#240;&#229;&#237;&#232; &#237;&#229;&#225;&#224;&#235;&#224;&#237;&#241;&#232;&#240;&#224;&#237;&#232; &#241;&#234;&#238;&#225;&#232;.
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>-1</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#237;&#255;&#236;&#224; &#228;&#238;&#241;&#242;&#224;&#242;&#250;&#247;&#237;&#238; &#231;&#224;&#242;&#226;&#224;&#240;&#255;&#249;&#232; &#241;&#234;&#238;&#225;&#232; ')'
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>-(n+1)</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#237;&#224; &#239;&#238;&#231;&#232;&#246;&#232;&#255; </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>n</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> &#229; &#237;&#224;&#236;&#229;&#240;&#229;&#237;&#224; &#238;&#242;&#226;&#224;&#240;&#255;&#249;&#224; '[' &#225;&#229;&#231; &#241;&#250;&#238;&#242;&#226;&#229;&#242;&#241;&#242;&#226;&#224;&#249;&#224; &#233; &#231;&#224;&#242;&#226;&#224;&#240;&#255;&#249;&#224; ']'
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>n</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#237;&#224; &#239;&#238;&#231;&#232;&#246;&#232;&#255; </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>n</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> &#229; &#237;&#224;&#236;&#229;&#240;&#229;&#237;&#224; &#231;&#224;&#242;&#226;&#224;&#240;&#255;&#249;&#224; ')' &#225;&#229;&#231; &#241;&#250;&#238;&#242;&#226;&#229;&#242;&#241;&#242;&#226;&#224;&#249;&#224; &#233; &#238;&#242;&#226;&#224;&#240;&#255;&#249;&#224; '('
+<br>
+
+<br>
+&#224;&#234;&#238; &#240;&#229;&#231;&#243;&#235;&#242;&#224;&#242;&#250;&#242; &#229; &lt;&gt; 0, &#242;&#238; ASubExpr &#241;&#250;&#228;&#250;&#240;&#230;&#224; &#239;&#240;&#224;&#231;&#237;&#232; &#232;&#235;&#232; &#237;&#229;&#234;&#238;&#240;&#229;&#234;&#242;&#237;&#232; &#241;&#242;&#240;&#232;&#237;&#227;&#238;&#226;&#229;.
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#0000FF"><b>&#202;&#235;&#224;&#241; '&#232;&#231;&#234;&#235;&#254;&#247;&#229;&#237;&#232;&#229;'</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+&#210;&#238;&#233; &#238;&#225;&#240;&#224;&#225;&#238;&#242;&#226;&#224; &#227;&#240;&#229;&#248;&#234;&#232;&#242;&#229; &#237;&#224; TRegExpr:
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>ERegExpr</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> = class (Exception)
+<br>
+   public
+<br>
+      ErrorCode : integer; // &#234;&#238;&#228; &#231;&#224; &#227;&#240;&#229;&#248;&#234;&#224;. &#202;&#238;&#228;&#238;&#226;&#229;&#242;&#229; &#231;&#224; &#227;&#240;&#229;&#248;&#234;&#224; &#239;&#240;&#232; &#234;&#238;&#236;&#239;&#232;&#235;&#232;&#240;&#224;&#237;&#229; &#241;&#224; &lt; 1000.
+<br>
+      CompilerErrorPos : integer; // &#207;&#238;&#231;&#232;&#246;&#232;&#255; &#226; &#232;&#231;&#240;&#224;&#231;&#224;, &#234;&#250;&#228;&#229;&#242;&#238; &#229; &#226;&#250;&#231;&#237;&#232;&#234;&#237;&#224;&#235;&#224; &#227;&#240;&#229;&#248;&#234;&#224;&#242;&#224;
+<br>
+end;
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#0000FF"><b><a name="unicode"></a>&Ecirc;&agrave;&ecirc; &auml;&agrave; &egrave;&ccedil;&iuml;&icirc;&euml;&ccedil;&acirc;&agrave;&igrave;&aring; Unicode</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+TRegExpr &#239;&#238;&#228;&#228;&#250;&#240;&#230;&#224; UniCode, &#237;&#238; &#240;&#224;&#225;&#238;&#242;&#232; &#241; &#237;&#229;&#227;&#238; </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>&#236;&#237;&#238;&#227;&#238; &#225;&#224;&#226;&#237;&#238;</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> :(
+<br>
+&#205;&#255;&#234;&#238;&#233; &#232;&#241;&#234;&#224; &#235;&#232; &#228;&#224; &#227;&#238; &#238;&#239;&#242;&#232;&#236;&#232;&#231;&#232;&#240;&#224; ? ;)
+<br>
+&#200;&#231;&#239;&#238;&#235;&#231;&#226;&#224;&#233;&#242;&#229; &#227;&#238; &#241;&#224;&#236;&#238; &#224;&#234;&#238; &#237;&#224;&#232;&#241;&#242;&#232;&#237;&#224; &#226;&#232; &#242;&#240;&#255;&#225;&#226;&#224; &#239;&#238;&#228;&#228;&#240;&#250;&#230;&#234;&#224; &#237;&#224; Unicode !
+<br>
+&#207;&#240;&#229;&#236;&#224;&#245;&#237;&#229;&#242;&#229; '.' &#238;&#242; {.$DEFINE UniCode} &#226; regexpr.pas. &#209;&#235;&#229;&#228; &#242;&#238;&#226;&#224; &#226;&#241;&#232;&#247;&#234;&#232; &#241;&#242;&#240;&#232;&#237;&#227;&#238;&#226;&#229; &#249;&#229; &#225;&#250;&#228;&#224;&#242; &#242;&#240;&#229;&#242;&#232;&#240;&#224;&#237;&#232; &#234;&#224;&#242;&#238; WideString.
+<br>
+
+<br>
+</span></span></span></span></span></span>
+
+  </TD>
+  <TD vAlign=top align=left bgColor="white" height="100%"
+       width=10>
+  </TD>
+</TR>
+</TABLE><BR><BR>
+
+<TABLE height=1 cellSpacing=0 cellPadding=0 width=780 bgColor=#0054a6 
+       border=0>
+<TR>
+  <TD><IMG height=1 alt="" src="../../../imgs/0.gif" width=1 border=0></TD>
+</TR>
+</TABLE>
+
+<TABLE height=70 cellSpacing=2 cellPadding=0 width=779 bgColor="white"
+       border=0>
+<TR>
+  <TD align=right width=2><IMG src="../../../imgs/0.gif" width=2 height=1 border=0></TD>
+  <TD vAlign=top align=left width="100%"><P class=pageauthor><I>&copy;&nbsp;<A 
+      class=pageauthor href="http://regexpstudio.com/">2004 Andrey V. Sorokin</A></I>,
+      Saint Petersburg, Russia
+      <BR><A class=pageauthor href="mailto:anso@mail.ru">anso@mail.ru</A>
+      <BR><A class=pageauthor href="http://regexpstudio.com/">RegExpStudio.com</A></P></TD>
+  <TD vAlign=top align=right width=468><A href="http://www.helpandmanual.com"
+      target="_blank"><img src="../../../tregexpr/Help/hmad468x60.gif" width="468" height="60"
+      border="0" alt="Help&Manual - the best help authoring tool!"></A></TD>
+  <TD align=right width=4><IMG src="../imgs/0.gif" width=4 height=1 border=0></TD>
+</TR>
+</TABLE><BR>
+
+</body>
+</html>

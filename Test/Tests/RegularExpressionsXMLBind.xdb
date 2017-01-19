@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xdb="http://www.borland.com/schemas/delphi/6.0/XMLDataBinding">
+  <xs:element name="regularExpressions" type="regularExpressionsType"/>
+  <xs:complexType name="regularExpressionsType"><xs:annotation>
+      <xs:appinfo xdb:docElement="regularExpressions"/>
+    </xs:annotation>
+    
+    <xs:sequence>
+      <xs:element name="regularExpression" type="regularExpressionType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="regularExpressionType">
+    <xs:sequence>
+      <xs:element name="description" type="xs:string"/>
+      <xs:element name="comment" type="xs:string"/>
+      <xs:element name="expression" type="xs:string"/>
+      <xs:element name="category" type="xs:string" maxOccurs="unbounded"/>
+      <xs:element name="testCase" type="testCaseType" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:integer"/>
+    <xs:attribute name="name" type="xs:string"/>
+  </xs:complexType>
+  <xs:complexType name="testCaseType"><xs:annotation>
+      <xs:appinfo xdb:repeated="True"/>
+    </xs:annotation>
+    
+    <xs:sequence>
+      <xs:element name="subject" type="subjectType"/>
+      <xs:element name="match" type="matchType" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="substitution" type="substitutionType" maxOccurs="unbounded"/>
+      <xs:element name="replace" type="replaceType" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="Modifiers" type="xs:string"/>
+  </xs:complexType>
+  <xs:complexType name="subjectType">
+    <xs:sequence>
+      <xs:element name="substring" type="substringType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="substringType">
+    <xs:simpleContent>
+      <xs:restriction base="xs:string">
+        <xs:attribute name="repeatCount" type="xs:integer"/>
+        <xs:attribute name="fileName" type="xs:string"/>
+      </xs:restriction>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="matchType"><xs:annotation>
+      <xs:appinfo xdb:repeated="True"/>
+    </xs:annotation>
+    
+    <xs:sequence>
+      <xs:element name="capturedSubstring" type="xs:string" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="position" type="xs:integer"/>
+    <xs:attribute name="length" type="xs:integer"/>
+  </xs:complexType>
+  <xs:complexType name="substitutionType"><xs:annotation>
+      <xs:appinfo xdb:repeated="True"/>
+    </xs:annotation>
+    
+    <xs:sequence>
+      <xs:element name="template" type="xs:string"/>
+      <xs:element name="result" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="replaceType"><xs:annotation>
+      <xs:appinfo xdb:repeated="True"/>
+    </xs:annotation>
+    
+    <xs:sequence>
+      <xs:element name="template" type="xs:string"/>
+      <xs:element name="result" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

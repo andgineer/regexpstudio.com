@@ -1,0 +1,19 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Time2HELP 1.0; Standard Template">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+<TITLE>RemoveLambdaTransitions Method</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF"><Font Face="Verdana">
+<BASEFONT NAME="verdana" Size="2">
+<TABLE BGCOLOR="#FFFF00" BORDER="0" WIDTH="100%">
+<TR>
+<TD><Font Color="#000000F"><B>RemoveLambdaTransitions method</B></Font></TD></TR></Table><P><B>Applies to</B><Br><A HREF="IDH_Class_TmlRegularExpression.htm">TmlRegularExpression</A><P><B>Declaration</B><Br><Font Face="Courier New"><B>Procedure</B> RemoveLambdaTransitions;</Font><P><B>Description</B><Br>Remove lambda transitions from the NFA.
+<p>     Lambda transitions are a powerful expressive tool - but they are expensive to use when
+     recognising a Regular Expression. By removing lambda transitions, it becomes more efficient
+     to use the NFA.
+<p>     This works as follows: If State A has a lambda transition to B, and B has a transition to C
+     on [a-z], then the lambda transition A-&gt;B can be replaced with a normal transition A to C on
+     [a-z]
+<p>     ie:  (A) ---lambda--&gt; (B) ---[a-z]--&gt; (C) == (A) ---[a-z]-&gt; (C) 

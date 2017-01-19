@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Time2HELP 1.0; Standard Template">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+<TITLE>GetTransitionsOn Method</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF"><Font Face="Verdana">
+<BASEFONT NAME="verdana" Size="2">
+<TABLE BGCOLOR="#FFFF00" BORDER="0" WIDTH="100%">
+<TR>
+<TD><Font Color="#000000F"><B>GetTransitionsOn method</B></Font></TD></TR></Table><P><B>Applies to</B><Br><A HREF="IDH_Class_TmlRegularExpressionState.htm">TmlRegularExpressionState</A><P><B>Declaration</B><Br><Font Face="Courier New"><B>Procedure</B> GetTransitionsOn(cChar: char; oStateList: TList);</Font><P><B>Description</B><Br>Get all the transitions we can make on this character.
+     If this state is the start of any lambda transitions, we implicitly follow them to find
+     any additional destinations which are possible for this character. oTransitionList is<b>not</b> cleared prior to adding our transitions.
+<P>
+<TABLE BGCOLOR="#000000" BORDER="0" cellspacing=2 WIDTH="100%">
+<TR>
+<TD><Font Color="#FFFFFF"><B>Parameters</B></Font></TD></TR></Table>
+<Table BGCOLOR="#EEEEEE" CellSpacing="1" Width="100%">
+<TR>
+<TD><Font Color=Blue>cChar&nbsp;</Font></TD>
+<TD>Character of input to recognise</TD></TR>
+<TR>
+<TD><Font Color=Blue>oTransitionList&nbsp;</Font></TD>
+<TD>List to receive possible transitions </TD></TR></Table>

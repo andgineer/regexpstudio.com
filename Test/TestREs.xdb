@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xdb="http://www.borland.com/schemas/delphi/6.0/XMLDataBinding">
+  <xs:element name="regularExpressions" type="regularExpressionsType"/>
+  <xs:complexType name="regularExpressionsType"><xs:annotation>
+      <xs:appinfo xdb:docElement="regularExpressions"/>
+    </xs:annotation>
+    
+    <xs:sequence>
+      <xs:element name="regularExpression" type="regularExpressionType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="regularExpressionType"><xs:annotation>
+      <xs:appinfo xdb:repeated="True"/>
+    </xs:annotation>
+    
+    <xs:sequence>
+      <xs:element name="Description" type="xs:string"/>
+      <xs:element name="Comment" type="xs:string"/>
+      <xs:element name="Expression" type="xs:string"/>
+      <xs:element name="testCase" type="testCaseType" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="name" type="xs:integer"/>
+  </xs:complexType>
+  <xs:complexType name="testCaseType"><xs:annotation>
+      <xs:appinfo xdb:repeated="True"/>
+    </xs:annotation>
+    
+    <xs:sequence>
+      <xs:element name="string" type="stringType" maxOccurs="unbounded"/>
+      <xs:element name="capturedSubstrings" type="capturedSubstringsType" maxOccurs="unbounded"/>
+      <xs:element name="substitution" type="substitutionType" maxOccurs="unbounded"/>
+      <xs:element name="replace" type="replaceType" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="Modifiers" type="xs:string"/>
+  </xs:complexType>
+  <xs:complexType name="stringType"><xs:annotation>
+      <xs:appinfo xdb:repeated="True"/>
+    </xs:annotation>
+    
+    <xs:simpleContent>
+      <xs:restriction base="xs:string">
+        <xs:attribute name="repeatCount" type="xs:integer"/>
+      </xs:restriction>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="capturedSubstringsType"><xs:annotation>
+      <xs:appinfo xdb:repeated="True"/>
+    </xs:annotation>
+    
+    <xs:sequence>
+      <xs:element name="substring" type="xs:string" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="substitutionType"><xs:annotation>
+      <xs:appinfo xdb:repeated="True"/>
+    </xs:annotation>
+    
+    <xs:sequence>
+      <xs:element name="template" type="xs:string"/>
+      <xs:element name="result" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="replaceType"><xs:annotation>
+      <xs:appinfo xdb:repeated="True"/>
+    </xs:annotation>
+    
+    <xs:sequence>
+      <xs:element name="template" type="xs:string"/>
+      <xs:element name="result" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

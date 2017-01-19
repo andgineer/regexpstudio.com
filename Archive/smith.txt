@@ -1,0 +1,4 @@
+  Special thanks to Jon Smith for really great work ! He corrected my ugly english in this documentation. If you see any error - it must be mine 'after Jon' changes ;)
+
+
+  Особая благодарность Jon Smith - он проделал титаническую работу по вычитыванию английской версии этой документации и исправлению в ней жутких питерских артефактов (и после этого еще вежливо отметил что бывает и хуже ;) ).

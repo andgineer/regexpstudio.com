@@ -1,0 +1,112 @@
+<html><head><meta name="generator" content="Help & Manual 2.6.3"><title>FAQ</title></head>
+<body background="niceblue.gif" bgcolor="#FFFFFF">
+<small><table width="100%"><tr><td align="right"><a href="tregexpr_decorator.htm"><img src="1arrow4.gif" border="0"></a><a href="tregexpr_author.htm"><img src="1arrow5.gif" border="0"></a></td></tr></small><table width="100%" border="0" cellspacing="0" cellpadding="3" bgcolor="#C6E7FF"><tr><td align="left">
+<font face="Arial" size="4" color="#000000"><font face="Arial" size="4" color="#0000FF"><b>FAQ</b></font><font face="Arial" size="5" color="#000000"><font face="Arial" size="5" color="#0000FF"><b>
+<br>
+</b></font></font></font>
+
+</td></tr></table><br>
+
+<font face="Arial" size="3" color="#000000">F.
+<br>
+<b>Wie kann ich TRegExpr mit Borland C++ Builder benutzen?</b>
+<br>
+Ich habe ein Problem, weil offensichtlich die Header Datei fehlt (.h or .hpp).
+<br>
+A.
+<br>
+<table border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="14"><font face="Arial" size="3" color="#000000">�</font></td><td><font face="Arial" size="3" color="#000000">F�ge RegExpr.pas zum BCB Projekt hinzu.
+&nbsp;<br>
+</font></td></tr><tr valign="top"><td><font face="Arial" size="3" color="#000000">�</font></td><td><font face="Arial" size="3" color="#000000">Kompiliere das Projekt. Dies generiert die Header Datei RegExpr.hpp.
+&nbsp;<br>
+</font></td></tr><tr valign="top"><td><font face="Arial" size="3" color="#000000">�</font></td><td><font face="Arial" size="3" color="#000000">Nun kann Programmcode geschrieben werden, der die RegExpr unit benutzt.Nicht vergessen den Verweis auf die Header Datei (#include "RegExpr.hpp") einzuf�gen, wo dies n�tig ist.
+&nbsp;<br>
+</font></td></tr><tr valign="top"><td><font face="Arial" size="3" color="#000000"></font></td><td></td></tr></table><font face="Arial" size="3" color="#000000">
+<br>
+F.
+<br>
+<b>Weshalb gibt TRegExpr mehr als eine Zeile zur�ck?</b>
+<br>
+Beispiel sei der regul�re Ausdruck &lt;font .*&gt;, der das erste &lt;font und danach den <b>ganzen Rest des Eingabefiles</b> zur�ckbringt inklusive dem letzten &lt;/html&gt;...
+<br>
+A.
+<br>
+Aus Grunden der Abwarstkompatibilitat ist der <a href="tregexpr_syntax.htm#modifier_s">Modifikator /s</a> standardmassig eingeschaltet.
+<br>
+Schalte ihn aus und '.' findet alles ausser <a href="tregexpr_syntax.htm#syntax_line_separators">Zeilenseparatoren</a> - Wie Du es wunschst.
+<br>
+BTW Ich schlage vor, Du nimmst '&lt;font ([^\n&gt;]*)&gt;', dann hast Du in Match[1] die URL.
+<br>
+
+<br>
+F.
+<br>
+<b>Weshalb gibt TRegExpr mehr zur�ck als ich erwarte?</b>
+<br>
+Beispiel sei der regul�re Ausdruck '&lt;p&gt;(.+)&lt;/p&gt;', angewandt auf den Zielstring '&lt;p&gt;a&lt;/p&gt;&lt;p&gt;b&lt;/p&gt;', der 'a&lt;/p&gt;&lt;p&gt;b' zur�ckgibt, aber nicht nur das 'a' wie erwartet.
+<br>
+A.
+<br>
+Standardm�ssig arbeiten alle Operatoren im "gierig" Modus. Sie finden also soviel wie m�glich.
+<br>
+Falls Du den "gen�gsamen" Modus benutzen m�chtest, so geht das nun ab Version 0.940. Da funktionieren Operatoren wie '+?' etc. in diesem minimalen Match-Modus. Du kannst auch alle Operatoren standardm�ssig in diesem Modus arbeiten lassen mit dem Einsatz des Modifikators 'g' (benutze dazu die entsprechenden TRegExpr-Eigenschaften oder Inline-Konstrukte wie '?(-g)' im regul�ren Ausdruck).
+<br>
+
+<br>
+F.
+<br>
+<b>Wie parse ich Quelltexte wie HTML mit Hilfe von TRegExpr?</b>
+<br>
+A.
+<br>
+Sorry folks, aber das ist fast unm�glich!
+<br>
+Nat�rlich kann man TRegExpr benutzen, um Teile aus einem HTML-File zu extrahieren, wie ich ja auch zeige in den Beispielen. Aber wenn effektiv ein ganzes File geparsed (d.h. in seine Elemente erlegt werden soll), dann braucht man einen ausgewachsenen Parser, nicht nur einen Regul�ren-Ausdruck-Matcher. Eine umfassende Lekt�re bietet beispielsweise das 'Perl Cookbook' von Tom Christiansen und Nathan Torkington. In kurzen Worten, es gibt viele Konstruktionen, die ganz leicht mit echten Parsern, aber nicht mit regul�ren Ausdr�cken zerlegt werden k�nnen. Zudem ist ein echter Parser viel schneller beim Zerlegen des Files, weil ein Regul�rer-Ausdruck-Matcher nicht nur den Eingabetext liest, sondern ein optimiertes Suchmuster aufbaut, was viel Zeit in Anspruch nehmen kann.
+<br>
+
+<br>
+F.
+<br>
+<b>Gibt es einen Weg, mehrere Treffer eines Suchmusters zu erhalten?</b>
+<br>
+A.
+<br>
+Du kannst eine Schleife mittels der ExecNext-Methode schreiben und so einen Treffer nach dem anderen herausholen.
+<br>
+Leichter kann es nicht gemacht werden, weil Delphi nicht wie Perl ein Interpreter ist. Als Compiler ist Delphi daf�r schneller.
+<br>
+Falls Du ein Beispiel suchst, schaue Dir doch die Implementation von TRegExpr.Replace an oder das Beispiel in <a href="tregexpr_decorator.htm">HyperLinksDecorator.pas</a>
+<br>
+
+<br>
+F.
+<br>
+<b>Ich �berpf�fe die Eingabe des Benutzers. Weshalb gibt TRegExpr 'True' zur�ck f�r falsche Eingabestrings?</b>
+<br>
+A.
+<br>
+In vielen F�llen vergessen die Benutzer von TRegExpr, dass er gemacht ist zur Suche im Eingabestring. Wenn Du also den Benutzer dazubringen m�chtest, dass er nur 4 Ziffern eingibt und Du dazu den regul�ren Ausdruck '\d{4,4}' benutzst, so wird dieser Ausdruck schon die 4 Ziffern in Eingaben wie '12345' oder 'irgendwas 1234 und nochwas' erkennen. Eventuell hast Du nur vergessen, dass die 4 Ziffern alleine vorkommen sollen. Du m�sstest also den regul�ren Ausdruck so schreiben: '^\d{4,4}$'.
+<br>
+
+<br>
+<a name="nongreedyoptimization">F.
+<br>
+<b>Weshalb arbeiten gen�gsame Operatoren manchmal wie ihre gierigen Gegenst�cke?</b>
+<br>
+Beispiel sei der regul�re Ausdruck 'a+?,b+?' angewandt auf den String 'aaa,bbb' findet 'aaa,b'. Sollte er nicht 'a,b' finden wegen des gen�gsamen ersten Iterators?
+<br>
+A.
+<br>
+Dies ist eine Einschr�nkung der von TRegExpr (und Perl und vielen UNIXen) verwandten Mathematik - regul�re Ausdr�cke verwenden nur "einfache" Suchoptimierungen, nicht unbedingt die beste Optimierung. In seltenen F�llen ist das nicht ausreichend, aber in den meisten F�llen ist es wohl eher ein Vorteil denn ein Nachteil: Und zwar aus Gr�nden der Performance und Vorhersagbarkeit des Resultats. Die Hauptregel ist: Die regul�ren Ausdr�cke versuchen zuerst, von der aktuellen Stelle im Zielstring alle Varianten zu finden und nur wenn es absolut keinen Treffer gibt, wird vom Zielstring ein Zeichen vorw�rtsgelesen und alles wiederholt. Wenn Du also 'a,b+?' benutzst, dann findet es 'a,b'. Im Falle von 'a+?,b+?' ist es zwar nicht w�nschenswert (wegen der gen�gsamen Iteratoren) aber m�glich, mehrere 'a's zu finden, also findet TRegExpr sie auch und gibt einen korrekten, aber nicht unbedingt optimalen Treffer zur�ck. Genauso wie die regul�ren Ausdr�cke Perl oder UNIX geht TRegExpr nicht so weit, dass es nach einem Zeichen weitergeht im Zielstring und erneut pr�ft, ob es einen "noch besseren Treffer" g�be. Zudem kann man hierbei �berhaupt nicht von "schlechteren oder besseren Treffern" sprechen. Bitte lies den Abschnitt  f�r <a href="tregexpr_syntax.htm#mechanism">Syntax</a> weitere Erl�uterungen.
+<br>
+
+<br>
+
+<br>
+</font></font>
+
+<small><table width="100%"><tr><td align="right"><a href="tregexpr_decorator.htm"><img src="1arrow4.gif" border="0"></a><a href="tregexpr_author.htm"><img src="1arrow5.gif" border="0"></a></td></tr></small>
+
+<script>     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){                 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');      ga('create', 'UA-90368520-1', 'auto');     ga('send', 'pageview');  </script>
+
+</body></html>

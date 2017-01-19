@@ -1,0 +1,114 @@
+<html><head><meta name="generator" content="Help & Manual 2.6.3"><title>FAQ</title></head>
+<body background="niceblue.gif" bgcolor="#FFFFFF">
+<small><table width="100%"><tr><td align="right"><a href="tregexpr_decorator.htm"><img src="1arrow4.gif" border="0"></a><a href="tregexpr_author.htm"><img src="1arrow5.gif" border="0"></a></td></tr></small><table width="100%" border="0" cellspacing="0" cellpadding="3" bgcolor="#ABFCFE"><tr><td align="left">
+<font face="Arial" size="3" color="#000000"><font face="Arial" size="3" color="#0000FF"><b>FAQ</b></font><font face="Arial" size="4" color="#000000"><font face="Arial" size="4" color="#0000FF"><b>
+<br>
+</b></font></font></font>
+
+</td></tr></table><br>
+
+<font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100">Q.
+<br>
+</font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100"><b>Comment utiliser TRegExpr avec Borland C++ Builder?</b></font></font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100">
+<br>
+J'ai un probl�me depuis qu'il n'y a plus aucun fichier d'en-t�te (.h or .hpp) n'est pas disponible.
+<br>
+R.
+<br>
+<table border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="0"></td><td width="13"><font face="Arial" size="2" color="#010100"></font></font></font><font face="Symbol" size="2" color="#000000"><font face="Symbol" size="2" color="#010100">�</font></font></td><td><font face="Symbol" size="2" color="#010100">&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100"> Ajouter RegExpr.pas au projet bcb.
+&nbsp;<br>
+</font></font></td></tr><tr valign="top"><td></td><td><font face="Arial" size="2" color="#010100"></font><font face="Symbol" size="2" color="#000000"><font face="Symbol" size="2" color="#010100">�</font></font></td><td><font face="Symbol" size="2" color="#010100">&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100"> Compiler le  projet. Ceci g�n�re le fichier RegExpr.hpp.
+&nbsp;<br>
+</font></font></td></tr><tr valign="top"><td></td><td><font face="Arial" size="2" color="#010100"></font><font face="Symbol" size="2" color="#000000"><font face="Symbol" size="2" color="#010100">�</font></font></td><td><font face="Symbol" size="2" color="#010100">&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100"> Maintenant vous pouvez utiliser l'unit� RegExpr.
+&nbsp;<br>
+</font></font></td></tr><tr valign="top"><td></td><td><font face="Arial" size="2" color="#010100"></font><font face="Symbol" size="2" color="#000000"><font face="Symbol" size="2" color="#010100">�</font></font></td><td><font face="Symbol" size="2" color="#010100">&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100"> Ne pas oublier d'inclure  #include "RegExpr.hpp" au d�but de votre programme.
+&nbsp;<br>
+</font></font></td></tr><tr valign="top"><td></td><td><font face="Arial" size="2" color="#010100"></font></td><td></td></tr></table><font face="Arial" size="2" color="#010100"></font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100">
+<br>
+Q.
+<br>
+</font></font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100"><b>Pourquoi TRegExpr retourne plus d'une ligne?</b></font></font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100">
+<br>
+Par exemple l'e.r. &lt;font .*&gt; retourne le premier &lt;font, et ensuite </font></font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100"><b>le reste du fichier</b></font></font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100"> incluant le dernier &lt;/html&gt;...
+<br>
+R.</font></font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100">
+<br>
+Pour la compatibilit� pr�c�dente le <a href="#dmn538">modifier /s</a> est � 'On' par d�faut.
+<br>
+Le mettre � off et ensuite le '.' concordera � tout except� les <a href="#idha88fzy">s�parateurs de ligne</a> - comme voulu.
+<br>
+</font></font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100">Mais je sugg�re aussi l'e.r. suivante '&lt;font ([^&gt;]*)&gt;', dans Match[1] sera l'url.
+<br>
+
+<br>
+Q.
+<br>
+</font></font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100"><b>Pourquoi TRegExpr retourne plus que pr�vu?</b></font></font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100">
+<br>
+Par exemple l'e.r. '&lt;p&gt;(.+)&lt;/p&gt;' appliqu� � la cha�ne '&lt;p&gt;a&lt;/p&gt;&lt;p&gt;b&lt;/p&gt;' retourne 'a&lt;/p&gt;&lt;p&gt;b' mais pas 'a' comme pr�vu.
+<br>
+R.
+<br>
+Par d�faut tous les op�rateurs fonctionne en mode "vorace", aussi il correspond � compare le plus possible. Si vous voulez le mode "non-vorace" vous pouvez utiliser les op�rateurs '+?' et ainsi de suite (nouveau dans la v. 0.940) ou changer tous les op�rateurs en mode "non-vorace" avec l'aide du modifier "g" (utiliser les propri�t�s convenablement dans TRegExpr ou avec une inscription dans l'e.r. comme '?(-g)').
+<br>
+
+<br>
+Q.
+<br>
+</font></font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100"><b>Comment analyser des sources comme du HTML avec l'aide deTRegExpr</b></font></font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100">
+<br>
+R.
+<br>
+D�sol� les gars, mais c'est pratiquement impossible!
+<br>
+Bien sur que vous pouvez utiliser TRegExpr pour extraire des informations comme d�montr� dans mes exemples, mais si vous voulez faire une analyse pr�cise, vous devez utiliser un vrai analyseur, pas l'e.r.!
+<br>
+Vous pouvez lire les explications de Tom Christiansen et Nathan Torkington dans le document 'Perl Cookbook', par exemple. Pour faire une histoire courte, il y a plusieurs expressions qui peuvent �tre analyser facilement avec un vrai analyseur mais pas toutes par e.r., et les vrai analyseurs sont PLUS rapide pour faire l'analyse, parce que l'e.r. ne scanne pas l'entr�e avant, il fait plut�t une optimisation de recherche qui peut prendre beaucoup de temps.
+<br>
+
+<br>
+Q.
+<br>
+</font></font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100"><b>Est-ce qu'il y a une fa�on d'avoir une correspondance multiple d'un mod�le sur TRegExpr?</b></font></font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100">
+<br>
+R.
+<br>
+Vous pouvez faire une loupe et proc�der comparaison par comparaison avec la m�thode ExecNext.
+<br>
+�a ne peut �tre plus fait plus facilement parce que delphi n'est pas un interpr�teur comme Perl (et les interpr�teurs fonctionnent g�n�ralement tr�s lentement!).
+<br>
+Si vous voulez quelques exemples, svp visionner la m�thode TRegExpr.Replace. ou aux exemples dans <a href="tregexpr_decorator.htm">HyperLinksDecorator.pas</a>.
+<br>
+
+<br>
+Q.
+<br>
+</font></font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100"><b>Je v�rifie l'entr�e d'utilisateur. Pourquoi TRegExpr retourne 'Vrai' pour une mauvaise cha�ne d'entr�e?</b></font></font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100">
+<br>
+R.
+<br>
+Dans plusieurs cas de TRegExpr les utilisateurs oublient qu'une expression r�guli�re est pour chercher dans les cha�nes d'entr�es. Aussi, si vous voulez faire que l'utilisateur entre seulement 4 caract�res num�rique et que vous utiliser l'expression '4,4', vous pouvez ignorer les mauvaises entr�es comme '12345' ou 'n'importe quel caract�re 1234 et n'importe quoi'. Vous devez ajouter une v�rification pour le d�but et la fin de la ligne et vous assurer qu'il n'y a rien d'autre comme dans l'expression suivante: '^4,4$'.
+<br>
+
+<br>
+Q.
+<br>
+</font></font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100"><b>Pourquoi que le mode non-vorace quelquefois fonctionne comme le mode vorace?</b></font></font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100">
+<br>
+Par exemple, l'e.r. 'a+?,b+?' appliqu� � 'aaa,bbb' retourne 'aaa,b', mais normalement ne devrait-il pas retourner 'a,b' � cause de la nature non-vorace du premier it�rateur ?
+<br>
+R.
+<br>
+C'est une limite d'utilisation par la math�matique de TRegExpr (et plusieurs autre comme Perl et Unix). E.r. effectue seulement une 'simple' optimisation de recherche, et ne tente pas d'obtenir la </font></font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100"><b>meilleure optimisation</b></font></font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100">. Dans plusieurs cas ce n'est pas bon, mais en g�n�ral cette limite est plut�t avantageuse, � cause des performances et des pr�visions de raison.
+<br>
+La r�gle g�n�rale est que premi�rement e.r. essaie de trouver une correspondance � partir de sa position actuelle et seulement si c'est compl�tement impossible de trouver une correspondance alors il avance d'un caract�re et r�essaie de nouveau � partir de cet emplacement. Aussi si vous utiliser 'a,b+?' il correspondra avec 'a,b', mais dans le cas de 'a+?,b+?' ce '</font></font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100"><b>n'est pas recommand�</b></font></font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100">' (� cause du mode non-vorace) </font></font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100"><b>mais possible</b></font></font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100"> de correspondre � plus d'un 'a', aussi TRegExpr le fait mais le r�sultat obtenu ne sera pas une correspondance optimum. TRegExpr comme Perl ou les e.r. de Unix ne tente pas de bouger en avant et v�rifier qu'est-ce qu'il serait la meilleure correspondance. De plus, il ne peut comparer en terme 'plus ou moins bon'.
+<br>
+SVP, lire le section '<a href="#ankq_7">Syntaxe</a>' du fichier d'aide pour plus d'explication.
+<br>
+</font></font></font>
+
+<small><table width="100%"><tr><td align="right"><a href="tregexpr_decorator.htm"><img src="1arrow4.gif" border="0"></a><a href="tregexpr_author.htm"><img src="1arrow5.gif" border="0"></a></td></tr></small>
+
+<script>     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){                 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');      ga('create', 'UA-90368520-1', 'auto');     ga('send', 'pageview');  </script>
+
+</body></html>

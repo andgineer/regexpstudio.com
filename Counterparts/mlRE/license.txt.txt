@@ -1,0 +1,7 @@
+License
+
+The RegularExpression archive includes full source code which you are welcome to study and pull apart for your own interest - after all, the examination of other code is perhaps the best way to improve your own programming skills. What you are not allowed to do is to claim the work as your own, or distribute modified copies of the library. If you have a change, email me and (subject to review) it will probably be included in the official distribution - with full credit attributed to you for your changes.
+
+This library is free for personal use - use by you on your own computer writing applications for your own use or use by your own family. As soon as you start distributing the applications you build (even just passing them along to a friend or releasing as freeware), then you need another license. For freeware applications and trivial utilities you've written for a friend, there is no charge - just the requirement that you register with me. I'll send you a confirmation by return email.
+
+For other use - where you intend to make money yourself from the application, then a full commercial distribution license can be had for a small charge. I will have online ordering up and running as soon as possible, for now just email me and I'll send you details. Special case: If you are writing a specific piece of software for a properly registered charitable organisation, and you have yourself discounted your services to assist the charity involved, then I'll happily grant you a special case, no cost, license for that project. 

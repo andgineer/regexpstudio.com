@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<HEAD>
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-8859-1">
+  <meta name="Content-Language" content="spanish">
+  <TITLE>Autor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;���������� ���������,perl,regexp,Delphi,Pascal,FreePascal,Kylix,Libraries,VCL,CLX,Tools,files utils</TITLE>
+  <!--  TRegExpr Expresiones Regulares (r.e. RegExpr regexp tregexpr), egrep perl unix; delphi pascal FreePascal Kylix freeware component Andrey Sorokin -->
+  <meta name="home_url" content="http://regexpstudio.com/">
+  <meta name="GENERATOR" content="Help & Manual">
+  <LINK REL="stylesheet" HREF="../../../styles/default.css" TYPE="text/css">
+  <meta name="description" content=" delphi pascal FreePascal Kylix freeware components: regular expressions (r.e. RegExpr regexp tregexpr), egrep perl unix; Andrey V. Sorokin">
+  <meta name="abstract" content=" TRegExpr Expresiones Regulares (r.e. RegExpr regexp tregexpr), egrep perl unix; Andrey V. Sorokin">
+  <meta name="keywords" content=" TRegExpr Expresiones Regulares (r.e. RegExpr regexp tregexpr), egrep perl unix; delphi pascal FreePascal Kylix freeware component Andrey V. Sorokin">
+  <META NAME="distribution" CONTENT="world">
+  <meta name="audience" content="all">
+  <meta name="robots" content="index,all">
+  <meta name="revisit" content="30 days">
+  <meta name="revisit-after" content="30 days">
+  <meta name="site-created" content="01-01-2004">
+  <META NAME="author" CONTENT="RegExpStudio.com, Andrey V. Sorokin, Saint Petersburg, Russia.">
+  <META NAME="copyright" CONTENT="Copyright &copy; RegExpStudio.com, Andrey V. Sorokin, Saint Petersburg, Russia. All rights reserved">
+</HEAD>
+  
+<BODY bgcolor=#FFFFFF leftmargin="0" topmargin="0" marginwidth="0" 
+      marginheight="0">
+
+<TABLE bgColor=#0054a6 cellspacing="2" cellpadding="2" border="0" 
+       width="780">
+<TR>
+  <TD align="left"><div class="MainTitle"><a href="http://regexpstudio.com"
+   title="" class="MainTitle"><span class="MainTitle">RegExp Studio</span></a>
+<br>TRegExpr v.0.947 - Delphi Expresiones Regulares
+<br><img src="../../../imgs/0.gif" width="1" height="15" alt=""><br>
+</div></TD>
+  <TD align="right"><A class=LangSwitch
+   href="../../../BG/tregexpr/Help/about.html">Bulgarian</A><BR>
+  <A class=LangSwitch
+   href="../../../tregexpr/Help/about.html">English</A><BR>
+  <A class=LangSwitch
+   href="../../../FR/tregexpr/Help/about.html">French</A><BR>
+  <A class=LangSwitch
+   href="../../../DE/tregexpr/Help/about.html">German</A><BR>
+  <A class=LangSwitch
+   href="../../../ru/tregexpr/Help/about.html">Russian</A><BR>
+  <DIV class=LangSwitch>Spanish</DIV>
+  </TD>
+</TR>
+</TABLE>
+
+<TABLE height=1 cellSpacing=0 cellPadding=0 width=780 bgColor="white" border=0>
+<TR><TD><IMG height=1 alt="" src="../../../imgs/0.gif" width=1 border=0></TD></TR>
+</TABLE>
+
+
+<TABLE width="780" height=24 cellspacing="2" cellpadding="2" border="0"
+  bgColor=#0054a6>
+<TR>
+  <TD><img src="../../../imgs/HomeSmall.gif" alt="About TRegExpr" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="about.html">Acerca&nbsp;de</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../../imgs/0.gif" width=5 border=0></TD>
+  <TD><img src="../../../imgs/DownloadsSmall.gif" alt="Installation" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="installation.html">Instalaci�n</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../../imgs/0.gif" width=5 border=0></TD>
+  <TD><img src="../../../imgs/RegExpSyntaxSmall.gif" alt="Regular Expressions Syntax" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="regexp_syntax.html">Sintaxis</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../../imgs/0.gif" width=5 border=0></TD>
+  <TD><img src="../../../imgs/TRegExprInterfaceSmall.gif" alt="TRegExpr Interface" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="tregexpr_interface.html">Interface</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../../imgs/0.gif" width=5 border=0></TD>
+  <TD><img src="../../../imgs/FAQSmall.gif" alt="FAQ" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="faq.html">FAQ</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../../imgs/0.gif" width=5 border=0></TD>
+  <TD><img src="../../../imgs/DemosSmall.gif" alt="TRegExpr usage demos" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="demos.html">Demos</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../../imgs/0.gif" width=5 border=0></TD>
+  <TD><IMG src="../../../imgs/AnSoHomePageSmall.gif" alt="Author" height=16 width=18 border=0></TD>
+  <TD><A class=top_menu href="author.html">Autor</A></TD>
+
+  <TD width="100%">&nbsp;</TD>
+</TR>
+</TABLE>
+
+
+
+<TABLE cellSpacing=14 cellPadding=0 width=779 bgColor="white" border=0>
+<TR>
+  <TD vAlign=top width=769 height="100%">
+
+
+<span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:12pt; color:#0000FF"><b>Autor
+<br>
+</b></span></span></span>
+
+
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+     Andrey V. Sorokin
+<br>
+     Saint Petersburg, Russia
+<br>
+     <a href="mailto:anso@mail.ru">anso@mail.ru</a>
+<br>
+     <a href="http://regexpstudio.com/" target="_blank">http://regexpstudio.com</a>
+<br>
+
+<br>
+<b>Por favor, si cree que encontr&#243; un error o tiene preguntas acerca de TRegExpr, obtenga la &#250;ltima versi&#243;n TRegExpr de mi home page y lea las </b><b><a href=faq.html>FAQ</a></b><b> antes de enviarme la consulta a m&#237;!
+<br>
+
+<br>
+</b>Esta librer&#237;a es derivada del c&#243;digo de Henry Spencer.
+<br>
+Mi trabajo fue la traducci&#243;n de los fuentes de C a Object Pascal, implementar el entorno de objeto y agregar algunas nuevas funciones.
+<br>
+Muchas caracter&#237;sticas son sugerencias e implementaciones parciales de usuarios de TRegExpr (ver los Agradecimientos).
+<br>
+
+<br>
+---------------------------------------------------------------
+<br>
+     Agradecimientos
+<br>
+---------------------------------------------------------------
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="0"></td><td width="13"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span><span style="font-family:Symbol; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></td><td><span style="font-family:Symbol; font-size:10pt; color:#000000">&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">  Guido Muehlwitz - encontr&#243; y arregl&#243; un feo error en el procesamiento de cadenas grandes
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="0"></td><td width="13"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span><span style="font-family:Symbol; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></td><td><span style="font-family:Symbol; font-size:10pt; color:#000000">&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">  Stephan Klimek - pruebas en CPPB y sugerencias/implementaci&#243;n de muchas funciones
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="0"></td><td width="13"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span><span style="font-family:Symbol; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></td><td><span style="font-family:Symbol; font-size:10pt; color:#000000">&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">  Steve Mudford - implementaci&#243;n del par&#225;metro Offset
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="0"></td><td width="13"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span><span style="font-family:Symbol; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></td><td><span style="font-family:Symbol; font-size:10pt; color:#000000">&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">  Martin Baur (<a href="http://www.mindpower.com',`',1,`')" target="_blank">www.mindpower.com</a>) - Ayuda en Alem&#225;n y &#250;tiles sugerencias
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="0"></td><td width="13"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span><span style="font-family:Symbol; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></td><td><span style="font-family:Symbol; font-size:10pt; color:#000000">&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">  Yury Finkel - implementaci&#243;n de soporte para UniCode, encontr&#243; y arregl&#243; algunos errores
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="0"></td><td width="13"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span><span style="font-family:Symbol; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></td><td><span style="font-family:Symbol; font-size:10pt; color:#000000">&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">  Ralf Junker - Implement&#243; algunas funciones, varias sugerencias de optimizacion
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="0"></td><td width="13"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span><span style="font-family:Symbol; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></td><td><span style="font-family:Symbol; font-size:10pt; color:#000000">&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">  Simeon Lilov - Ayuda en B&#250;lgaro
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="0"></td><td width="13"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span><span style="font-family:Symbol; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></td><td><span style="font-family:Symbol; font-size:10pt; color:#000000">&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">  Filip Jirs&#225;k y Matthew Winter (wintermi@yahoo.com) - colaboraron en la implementaci&#243;n del modo no voraz
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="0"></td><td width="13"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span><span style="font-family:Symbol; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></td><td><span style="font-family:Symbol; font-size:10pt; color:#000000">&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">  Kit Eason varios ejemplos para la secci&#243;n de introducci&#243;n
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="0"></td><td width="13"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span><span style="font-family:Symbol; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></td><td><span style="font-family:Symbol; font-size:10pt; color:#000000">&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">  Juergen Schroth - cazador de errores y sugerencias &#250;tiles
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="0"></td><td width="13"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span><span style="font-family:Symbol; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></td><td><span style="font-family:Symbol; font-size:10pt; color:#000000">&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">  Martin Ledoux - Ayuda en Franc&#233;s
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="0"></td><td width="13"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span><span style="font-family:Symbol; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></td><td><span style="font-family:Symbol; font-size:10pt; color:#000000">&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">  Diego Calp (info@agroideas.com) Ayuda en Espa&#241;ol
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="0"></td><td width="13"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+  y muchos otros - por un gran trabajo detectando errores !
+<br>
+
+<br>
+Todav&#237;a estoy buscando ayuda para traducir este documento a otros idiomas
+<br>
+</span></span></span>
+
+  </TD>
+  <TD vAlign=top align=left bgColor="white" height="100%"
+       width=10>
+  </TD>
+</TR>
+</TABLE><BR><BR>
+
+<TABLE height=1 cellSpacing=0 cellPadding=0 width=780 bgColor=#0054a6 
+       border=0>
+<TR>
+  <TD><IMG height=1 alt="" src="../../../imgs/0.gif" width=1 border=0></TD>
+</TR>
+</TABLE>
+
+<TABLE height=70 cellSpacing=2 cellPadding=0 width=779 bgColor="white"
+       border=0>
+<TR>
+  <TD align=right width=2><IMG src="../../../imgs/0.gif" width=2 height=1 border=0></TD>
+  <TD vAlign=top align=left width="100%"><P class=pageauthor><I>&copy;&nbsp;<A 
+      class=pageauthor href="http://regexpstudio.com/">2004 Andrey V. Sorokin</A></I>,
+      Saint Petersburg, Russia
+      <BR><A class=pageauthor href="mailto:anso@mail.ru">anso@mail.ru</A>
+      <BR><A class=pageauthor href="http://regexpstudio.com/">RegExpStudio.com</A></P></TD>
+  <TD vAlign=top align=right width=468><A href="http://www.helpandmanual.com"
+      target="_blank"><img src="../../../tregexpr/Help/hmad468x60.gif" width="468" height="60"
+      border="0" alt="Help&Manual - the best help authoring tool!"></A></TD>
+  <TD align=right width=4><IMG src="../../../imgs/0.gif" width=4 height=1 border=0></TD>
+</TR>
+</TABLE><BR>
+
+</body>
+</html>

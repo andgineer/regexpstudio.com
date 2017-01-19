@@ -1,0 +1,58 @@
+<HTML>
+<HEAD>
+<title>Test file for TestRExp.exe</title>
+</HEAD>
+
+<BODY>
+<P>
+Hi !<BR>
+My name is Andrey Sorokin,
+I am software developer from Saint-Petersburg,	Russia.
+</P>
+
+<P>
+I am working in cash payment system for Internet project:
+<A HREF="http://www.paycash.ru"> http://www.paycash.ru</A>, 
+phone +7 (812) 329-44-69,
+or <a href="http://www.cyphermint.com/"> www.cyphermint.com</a>,
+Boston, Massuchusets, USA.
+</P>
+
+TRegExpr mirrors (please, note: detailed documentation available for free
+in English, Russian, German, French, Bulgarian and Spanish and distributed separately!):
+<ul>
+<li><a href="http://anso.virtualave.net/delphi_stuff.htm" target=_blank>Andrey Sorokin home page</a> or redirector: <A HREF="http://anso.da.ru">anso.da.ru</A>
+<li><a href="http://www.delphicity.net/component.cfm?componentid=239" target=_blank>DelphiCity</a> (cool site !)
+<li><a href="http://www.torry.net/text.htm#4001" target=_blank>Torry's Delphi site</a>
+<li><a href="http://www.delphipages.com/result.cfm?ID=1216" target=_blank>Delphi Pages</a>
+</ul>
+
+<P>
+Please, feel free to contact me anso@mail.ru, anso@paycash.ru,
+anso@mailbox.alkor.ru.
+</P>
+
+<P>
+And the example for &quot;Non-greedy&quot; example of extracting script blocks:
+</P>
+
+<!--TopList COUNTER--><script language="JavaScript"><!--
+d=document;js=10;a='';a+=';r='+escape(d.referrer)
+//--></script><script language="JavaScript1.1"><!--
+js=11;a+=';j='+navigator.javaEnabled()
+//--></script><script language="JavaScript1.2"><!--
+js=12;s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+//--></script><script language="JavaScript1.3"><!--
+js=13//--></script><script language="JavaScript"><!--
+d.write('<img src="http://195.34.34.80/counter'+
+'?id=62464;js='+js+a+'" alt="" height=1 width=1>')
+if(js>11)d.write('<'+'!-- ')//--></script><noscript><img
+src="http://195.34.34.80/counter?js=na;id=62464"
+height=1 width=1 alt=""></noscript><script language="JavaScript"><!--
+if(js>11)d.write('--'+'>')
+//--></script><!--TopList COUNTER-->
+
+</BODY>
+
+</HTML>

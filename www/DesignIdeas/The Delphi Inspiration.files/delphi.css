@@ -1,0 +1,36 @@
+BODY {
+	FONT-FAMILY: Verdana,Arial,Helvetica
+}
+EM {
+	FONT-WEIGHT: bold; COLOR: #003399; FONT-STYLE: normal
+}
+.ClassName {
+	FONT-WEIGHT: bold; FONT-SIZE: 120%; COLOR: #990033
+}
+.PropertiesMethods {
+	FONT-WEIGHT: bold; FONT-SIZE: 110%; COLOR: #009933
+}
+CODE {
+	FONT-FAMILY: "CourierNew",Courier
+}
+.Title {
+	FONT-WEIGHT: bold; FONT-SIZE: 120%
+}
+.Component {
+	FONT-WEIGHT: bold; FONT-SIZE: 110%
+}
+H1 {
+	FONT-SIZE: 115%
+}
+H2 {
+	FONT-SIZE: 110%
+}
+H3 {
+	FONT-SIZE: 105%
+}
+DT {
+	MARGIN-TOP: 3px; FONT-WEIGHT: bold
+}
+.nav:hover {
+	BACKGROUND-COLOR: #fdb6a2
+}

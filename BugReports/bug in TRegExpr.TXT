@@ -1,0 +1,45 @@
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+From:    Tom Corcoran <tom.corcoran@sportstg.com>
+To:      anso@mail.ru <anso@mail.ru>
+Date:    Friday, July 16, 2004, 3:39:23 PM
+Subject: bug in TRegExpr
+Files:   Message.html
+--====----====----====----====----====----====----====----====----====----===--
+Hi,
+
+I use :
+
+Re =
+'^([A-Z][a-z]*)([A-Z][a-z]*)?([A-Z][a-z]*)?([A-Z][a-z]*)?(Edit)?(Modal)?Dlg$
+';
+
+RegExp.Exec('PlayerDemographicsModalDlg') returns true
+
+$1 = Player
+$2 = Demographics
+$3 = Modal
+
+I want to use replace / substitute to return "Player Demographics Modal". I
+have tried lots of things such as :
+
+RegExp.Replace(Title,Format('%s %s %s
+%s',[RegExp.Match[0],RegExp.Match[1],RegExp.Match[2]),True);
+Title := RegExp.Substitute('$1 $2 $3);
+
+But none work. So I think there must be a bug in RegExpr. I appreciate any
+help on this, perhaps there could be a newsgroup where other who use your
+code could contribute.
+
+Thanks,
+
+
+Cheers, Tom.
+
+SPORTS TG PLC
+Tel:+44 (0)118 973 7376
+Fax:+44 (0)118 973 5910
+E-mail: tom.corcoran@sportstg.com
+Website: www.sportstg.com
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+

@@ -1,0 +1,132 @@
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+From:    Alvaro Xaverite <alvaro_xav@yahoo.com>
+To:      anso@mail.ru <anso@mail.ru>
+Date:    Tuesday, June 27, 2006, 12:13:47 PM
+Subject: TReqExpr Problem on Gamefaqs
+Files:   Сообщение.html
+--====----====----====----====----====----====----====----====----====----===--
+Hi, I just tried your TRegExpr, and learned something about Regular Expression.
+Well, last night I tried to make a program that can parse URL from HTML, so I can download it with wget.
+  So, it looks like I found a "bug" : 
+Test input is from Diablo II Faq, http://www.gamefaqs.com/computer/doswin/game/370600.html
+   
+  The problem is line 138, contains 40,276 characters.
+  So, here's my result : 
+reURL.Expression := '(destURL=)(([^"])*\.txt)';
+  memo_ResultString.Lines.Add(reURL.Match[2]);
+  BTW, I convert %3A to : and %2F to /
+  
+----------------------------- START RESULT -----------------------------
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_c.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_i.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_d.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_reference.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_firewall_sorceress.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_martial_artist.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_meleemancer.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_summonancer.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_wolfbrother.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_110_concentrator.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_110_flaming_druid.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_110_martial_artist.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_110_palidin.txt
+http://db.gamefaqs.com/computer/doswin
+/file/diablo_ii_lod_110_summoner.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_110_windy_druid.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_111_auradin.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_111_blizz_sorc.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_111_clorb_sorc.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_111_dragoon.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_111_find_barb.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_110_hammerdin.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_111_hs_pal.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_111_frozenwall_hybrid.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_111_hybrid_ass.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_110_meteorb_sorc.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_111_bonemancer.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_111_necro.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_111_passivezon.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_111_poisoner.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_111_trapassin.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_111_tri_sorc.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_111_smiter.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_111_werewolf.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_111_whirlwind_barb.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_111_zealadin.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_amazon.txt
+http://db.gamefaqs.com/computer%2
+Fdoswin/file/diablo_ii_lod_assassin.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_assassin_a.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_assassin_b.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_bowazon.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_111_commander.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_druid.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_elemental_assassin.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_healadin.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_melee_sorc.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_necromancer.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_zookeeper.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_paladin_a.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_paladin.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_pvp_necromancer.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_pvp_paladin.txt
+http://db.gamefaqs.com/
+computer/doswin/file/diablo_ii_pvp_barbarian.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_shapeshifting_druid.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_sorceress_a.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_sorceress.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_summon_druid.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_sword_barbarian.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_werebear.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_werebear_druid.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_110_high_level.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_cube.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_110_items.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_111_ultimate_quest.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_111_runeword.txt
+http://db.gamefaqs.com/com
+puter/doswin/file/diablo_ii_anti_pk.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_beginner.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_bestiary.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_char_event.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_char.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_crafted_items.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_hell.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_hex_editing.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_hirelings.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_ladder_runeword.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_low_dueling.txt
+http://db.gamefa
+qs.com/computer/doswin/file/diablo_ii_lod_magic_find.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_multiplayer.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_prefix.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_pvp_sorceress_a.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_rare_items.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_reanimated_horde.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_rune_109.txt
+http://db.gamefaqs.com/computer/mac/file/diablo_ii_lod_rune_111.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_set_items_a.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_set_items.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_subclasses.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_synerg
+y.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_terms.txt
+http://db.gamefaqs.com/computer/doswin/file/diablo_ii_lod_unique.txt
+------------------------------ END RESULT ------------------------------
+  Why the result become like this ?
+http://db.gamefaqs.com/computer/doswin
+/file/diablo_ii_lod_110_summoner.txt
+  Is this happen because of max number of character in one line exceed the limit ?
+   
+  Please answer as soon as possible.
+   
+  With regards, 
+Alvaro
+
+
+ 		
+---------------------------------
+Yahoo! Groups gets better. Check out the new email design. Plus there?s much more to come.  
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+

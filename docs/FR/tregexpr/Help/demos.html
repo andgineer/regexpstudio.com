@@ -1,0 +1,318 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<HEAD>
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-8859-1">
+  <meta name="Content-Language" content="french">
+  <TITLE>Comment &ccedil;a Fonctionne&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;���������� ���������,perl,regexp,Delphi,Pascal,FreePascal,Kylix,Libraries,VCL,CLX,Tools,files utils</TITLE>
+  <!--  TRegExpr Expressions R�guli�res (r.e. RegExpr regexp tregexpr), egrep perl unix; delphi pascal FreePascal Kylix freeware component Andrey Sorokin -->
+  <meta name="home_url" content="http://regexpstudio.com/">
+  <meta name="GENERATOR" content="Help & Manual">
+  <LINK REL="stylesheet" HREF="../../../styles/default.css" TYPE="text/css">
+  <meta name="description" content=" delphi pascal FreePascal Kylix freeware components: regular expressions (r.e. RegExpr regexp tregexpr), egrep perl unix; Andrey V. Sorokin">
+  <meta name="abstract" content=" TRegExpr Expressions R�guli�res (r.e. RegExpr regexp tregexpr), egrep perl unix; Andrey V. Sorokin">
+  <meta name="keywords" content=" TRegExpr Expressions R�guli�res (r.e. RegExpr regexp tregexpr), egrep perl unix; delphi pascal FreePascal Kylix freeware component Andrey V. Sorokin">
+  <META NAME="distribution" CONTENT="world">
+  <meta name="audience" content="all">
+  <meta name="robots" content="index,all">
+  <meta name="revisit" content="30 days">
+  <meta name="revisit-after" content="30 days">
+  <meta name="site-created" content="01-01-2004">
+  <META NAME="author" CONTENT="RegExpStudio.com, Andrey V. Sorokin, Saint Petersburg, Russia.">
+  <META NAME="copyright" CONTENT="Copyright &copy; RegExpStudio.com, Andrey V. Sorokin, Saint Petersburg, Russia. All rights reserved">
+</HEAD>
+  
+<BODY bgcolor=#FFFFFF leftmargin="0" topmargin="0" marginwidth="0" 
+      marginheight="0">
+
+<TABLE bgColor=#0054a6 cellspacing="2" cellpadding="2" border="0" 
+       width="780">
+<TR>
+  <TD align="left"><div class="MainTitle"><a href="http://regexpstudio.com"
+   title="" class="MainTitle"><span class="MainTitle">RegExp Studio</span></a>
+<br>TRegExpr v.0.942 - Delphi Expressions R�guli�res
+<br><img src="../../../imgs/0.gif" width="1" height="15" alt=""><br>
+</div></TD>
+  <TD align="right"><A class=LangSwitch
+   href="../../../BG/tregexpr/Help/about.html">Bulgarian</A><BR>
+  <A class=LangSwitch
+   href="../../../tregexpr/Help/about.html">English</A><BR>
+  <DIV class=LangSwitch>French<BR></DIV>
+  <A class=LangSwitch
+   href="../../../DE/tregexpr/Help/about.html">German</A><BR>
+  <A class=LangSwitch
+   href="../../../ru/tregexpr/Help/about.html">Russian</A><BR>
+  <A class=LangSwitch
+   href="../../../ES/tregexpr/Help/about.html">Spanish</A></TD>
+</TR>
+</TABLE>
+
+<TABLE height=1 cellSpacing=0 cellPadding=0 width=780 bgColor="white" border=0>
+<TR><TD><IMG height=1 alt="" src="../../../imgs/0.gif" width=1 border=0></TD></TR>
+</TABLE>
+
+
+<TABLE width="780" height=24 cellspacing="2" cellpadding="2" border="0"
+  bgColor=#0054a6>
+<TR>
+  <TD><img src="../../../imgs/HomeSmall.gif" alt="About TRegExpr" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="about.html">A&nbsp;propos</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../../imgs/0.gif" width=5 border=0></TD>
+  <TD><img src="../../../imgs/DownloadsSmall.gif" alt="Installation" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="installation.html">Installation</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../../imgs/0.gif" width=5 border=0></TD>
+  <TD><img src="../../../imgs/RegExpSyntaxSmall.gif" alt="Regular Expressions Syntax" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="regexp_syntax.html">Syntaxe</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../../imgs/0.gif" width=5 border=0></TD>
+  <TD><img src="../../../imgs/TRegExprInterfaceSmall.gif" alt="TRegExpr Interface" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="tregexpr_interface.html">Interface</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../../imgs/0.gif" width=5 border=0></TD>
+  <TD><img src="../../../imgs/FAQSmall.gif" alt="FAQ" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="faq.html">FAQ</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../../imgs/0.gif" width=5 border=0></TD>
+  <TD><img src="../../../imgs/DemosSmall.gif" alt="TRegExpr usage demos" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="demos.html">Demos</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../../imgs/0.gif" width=5 border=0></TD>
+  <TD><IMG src="../../../imgs/AnSoHomePageSmall.gif" alt="Author" height=16 width=18 border=0></TD>
+  <TD><A class=top_menu href="author.html">Auteur</A></TD>
+
+  <TD width="100%">&nbsp;</TD>
+</TR>
+</TABLE>
+
+
+
+<TABLE cellSpacing=14 cellPadding=0 width=779 bgColor="white" border=0>
+<TR>
+  <TD vAlign=top width=769 height="100%">
+
+
+<span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:12pt; color:#0000FF"><b>Comment &#231;a Fonctionne</b></span><span style="font-family:Helvetica,Arial; font-size:14pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:14pt; color:#0000FF"><b>
+<br>
+</b></span></span></span></span></span></span>
+
+
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#0000FF"><b>Simple illustrations</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+Si vous n</span></span></span><span style="font-family:Times New Roman; font-size:10pt; color:#000000"><span style="font-family:Times New Roman; font-size:10pt; color:#010100">'</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">&#234;tes pas familier avec les expressions r&#233;guli&#232;res, svp, aller au sujet </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=javaScript:parent.reDisplay('5',1,0)>syntaxe</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">.
+<br>
+
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>Utiliser les routines globales</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+ C</span></span></span><span style="font-family:Times New Roman; font-size:10pt; color:#000000"><span style="font-family:Times New Roman; font-size:10pt; color:#010100">'</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">est simple mais pas une fa&#231;on flexible et pratique.
+<br>
+
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="12"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#800000"><b>ExecRegExpr ('\d{3}-(\d{2}-\d{2}|\d{4})', 'T&#233;l&#233;phone: 555-1234')</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">;
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="12"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">   retourne Vrai
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="12"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#800000"><b>ExecRegExpr ('^\d{3}-(\d{2}-\d{2}|\d{4})', 'T&#233;l&#233;phone: 555-1234')</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">;
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="12"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">   retourne Faux, parce qu</span></span></span><span style="font-family:Times New Roman; font-size:10pt; color:#000000"><span style="font-family:Times New Roman; font-size:10pt; color:#010100">'</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">il y a des symboles avant le num&#233;ro de t&#233;l&#233;phone on utilise le m&#233;tasymbole '^' (qui signifie d&#233;but de ligne).
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="12"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#800000"><b>ReplaceRegExpr ('au produit', 'Tendez un regard au produit. TRegExpr est le meilleur!', '&#224; TRegExpr');</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="12"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">   retourne 'Tendez un regard &#224; TRegExpr. TRegExpr est le meilleur !'.
+<br>
+
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>Utiliser la classe TRegExpr
+<br>
+</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> Vous avez tout le pouvoir de la librairie.
+<br>
+
+<br>
+// Cette simple fonction extrait tous les e-mail de la cha&#238;ne d</span></span></span><span style="font-family:Times New Roman; font-size:10pt; color:#000000"><span style="font-family:Times New Roman; font-size:10pt; color:#010100">'</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">entr&#233;e.
+<br>
+// et place la liste de tous les e-mail dans la cha&#238;ne sortante.
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#800000"><b>function ExtractEmails (const AInputString : string) : string;
+<br>
+const
+<br>
+</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#800000"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EmailRE = '[_a-zA-Z\d\-\.]+@[_a-zA-Z\d\-]+(\.[_a-zA-Z\d\-]+)+'
+<br>
+var
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;r : TRegExpr;
+<br>
+begin
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Result := '';
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;r := TRegExpr.Create;</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> // Cr&#233;e L</span></span></span><span style="font-family:Times New Roman; font-size:10pt; color:#000000"><span style="font-family:Times New Roman; font-size:10pt; color:#010100">'</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">objet</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#800000"><b>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> // s</span></span></span><span style="font-family:Times New Roman; font-size:10pt; color:#000000"><span style="font-family:Times New Roman; font-size:10pt; color:#010100">'</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">assure de la rel&#226;che de m&#233;moire en cas d</span></span></span><span style="font-family:Times New Roman; font-size:10pt; color:#000000"><span style="font-family:Times New Roman; font-size:10pt; color:#010100">'</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">erreurs d'exceptions.</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#800000"><b>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;r.Expression := EmailRE;
+<br>
+</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Assigne le code source &#224; l</span></span></span><span style="font-family:Times New Roman; font-size:10pt; color:#000000"><span style="font-family:Times New Roman; font-size:10pt; color:#010100">'</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">e.r. Il sera compil&#233; quand ce sera n&#233;cessaire
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// (par exemple quand Exec sera appel&#233;). S</span></span></span><span style="font-family:Times New Roman; font-size:10pt; color:#000000"><span style="font-family:Times New Roman; font-size:10pt; color:#010100">'</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">il y a des erreurs dans l</span></span></span><span style="font-family:Times New Roman; font-size:10pt; color:#000000"><span style="font-family:Times New Roman; font-size:10pt; color:#010100">'</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">e.r.
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Des exceptions seront lev&#233;es durant la compilation de l</span></span></span><span style="font-family:Times New Roman; font-size:10pt; color:#000000"><span style="font-family:Times New Roman; font-size:10pt; color:#010100">'</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">e.r.
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#800000"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if r.Exec (AInputString) then
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REPEAT
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Result := Result + r.Match [0] + ', ';
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UNTIL not r.ExecNext;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;finally r.Free;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end;
+<br>
+end;
+<br>
+begin
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ExctractEmails ('My e-mails is anso@mail.ru and anso@usa.net');
+<br>
+</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// retourne 'anso@mail.ru, anso@usa.net, '
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#800000"><b>end.
+<br>
+</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">// Noter: La compilation de l</span></span></span><span style="font-family:Times New Roman; font-size:10pt; color:#000000"><span style="font-family:Times New Roman; font-size:10pt; color:#010100">'</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">e.r. durant l</span></span></span><span style="font-family:Times New Roman; font-size:10pt; color:#000000"><span style="font-family:Times New Roman; font-size:10pt; color:#010100">'</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">attribution de l</span></span></span><span style="font-family:Times New Roman; font-size:10pt; color:#000000"><span style="font-family:Times New Roman; font-size:10pt; color:#010100">'</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">expression
+<br>
+// prend quelque temps , si vous voulez utiliser cette fonction plusieurs fois
+<br>
+// ce sera du travail inutile...
+<br>
+// Pour l</span></span></span><span style="font-family:Times New Roman; font-size:10pt; color:#000000"><span style="font-family:Times New Roman; font-size:10pt; color:#010100">'</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">optimiser de fa&#231;on significative, cr&#233;er TRegExpr
+<br>
+// et pr&#233;compiler l</span></span></span><span style="font-family:Times New Roman; font-size:10pt; color:#000000"><span style="font-family:Times New Roman; font-size:10pt; color:#010100">'</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">expression durant la phase d</span></span></span><span style="font-family:Times New Roman; font-size:10pt; color:#000000"><span style="font-family:Times New Roman; font-size:10pt; color:#010100">'</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">initialisation du programme.
+<br>
+
+<br>
+
+<br>
+// Ce simple exemple extrait les num&#233;ros de t&#233;l&#233;phone et
+<br>
+// l</span></span></span><span style="font-family:Times New Roman; font-size:10pt; color:#000000"><span style="font-family:Times New Roman; font-size:10pt; color:#010100">'</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">analyse en partie (code r&#233;gional, ville, num&#233;ro interne).
+<br>
+// Ensuite il substitut les parties en gabarit.
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#800000"><b>function ParsePhone (const AInputString, ATemplate : string) : string;</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#800000"><b>
+<br>
+</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#800000"><b>const
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IntPhoneRE = '(\+\d *)?(\(\d+\) *)?\d+(-\d*)*';</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#800000"><b>
+<br>
+</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#800000"><b>var
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;r : TRegExpr;
+<br>
+begin
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;r := TRegExpr.Create;</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> // Cr&#233;e l'objet</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#800000"><b>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> // s</span></span></span><span style="font-family:Times New Roman; font-size:10pt; color:#000000"><span style="font-family:Times New Roman; font-size:10pt; color:#010100">'</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">assure de la rel&#226;che de m&#233;moire en cas d</span></span></span><span style="font-family:Times New Roman; font-size:10pt; color:#000000"><span style="font-family:Times New Roman; font-size:10pt; color:#010100">'</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">erreurs d'exceptions.</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#800000"><b>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;r.Expression := IntPhoneRE;
+<br>
+</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Assigne le code source &#224; l</span></span></span><span style="font-family:Times New Roman; font-size:10pt; color:#000000"><span style="font-family:Times New Roman; font-size:10pt; color:#010100">'</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">e.r. Il sera compil&#233; quand n&#233;cessaire
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// (par exemple quand Exec sera appel&#233;). S</span></span></span><span style="font-family:Times New Roman; font-size:10pt; color:#000000"><span style="font-family:Times New Roman; font-size:10pt; color:#010100">'</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">il y a des erreurs dans l</span></span></span><span style="font-family:Times New Roman; font-size:10pt; color:#000000"><span style="font-family:Times New Roman; font-size:10pt; color:#010100">'</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">e.r.
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Des exceptions seront lev&#233;es durant la compilation de l</span></span></span><span style="font-family:Times New Roman; font-size:10pt; color:#000000"><span style="font-family:Times New Roman; font-size:10pt; color:#010100">'</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">e.r.
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#800000"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#800000"><b>if r.Exec (AInputString)
+<br>
+</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#800000"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#800000"><b>then Result := r.Substitute (ATemplate)
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else Result := '';
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;finally r.Free;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end;
+<br>
+end;
+<br>
+begin
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ParsePhone ('Phone of AlkorSoft (project PayCash) is +7(812) 329-44-69',
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'Zone code $1, city code $2. Whole phone number is $&amp;.');
+<br>
+</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// retourne 'Code R&#233;gional +7, Code de Ville (812) . T&#233;l&#233;phone complet +7(812) 329-44-69.'
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#800000"><b>end.
+<br>
+
+<br>
+
+<br>
+</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#0000FF"><b>Ilustrations plus complexes</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+Vous pouvez trouver des illustrations plus complexes pour utiliser TRegExpr dans le projet </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=javaScript:parent.reDisplay('7',1,0)>TestRExp.dpr</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">  et </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=javaScript:parent.reDisplay('8',1,0)>HyperLinkDecorator.pas</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">.
+<br>
+Voir aussi mon petit article &#224; </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href="http://www.delphi3000.com/member.asp?ID=1300',`',1)" target="_blank">Delphi3000.com</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> (en Anglais) et </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href="http://delphi.vitpc.com/mastering/strings_birds_eye_view.htm',`',1)" target="_blank">Delphi Kingdom</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> (en Russe).</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#0000FF"><b>Explication plus d&#233;taill&#233;e</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+Svp, voir la </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=javaScript:parent.reDisplay('6',1,0)>description</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> d</span></span></span><span style="font-family:Times New Roman; font-size:10pt; color:#000000"><span style="font-family:Times New Roman; font-size:10pt; color:#010100">'</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">interface de TregExpr.
+<br>
+
+<br>
+</span></span></span></span></span></span>
+
+  </TD>
+  <TD vAlign=top align=left bgColor="white" height="100%"
+       width=10>
+  </TD>
+</TR>
+</TABLE><BR><BR>
+
+<TABLE height=1 cellSpacing=0 cellPadding=0 width=780 bgColor=#0054a6 
+       border=0>
+<TR>
+  <TD><IMG height=1 alt="" src="../../../imgs/0.gif" width=1 border=0></TD>
+</TR>
+</TABLE>
+
+<TABLE height=70 cellSpacing=2 cellPadding=0 width=779 bgColor="white"
+       border=0>
+<TR>
+  <TD align=right width=2><IMG src="../../../imgs/0.gif" width=2 height=1 border=0></TD>
+  <TD vAlign=top align=left width="100%"><P class=pageauthor><I>&copy;&nbsp;<A 
+      class=pageauthor href="http://regexpstudio.com/">2004 Andrey V. Sorokin</A></I>,
+      Saint Petersburg, Russia
+      <BR><A class=pageauthor href="mailto:anso@mail.ru">anso@mail.ru</A>
+      <BR><A class=pageauthor href="http://regexpstudio.com/">RegExpStudio.com</A></P></TD>
+  <TD vAlign=top align=right width=468><A href="http://www.helpandmanual.com"
+      target="_blank"><img src="../../../tregexpr/Help/hmad468x60.gif" width="468" height="60"
+      border="0" alt="Help&Manual - the best help authoring tool!"></A></TD>
+  <TD align=right width=4><IMG src="../../../imgs/0.gif" width=4 height=1 border=0></TD>
+</TR>
+</TABLE><BR>
+
+</body>
+</html>

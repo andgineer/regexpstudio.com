@@ -1,0 +1,118 @@
+<html><head><meta name="generator" content="Help & Manual 2.6.3"><title>Exemple: D�corateur HyperLinks</title></head>
+<body background="niceblue.gif" bgcolor="#FFFFFF">
+<small><table width="100%"><tr><td align="right"><a href="tregexpr_testrexp.htm"><img src="1arrow4.gif" border="0"></a><a href="tregexpr_faq.htm"><img src="1arrow5.gif" border="0"></a></td></tr></small><table width="100%" border="0" cellspacing="0" cellpadding="3" bgcolor="#ABFCFE"><tr><td align="left">
+<font face="Arial" size="3" color="#000000"><font face="Arial" size="3" color="#0000FF"><b>Exemple: D�corateur HyperLinks</b></font><font face="Arial" size="4" color="#000000"><font face="Arial" size="4" color="#0000FF"><b>
+<br>
+<a href="#indc3blkk">D�corer les URLs</a>   <a href="#cc7l98">D�corer les E-Mails</a>
+<br>
+</b></font></font></font>
+
+</td></tr></table><br>
+
+<font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100">
+<br>
+Fonctions pour d�corer les liens hyperlinks en convertissant le texte standard en format HTML.
+<br>
+
+<br>
+Par exemple, remplace '</font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100"><i>http://anso.da.ru</i></font></font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100">'  avec  '</font></font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100"><i>&lt;a href="http://anso.da.ru"&gt;anso.da.ru&lt;/a&gt;</i></font></font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100">' ou '</font></font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100"><i>anso@mail.ru</i></font></font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100">'  avec  '</font></font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100"><i>&lt;a href="mailto:anso@mail.ru"&gt;anso@mail.ru&lt;/a&gt;</i></font></font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100">'.
+<br>
+
+<br>
+</font></font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#0000FF"><b>fonction D�corer les URLs
+<br>
+</b></font></font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100">
+<br>
+Trouve et remplace les liens comme 'http://...' ou 'ftp://..' aussi bien que les liens sans protocol, mais qui commence avec 'www.' Si vous voulez d�corer les e-mails, vous pouvez utiliser la fonction <a href="#cc7l98">DecorateEMails</a>.
+<br>
+
+<br>
+</font></font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100"><b>function DecorateURLs</b></font></font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100"> (const AText : string; AFlags : TDecorateURLsFlagSet = [durlAddr, durlPath]) : string;
+<br>
+
+<br>
+</font></font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100"><b>Description</b></font></font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100">
+<br>
+
+<br>
+retourne le texte d'entr�e AText avec les liens hyperliens d�cor�s.
+<br>
+
+<br>
+AFlags d�cris quelle partie de l'hyperlien lien doit �tre inclus dans la partie VISIBLE du lien:
+<br>
+Par exemple, si [durlAddr]  alors  hyperlien 'http://anso.da.ru/index.htm'  sera d�cor� comme  '&lt;a href="http://anso.da.ru/index.htm"&gt;anso.da.ru&lt;/a&gt;'.
+<br>
+
+<br>
+</font></font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100"><b>type 
+<br>
+ TDecorateURLsFlags</b></font></font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100"> = (durlProto, durlAddr, durlPort, durlPath, durlBMark, durlParam);
+<br>
+</font></font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100"><b> TDecorateURLsFlagSet</b></font></font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100"> = jeux de TDecorateURLsFlags;
+<br>
+
+<br>
+</font></font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100"><b>Description</b></font></font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100">
+<br>
+
+<br>
+Voici les valeurs possibles pour TDecorateURLsFlagSet:
+<br>
+
+<br>
+<table border="0" cellpadding="0" cellspacing="0"><tr valign="TOP"><td width="25"></td><td><font face="Arial" size="2" color="#010100"></font></font></font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100"><b>Value&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Meaning</b></font></font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100">
+&nbsp;<br>
+</font></font></td></tr><tr valign="top"><td></td><td><font face="Arial" size="2" color="#010100"></font><font face="Arial" size="1" color="#000000"><font face="Arial" size="1" color="#010100">
+&nbsp;<br>
+</font></font></td></tr><tr valign="top"><td></td><td><font face="Arial" size="1" color="#010100"></font><font face="MS Sans Serif" size="1" color="#000000"> </font><font face="Arial" size="1" color="#000000"><font face="Arial" size="1" color="#010100">
+&nbsp;<br>
+</font></font></td></tr><tr valign="top"><td></td><td><font face="Arial" size="1" color="#010100">
+&nbsp;<br>
+</font></td></tr><tr valign="top"><td></td><td><font face="Arial" size="1" color="#010100"></font></td></tr></table><font face="Arial" size="1" color="#010100"><table border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="27"></td><td width="88"><font face="Arial" size="1" color="#010100"></font></font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100">durlProto</font></font></td><td><font face="Arial" size="2" color="#010100">&nbsp;&nbsp;&nbsp;Protocole (comme 'ftp://' ou 'http://').
+&nbsp;<br>
+</font></td></tr><tr valign="top"><td></td><td><font face="Arial" size="2" color="#010100"></font></td><td></td></tr></table><font face="Arial" size="2" color="#010100"><table border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="27"></td><td width="88"><font face="Arial" size="2" color="#010100"></font></font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100">durlAddr</font></font></td><td><font face="Arial" size="2" color="#010100">&nbsp;&nbsp;&nbsp;Adresse TCP ou nom de domaine (comme 'anso.da.ru').
+&nbsp;<br>
+</font></td></tr><tr valign="top"><td></td><td><font face="Arial" size="2" color="#010100">durlPort</font></td><td><font face="Arial" size="2" color="#010100">&nbsp;&nbsp;&nbsp;Num�ro de port si sp�cifi� (comme ':8080').
+&nbsp;<br>
+</font></td></tr><tr valign="top"><td></td><td><font face="Arial" size="2" color="#010100">durlPath</font></td><td><font face="Arial" size="2" color="#010100">&nbsp;&nbsp;&nbsp;Chemin au document (comme 'index.htm').
+&nbsp;<br>
+</font></td></tr><tr valign="top"><td></td><td><font face="Arial" size="2" color="#010100">durlBMark</font></td><td><font face="Arial" size="2" color="#010100">&nbsp;&nbsp;&nbsp;Bookmark (comme '#mark').
+&nbsp;<br>
+</font></td></tr><tr valign="top"><td></td><td><font face="Arial" size="2" color="#010100">durlParam</font></td><td><font face="Arial" size="2" color="#010100">&nbsp;&nbsp;&nbsp;Param�tres URL (comme '?ID=2&amp;User=13').
+&nbsp;<br>
+</font></td></tr><tr valign="top"><td></td><td><font face="Arial" size="2" color="#010100"></font></td><td></td></tr></table><font face="Arial" size="2" color="#010100"></font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100">
+<br>
+
+<br>
+
+<br>
+
+<br>
+</font></font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#0000FF"><b>Fonction D�corer les EMails</b></font></font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100">
+<br>
+
+<br>
+Remplace les e-mails avec '&lt;a href="mailto:ADDR"&gt;ADDR&lt;/a&gt;'. Par exemple, remplace 'anso@mail.ru' avec '&lt;a href="mailto:anso@mail.ru"&gt;anso@mail.ru&lt;/a&gt;'.
+<br>
+
+<br>
+</font></font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100"><b>function DecorateEMails</b></font></font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100"> (const AText : string) : string;
+<br>
+
+<br>
+</font></font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100"><b>Description</b></font></font><font face="Arial" size="2" color="#000000"><font face="Arial" size="2" color="#010100">
+<br>
+
+<br>
+Retourne le texte d'entr�e avec les d�coration e-mails dans Atext.
+<br>
+
+<br>
+</font></font></font>
+
+<small><table width="100%"><tr><td align="right"><a href="tregexpr_testrexp.htm"><img src="1arrow4.gif" border="0"></a><a href="tregexpr_faq.htm"><img src="1arrow5.gif" border="0"></a></td></tr></small>
+
+<script>     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){                 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');      ga('create', 'UA-90368520-1', 'auto');     ga('send', 'pageview');  </script>
+
+</body></html>

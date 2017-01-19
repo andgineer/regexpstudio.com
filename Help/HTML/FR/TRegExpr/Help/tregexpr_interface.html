@@ -1,0 +1,848 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<HEAD>
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-8859-1">
+  <meta name="Content-Language" content="french">
+  <TITLE>Interface de TRegExpr&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;���������� ���������,perl,regexp,Delphi,Pascal,FreePascal,Kylix,Libraries,VCL,CLX,Tools,files utils</TITLE>
+  <!--  TRegExpr Expressions R�guli�res (r.e. RegExpr regexp tregexpr), egrep perl unix; delphi pascal FreePascal Kylix freeware component Andrey Sorokin -->
+  <meta name="home_url" content="http://regexpstudio.com/">
+  <meta name="GENERATOR" content="Help & Manual">
+  <LINK REL="stylesheet" HREF="../../../styles/default.css" TYPE="text/css">
+  <meta name="description" content=" delphi pascal FreePascal Kylix freeware components: regular expressions (r.e. RegExpr regexp tregexpr), egrep perl unix; Andrey V. Sorokin">
+  <meta name="abstract" content=" TRegExpr Expressions R�guli�res (r.e. RegExpr regexp tregexpr), egrep perl unix; Andrey V. Sorokin">
+  <meta name="keywords" content=" TRegExpr Expressions R�guli�res (r.e. RegExpr regexp tregexpr), egrep perl unix; delphi pascal FreePascal Kylix freeware component Andrey V. Sorokin">
+  <META NAME="distribution" CONTENT="world">
+  <meta name="audience" content="all">
+  <meta name="robots" content="index,all">
+  <meta name="revisit" content="30 days">
+  <meta name="revisit-after" content="30 days">
+  <meta name="site-created" content="01-01-2004">
+  <META NAME="author" CONTENT="RegExpStudio.com, Andrey V. Sorokin, Saint Petersburg, Russia.">
+  <META NAME="copyright" CONTENT="Copyright &copy; RegExpStudio.com, Andrey V. Sorokin, Saint Petersburg, Russia. All rights reserved">
+</HEAD>
+  
+<BODY bgcolor=#FFFFFF leftmargin="0" topmargin="0" marginwidth="0" 
+      marginheight="0">
+
+<TABLE bgColor=#0054a6 cellspacing="2" cellpadding="2" border="0" 
+       width="780">
+<TR>
+  <TD align="left"><div class="MainTitle"><a href="http://regexpstudio.com"
+   title="" class="MainTitle"><span class="MainTitle">RegExp Studio</span></a>
+<br>TRegExpr v.0.942 - Delphi Expressions R�guli�res
+<br><img src="../../../imgs/0.gif" width="1" height="15" alt=""><br>
+</div></TD>
+  <TD align="right"><A class=LangSwitch
+   href="../../../BG/tregexpr/Help/About.html">Bulgarian</A><BR>
+  <A class=LangSwitch
+   href="../../../tregexpr/Help/About.html">English</A><BR>
+  <DIV class=LangSwitch>French<BR></DIV>
+  <A class=LangSwitch
+   href="../../../DE/tregexpr/Help/About.html">German</A><BR>
+  <A class=LangSwitch
+   href="../../../ru/tregexpr/Help/About.html">Russian</A><BR>
+  <A class=LangSwitch
+   href="../../../ES/tregexpr/Help/About.html">Spanish</A></TD>
+</TR>
+</TABLE>
+
+<TABLE height=1 cellSpacing=0 cellPadding=0 width=780 bgColor="white" border=0>
+<TR><TD><IMG height=1 alt="" src="../../../imgs/0.gif" width=1 border=0></TD></TR>
+</TABLE>
+
+
+<TABLE width="780" height=24 cellspacing="2" cellpadding="2" border="0"
+  bgColor=#0054a6>
+<TR>
+  <TD><img src="../../../imgs/HomeSmall.gif" alt="About TRegExpr" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="About.html">A&nbsp;propos</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../../imgs/0.gif" width=5 border=0></TD>
+  <TD><img src="../../../imgs/DownloadsSmall.gif" alt="Installation" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="Installation.html">Installation</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../../imgs/0.gif" width=5 border=0></TD>
+  <TD><img src="../../../imgs/RegExpSyntaxSmall.gif" alt="Regular Expressions Syntax" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="RegExp_Syntax.html">Syntaxe</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../../imgs/0.gif" width=5 border=0></TD>
+  <TD><img src="../../../imgs/TRegExprInterfaceSmall.gif" alt="TRegExpr Interface" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="TRegExpr_Interface.html">Interface</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../../imgs/0.gif" width=5 border=0></TD>
+  <TD><img src="../../../imgs/FAQSmall.gif" alt="FAQ" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="FAQ.html">FAQ</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../../imgs/0.gif" width=5 border=0></TD>
+  <TD><img src="../../../imgs/DemosSmall.gif" alt="TRegExpr usage demos" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="Demos.html">Demos</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../../imgs/0.gif" width=5 border=0></TD>
+  <TD><IMG src="../../../imgs/AnSoHomePageSmall.gif" alt="Author" height=16 width=18 border=0></TD>
+  <TD><A class=top_menu href="Author.html">Auteur</A></TD>
+
+  <TD width="100%">&nbsp;</TD>
+</TR>
+</TABLE>
+
+
+
+<TABLE cellSpacing=14 cellPadding=0 width=779 bgColor="white" border=0>
+<TR>
+  <TD vAlign=top width=769 height="100%">
+
+
+<span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:12pt; color:#0000FF"><b>Interface de TRegExpr
+<br>
+</b></span></span></span>
+
+
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#0000FF"><b>M�thodes et propri�t�s publique de TRegExpr</b></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">:
+<br>
+
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>property Expression</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : string
+<br>
+Fonction
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Contient l'expression R�guli�re. Pour L'optimisation, TRegExpr va automatiquement le compiler en 'P-code' (vous pouvez le voir avec l'aide de la m�thode Dump) et stock� dans sa structure interne. La vrai [re]compilation survient quand c'est r�ellement le cas - en appellant Exec[Next], Substitute, Dump, etc et seulement si l'expression ou un autre P-code a affect� les propri�t�s qui ont �t� chang�es apr�s la derni�re [re]compilation.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Erreur
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Si une erreur survient durant la [re]compilation, une m�thode d'erreur est appel�e (par d�faut une erreur d'exception est lev�e - voir plus bas).
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>property ModifierStr</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : string
+<br>
+Fonction
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Ajuste/r�cup�re les valeurs par d�faut des </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=key9fi_t1.html>modifications d'e.r.</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">. Le format de cha�ne est similaire � </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=5o226t.html>(?ismx-ismx)</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">. Par exemple si ModifierStr := 'i-x' va mettre � On le modifier /i, � Off /x et laisser les autres inchang�s.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Valeurs Possibles
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">-i-s-m-x ou ismx ou,...
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Valeurs par D�faut
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">-i-s-m-x
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Erreur
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Si vous essayez des modifications non support�es, une erreur sera appel�e (par d�faut les erreurs l�ve une exception dans ERegExpr).
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>property ModifierI</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : boolean
+<br>
+Fonction
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=dmn52y.html>Modifier /i</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> - ("casse des caract�res ignor�e"), initialis� avec la valeur </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=indetcg35.html>RegExprModifierI</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Valeurs Possibles
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="27"></td><td width="75"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">True</span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ignore les majuscules/minuscules.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="27"></td><td width="75"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">False</span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fait une distinction entre les majuscules/minuscules.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="27"></td><td width="75"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Valeur par D�faut
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">False
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Erreur
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Aucune
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>property ModifierR</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : boolean
+<br>
+Fonction
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=dmn537.html>Modifier /r</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> - ("extension de syntaxe Russe"), initialis� avec la valeur </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=indetcg35.html>RegExprModifierR</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Valeurs Possibles
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="27"></td><td width="75"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">True</span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Active l'extension de syntaxe Russe.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="27"></td><td width="75"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">False</span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D�sactive l'extension de syntaxe Russe.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="27"></td><td width="75"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Valeur par D�faut
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">True
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Erreur
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Aucune
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>property ModifierS</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : boolean
+<br>
+Fonction
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=dmn538.html>Modifier /s</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> - '.' veut dire n'importe quel caract�re (normalement il ne comprend pas les </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=_hlqzt.html>LinesSeparators</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> et </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=indcj_mwd.html>LinePairedSeparator</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">), initialis� avec la valeur </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=indetcg35.html>RegExprModifierS</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Valeurs Possible
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="27"></td><td width="75"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">True</span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S�parateur de ligne inclus pour le m�tacaract�re ".".
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="27"></td><td width="75"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">False</span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S�parateur de ligne pas inclus pour le m�tacaract�re ".".
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="27"></td><td width="75"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Valeur par D�faut
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">True
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Erreur
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Aucune
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>property ModifierG</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : boolean;
+<br>
+Fonction
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=dmn52w.html>Modifier /g</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">. En le mettant � Off tous les op�rateurs fonctionne en mode non-vorace, donc si ModifierG = Faux, alors '*' est comme '*?', tous les '+' comme '+?' et ainsi de suite, initialis� avec la valeur </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=indetcg35.html>RegExprModifierG</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Valeurs Possible
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="27"></td><td width="75"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">True</span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mode vorace.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="27"></td><td width="75"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">False</span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mode non-vorace.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="27"></td><td width="75"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Valeur par D�faut
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">True
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Erreur
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Aucune
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>property ModifierM</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : boolean;
+<br>
+Fonction
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=dmn532.html>Modifier /m</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> Traite les cha�nes comme des lignes multiples . Ceci fait, changer `^' et `$' de correspondre au d�but ou � la fin de la cha�ne, � partir d'une nouvelle ligne ou � la fin d'une ligne, initialis� avec la valeur </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=indetcg35.html>RegExprModifierM</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Valeurs Possible
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="27"></td><td width="75"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Vrai</span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Consid�re une nouvelle ligne ou la fin d'une ligne comme le d�but d'une cha�ne.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="27"></td><td width="75"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">False</span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Doit absolument �tre au d�but ou � la fin de la cha�ne.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="27"></td><td width="75"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Valeur par D�faut
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">False
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Erreur
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Aucune
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>property ModifierX</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : boolean;
+<br>
+Fonction
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=dmn53_.html>Modifier /x</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> - ("syntaxe �tendue"), initialis� avec la valeur</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=indetcg35.html>RegExprModifierX</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Valeurs Possible
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="27"></td><td width="75"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Vrai</span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Syntaxe �tendue activ� (des commentaires peuvent �tre ins�r�s dans l'e.r.).
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="27"></td><td width="75"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">False</span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Syntaxe �tendue d�sactiv� (aucun commentaire possible).
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="27"></td><td width="75"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Valeur par D�faut
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">False
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Erreur
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Aucune
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>function Exec</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> (const AInputString : string) : boolean;
+<br>
+Fonction
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Compare une recherche � la cha�ne AInputString.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Note
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">La fonction Exec stocke AInputString dans la propri�t� InputString.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>function ExecNext</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : boolean;
+<br>
+Fonction
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Trouve l'occurrence suivante de Exec(AString);
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Note
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">fonctionne comme
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="51"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Exec (AString);
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="51"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="64"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">if MatchLen [0] = 0 then ExecPos(MatchPos [0] + 1)
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="64"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="51"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">else ExecPos (MatchPos [0] + MatchLen [0]);
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="51"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">mais est plus simple !
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>function ExecPos</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> (AOffset: integer = 1) : boolean;
+<br>
+Fonction
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Trouve une occurrence de recherche pour de d�part de InputString � partir de la position Aoffset (AOffset=1 - premier caract�re de InputString).
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>property InputString</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : string;
+<br>
+Fonction
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Retourne le cha�ne d'entr�e courante (� partir du dernier appel de Exec ou de la derni�re d�signation de cette propri�t�).
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Note
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Une modification � cette propri�t� efface les propri�t�s Match* !
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>function Substitute</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> (const ATemplate : string) : string;
+<br>
+Fonction
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Retourne ATemplate avec '$&amp;' ou '$0' remplac� par l'occurrence compl�te de l'e.r. et '$n' remplac� par l'occurrence de la sous expression #n.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Valeur de Retour
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Contient la cha�ne avec les modification apport�es.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Note
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Depuis la  v.0.929 '$' utiliser plut�t '\' (pour les futures extensions et pour plus de compatibilit� avec Perl) pour accepter plus d'un caract�re num�rique.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Si vous voulez placer le gabarit dans le mod�le '$' ou '\', utiliser le pr�fixe '\'.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="51"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Exemple: '1\$ is $2\\rub\\' -&gt; '1$ est &lt;Match[2]&gt;\rub\'
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="51"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Si vous voulez placer un caract�re num�rique apr�s '$n' vous devez d�limiter n avec des accolades '{}'.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="51"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Exemple: 'a$12bc' -&gt; 'a&lt;Match[12]&gt;bc', 'a${1}2bc' -&gt; 'a&lt;Match[1]&gt;2bc'.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="51"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>procedure Split</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> (AInputStr : string; APieces : TStrings);
+<br>
+Fonction
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Divise AInputStr en pi�ces dans APieces par les occurrences de l'e.r.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Note
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Appel� au niveau interne Exec[Next].
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>function Replace</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> (AInputStr : string; const AReplaceStr : string) : string;
+<br>
+Fonction
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Retourne AInputStr avec les occurrences de l'e.r remplac� par AReplaceStr
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Note
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Appel� au niveau interne Exec[Next].
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>property SubExprMatchCount</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : integer; // </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>LectureSeulement</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+Fonction
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Le nombre de sous expressions qui a �t� trouv� dans la derni�re ex�cution de Exec*.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Valeur de Retour
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">S'il n'y a aucune sous expression mais que l'expression compl�te � �t� trouv� (Exec* � retourn� vrai), alors SubExprMatchCount=0, si aucune sous expression et aucune e.r. compl�te a �t� trouv� (Exec* retourne Faux) alors SubExprMatchCount=-1.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Noter que quelques sous expressions peuvent ne pas �tre trouv�es et pour de telles sous expressions, MathPos=MatchLen=-1 and Match=''.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="51"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Par exemple: L'Expression := '(1)?2(3)?';
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="51"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="64"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Exec ('123'): SubExprMatchCount=2, Match[0]='123', [1]='1', [2]='3'
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="64"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Exec ('12'): SubExprMatchCount=1, Match[0]='12', [1]='1'
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="64"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Exec ('23'): SubExprMatchCount=2, Match[0]='23', [1]='', [2]='3'
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="64"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Exec ('2'): SubExprMatchCount=0, Match[0]='2'
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="64"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Exec ('7') - return False: SubExprMatchCount=-1
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="64"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>property MatchPos</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> [Idx : integer] : integer; // </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>LectureSeulement</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+Fonction
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">La position d'entr�e de la sous expression #Idx en test � la derni�re ex�cution de Exec*.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Param�tre
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">La premi�re sous expression a une valeur de Idx=1, derni�re - MatchCount, l'e.r. a une valeur de Idx=0.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Valeur de Retour
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Retourne -1 si dans l'e.r. il n'y a pas de sous expression trouv�e dans la cha�ne.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>property MatchLen</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> [Idx : integer] : integer; // </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>Lecture Seulement</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+Fonction
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">La longueur d'entr�e de la sous expression #Idx e.r. en test � la derni�re ex�cution de Exec*. La premi�re sous expression a la valeur Idx=1, derni�re - MatchCount, l'e.r. enti�re a une valeur de Idx=0.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Valeur de Retour
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Retourne -1 si dans l'e.r. il n'y a pas de sous expression ou que cette expression n'as pas �t� trouv� dans la cha�ne.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>property Match</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> [Idx : integer] : string; // </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>Lecture Seulement</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+Fonction
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">== copy (InputString, MatchPos [Idx], MatchLen [Idx])
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Valeur de Retour
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Retourne '' si dans l'e.r. il n'y a pas de sous expression ou que la sous expression n'as pas �t� trouv� dans la cha�ne.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>function LastError</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : integer;
+<br>
+Fonction
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Retourne l'ID de la derni�re erreur, 0 s'il y a aucune erreur (inutilisable si l'erreur a g�n�r�e une erreur d'exception) et efface la valeur interne � 0 (pas d'erreur).
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>function ErrorMsg</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> (AErrorID : integer) : string; virtual;
+<br>
+Fonction
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Retourne un message d'erreur pour l'erreur avec ID = AErrorID.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>property CompilerErrorPos</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : integer; // Lecture Seulement
+<br>
+Fonction
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Retourne la position dans l'e.r. ou le compilateur a stopp�. Tr�s pratique pour diagnostiquer les erreurs.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>property SpaceChars</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : RegExprString
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Fonction
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Contient les caract�res  trait�s comme </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">\</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">s (initialement remplit avec les valeurs de la variable globale RegExprSpaceChars).
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>property WordChars</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : RegExprString;
+<br>
+Fonction
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Contient les caract�res trait�s comme  \w (initialement remplit avec les valeurs de la variable globale RegExprWordChars).
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>property LineSeparators</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : RegExprString
+<br>
+Fonction
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Les s�parateurs de ligne (comme Unix \n),</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> initialement remplit avec les valeurs de la variable globale RegExprLineSeparators). </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Voir aussi </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=idha88fzy.html>a propos des s�parateurs de ligne</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>property LinePairedSeparator</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : RegExprString
+<br>
+Fonction
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Paire de s�parateur de ligne (pour le Dos et Windows \r\n). Doit contenir exactement deux caract�res ou pas de caract�res du tout, </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">initialement remplit avec les valeurs de la variable globale RegExprLine</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Paired</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Separato). Voir aussi</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=idha88fzy.html>a propos des s�parateurs de ligne</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Note
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Par exemple, si vous avez besoin du style Unix, assigner � LineSeparators := #$a (caract�re de nouvelle ligne) et LinePairedSeparator := '' (cha�ne vide), si par contre vous voulez accepter les s�parateurs "\x0D\x0A" mais pas "\x0D" ou "\x0A" seul, alors assigner LineSeparators := '' (cha�ne vide) et LinePairedSeparator := #$d#$a.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Par d�faut le mode 'mixe' est utilis� (d�finit par d�faut dans les constantes globales RegExprLine[Paired]Separator[s]</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">)</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">: LineSeparators := #$d#$a; LinePairedSeparator := #$d#$a. Le comportement de ce mode est d�cris dans la </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=idha88fzy.html>section syntaxe</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>class function InvertCaseFunction</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">  (const Ch : REChar) : REChar;
+<br>
+Fonction
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Convertit Ch en majuscule si c'est minuscule et vice-versa (en utilisant les ajustement du syst�me local).
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>property InvertCase</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : TRegExprInvertCaseFunction;
+<br>
+Fonction
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Ajuster cette propri�t� si vous voulez �viter la fonctionnalit� de l'ignorance des minuscules/majuscules.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Note
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Cr�e une interdiction � la fonction RegExprInvertCaseFunction (InvertCaseFunction par d�faut).
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>procedure Compile</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">;
+<br>
+Fonction
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">[Re]compile l'e.r. Tr�s pratique pour les applications qui utilise les �diteurs graphique pour v�rifier la validit� des propri�t�s.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>function Dump</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : string;
+<br>
+Fonction
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Cr�e pour le visionnement une e.r. compil�e en une forme plus compr�hensive.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#0000FF"><b>Constantes Globales
+<br>
+</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+Valeurs par d�faut des Modifiers:
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">  </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>RegExprModifierI</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#800000"><b> </b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">: boolean = False;</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">// </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=261ber.html>TRegExpr.ModifierI</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+  </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>RegExprModifierR</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : boolean = True;</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">// </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=inde9_ozp.html>TRegExpr.ModifierR</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+  </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>RegExprModifierS</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : boolean = True;</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">// </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=261bf1.html>TRegExpr.ModifierS</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+  </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>RegExprModifierG</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : boolean = True;</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">// </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=261bep.html>TRegExpr.ModifierG</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">  </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>RegExprModifierM</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : boolean = False;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=261bev.html>TRegExpr.ModifierM</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+  </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>RegExprModifierX</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : boolean = False;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=261bf6.html>TRegExpr.ModifierX</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">  </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>RegExprSpaceChars</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : RegExprString = ' '#$9#$A#$D#$C;
+<br>
+  // Valeur par d�faut pour la propri�t� SpaceChars
+<br>
+
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">  </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>RegExprWordChars</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : RegExprString =
+<br>
+    '0123456789'
+<br>
+  + 'abcdefghijklmnopqrstuvwxyz'
+<br>
+  + 'ABCDEFGHIJKLMNOPQRSTUVWXYZ_';
+<br>
+  // Valeur par d�faut pour la propri�t� WordChars
+<br>
+
+<br>
+
+<br>
+  </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>RegExprLineSeparators</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : RegExprString =
+<br>
+   #$d#$a{$IFDEF UniCode}#$b#$c#$2028#$2029#$85{$ENDIF};
+<br>
+  // </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Valeur par d�faut pour la propri�t� </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">LineSeparators
+<br>
+  </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>RegExprLinePairedSeparator</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : RegExprString =
+<br>
+   #$d#$a;
+<br>
+  // </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Valeur par d�faut pour la propri�t� </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">LinePairedSeparator
+<br>
+
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">  </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>RegExpr</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>Invert</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>CaseFunction</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> : TRegExprInvertCaseFunction = TRegExpr.InvertCaseFunction; 
+<br>
+  </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">// </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Valeur par d�faut pour la propri�t� </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">InvertCase</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#0000FF"><b>Fonctions globales pratiques</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>function ExecRegExpr</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> (const ARegExpr, AInputStr : string) : boolean;
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Fonction
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Retourne vrai si la cha�ne AInputString concorde � l'expression ARegExpr.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Note
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">!Va lever une exception s'il y a une erreur de syntaxe dans ARegExpr.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>procedure SplitRegExpr</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> (const ARegExpr, AInputStr : string; APieces : TStrings);
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Fonction
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">S�pare AInputStr en pi�ces dans APieces par les occurrences de l'e.r. ARegExpr.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>function ReplaceRegExpr</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> (const ARegExpr, AInputStr, AReplaceStr : string) : string;
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Fonction
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Retourne AInputStr avec l'occurrence de l'e.r. remplac� par AReplaceStr.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>function Quot</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>e</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>RegExprMetaChars</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> (const AStr : string) : string;
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Fonction
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Remplace tous les m�tacaract�res avec une repr�sentation simple, par exemple 'abc$cd.(' est converti en 'abc\$cd\.\('.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Note
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Cette fonction est tr�s pratique pour l'autog�n�ration d'e.r. � partir d'entr�e utilisateur.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>function RegExprSubExpressions</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> (const ARegExpr : string; ASubExprs : TStrings; AExtendedSyntax : boolean = False) : integer;
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Fonction
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Fabrique une liste de sous expression trouv� dans l'e.r. ARegExpr.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Note
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Dans ASubExps chaque item repr�sente une sous expression, � partir de la premi�re jusqu'� la derni�re, dans le format:
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="52"></td><td width="172"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Cha�ne</span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;texte de sous expression (sans les '()').
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="52"></td><td width="172"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">bas mot de l'objet</span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;position de d�part dans ARegExpr, incluant  '(' s'il existe ! (la premi�re position est 1).
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="52"></td><td width="172"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">haut mot de l'objet</span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;La longueur, incluant le d�part '(' et la fin ')' s'il existent!
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="52"></td><td width="172"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">AExtendedSyntax</span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Doit �tre Vrai si le modifier /x est � On durant l'utilisation de l'e.r.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="52"></td><td width="172"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Utile pour les �diteurs avec interface graphique (Vous pouvez trouver un exemple d'utilisation dans le projet </span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href=javaScript:parent.reDisplay('7',1,0)>TestRExp.dpr</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">).
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="27"></td><td width="75"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>Code R�sultat</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>Sens</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="27"></td><td width="75"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:1pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:1pt; color:#010100">
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="27"></td><td width="75"><span style="font-family:Helvetica,Arial; font-size:1pt; color:#010100">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="27"></td><td width="75"><span style="font-family:Helvetica,Arial; font-size:1pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>0</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> </span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Succ�s. Pas de parenth�se non balanc�es trouv�.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="27"></td><td width="75"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>-1</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> </span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Il n'a pas assez de parenth�se de fermeture.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="27"></td><td width="75"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>-(n+1)</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> </span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;� la position </span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>n</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> �tait trouv� '[' sans fermeture ']'.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="27"></td><td width="75"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>n</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> </span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;� la position </span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>n</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> �tait trouv�  ')' sans ouverture '('.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="27"></td><td width="75"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Si le r�sultat &lt;&gt; 0, alors ASubExprs peut contenir des items vide ou de items ill�gaux.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#0000FF"><b>Type d'exception</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+
+<br>
+Routine par D�faut des erreurs d'exception pour TRegExpr:
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>ERegExpr </b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">= class (Exception)
+<br>
+   public
+<br>
+    ErrorCode : integer; // code d'erreur. Les erreurs de compilation du code sont avant 1000.
+<br>
+    CompilerErrorPos : integer;</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">// Position dans l'e.r. o� l'erreur est survenue.
+<br>
+  end;
+<br>
+
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#0000FF"><b>Comment utiliser les Unicode</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+TRegExpr supporte maintenant les UniCode, mais il travaille </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>tr�s lentement</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">.
+<br>
+Qui veut se risquer � l'optimiser ?
+<br>
+L'utiliser seulement si vous avez vraiment besoin du support des Unicode !
+<br>
+Pour utiliser les WideString, enlever le '.' dans {.$DEFINE UniCode} dans le fichier regexpr.pas.
+<br>
+
+<br>
+</span></span></span></span></span></span>
+
+  </TD>
+  <TD vAlign=top align=left bgColor="white" height="100%"
+       width=10>
+  </TD>
+</TR>
+</TABLE><BR><BR>
+
+<TABLE height=1 cellSpacing=0 cellPadding=0 width=780 bgColor=#0054a6 
+       border=0>
+<TR>
+  <TD><IMG height=1 alt="" src="../../../imgs/0.gif" width=1 border=0></TD>
+</TR>
+</TABLE>
+
+<TABLE height=70 cellSpacing=2 cellPadding=0 width=779 bgColor="white"
+       border=0>
+<TR>
+  <TD align=right width=2><IMG src="../../../imgs/0.gif" width=2 height=1 border=0></TD>
+  <TD vAlign=top align=left width="100%"><P class=pageauthor><I>&copy;&nbsp;<A 
+      class=pageauthor href="http://regexpstudio.com/">2004 Andrey V. Sorokin</A></I>,
+      Saint Petersburg, Russia
+      <BR><A class=pageauthor href="mailto:anso@mail.ru">anso@mail.ru</A>
+      <BR><A class=pageauthor href="http://regexpstudio.com/">RegExpStudio.com</A></P></TD>
+  <TD vAlign=top align=right width=468><A href="http://www.helpandmanual.com"
+      target="_blank"><img src="../../../tregexpr/Help/hmad468x60.gif" width="468" height="60"
+      border="0" alt="Help&Manual - the best help authoring tool!"></A></TD>
+  <TD align=right width=4><IMG src="../../../imgs/0.gif" width=4 height=1 border=0></TD>
+</TR>
+</TABLE><BR>
+
+</body>
+</html>

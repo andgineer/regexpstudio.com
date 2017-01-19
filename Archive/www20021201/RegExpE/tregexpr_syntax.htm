@@ -1,0 +1,518 @@
+<html><head><meta name="generator" content="Help & Manual 2.6.3"><title>Syntax of Regular Expressions</title></head>
+<body background="niceblue.gif" bgcolor="#FFFFFF">
+<small><table width="100%"><tr><td align="right"><a href="tregexpr_how_it_works.htm"><img src="1arrow4.gif" border="0"></a><a href="tregexpr_interface.htm"><img src="1arrow5.gif" border="0"></a></td></tr></small><table width="100%" border="0" cellspacing="0" cellpadding="3" bgcolor="#C6E7FF"><tr><td align="left">
+<font face="Arial" size="4" color="#000000"><font face="Arial" size="4" color="#0000FF"><b>Syntax of Regular Expressions</b></font><font face="Arial" size="5" color="#000000"><font face="Arial" size="5" color="#0000FF"><b>
+<br>
+</b></font></font></font>
+
+</td></tr></table><br>
+
+<font face="Arial" size="3" color="#000000"><font face="Arial" size="3" color="#0000FF"><b>Introduction</b></font><font face="Arial" size="3" color="#000000">
+<br>
+
+<br>
+Regular Expressions are a widely-used method of specifying patterns of text to search for. Special <b>metacharacters</b> allow You to specify, for instance, that a particular string You are looking for occurs at the beginning or end of a line, or contains <b>n</b> recurrences of a certain character.
+<br>
+
+<br>
+Regular expressions look ugly for novices, but really they are very simple (well, usually simple ;) ), handly and powerfull tool.
+<br>
+
+<br>
+I strongly recommend You to play with regular expressions using <a href="tregexpr_testrexp.htm">TestRExp.dpr</a> - it'll help You to uderstand main conceptions. Moreover, there are many predefined examples with comments included into TestRExp.
+<br>
+
+<br>
+Let's start our learning trip!
+<br>
+
+<br>
+
+<br>
+<font face="Arial" size="3" color="#0000FF"><b>Simple matches
+<br>
+
+<br>
+</b></font></font><font face="Arial" size="3" color="#000000">Any single character matches itself, unless it is a <b>metacharacter</b> with a special meaning described below.
+<br>
+
+<br>
+A series of characters matches that series of characters in the target string, so the pattern "bluh" would match "bluh'' in the target string. Quite simple, eh ?
+<br>
+
+<br>
+You can cause characters that normally function as <b>metacharacters</b> or <b>escape sequences</b> to be interpreted literally by 'escaping' them by preceding them with a backslash "\", for instance: metacharacter "^" match beginning of string, but "\^" match character "^", "\\" match "\" and so on.
+<br>
+
+<br>
+<b>Examples:</b>
+<br>
+</font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;foobar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>matchs string 'foobar'
+<br>
+</i></font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;\^FooBarPtr&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>matchs '^FooBarPtr'
+<br>
+</i>
+<br>
+
+<br>
+<font face="Arial" size="3" color="#0000FF"><b>Escape sequences</b></font></font><font face="Arial" size="3" color="#000000">
+<br>
+
+<br>
+Characters may be specified using a <b>escape sequences</b> syntax much like that used in C and Perl: "\n'' matches a newline, "\t'' a tab, etc. More generally, \xnn, where nn is a string of hexadecimal digits, matches the character whose ASCII value is nn. If You need wide (Unicode) character code, You can use '\x{nnnn}', where 'nnnn' - one or more hexadecimal digits.
+<br>
+
+<br>
+</font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;\xnn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>char with hex code nn</i>
+<br>
+</font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;\x{nnnn}&nbsp;</font><font face="Arial" size="3" color="#000000"><i>char with hex code nnnn (one byte for plain text and two bytes for <a href="#unicode_support">Unicode</a>)
+<br>
+</i></font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;\t&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>tab (HT/TAB), same as \x09</i>
+<br>
+</font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>newline (NL), same as \x0a</i>
+<br>
+</font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;\r&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>car.return (CR), same as \x0d
+<br>
+</i></font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;\f&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>form feed (FF), same as \x0c
+<br>
+</i></font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;\a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>alarm (bell) (BEL), same as \x07</i>
+<br>
+</font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;\e&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>escape (ESC), same as \x1b
+<br>
+</i>
+<br>
+<b>Examples:</b>
+<br>
+</font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;foo\x20bar&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>matchs 'foo bar' (note space in the middle)
+<br>
+</i></font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;\tfoobar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>matchs 'foobar' predefined by tab
+<br>
+</i>
+<br>
+
+<br>
+<font face="Arial" size="3" color="#0000FF"><b>Character classes
+<br>
+</b></font></font><font face="Arial" size="3" color="#000000">
+<br>
+You can specify a <b>character class</b>, by enclosing a list of characters in [], which will match any <b>one</b> character from the list.
+<br>
+
+<br>
+If the first character after the "['' is "^'', the class matches any character <b>not</b> in the list.
+<br>
+
+<br>
+<b>Examples:</b>
+<br>
+</font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;foob[aeiou]r&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>finds strings 'foobar', 'foober' etc. but not 'foobbr', 'foobcr' etc.</i>
+<br>
+</font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;foob[^aeiou]r&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>find strings 'foobbr', 'foobcr' etc. but not 'foobar', 'foober' etc.</i>
+<br>
+
+<br>
+Within a list, the "-'' character is used to specify a <b>range</b>, so that a-z represents all characters between "a'' and "z'', inclusive. 
+<br>
+
+<br>
+If You want "-'' itself to be a member of a class, put it at the start or end of the list, or escape it with a backslash. If You want ']' you may place it at the start of list or escape it with a backslash.
+<br>
+
+<br>
+<b>Examples:
+<br>
+</b></font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;[-az]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>matchs 'a', 'z' and '-'
+<br>
+</i></font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;[az-]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>matchs 'a', 'z' and '-'
+<br>
+</i></font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;[a\-z]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>matchs 'a', 'z' and '-'
+<br>
+</i></font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;[a-z]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>matchs all twenty six small characters from 'a' to 'z'</i>
+<br>
+</font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;[\n-\x0D]&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>matchs any of #10,#11,#12,#13.
+<br>
+</i></font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;[\d-t]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>matchs any digit, '-' or 't'.</i> 
+<br>
+</font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;[]-a]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>matchs any char from ']'..'a'.</i>
+<br>
+
+<br>
+
+<br>
+<font face="Arial" size="3" color="#0000FF"><b>Metacharacters
+<br>
+</b></font></font><font face="Arial" size="3" color="#000000">
+<br>
+Metacharacters are special characters which are the essence of Regular Expressions. There are different types of metacharacters, described below.
+<br>
+
+<br>
+
+<br>
+<font face="Arial" size="3" color="#0000FF"><b><a name="syntax_line_separators">Metacharacters - line separators
+<br>
+</b></font></font><font face="Arial" size="3" color="#000000">
+<br>
+</font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;^&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>start of line</i>
+<br>
+</font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;$&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>end of line
+<br>
+</i></font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;\A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>start of text</i>
+<br>
+</font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;\Z&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>end of text
+<br>
+</i></font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>any character</i><i> in line</i>
+<br>
+</font><font face="Courier" size="3" color="#000000">
+<br>
+</font><font face="Arial" size="3" color="#000000"><b>Examples:
+<br>
+</b></font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;^foobar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>matchs string 'foobar' only if it's at the beginning of line</i>
+<br>
+</font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;foobar$&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>matchs string 'foobar' only if it's at the end of line</i>
+<br>
+</font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;^foobar$&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>matchs string 'foobar' only if it's the only string in line</i>
+<br>
+</font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;foob.r&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>matchs strings like 'foobar', 'foobbr', 'foob1r' and so on
+<br>
+</i>
+<br>
+The "^" metacharacter by default is only guaranteed to match at the beginning of the input string/text, the "$" metacharacter only at the end. Embedded line separators will not be matched by "^'' or "$''.
+<br>
+You may, however, wish to treat a string as a multi-line buffer, such that the "^'' will match after any line separator within the string, and "$'' will match before any line separator. You can do this by switching On the <a href="tregexpr_syntax.htm#modifier_m">modifier /m</a>.
+<br>
+The \A and \Z are just like "^'' and "$'', except that they won't match multiple times when the <a href="tregexpr_syntax.htm#modifier_m">modifier /m</a> is used, while "^'' and "$'' will match at every internal line separator. </font><font face="Times New Roman" size="4" color="#000000">
+<br>
+</font><font face="Arial" size="3" color="#000000">
+<br>
+The ".'' metacharacter by default matches any character, but if You switch Off the <a href="tregexpr_syntax.htm#modifier_s">modifier /s</a>, then '.' won't match embedded line separators.
+<br>
+
+<br>
+TRegExpr works with line separators as recommended at www.unicode.org ( http://www.unicode.org/unicode/reports/tr18/ ):
+<br>
+
+<br>
+ "^" is at the beginning of a input string, and, if <a href="tregexpr_syntax.htm#modifier_m">modifier /m</a> is On, also immediately following any occurrence of \x0D\x0A or \x0A or \x0D (if You are using <a href="tregexpr_interface.htm#unicode_support">Unicode version</a> of TRegExpr, then also \x2028 or  \x2029 or \x0B or \x0C or \x85). Note that there is no empty line within the sequence \x0D\x0A. 
+<br>
+
+<br>
+"$" is at the end of a input string, and, if <a href="tregexpr_syntax.htm#modifier_m">modifier /m</a> is On, also immediately preceding any occurrence of  \x0D\x0A or \x0A or \x0D (if You are using <a href="tregexpr_interface.htm#unicode_support">Unicode version</a> of TRegExpr, then also \x2028 or  \x2029 or \x0B or \x0C or \x85). Note that there is no empty line within the sequence \x0D\x0A.
+<br>
+
+<br>
+"." matchs any character, but if You switch Off <a href="tregexpr_syntax.htm#modifier_s">modifier /s</a> then "." doesn't match \x0D\x0A and \x0A and \x0D (if You are using <a href="tregexpr_interface.htm#unicode_support">Unicode version</a> of TRegExpr, then also \x2028 and  \x2029 and \x0B and \x0C and \x85).
+<br>
+ 
+<br>
+Note that "^.*$" (an empty line pattern) doesnot match the empty string within the sequence \x0D\x0A, but matchs the empty string within the sequence \x0A\x0D.
+<br>
+
+<br>
+Multiline processing can be easely tuned for Your own purpose with help of TRegExpr properties <a href="tregexpr_interface.htm#lineseparators">LineSeparators</a> and <a href="tregexpr_interface.htm#linepairedseparator">LinePairedSeparator</a>, You can use only Unix style separators \n or only DOS/Windows style \r\n or mix them together (as described above and used by default) or define Your own line separators!
+<br>
+
+<br>
+
+<br>
+<font face="Arial" size="3" color="#0000FF"><b><a name="syntax_predefined_classes">Metacharacters - predefined classes
+<br>
+
+<br>
+</b></font></font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;\w&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>an alphanumeric character (including "_")
+<br>
+</i></font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;\W&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>a nonalphanumeric</i>
+<br>
+</font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;\d&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>a </i><i>numeric character
+<br>
+</i></font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;\D&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>a</i><i> non-numeric</i>
+<br>
+</font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;\s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>any space (same as [ \t\n\r\f])
+<br>
+</i></font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;\S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>a non space</i>
+<br>
+
+<br>
+You may use \w, \d and \s within custom <b>character classes</b>.
+<br>
+
+<br>
+<b>Examples:
+<br>
+</b></font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;foob\dr&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>matchs strings like 'foob1r', ''foob6r' and so on but not 'foobar', 'foobbr' and so on</i>
+<br>
+</font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;foob[\w\s]r&nbsp;</font><font face="Arial" size="3" color="#000000"><i>matchs strings like 'foobar', 'foob r', 'foobbr' and so on but not 'foob1r', 'foob=r' and so on</i>
+<br>
+
+<br>
+TRegExpr uses properties <a href="tregexpr_interface.htm#tregexpr_spacechars">SpaceChars</a> and <a href="tregexpr_interface.htm#tregexpr_wordchars">WordChars</a> to define character classes \w, \W, \s, \S, so You can easely redefine it.
+<br>
+
+<br>
+
+<br>
+<font face="Arial" size="3" color="#0000FF"><b><a name="syntax_word_boundaries">Metacharacters - word boundaries
+<br>
+</b></font></font><font face="Arial" size="3" color="#000000">
+<br>
+</font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;\b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>Match a word boundary</i> 
+<br>
+</font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;\B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>Match a non-(word boundary)
+<br>
+</i></font><font face="Times New Roman" size="4" color="#000000">
+<br>
+</font><font face="Arial" size="3" color="#000000">A word boundary (\b) is a spot between two characters that has a \w on one side of it and a \W on the other side of it (in either order), counting the imaginary characters off the beginning and end of the string as matching a \W. 
+<br>
+
+<br>
+
+<br>
+<font face="Arial" size="3" color="#0000FF"><b><a name="metacharacters_iterators">Metacharacters - iterators
+<br>
+
+<br>
+</b></font></font><font face="Arial" size="3" color="#000000">Any item of a regular expression may be followed by another type of metacharacters - <b>iterators</b>. Using this metacharacters You can specify number of occurences of previous character, <b>metacharacter</b> or <b>subexpression</b>.
+<br>
+
+<br>
+</font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>zero or more</i><i> ("greedy"), similar to {0,}</i><i>
+<br>
+</i></font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;+&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Courier" size="4" color="#000000">&nbsp;</font><font face="Courier" size="3" color="#000000">&nbsp;</font><font face="Arial" size="3" color="#000000"><i>one or more</i><i> ("greedy"), similar to {1,}</i><i>
+<br>
+</i></font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;</font><font face="Courier" size="4" color="#000000">&nbsp;</font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>zero or one ("greedy"), similar to {0,1}</i><i>
+<br>
+</i></font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;{n}&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>exactly n times ("greedy")</i>
+<br>
+</font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;{n,}&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>at least n times ("greedy")
+<br>
+</i></font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;{n,m}&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>at least n but not more than m times ("greedy")
+<br>
+</i></font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;*?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>zero or more</i><i> ("non-greedy"), similar to {0,}?</i><i>
+<br>
+</i></font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;+?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>one or more</i><i> ("non-greedy"), similar to {1,}?</i><i>
+<br>
+</i></font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;??&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>zero or one ("non-greedy"), similar to {0,1}?</i><i>
+<br>
+</i></font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;{n}?&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>exactly n times ("non-greedy")</i>
+<br>
+</font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;{n,}?&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>at least n times ("non-greedy")
+<br>
+</i></font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;{n,m}?&nbsp;</font><font face="Arial" size="3" color="#000000"><i>at least n but not more than m times ("non-greedy")
+<br>
+</i>
+<br>
+So, digits in curly brackets of the form {n,m}, specify the minimum number of times to match the item n and the maximum m. The form {n} is equivalent to {n,n} and matches exactly n times. The form {n,} matches n or more times. There is no limit to the size of n or m, but large numbers will chew up more memory and slow down r.e. execution.
+<br>
+
+<br>
+If a curly bracket occurs in any other context, it is treated as a regular character.
+<br>
+
+<br>
+<b>Examples:
+<br>
+</b></font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;foob.*r&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>matchs strings like 'foobar',  'foobalkjdflkj9r' and 'foobr'</i>
+<br>
+</font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;foob.+r&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>matchs strings like 'foobar', 'foobalkjdflkj9r' but not 'foobr'
+<br>
+</i></font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;foob.?r&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>matchs strings like 'foobar', 'foobbr' and 'foobr' but not 'foobalkj9r'
+<br>
+</i></font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;fooba{2}r&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>matchs the string 'foobaar'
+<br>
+</i></font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;fooba{2,}r&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000">m<i>atchs strings like 'foobaar', 'foobaaar', 'foobaaaar' etc.
+<br>
+</i></font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;fooba{2,3}r&nbsp;</font><font face="Arial" size="3" color="#000000"><i>matchs strings like 'foobaar', or 'foobaaar'  but not 'foobaaaar'
+<br>
+</i>
+<br>
+A little explanation about "greediness". "Greedy" takes as many as possible, "non-greedy" takes as few as possible. For example, 'b+' and 'b*' applied to string 'abbbbc' return 'bbbb', 'b+?' returns 'b', 'b*?' returns empty string, 'b{2,3}?' returns 'bb', 'b{2,3}' returns 'bbb'.
+<br>
+
+<br>
+You can switch all iterators into "non-greedy" mode (see the <a href="tregexpr_syntax.htm#modifier_g">modifier /g</a>).
+<br>
+
+<br>
+
+<br>
+<font face="Arial" size="3" color="#0000FF"><b>Metacharacters - alternatives
+<br>
+
+<br>
+</b></font></font><font face="Arial" size="3" color="#000000">You can specify a series of <b>alternatives</b> for a pattern using "|'' to separate them, so that fee|fie|foe will match any of "fee'', "fie'', or "foe'' in the target string (as would f(e|i|o)e). The first alternative includes everything from the last pattern delimiter ("('', "['', or the beginning of the pattern) up to the first "|'', and the last alternative contains everything from the last "|'' to the next pattern delimiter. For this reason, it's common practice to include alternatives in parentheses, to minimize confusion about where they start and end.
+<br>
+Alternatives are tried from left to right, so the first alternative found for which the entire expression matches, is the one that is chosen. This means that alternatives are not necessarily greedy. For example: when matching foo|foot against "barefoot'', only the "foo'' part will match, as that is the first alternative tried, and it successfully matches the target string. (This might not seem important, but it is important when you are capturing matched text using parentheses.)
+<br>
+Also remember that "|'' is interpreted as a literal within square brackets, so if You write [fee|fie|foe] You're really only matching [feio|].
+<br>
+
+<br>
+<b>Examples:
+<br>
+</b></font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;foo(bar|foo)&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>matchs strings 'foobar' or 'foofoo'.</i>
+<br>
+
+<br>
+
+<br>
+<font face="Arial" size="3" color="#0000FF"><b>Metacharacters - subexpressions
+<br>
+
+<br>
+</b></font></font><font face="Arial" size="3" color="#000000">The bracketing construct ( ... ) may also be used for define r.e. subexpressions (after parsing You can find subexpression positions, lengths and actual values in MatchPos, MatchLen and <a href="tregexpr_interface.htm#tregexpr_match">Match</a> properties of TRegExpr, and substitute it in template strings by <a href="tregexpr_interface.htm#tregexpr_substitute">TRegExpr.Substitute</a>).
+<br>
+
+<br>
+Subexpressions are numbered based on the left to right order of their opening parenthesis.
+<br>
+First subexpression has number '1' (whole r.e. match has number '0' - You can substitute it in <a href="tregexpr_interface.htm#tregexpr_substitute">TRegExpr.Substitute</a> as '$0' or '$&amp;').
+<br>
+
+<br>
+<b>Examples:
+<br>
+</b></font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;(foobar){8,10}&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>matchs strings which contain 8, 9 or 10 instances of the 'foobar'
+<br>
+</i></font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;foob([0-9]|a+)r&nbsp;</font><font face="Arial" size="3" color="#000000"><i>matchs 'foob0r', 'foob1r' , 'foobar', 'foobaar', 'foobaar' etc.</i>
+<br>
+    
+<br>
+
+<br>
+<font face="Arial" size="3" color="#0000FF"><b>Metacharacters - backreferences
+<br>
+</b></font></font><font face="Arial" size="3" color="#000000">
+<br>
+<b>Metacharacters</b> \1 through \9 are interpreted as backreferences. \&lt;n&gt; matches previously matched <b>subexpression</b> #&lt;n&gt;.
+<br>
+
+<br>
+<b>Examples:
+<br>
+</b></font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;(.)\1+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>matchs 'aaaa' and 'cc'. 
+<br>
+</i></font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;(.+)\1+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>also match 'abab' and '123123'
+<br>
+</i></font><font face="Courier" size="3" color="#000000"><i>&nbsp;&nbsp;(['"]?)(\d+)\1&nbsp;</i></font><font face="Arial" size="3" color="#000000"><i>matchs '"13"</i><i> (in double quotes)</i><i>, or '4'</i><i> (in single quotes)</i><i> or 77</i><i> (without quotes)</i><i> etc
+<br>
+</i>
+<br>
+
+<br>
+<font face="Arial" size="3" color="#0000FF"><b><a name="about_modifiers">Modifiers</b></font></font><font face="Arial" size="3" color="#000000">
+<br>
+<table border="0" cellpadding="0" cellspacing="0"><tr valign="TOP"><td width="25"></td><td><font face="Arial" size="3" color="#000000">
+&nbsp;<br>
+</font></font></td></tr><tr valign="top"><td></td><td><font face="Arial" size="3" color="#000000"></font></td></tr></table><font face="Arial" size="3" color="#000000">Modifiers are for changing behaviour of TRegExpr.
+<br>
+
+<br>
+There are many ways to set up modifiers. 
+<br>
+Any of these modifiers may be embedded within the regular expression itself using the <a href="#inline_modifiers">(?...)</a> construct.
+<br>
+Also, You can assign to appropriate TRegExpr properties (<a href="tregexpr_interface.htm#tregexpr_modifier_x">ModifierX</a> for example to change /x, or ModifierStr to change all modifiers together). The default values for new instances of TRegExpr object defined in <a href="tregexpr_interface.htm#modifier_defs">global variables</a>, for example global variable RegExprModifierX defines value of new TRegExpr instance ModifierX property.
+<br>
+
+<br>
+<b><a name="modifier_i">i</b>
+<br>
+<table border="0" cellpadding="0" cellspacing="0"><tr valign="TOP"><td width="25"></td><td><font face="Arial" size="3" color="#000000">Do case-insensitive pattern matching (using installed in you system locale settings), see also <a href="tregexpr_interface.htm#invertcase">InvertCase</a>.
+&nbsp;<br>
+</font></font></td></tr><tr valign="top"><td></td><td><font face="Arial" size="3" color="#000000"></font></td></tr></table><font face="Arial" size="3" color="#000000"><b><a name="modifier_m">m </b></font><font face="Times New Roman" size="4" color="#000000">
+<br>
+<table border="0" cellpadding="0" cellspacing="0"><tr valign="TOP"><td width="25"></td><td><font face="Times New Roman" size="4" color="#000000"></font></font><font face="Arial" size="3" color="#000000">Treat string as multiple lines. That is, change "^'' and "$'' from matching at only the very start or end of the string to the start or end of any line anywhere within the string, see also <a href="tregexpr_syntax.htm#syntax_line_separators">Line separators</a>.
+&nbsp;<br>
+</font></td></tr><tr valign="top"><td></td><td><font face="Arial" size="3" color="#000000"></font></td></tr></table><font face="Arial" size="3" color="#000000"><b><a name="modifier_s">s </b></font><font face="Times New Roman" size="4" color="#000000">
+<br>
+<table border="0" cellpadding="0" cellspacing="0"><tr valign="TOP"><td width="25"></td><td><font face="Times New Roman" size="4" color="#000000"></font></font><font face="Arial" size="3" color="#000000">Treat string as single line. That is, change ".'' to match any character whatsoever, even a line separators (see also <a href="tregexpr_syntax.htm#syntax_line_separators">Line separators</a>), which it normally would not match.
+&nbsp;<br>
+</font></td></tr><tr valign="top"><td></td><td><font face="Arial" size="3" color="#000000"></font></td></tr></table><font face="Arial" size="3" color="#000000"><b><a name="modifier_g">g </b></font><font face="Times New Roman" size="4" color="#000000">
+<br>
+<table border="0" cellpadding="0" cellspacing="0"><tr valign="TOP"><td width="25"></td><td><font face="Times New Roman" size="4" color="#000000"></font></font><font face="Arial" size="3" color="#000000">Non standard modifier. Switching it Off You'll switch all following operators into non-greedy mode (by default this modifier is On). So, if modifier /g is Off then '+' works as '+?', '*' as '*?' and so on
+&nbsp;<br>
+</font></td></tr><tr valign="top"><td></td><td><font face="Arial" size="3" color="#000000"></font></td></tr></table><font face="Arial" size="3" color="#000000"><b><a name="modifier_x">x </b></font><font face="Times New Roman" size="4" color="#000000">
+<br>
+<table border="0" cellpadding="0" cellspacing="0"><tr valign="TOP"><td width="25"></td><td><font face="Times New Roman" size="4" color="#000000"></font></font><font face="Arial" size="3" color="#000000">Extend your pattern's legibility by permitting whitespace and comments (see explanation below)</font><font face="Times New Roman" size="4" color="#000000">. 
+&nbsp;<br>
+</font></td></tr><tr valign="top"><td></td><td><font face="Times New Roman" size="4" color="#000000"></font></td></tr></table><font face="Times New Roman" size="4" color="#000000"></font><font face="Arial" size="3" color="#000000"><b><a name="modifier_r">r</b><font face="Arial" size="3" color="#7F0000"><b>
+<br>
+</b><table border="0" cellpadding="0" cellspacing="0"><tr valign="TOP"><td width="25"></td><td><font face="Arial" size="3" color="#7F0000"></font></font></font><font face="Arial" size="3" color="#000000">Non-standard modifier. If is set then range &#224;-&#255; additional include russian letter '&#184;', &#192;-&#223;  additional include '&#168;', and &#224;-&#223; include all russian symbols.
+&nbsp;<br>
+</font></td></tr><tr valign="top"><td></td><td><font face="Arial" size="3" color="#000000">Sorry for foreign users, but it's set by default. If you want switch if off by default - set false to global variable <a href="tregexpr_interface.htm#modifier_defs">RegExprModifierR</a>.
+&nbsp;<br>
+</font></td></tr><tr valign="top"><td></td><td><font face="Arial" size="3" color="#000000">
+&nbsp;<br>
+</font></td></tr><tr valign="top"><td></td><td><font face="Arial" size="3" color="#000000">
+&nbsp;<br>
+</font></td></tr><tr valign="top"><td></td><td><font face="Arial" size="3" color="#000000"></font></td></tr></table><font face="Arial" size="3" color="#000000">The <a href="tregexpr_syntax.htm#modifier_x">modifier /x</a> itself needs a little more explanation. It tells the TRegExpr to ignore whitespace that is neither backslashed nor within a character class. You can use this to break up your regular expression into (slightly) more readable parts. The # character is also treated as a metacharacter introducing a comment, for example:
+<br>
+
+<br>
+<table border="0" cellpadding="0" cellspacing="0"><tr valign="TOP"><td width="19"></td><td><font face="Arial" size="3" color="#000000"></font></font><font face="Courier" size="3" color="#000000"><i>(&nbsp;
+&nbsp;<br>
+</i></font></td></tr><tr valign="top"><td></td><td><font face="Courier" size="3" color="#000000"><i>(abc)&nbsp;#&nbsp;comment&nbsp;1
+&nbsp;<br>
+</i></font></td></tr><tr valign="top"><td></td><td><font face="Courier" size="3" color="#000000"><i>&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;#&nbsp;You&nbsp;can&nbsp;use&nbsp;spaces&nbsp;to&nbsp;format&nbsp;r.e.&nbsp;-&nbsp;TRegExpr&nbsp;ignores&nbsp;it
+&nbsp;<br>
+</i></font></td></tr><tr valign="top"><td></td><td><font face="Courier" size="3" color="#000000"><i>(efg)&nbsp;#&nbsp;comment&nbsp;2
+&nbsp;<br>
+</i></font></td></tr><tr valign="top"><td></td><td><font face="Courier" size="3" color="#000000"><i>)
+&nbsp;<br>
+</i></font></td></tr><tr valign="top"><td></td><td><font face="Courier" size="3" color="#000000"><i></i></font></td></tr></table><font face="Courier" size="3" color="#000000"></font><font face="Arial" size="3" color="#000000">
+<br>
+This also means that if you want real whitespace or # characters in the pattern (outside a character class, where they are unaffected by /x), that you'll either have to escape them or encode them using octal or hex escapes. Taken together, these features go a long way towards making regular expressions text more readable. 
+<br>
+<table border="0" cellpadding="0" cellspacing="0"><tr valign="TOP"><td width="25"></td><td><font face="Arial" size="3" color="#000000">
+&nbsp;<br>
+</font></font></td></tr><tr valign="top"><td></td><td><font face="Arial" size="3" color="#000000">
+&nbsp;<br>
+</font></td></tr><tr valign="top"><td></td><td><font face="Arial" size="3" color="#000000"></font></td></tr></table><font face="Arial" size="3" color="#000000"><font face="Arial" size="3" color="#0000FF"><b>Perl extensions
+<br>
+</b></font></font><font face="Arial" size="3" color="#000000">
+<br>
+</font><font face="Times New Roman" size="4" color="#000000"><a name="inline_modifiers">(?imsxr-imsxr)
+<br>
+</font><font face="Arial" size="3" color="#000000">You may use it into r.e. for modifying modifiers by the fly. If this construction inlined into subexpression, then it effects only into this subexpression</font><font face="Times New Roman" size="4" color="#000000">
+<br>
+
+<br>
+</font><font face="Arial" size="3" color="#000000"><b>Examples:
+<br>
+</b></font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;(?i)Saint-Petersburg&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>matchs 'Saint-petersburg' and 'Saint-Petersburg'
+<br>
+</i></font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;(?i)Saint-(?-i)Petersburg&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>matchs 'Saint-Petersburg' but not 'Saint-petersburg'</i>
+<br>
+</font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;(?i)(Saint-)?Petersburg&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>matchs 'Saint-petersburg' and 'saint-petersburg'</i>
+<br>
+</font><font face="Courier" size="3" color="#000000">&nbsp;&nbsp;((?i)Saint-)?Petersburg&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Arial" size="3" color="#000000"><i>matchs 'saint-Petersburg', but not 'saint-petersburg' 
+<br>
+
+<br>
+</i></font><font face="Times New Roman" size="4" color="#000000">
+<br>
+<a name="inline_comment">(?#text) 
+<br>
+</font><font face="Arial" size="3" color="#000000">A comment, the text is ignored. Note that TRegExpr closes the comment as soon as it sees a ")", so there is no way to put a literal ")" in the comment. </font><font face="Times New Roman" size="4" color="#000000">
+<br>
+</font><font face="Arial" size="3" color="#000000">
+<br>
+
+<br>
+<font face="Arial" size="3" color="#0000FF"><b><a name="mechanism">Internal mechanism explanation</b></font></font><font face="Arial" size="3" color="#000000">
+<br>
+
+<br>
+It seems You need some internal secrets of TRegExpr?
+<br>
+Well, it's under constraction, please wait some time..
+<br>
+Just now don't forget to read the <a href="tregexpr_faq.htm">FAQ</a> (expecially 'non-greediness' optimization <a href="tregexpr_faq.htm#nongreedyoptimization">question</a>).
+<br>
+</font></font>
+
+<small><table width="100%"><tr><td align="right"><a href="tregexpr_how_it_works.htm"><img src="1arrow4.gif" border="0"></a><a href="tregexpr_interface.htm"><img src="1arrow5.gif" border="0"></a></td></tr></small>
+
+<script>     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){                 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');      ga('create', 'UA-90368520-1', 'auto');     ga('send', 'pageview');  </script>
+
+</body></html>

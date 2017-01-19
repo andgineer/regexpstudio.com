@@ -1,0 +1,231 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Time2HELP 1.0; Standard Template">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+<TITLE>TmlRegularExpression Class</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF"><Font Face="Verdana">
+<BASEFONT NAME="verdana" Size="2">
+<TABLE BGCOLOR="#FFFF00" BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="100%"><FONT SIZE="5">TmlRegularExpression Object
+<BR></FONT><Font Size="1">
+<A HREF="#Properties">Properties</A> 
+<A HREF="#Methods">Methods</A> </Font></TD></TR></TABLE><P><B>Unit</B><Br><A HREF="IDH_Unit_mlRegularExpression.htm">mlRegularExpression</A><P><B>Declaration</B><Br><Font Face="Courier New">TmlRegularExpression = <B>class</B>(<A HREF="IDH_Class_TmlObject.htm">TmlObject</A>)</Font><P><B>Description</B><Br>Regular Expression Matching object.
+<p>   This class provides easy to use Regular Expression string matching for use in wider
+   applications.  Use includes language lexers &amp; parsers, searching tools and so on. 
+<p><b>Operation</b>
+<br>   Developed from first principals and NFA theory, this object works as follows (note that this
+   description uses terminology which should be confined to a Computer Science paper):
+<br>
+<ol>
+<li> Parse Regular Expression into a Non-deterministic Finite State Automata (NFA) with
+        lambda transitions
+<li> Merge identical states
+<li> Eliminate Lambda transitions
+<li> Merge identical states
+<br>        (The Removal of lambda transitions can reveal that two transitions are actually identical
+        when they didn't appear so initially)
+<li> Remove of unreachable states
+<li> Use the resultant NFA to match an input stream</ol>   Note that some Computer Science courses and textbooks use the term "epsilon transition" instead
+   of "lambda transition" - in both cases the meaning is the same: A transition in the NFA which
+   does not consume any characters of input. 
+<BR>
+<br>
+<A NAME="Properties"></A>
+<TABLE BGCOLOR="#000000" BORDER="0" cellspacing=2 WIDTH="100%">
+<TR>
+<TD><Font Color="#FFFFFF"><B>Introduced Public Properties</B></Font></TD></TR></Table><Font Size="2">
+<Table BGCOLOR="#EEEEEE" CellSpacing="1" Width="100%">
+<TR>
+<TD>
+<A HREF="IDH_TmlRegularExpression_MatchCount.htm">MatchCount</A>&nbsp;</TD>
+<TD>Count of how many matches we found </TD></TR>
+<TR>
+<TD>
+<A HREF="IDH_TmlRegularExpression_MatchFinish.htm">MatchFinish</A>&nbsp;</TD>
+<TD>Finish position of match iIndex </TD></TR>
+<TR>
+<TD>
+<A HREF="IDH_TmlRegularExpression_MatchSize.htm">MatchSize</A>&nbsp;</TD>
+<TD>Size of match iIndex </TD></TR>
+<TR>
+<TD>
+<A HREF="IDH_TmlRegularExpression_MatchStart.htm">MatchStart</A>&nbsp;</TD>
+<TD>Start position of match iIndex </TD></TR>
+<TR>
+<TD>
+<A HREF="IDH_TmlRegularExpression_StartState.htm">StartState</A>&nbsp;</TD>
+<TD>The state from which matching should begin </TD></TR>
+<TR>
+<TD>
+<A HREF="IDH_TmlRegularExpression_StateCount.htm">StateCount</A>&nbsp;</TD>
+<TD>Count of states in this Regular expression </TD></TR>
+<TR>
+<TD>
+<A HREF="IDH_TmlRegularExpression_States.htm">States</A>&nbsp;</TD>
+<TD>Access to states in this regular expression </TD></TR></Table></Font>
+<br>
+<A Name="Methods">
+<TABLE BGCOLOR="#000000" BORDER="0" cellspacing=2 WIDTH="100%">
+<TR>
+<TD><Font Color="#FFFFFF"><B>Introduced Methods</B></Font></TD></TR></Table><Font Size="2">
+<Table BGCOLOR="#EEEEEE" CellSpacing="1" Width="100%">
+<TR>
+<TD>
+<IMG Src="images/private.gif"><B><A HREF="IDH_TmlRegularExpression_AddBranch.htm">AddBranch</A></B></TD>
+<TD Align=center valign=middle>   </TD>
+<TD>Start another branch </TD></TR>
+<TR>
+<TD>
+<IMG Src="images/private.gif"><B><A HREF="IDH_TmlRegularExpression_AddOptional.htm">AddOptional</A></B></TD>
+<TD Align=center valign=middle>   </TD>
+<TD>Add Optionality to the last state </TD></TR>
+<TR>
+<TD>
+<IMG Src="images/private.gif"><B><A HREF="IDH_TmlRegularExpression_AddRepetition.htm">AddRepetition</A></B></TD>
+<TD Align=center valign=middle>   </TD>
+<TD>Add Repeating to the last state </TD></TR>
+<TR>
+<TD>
+<IMG Src="images/private.gif"><B><A HREF="IDH_TmlRegularExpression_AddTransition.htm">AddTransition</A></B></TD>
+<TD Align=center valign=middle>   </TD>
+<TD>Add a transition to a state and set that new state as the current state.</TD></TR>
+<TR>
+<TD>
+<IMG Src="images/private.gif"><B><A HREF="IDH_TmlRegularExpression_BeginGroup.htm">BeginGroup</A></B></TD>
+<TD Align=center valign=middle>   </TD>
+<TD>Start a New Group.</TD></TR>
+<TR>
+<TD>
+<IMG Src="images/public.gif"><B><A HREF="IDH_TmlRegularExpression_CalculateDFAFingerprint.htm">CalculateDFAFingerprint</A></B></TD>
+<TD Align=center valign=middle>   </TD>
+<TD>Get a fingerprint number to use for this set of states .</TD></TR>
+<TR>
+<TD>
+<IMG Src="images/private.gif"><B><A HREF="IDH_TmlRegularExpression_CalculateFirstSets.htm">CalculateFirstSets</A></B></TD>
+<TD Align=center valign=middle>   </TD>
+<TD>Calculate the First sets of each transition - the possible characters which may result in
+     a transition from a given state.</TD></TR>
+<TR>
+<TD>
+<IMG Src="images/private.gif"><B><A HREF="IDH_TmlRegularExpression_CollapseIdenticalStates.htm">CollapseIdenticalStates</A></B></TD>
+<TD Align=center valign=middle>   </TD>
+<TD>Find and merge any states which are semantically identical - states which add no information
+     to the NFA.</TD></TR>
+<TR>
+<TD>
+<IMG Src="images/public.gif"><B><A HREF="IDH_TmlRegularExpression_Create.htm">Create</A></B></TD>
+<TD Align=center valign=middle>   </TD>
+<TD>Create a new Regular Expression object to match a given RE.</TD></TR>
+<TR>
+<TD>
+<IMG Src="images/public.gif"><B><A HREF="IDH_TmlRegularExpression_Destroy.htm">Destroy</A></B></TD>
+<TD Align=center valign=middle>       
+<Img Src="images/overrid2.gif"></TD>
+<TD>Destroy this instance.</TD></TR>
+<TR>
+<TD>
+<IMG Src="images/public.gif"><B><A HREF="IDH_TmlRegularExpression_DumpStateTable.htm">DumpStateTable</A></B></TD>
+<TD Align=center valign=middle>   </TD>
+<TD>Add details of this Regular Expressions state table to the give TStrings instance.</TD></TR>
+<TR>
+<TD>
+<IMG Src="images/private.gif"><B><A HREF="IDH_TmlRegularExpression_FinishGroup.htm">FinishGroup</A></B></TD>
+<TD Align=center valign=middle>   </TD>
+<TD>Finish a Group.</TD></TR>
+<TR>
+<TD>
+<IMG Src="images/public.gif"><B><A HREF="IDH_TmlRegularExpression_GetDFAState.htm">GetDFAState</A></B></TD>
+<TD Align=center valign=middle>   </TD>
+<TD>Get the composite state representing the list of states passed </TD></TR>
+<TR>
+<TD>
+<IMG Src="images/private.gif"><A HREF="IDH_TmlRegularExpression_GetMatchCount.htm">GetMatchCount</A></TD>
+<TD Align=center valign=middle>   </TD></TR>
+<TR>
+<TD>
+<IMG Src="images/private.gif"><A HREF="IDH_TmlRegularExpression_GetMatchFinishByIndex.htm">GetMatchFinishByIndex</A></TD>
+<TD Align=center valign=middle>   </TD></TR>
+<TR>
+<TD>
+<IMG Src="images/private.gif"><A HREF="IDH_TmlRegularExpression_GetMatchSizeByIndex.htm">GetMatchSizeByIndex</A></TD>
+<TD Align=center valign=middle>   </TD></TR>
+<TR>
+<TD>
+<IMG Src="images/private.gif"><A HREF="IDH_TmlRegularExpression_GetMatchStartByIndex.htm">GetMatchStartByIndex</A></TD>
+<TD Align=center valign=middle>   </TD></TR>
+<TR>
+<TD>
+<IMG Src="images/private.gif"><A HREF="IDH_TmlRegularExpression_GetStateByIndex.htm">GetStateByIndex</A></TD>
+<TD Align=center valign=middle>   </TD></TR>
+<TR>
+<TD>
+<IMG Src="images/private.gif"><A HREF="IDH_TmlRegularExpression_GetStateCount.htm">GetStateCount</A></TD>
+<TD Align=center valign=middle>   </TD></TR>
+<TR>
+<TD>
+<IMG Src="images/private.gif"><B><A HREF="IDH_TmlRegularExpression_MakeCaseInsensitive.htm">MakeCaseInsensitive</A></B></TD>
+<TD Align=center valign=middle>   </TD>
+<TD>Modify the NFA to be Case Insensitive </TD></TR>
+<TR>
+<TD>
+<IMG Src="images/private.gif"><B><A HREF="IDH_TmlRegularExpression_MakeDeterministic.htm">MakeDeterministic</A></B></TD>
+<TD Align=center valign=middle>   </TD>
+<TD>Transform the NFA into an equivilent DFA.</TD></TR>
+<TR>
+<TD>
+<IMG Src="images/public.gif"><B><A HREF="IDH_TmlRegularExpression_Match.htm">Match</A></B></TD>
+<TD Align=center valign=middle>   </TD>
+<TD>Search for a match in a given string.</TD></TR>
+<TR>
+<TD>
+<IMG Src="images/public.gif"><B><A HREF="IDH_TmlRegularExpression_NewState.htm">NewState</A></B></TD>
+<TD Align=center valign=middle>   </TD>
+<TD>Create a new state and return it </TD></TR>
+<TR>
+<TD>
+<IMG Src="images/private.gif"><B><A HREF="IDH_TmlRegularExpression_Optimize.htm">Optimize</A></B></TD>
+<TD Align=center valign=middle>   </TD>
+<TD>Optimize the NFA into a DFA for efficient use.</TD></TR>
+<TR>
+<TD>
+<IMG Src="images/private.gif"><B><A HREF="IDH_TmlRegularExpression_ParseExpression.htm">ParseExpression</A></B></TD>
+<TD Align=center valign=middle>   </TD>
+<TD>Parse a regular expression and create a state machine for recognition.</TD></TR>
+<TR>
+<TD>
+<IMG Src="images/private.gif"><B><A HREF="IDH_TmlRegularExpression_ParseForRange.htm">ParseForRange</A></B></TD>
+<TD Align=center valign=middle>   </TD>
+<TD>Parse a single character when creating a Character Range </TD></TR>
+<TR>
+<TD>
+<IMG Src="images/private.gif"><B><A HREF="IDH_TmlRegularExpression_ParseForState.htm">ParseForState</A></B></TD>
+<TD Align=center valign=middle>   </TD>
+<TD>Parse a single character when creating states </TD></TR>
+<TR>
+<TD>
+<IMG Src="images/private.gif"><B><A HREF="IDH_TmlRegularExpression_PropagateAcceptedFlags.htm">PropagateAcceptedFlags</A></B></TD>
+<TD Align=center valign=middle>   </TD>
+<TD>Determine all the Accept states of the NFA.</TD></TR>
+<TR>
+<TD>
+<IMG Src="images/private.gif"><B><A HREF="IDH_TmlRegularExpression_RemoveLambdaTransitions.htm">RemoveLambdaTransitions</A></B></TD>
+<TD Align=center valign=middle>   </TD>
+<TD>Remove lambda transitions from the NFA.</TD></TR>
+<TR>
+<TD>
+<IMG Src="images/private.gif"><B><A HREF="IDH_TmlRegularExpression_RemoveRedundantStates.htm">RemoveRedundantStates</A></B></TD>
+<TD Align=center valign=middle>   </TD>
+<TD>Find and remove any states which are not reachable from our start state.</TD></TR>
+<TR>
+<TD>
+<IMG Src="images/private.gif"><B><A HREF="IDH_TmlRegularExpression_Simplify.htm">Simplify</A></B></TD>
+<TD Align=center valign=middle>   </TD>
+<TD>Do some basic simplifications to the NFA </TD></TR>
+<TR>
+<TD>
+<IMG Src="images/private.gif"><B><A HREF="IDH_TmlRegularExpression_StartRange.htm">StartRange</A></B></TD>
+<TD Align=center valign=middle>   </TD>
+<TD>Initialise for parsing a Character Range </TD></TR></Table></Font>

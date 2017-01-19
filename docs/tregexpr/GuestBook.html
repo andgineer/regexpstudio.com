@@ -1,0 +1,493 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<HEAD>
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-8859-1">
+  <meta name="Content-Language" content="english">
+  <TITLE>TRegExpr Guest Book&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Regular Expressions,perl,regexp,Delphi,Pascal,FreePascal,Kylix,Libraries,VCL,CLX,Tools,files utils</TITLE>
+  <!-- TRegExpr regular expressions (r.e. RegExpr regexp tregexpr), egrep perl unix; delphi pascal FreePascal Kylix freeware component Andrey Sorokin -->
+  <meta name="home_url" content="http://regexpstudio.com/">
+  <meta name="GENERATOR" content="FAR 1.70">
+  <LINK REL="stylesheet" HREF="../styles/default.css" TYPE="text/css">
+  <meta name="description" content="delphi pascal FreePascal Kylix freeware components: regular expressions (r.e. RegExpr regexp tregexpr), egrep perl unix; Andrey Sorokin">
+  <meta name="abstract" content="TRegExpr regular expressions (r.e. RegExpr regexp tregexpr), egrep perl unix; Andrey Sorokin">
+  <meta name="keywords" content="TRegExpr regular expressions (r.e. RegExpr regexp tregexpr), egrep perl unix; delphi pascal FreePascal Kylix freeware component Andrey Sorokin">
+  <META NAME="distribution" CONTENT="world">
+  <meta name="audience" content="all">
+  <meta name="robots" content="index,all">
+  <meta name="revisit" content="30 days">
+  <meta name="revisit-after" content="30 days">
+  <meta name="site-created" content="01-01-2004">
+  <META NAME="author" CONTENT="RegExpStudio.com, Andrey V. Sorokin, Saint Petersburg, Russia.">
+  <META NAME="copyright" CONTENT="Copyright &copy; RegExpStudio.com, Andrey V. Sorokin, Saint Petersburg, Russia. All rights reserved">
+</HEAD>
+  
+<BODY bgcolor="white" leftmargin="0" topmargin="0" marginwidth="0" 
+      marginheight="0">
+
+<TABLE bgColor=#0054a6 cellspacing="2" cellpadding="2" border="0" 
+       width="780">
+<TR>
+  <TD align="left"><div class="MainTitle"><a href="http://regexpstudio.com"
+   title="" class="MainTitle"><span class="MainTitle">RegExp Studio</span></a>
+<br><a href="http://regexpstudio.com/" class="MainTitle"
+ title="RegExp Studio">Regular Expressions Visual Designer</a>
+<br><img src="imgs/0.gif" width="1" height="15" alt=""><br>
+</div></TD>
+</TR>
+</TABLE>
+
+<TABLE height=1 cellSpacing=0 cellPadding=0 width=780 bgColor="white" border=0>
+<TR><TD><IMG height=1 alt="" src="../imgs/0.gif" width=1 border=0></TD></TR>
+</TABLE>
+
+<TABLE width="780" height=24 cellspacing="2" cellpadding="2" border="0"
+  bgColor=#0054a6>
+<TR>
+  <TD><img src="../imgs/HomeSmall.gif" alt="RegExpStudio.com" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="http://regexpstudio.com/">Home</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../imgs/0.gif" width=5 border=0></TD>
+  <TD><img src="../imgs/RegExpStudioSmall.gif" alt="RegExp Studio" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="../RegExpStudio.html">RegExp&nbsp;Studio</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../imgs/0.gif" width=5 border=0></TD>
+  <TD><img src="../imgs/RegExpSyntaxSmall.gif" alt="RegExp Syntax" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="../tregexpr/Help/regexp_syntax.html">RegExp&nbsp;Syntax</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../imgs/0.gif" width=5 border=0></TD>
+  <TD><img src="../imgs/TRegExprSmall.gif" alt="TRegExpr library" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="../tregexpr/TRegExpr.html">TRegExpr&nbsp;library</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../imgs/0.gif" width=5 border=0></TD>
+  <TD><img src="../imgs/ContactsSmall.gif" alt="Contacts" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="../Contacts.html">Contacts</A></TD>
+
+  <TD width="100%">&nbsp;</TD>
+</TR>
+</TABLE>
+
+<TABLE cellSpacing=14 cellPadding=0 width=779 bgColor="white" border=0>
+<TR>
+  <TD vAlign=top align=left width=50 height="100%"><IMG
+    height=1 alt="" src="../imgs/0.gif" width=50 border=0></TD>
+
+  <TD vAlign=top align=left bgColor="white" height="100%"
+       width=600>
+
+<TABLE cellSpacing=1 cellPadding=0 bgColor=#f7941d border=0 width=600>
+<TR><TD>
+ <TABLE cellSpacing=0 cellPadding=0 height=16 border=0 width="100%"><TR>
+ <TD><IMG height=16 alt="" src="../imgs/yellow_arrow.gif" width=20 border=0></TD>
+ <TD width="100%"><FONT class=news_date>&nbsp;Guestbook</FONT></TD>
+ </TR></TABLE>
+</TD></TR>
+<TR><TD>
+<TABLE cellSpacing=0 cellPadding=8 width="100%" border=0><TR><TD bgColor="white">
+
+<H4>What developers are saying about TRegExpr (Delphi Regular Expressions)</H4>
+
+<DIV class=GB>
+<P class=GB><BR>Passeggieri Filippo, Italy</P>
+I really like TRegExpr!!!! many compliments for that great components! 
+You really did a good job!
+Many Thanks Andrey.
+
+<P class=GB><BR>Hans J. Klarskov Mortensen, Denmark</P>
+I have just stumled into your Regular Expression for Delphi. What a
+gorgeous find!
+
+<P class=GB><BR>Fabian, Germany</P>
+I am using your RegExpr Component for a long time now with pleasure
+
+<P class=GB><BR>Sebastian, Germany</P>
+Such good open source thingies must be supported ;-)
+
+<P class=GB><BR>Bryan Ashby</P>
+Thanks for the great code and your help!
+
+<P class=GB><BR>Daniele Teti, Italy</P>
+Hi, your is a valuable work.
+TRegExpr is a great Class...
+
+<P class=GB><BR>David Lang, Austria</P>
+I've been using your Delphi regular expressions package, and find it 
+extremely powerful.  I thank you for your efforts.
+
+<P class=GB><BR>Fernando Leandro Fernandes, Brasil</P>
+I'm very excited for
+using regular expressions in my projects... it's a very powerful tool
+
+<P class=GB><BR>Arjuna Diaz, USA</P>
+I've been using your regexp package in my personal software for a while now,
+whenever I need broad matching capabilities. Great job! Very easy to use.  Also,
+I used to work at Bell Labs, so I'm a little familiar with stuff.
+
+<P class=GB><BR>Martin Barrowcliff, USA</P>
+I have your test-reg exp program. Very nice, you will soon be a top programmer in your country.
+You are also ex military, as I am.
+
+<P class=GB><BR>Craig Manley, Netherlands</P>
+I'm a Perl and Delphi programmer and therefore find your class very useful.
+
+<P class=GB><BR>Tom Corcoran</P>
+I am using your Regular expression unit in Delphi, superb stuff, thank you.
+
+<P class=GB><BR>Jelmer Vos, Netherlands</P>
+It is very nice to see that you are still working with TRegExpr. I think it
+is the best in the world for Delphi. Good work!
+
+<P class=GB><BR>Celso Rossi, Brasil</P>
+Im a dephi programmer and find the TRegExpr on the web. It is a Excelent
+Interface and work Fine !.
+
+<P class=GB><BR>Ekki Plicht, Germany</P>
+big thanks for the TRegExp class... it's really fantastic and works very 
+nicely. Good work!
+
+<P class=GB><BR>Riccardo Zorn, Italy</P>
+I am using your regexp component and put it on 3 different
+projects. it's great, congratulations.
+
+<P class=GB><BR>Richard</P>
+well done on the TRegExp package you created. It looks
+very good !.
+
+<P class=GB><BR>Markus Dauberschmidt, Germany</P>
+I started using your TRegExpr unit some days ago to use regular expression
+string replacements in my application.
+Let me point out what a powerful class you've written! I'am really impressed.
+
+<P class=GB><BR>Udo Weik, Germany</P>
+greetings from Germany! I'm just testing TRegExpr. Thanxs
+for that wonderful component!
+
+<P class=GB><BR>Guru Ramnath Kathiresan</P>
+I been using your component for the past 10 months and i'm
+very satisfied withit...
+
+<P class=GB><BR>Matthias Fichtner</P>
+thanks again for your great RegEx implementation. I use it
+so often, I wouldn't know what to do without it. :)
+
+<P class=GB><BR>Damien Mangin, France</P>
+thank's a lot for your amazing work with the TRegExpr library !
+I spent hours trying to embed perl into Delphi program (embedded-perl),
+before trying your implementation, which works just fine !
+
+<P class=GB><BR>Bruno Zeitoun, France</P>
+I found your TRegExpr  very usefull
+
+<P class=GB><BR>Thor Asmund</P>
+Your implementation is just the right way to do it! 
+I am very pleased that you have taken the time to make the only, I think, regexp
+component for delphi that supports not only matching but also substitution. I
+have been using your library in various applicaitons, for instance a GUI
+Search/Replace tool (that replaces in files in subdirectories) and a homepage
+image grabber!!
+
+<P class=GB><BR>Piero Longhetto, Italy</P>
+i've just finished to download
+your TRegExp class for delphi and i thing it's very well done.
+
+<P class=GB><BR>Craig Peterson</P>
+We are using RegExpr in the new version of our product, Beyond Compare 2.0
+and would be very happy to give you a free license as thanks for your great 
+component.
+
+<P class=GB><BR>Martin Fuller, UK</P>
+I have used your TRegExpr to do some simple parsing of Delphi code.  Thank you!  It is easy to use
+and your demo application is very helpful.  All the expressions I needed worked perfectly.
+
+<P class=GB><BR>Tobias Theune, Germany</P>
+i was looking for a regular expression for urls and email and found
+your routines. its working pretty good
+
+<P class=GB><BR>Jelmer Vos, Netherlands</P>
+I just want to say that TRegExpr is great. It is so functional why does 
+Borland put TRegExpr default in Delphi?  Is is so cool for a programmer.
+I do not send such e-mails, but for this I do, because I just want to say
+thanks! :)
+And I hope that you are developing TRegExpr in de future so it will even
+greater and better.
+If someone ask me for a good RegEx component/unit for Delphi I wil alway
+give your homepage! :)
+
+<P class=GB><BR>John Hocking</P>
+Thanks for the great component you have provided. I have used version 0.938 with
+success.
+
+<P class=GB><BR>Gerald Nunn, Canada</P>
+I've been looking at your regexp component and it looks very nice.
+
+<P class=GB><BR>Sony Arianto Kurniawan, Indonesia</P>
+Thanks for your great regex library for delphi. I'm using it in my 
+application and perhaps i always use it in all of my app ;) Many of my app 
+is get data from internet and parse it, so i think your regexpr is powerful 
+:)))
+
+<P class=GB><BR>Jim McKay, Oakland, Ca.</P>
+I just wanted to say thanks.  RegExpr is 
+ very nice, great help file, great demo.  I happy as hell!
+
+<P class=GB><BR>Bernie</P>
+Thank you for the excellent regular expression object for Delphi and
+Builder. I have compiled and the example in Delphi and enjoyed testing it. 
+
+<P class=GB><BR>Rendenbach Marc, Germany</P>
+since a few weeks i use your TRegExpr Class for Delphi. Really great
+stuff
+
+<P class=GB><BR>David Gerrald, USA</P>
+Keep Up the good work!
+
+<P class=GB><BR>Armando de la Torre</P>
+thank you for creating such a great library.
+
+<P class=GB><BR>Janus N. Tondering, DK</P>
+ Your component works great and is easy to use (if
+you know regexp). 
+
+<P class=GB><BR>Dave Hughes, UK</P>
+thank you so much for releasing a freeware regular expression 
+library, especially one so feature packed, fast and reliable as this one (I'd 
+written one myself - but it was a bit buggy and used a horribly slow and 
+complicated recursive algorithm - yuck!).
+
+<P class=GB><BR>Jeremy Echols</P>
+I've downloaded and have been using your TRegExpr object, and it's actually 
+working very well. 
+thanks for your great regular expressions class.
+
+<P class=GB><BR>Naguschewski Andreas, Germany</P>
+TRegExpr - TREMENDOUSLY INGENIOUS!
+thx for offering your work for free, man. it's great!
+
+<P class=GB><BR>Miroslav Vracevic</P>
+I think that your TRegExpr is pretty cool!
+
+<P class=GB><BR>Aaron Chan</P>
+Your TRegExpr is great!
+
+<P class=GB><BR>Riccardo Zanelli, Italy</P>
+Great stuff this Tregexpr!
+Do you need an Italian translation of the Help file?
+I may volounteer...! ;-)
+
+<P class=GB><BR>Anatoly, Russia</P>
+Big thank, man!
+
+<P class=GB><BR>Dennis Gurock</P>
+Thank you for TRegExpr. It is very very very usefull :) Keep up the good
+work.
+
+<P class=GB><BR>Andrew Fedorov, Russia</P>
+TRegExpr is very userful component. Thank you.
+
+<P class=GB><BR>Peter Furlan, Germany</P>
+Thank you a lot for AudioInfo... it works nice!
+
+<P class=GB><BR>Martin Ledoux, Quebec, Canada</P>
+Thank's a lot for this very good class, this is a very usefull and
+powerfull one. I have big projects with this one.
+By using this class I think the least I can do is to translate it in
+french.
+
+<P class=GB><BR>shukaiyong, China</P>
+   Your TRegExpr is very useful, Thanks.
+
+<P class=GB><BR>Kit Eason</P>
+I'm using TRegExp in a shareware utility I am writing.
+Many thanks for this brilliant component!
+
+<P class=GB><BR>Diego Calp, Argentina</P>
+Your work is excellent, congratulations! I'm working with Excel 
+DDE connection, parsing strings like 
+        '[BUDGET.XLS]Main table'!R10C10:R30C12,
+piece of cake with your library!! 
+
+<P class=GB><BR>Matthew Winter</P>
+I have just started to make use of the Regular Expression package,
+and I have to say. Excellent work.
+
+<P class=GB><BR>Kire Mrceski, Yugoslavia</P>
+thanks
+
+<P class=GB><BR>Atli Bj�rgvin Oddsson, Iceland</P>
+Like your Delphi Regular expression component a lot! 
+Easy to use and comes with good examples. This should be 
+included with standard Delphi! :)
+
+<P class=GB><BR>Rob McCormack</P>
+  Let me say how much I like
+  your TRegExpr. Excellent!
+
+<P class=GB><BR>Knud Ole Reffstrup, Denmark</P>
+I am writing you to inform you about the use I have made of your
+TRegExpr-unit for Delphi.
+I am a teacher. The Danish teachers in Computer Science have just 
+held their annual meeting, and I held a presentation, where I introduced 
+the subject Regular Expressions with examples from Perl, Delphi (using 
+your unit) and JavaScript.
+I find your unit very versatile and easy to use. The fact that it is
+distributed as a unit and not a component to be installed in the
+Delphi-system makes it particularly attractive.
+
+<P class=GB><BR>Dod </P>
+veryveryvrey nice job !!! :-) Since I
+discovered Perl, I did a lot of things because of regexp but with no
+Graphical interface...just batch mode, but now I'll be able to go back
+to Delphi with that lovely RegExp library, agin many thanx for having
+making it !
+
+<P class=GB><BR>Heikko Webers</P>
+I like your component !
+
+<P class=GB><BR>Jon Smith</P>
+Finally - I would like to thank you again for a most excellent component!
+It is truly a joy to use and solves a very troublesome programming problem
+with ease and elegance.
+
+<P class=GB><BR>Edan P.</P>
+After searching for a good regular expression parser on the net, I came 
+across your component, and was very impressed. It got everything I need, and 
+its just a unit that can easily be added to my project.
+
+<P class=GB><BR>Andrew, Europe</P>
+TRegExpr was a first toolkit I used to solve some string handling problems 
+and I found it powerfull enough for that case.
+Generally TRegExpr is stable and very usefull. Thank you.
+
+<P class=GB><BR>Terry Thomas, USA</P>
+Das Vadonia!
+Sorry, I can't spell in Russian but "Hello" from Atlanta, Georgia in the USA.
+I am just learning Delphi 3 and am amazed with what you are able to do in a few 
+lines of code!
+You have a lot of skill and knowledge and I wish you well.<BR>
+Sperseba / Thank You
+
+<P class=GB><BR>Ramanujan M.S.S, India</P>
+Thanks for the nice component. 
+It will save hours of coding for searching 
+things out from the strings. Great  thought.
+
+<P class=GB><BR>Moisey Oysgelt, USA</P>
+I'm evaluating you TregExpr.
+You did a grate job with this component. Thank you for doing this job.
+
+<P class=GB><BR>Simeon Lilov, Bulgaria</P>
+I used TRegExpt to make a DLL and now I use this DLL in Progress 4GL. And it works just fine! I
+did'n encounter any problems yet.
+I like TRgExpr very much! You have done great work!
+
+<P class=GB><BR>Gerard Cote, Canada</P>
+Hello Andrey,
+I'm glad to (Virtually) meet you on the net. It's like
+a great trip for me to the far from America but nevertheless
+dreamed of Russia ans St-Petersbourg.
+I found your work very useful to me. I already teached Unix 
+and the Grep like utilities and will undoubtedly find some 
+utility for your Rgrepexe tools as I am learning Delphi to 
+support my back end engine on my new NT Internet Web server,
+which will be used for teaching support. so I will have to 
+analyse open responses to many exams... and your tool will 
+be welcome then.
+
+<P class=GB><BR>Joe Ward</P>
+I want to say that this is a great library.  Thanks!
+
+<P class=GB><BR>Basri</P>
+Thank you for your Delphi implementation of
+RegExpr. An excellent work.
+
+<P class=GB><BR>Yvon Labbee</P>
+I took your TAudio library it works fine so Thank you. 
+
+<P class=GB><BR>Zlatka, Russia</P>
+Have downloaded your Regular Expression component. :)
+It's a perfectly new thing for me :( , but how much easier
+my work could be if I had had it earlier!
+
+<P class=GB><BR>Martin Baur, Switzerland</P>
+Hi Andrey
+Fine homepage ... nice look ... everything that's needed is there.
+And of course thank you for your honorable mention of me in your help file ... 
+I was not aware that I did earn this .. :-)
+Anyway, I was always lurking for some thing like TRegExpr in native Delphi 
+code ... you gave it to us and this is what need some honorable metion.
+
+<P class=GB><BR>Stephan Klimek, Munic, Germany</P>
+You did a hell of a job for integrating this
+little perlish things ;-)
+
+<P class=GB><BR>Vlad, Russia</P>
+I try to write this on c many years ago :)
+but my small attempt forgotten a long time :)
+thanks for sources and examples :)
+
+<P class=GB><BR>chenbm, Fuzhou, China</P>
+Thank Your' regular expressions unit!!
+</DIV>
+
+</TD></TR></TABLE>
+</TD></TR></TABLE>
+<TABLE cellSpacing=1 cellPadding=0 bgColor="white" border=0 width="100%">
+<TR><TD><IMG alt="" src="../Imgs/0.gif" width=1 height=16 border=0></TD></TR>
+</TABLE>
+
+<!--
+    <TABLE cellSpacing=1 cellPadding=0 bgColor="white" border=0 width="100%">
+    <TR><TD><IMG alt="" src="../Imgs/0.gif" width=1 height=16 border=0></TD></TR>
+    </TABLE>
+
+    <TABLE cellSpacing=10 cellPadding=0 width="100%" bgColor="white" border=0>
+    <TR>
+      <TD align=middle>
+<A href="http://www.rarsoft.com" target=_blank><IMG src="../imgs/Far88x31.gif" 
+   width="88" height="31" border="0" alt="This page was build with FAR! manager"></A>
+<BR><BR>
+      </TD>
+    </TR>
+    </TABLE><BR>
+-->
+
+  </TD>
+</TR>
+</TABLE><BR><BR>
+
+<TABLE height=1 cellSpacing=0 cellPadding=0 width=780 bgColor=#0054a6 
+       border=0>
+<TR>
+  <TD><IMG height=1 alt="" src="../imgs/0.gif" width=1 border=0></TD>
+</TR>
+</TABLE>
+
+<TABLE height=70 cellSpacing=2 cellPadding=0 width=779 bgColor="white"
+       border=0>
+<TR>
+  <TD align=right width=32><IMG src="../imgs/0.gif" width=32 height=1 border=0></TD>
+  <TD vAlign=top align=left width="100%"><P class=pageauthor><I>&copy;&nbsp;<A 
+      class=pageauthor href="http://regexpstudio.com/">2004 Andrey V. Sorokin</A></I>,
+      Saint Petersburg, Russia
+      <BR><A class=pageauthor href="mailto:anso@mail.ru">anso@mail.ru</A>
+      <BR><A class=pageauthor href="http://regexpstudio.com/">RegExpStudio.com</A></P></TD>
+  <TD vAlign=top align=right width=468><A href="http://www.helpandmanual.com"
+      target="_blank"><img src="Help/hmad468x60.gif" width="468" height="60"
+      border="0" alt="Help&Manual - the best help authoring tool!"></A></TD>
+  <TD align=right width=4><IMG src="../imgs/0.gif" width=4 height=1 border=0></TD>
+</TR>
+</TABLE><BR>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-90368520-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+</BODY>
+
+</HTML>

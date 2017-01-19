@@ -1,0 +1,14 @@
+:BASE RegExpE.hlp
+:TITLE Regular Expressions For Delphi
+1 About=tregexpr_about@RegExpE.hlp
+1 Legal issues=tregexpr_disclaimer@RegExpE.hlp
+1 Installation=tregexpr_installation@RegExpE.hlp
+1 Syntax of Regular Expressions=tregexpr_syntax@RegExpE.hlp
+1 TRegExpr interface=tregexpr_interface@RegExpE.hlp
+1 R.E. Studio=tregexpr_restudio@RegExpE.hlp
+1 FAQ=tregexpr_faq@RegExpE.hlp
+1 Author=tregexpr_author@RegExpE.hlp
+1 Demos
+2 Demos=tregexpr_demos@RegExpE.hlp
+2 Text2HTML=Text2Html@RegExpE.hlp
+2 Unit HyperLinksDecorator=tregexpr_decorator@RegExpE.hlp

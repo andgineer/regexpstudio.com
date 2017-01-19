@@ -1,0 +1,16 @@
+Option Explicit
+Private Declare Function QuoteRegExprMetaChars Lib "RegExpress.dll" (ByVal AStr As String, ByVal aRes As String, ByVal aMax As Long) As Long
+Private Declare Function ExecRegExpr Lib "RegExpress.dll" (ByVal ARegExpr As String, ByVal AInputStr As String) As Boolean
+Private Declare Function SplitRegExpr Lib "RegExpress.dll" (ByVal ARegExpr As String, ByVal AInputStr As String, ByVal APieces As String, ByVal aMax As Long) As Long
+Private Declare Function ReplaceRegExpr Lib "RegExpress.dll" (ByVal ARegExpr As String, ByVal AInputStr As String, ByVal AReplaceStr As String, ByVal aRes As String, ByVal aMax As Long) As Long
+
+
+Private Sub cmdAction_Click()
+   Dim strRes As String
+   Dim lngNum As Long
+   strRes = Space$(100)
+'   lngNum = QuoteRegExprMetaChars("abc$cd.(", strRes, 30)
+'   Debug.Print ExecRegExpr("\d{3}-(\d{2}-\d{2}|\d{4})", "Phone: 555-1234")
+'   SplitRegExpr "([IVXCL]{3}-[ -Ÿ][ -Ÿ] *[Nü]? *)?\d{6}", "The example of russian passport number: IVX-™€ 123456 - rerererere", strRes, 100
+'   ReplaceRegExpr "([IVXCL]{3}-[ -Ÿ][ -Ÿ] *[Nü]? *)?\d{6}", "The example of russian passport number: IVX-™€ 123456 - rerererere", "aaa", strRes, 100
+End Sub

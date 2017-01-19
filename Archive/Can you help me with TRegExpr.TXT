@@ -1,0 +1,658 @@
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+From:    sky 21cn <skysky@21cn.com>
+To:      anso@mail.ru <anso@mail.ru>
+Date:    Friday, August 17, 2001, 3:42:24 PM
+Subject: Can you help me with TRegExpr?
+Files:   message.stm
+--====----====----====----====----====----====----====----====----====----===--
+I use TRegExpr 0.942, but there is a dead loop there. Is there new version? Your site can not be connected.
+
+Here is my expression, and input string.
+
+
+
+BrWindow\(\'([^<]+?)\'.+?>([^<]+?)</a.+?/td>(.+?)</td>(.*?)</td>.+?en\">(\d+?)</.+?</form>
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+<title>易得资源</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type="text/css">
+<!--
+.9-1 {  font-family: "宋体"; font-size: 9pt; font-style: normal; line-height: 1.5pc; color: #FF6633}
+.未命名1 {  font-family: "宋体"; font-size: 9pt; font-style: normal; color: #000033}
+.未命名2 {  font-family: "宋体"; font-size: 9pt; font-style: normal; line-height: 1.5pc; color: #000033}
+-->
+</style>
+<link rel=stylesheet href="../main.css">
+<script language="JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { file://v2.0
+  window.open(theURL,winName,features);
+}
+file://-->
+</script>
+</head>
+
+<body bgcolor="ffffee" topmargin="0">
+<table width="750" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td width="141">
+      <div align="center"><img src="../qcjy/pic/Logo.jpg" width="55" height="58"></div>
+    </td>
+    <td width="609"><img src="../gsbz/picture/dh.JPG" width="621" height="72" usemap="#Map" border="0"><map name="Map"><area shape="rect" coords="62,8,124,30" href="http://www.office1-2-3.com"><area shape="rect" coords="337,3,390,23" href="../qcjy/index.htm"><area shape="rect" coords="394,5,443,22" href="../gszb/"><area shape="rect" coords="452,4,500,24" href="../gsbz/"><area shape="rect" coords="508,3,554,24" href="../gsyz/"><area shape="rect" coords="339,28,390,48" href="../zxsd/zxsd.htm"><area shape="rect" coords="394,26,445,45" href="../ydsq/"><area shape="rect" coords="451,27,502,47" href="../hyxx/hydl_tm.asp"><area shape="rect" coords="509,28,558,45" href="../gybz.htm"><area shape="rect" coords="575,36,607,69" href="../zxsd/syt.asp"></map></td>
+  </tr>
+</table>
+<table width="750" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="2"><img src="picture/t1.jpg" width="750" height="7"></td>
+  </tr>
+  <tr> 
+    <td width="198" bgcolor="#FFFFCC" height="13"><img src="picture/t2.jpg" width="21" height="23"></td>
+    <td width="560" height="13" align="left"> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="ffbc5f">
+        <tr>
+          <td width="4%"><img src="picture/t3.jpg" width="20" height="23"></td>
+          <td width="94%">&nbsp;</td>
+          <td width="2%"><img src="picture/t4.jpg" width="13" height="23"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table width="750" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td width="214" valign="top" height="371" bgcolor="ffffcc"> 
+      <table width="165" border="0" cellspacing="0" cellpadding="0" height="192" background="picture/3image1.jpg" align="center">
+        <tr background="picture/3image1.jpg" align="center" valign="middle"> 
+          <td height="171" width="165"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr align="center"> 
+                <td> 
+                  <form method="post" action="../hyxx/hydl.asp" name="post">
+                    <table width="99%" border="0" cellspacing="0" cellpadding="0" class="未命名1" align="center">
+                      <tr> 
+                        <td width="33%" height="33"> 
+                          <div align="center">用户名：</div>
+                        </td>
+                        <td width="67%" height="33"> 
+                          <input type="text" name="hym" size="10">
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td width="33%"> 
+                          <div align="center">密　码：</div>
+                        </td>
+                        <td width="67%"> 
+                          <input type="password" name="hymm" size="10">
+                        </td>
+                      </tr>
+                    </table>
+                    <br>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="未命名1">
+                      <tr> 
+                        <td width="45%"> 
+                          <div align="center"> 
+                            <input type="image" border="0" name="imageField" src="../gsbz/picture/a3.jpg" width="35" height="20">
+                          </div>
+                        </td>
+                        <td width="55%"><a href="../hyxx/hyzc.asp"> 
+                          <input type="hidden" name="log" value="5">
+                          <img src="../gsbz/picture/a2.jpg" width="35" height="20" border="0"></a></td>
+                      </tr>
+                    </table>
+                    <table width="98%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td class="未命名1"><br>
+                          注册就有奖，易得资源等着您</td>
+                      </tr>
+                    </table>
+                    </form>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <table width="165" border="0" cellspacing="0" cellpadding="0" height="192" background="picture/3image.jpg" align="center">
+        <tr valign="middle" align="center"> 
+          <td height="157"> 
+            <form method="post" action="spzx1.asp">
+              <table width="99%" border="0" cellspacing="0" cellpadding="0" class="未命名1">
+                <tr> 
+                  <td width="25%" height="33">名称：</td>
+                  <td width="75%" height="33"> 
+                    <input type="text" name="spmc" size="10">
+                  </td>
+                </tr>
+                <tr> 
+                  <td width="25%" height="28">价格：</td>
+                  <td width="75%" class="未命名1" height="28"> 
+                    <input type="text" name="jg1" size="3">
+                    元-
+                    <input type="text" name="jg2" size="3">
+                    元 </td>
+                </tr>
+                <tr> 
+                  <td width="25%" height="22">种类：</td>
+                  <td width="75%" height="22"> 
+                    <select name="zl" size="1">
+                      <option value="1" selected>办公家具</option>
+                      <option value="3">办公设备</option>
+                      <option value="2">办公用品</option>
+                      <option value="4">办公礼品</option>
+                      <option value="5">大堂用品</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr> 
+                  <td width="25%" height="40">&nbsp;</td>
+                  <td width="75%" height="40"> 
+                    <input type="image" border="0" name="imageField2" src="picture/search-1.gif" width="31" height="20">
+                    <input type="hidden" name="log" value="5">
+                  </td>
+                </tr>
+              </table>
+            </form>
+          </td>
+        </tr>
+      </table>
+      <br>
+    </td>
+    <td width="1" height="371" bgcolor="ffbc5f"></td>
+    <td width="528" height="371" valign="top">
+ <table width="100%" border="1" cellspacing="0" cellpadding="0" align="center" bordercolor="ffffdd" bordercolorlight="#FFFFff">
+        <tr align="center" bgcolor="#FEE8A5"> 
+          <td width="24%" bgcolor="#FEE8A5"><font face="宋体" size="2" color="#000084">商品名称</font></td>
+          <td width="16%"><font face="宋体" size="2" color="#000084">型号</font></td>
+          <td width="26%"><font face="宋体" size="2" color="#000084">品牌</font></td>
+
+          <td width="11%"><font face="宋体" size="2" color="#FF0033">优惠价</font></td>
+          <td width="10%"><font face="宋体" size="2" color="#000084">数量</font></td>
+          <td width="9%"><font face="宋体" size="2" color="#000084">购买</font></td>
+        </tr>
+      </table>
+       
+ 
+      <form method="post" action="spgwc.asp" target="spgwc" style="margin-top:0;margin-bottom:0">
+        <table width="100%" border=1 cellspacing="0" cellpadding="0" align="center" height="15" bordercolor="ffffdd" bordercolorlight="#FFFFff">
+          <tr> 
+            <td width="24%" height="8"><font size="2" face="宋体"><a href=# onClick="MM_openBrWindow('spxxzl.asp?bm=2041501001','','width=450,height=250')">“思高”牌封箱胶带--带切割座</a></font></td>
+         
+            <td width="16%" height="8"><font size="2" face="宋体">141</font></td>
+          
+      <td width="26%" height="8"><font size="2" face="宋体">3M</font></td>
+            <script language="javascript">
+  function pop()
+  {
+  window.open("", "parent", "width=450; height=280");
+  }
+  </script>
+         <td width="11%" height="8"><font size="2" face="宋体" color="green">22.6</font></td>
+            <td width="10%" height="8"><font size="2" face="宋体"> 
+              <input type="text" name="spsl" size="2" value="1">
+              </font></td>
+<!--            <td width="14%" height="8"><font size="2" face="宋体"><a href=# onClick="MM_openBrWindow('spxxzl.asp?bm=2041501001','','width=450,height=250')">详细资料</a></font></td> -->            
+            <td width="9%" height="8"><font size="2" face="宋体"> 
+              <input type="image" border="0" name="imageField2" src="../image/ok.gif" width="38" height="15">
+              <input type="hidden" name="log" value=2041501001>
+              </font></td>
+          </tr>
+        </table>
+      </form>
+       
+ 
+      <form method="post" action="spgwc.asp" target="spgwc" style="margin-top:0;margin-bottom:0">
+        <table width="100%" border=1 cellspacing="0" cellpadding="0" align="center" height="15" bordercolor="ffffdd" bordercolorlight="#FFFFff">
+          <tr> 
+            <td width="24%" height="8"><font size="2" face="宋体"><a href=# onClick="MM_openBrWindow('spxxzl.asp?bm=2070201001','','width=450,height=250')">“思高”牌固体胶棒</a></font></td>
+         
+            <td width="16%" height="8"><font size="2" face="宋体">6008D</font></td>
+          
+      <td width="26%" height="8"><font size="2" face="宋体">3M</font></td>
+            <script language="javascript">
+  function pop()
+  {
+  window.open("", "parent", "width=450; height=280");
+  }
+  </script>
+         <td width="11%" height="8"><font size="2" face="宋体" color="green">9.8</font></td>
+            <td width="10%" height="8"><font size="2" face="宋体"> 
+              <input type="text" name="spsl" size="2" value="1">
+              </font></td>
+<!--            <td width="14%" height="8"><font size="2" face="宋体"><a href=# onClick="MM_openBrWindow('spxxzl.asp?bm=2070201001','','width=450,height=250')">详细资料</a></font></td> -->            
+            <td width="9%" height="8"><font size="2" face="宋体"> 
+              <input type="image" border="0" name="imageField2" src="../image/ok.gif" width="38" height="15">
+              <input type="hidden" name="log" value=2070201001>
+              </font></td>
+          </tr>
+        </table>
+      </form>
+       
+ 
+      <form method="post" action="spgwc.asp" target="spgwc" style="margin-top:0;margin-bottom:0">
+        <table width="100%" border=1 cellspacing="0" cellpadding="0" align="center" height="15" bordercolor="ffffdd" bordercolorlight="#FFFFff">
+          <tr> 
+            <td width="24%" height="8"><font size="2" face="宋体"><a href=# onClick="MM_openBrWindow('spxxzl.asp?bm=2070203001','','width=450,height=250')">“思高”牌固体胶棒</a></font></td>
+         
+            <td width="16%" height="8"><font size="2" face="宋体">6018D</font></td>
+          
+      <td width="26%" height="8"><font size="2" face="宋体">3M</font></td>
+            <script language="javascript">
+  function pop()
+  {
+  window.open("", "parent", "width=450; height=280");
+  }
+  </script>
+         <td width="11%" height="8"><font size="2" face="宋体" color="green">9.8</font></td>
+            <td width="10%" height="8"><font size="2" face="宋体"> 
+              <input type="text" name="spsl" size="2" value="1">
+              </font></td>
+<!--            <td width="14%" height="8"><font size="2" face="宋体"><a href=# onClick="MM_openBrWindow('spxxzl.asp?bm=2070203001','','width=450,height=250')">详细资料</a></font></td> -->            
+            <td width="9%" height="8"><font size="2" face="宋体"> 
+              <input type="image" border="0" name="imageField2" src="../image/ok.gif" width="38" height="15">
+              <input type="hidden" name="log" value=2070203001>
+              </font></td>
+          </tr>
+        </table>
+      </form>
+       
+ 
+      <form method="post" action="spgwc.asp" target="spgwc" style="margin-top:0;margin-bottom:0">
+        <table width="100%" border=1 cellspacing="0" cellpadding="0" align="center" height="15" bordercolor="ffffdd" bordercolorlight="#FFFFff">
+          <tr> 
+            <td width="24%" height="8"><font size="2" face="宋体"><a href=# onClick="MM_openBrWindow('spxxzl.asp?bm=2041501101','','width=450,height=250')">“思高”牌胶带切割座</a></font></td>
+         
+            <td width="16%" height="8"><font size="2" face="宋体">H-127</font></td>
+          
+      <td width="26%" height="8"><font size="2" face="宋体">3M</font></td>
+            <script language="javascript">
+  function pop()
+  {
+  window.open("", "parent", "width=450; height=280");
+  }
+  </script>
+         <td width="11%" height="8"><font size="2" face="宋体" color="green">120</font></td>
+            <td width="10%" height="8"><font size="2" face="宋体"> 
+              <input type="text" name="spsl" size="2" value="1">
+              </font></td>
+<!--            <td width="14%" height="8"><font size="2" face="宋体"><a href=# onClick="MM_openBrWindow('spxxzl.asp?bm=2041501101','','width=450,height=250')">详细资料</a></font></td> -->            
+            <td width="9%" height="8"><font size="2" face="宋体"> 
+              <input type="image" border="0" name="imageField2" src="../image/ok.gif" width="38" height="15">
+              <input type="hidden" name="log" value=2041501101>
+              </font></td>
+          </tr>
+        </table>
+      </form>
+       
+ 
+      <form method="post" action="spgwc.asp" target="spgwc" style="margin-top:0;margin-bottom:0">
+        <table width="100%" border=1 cellspacing="0" cellpadding="0" align="center" height="15" bordercolor="ffffdd" bordercolorlight="#FFFFff">
+          <tr> 
+            <td width="24%" height="8"><font size="2" face="宋体"><a href=# onClick="MM_openBrWindow('spxxzl.asp?bm=2041503101','','width=450,height=250')">“思高”牌胶带切割座</a></font></td>
+         
+            <td width="16%" height="8"><font size="2" face="宋体">C-15</font></td>
+          
+      <td width="26%" height="8"><font size="2" face="宋体">3M</font></td>
+            <script language="javascript">
+  function pop()
+  {
+  window.open("", "parent", "width=450; height=280");
+  }
+  </script>
+         <td width="11%" height="8"><font size="2" face="宋体" color="green">35</font></td>
+            <td width="10%" height="8"><font size="2" face="宋体"> 
+              <input type="text" name="spsl" size="2" value="1">
+              </font></td>
+<!--            <td width="14%" height="8"><font size="2" face="宋体"><a href=# onClick="MM_openBrWindow('spxxzl.asp?bm=2041503101','','width=450,height=250')">详细资料</a></font></td> -->            
+            <td width="9%" height="8"><font size="2" face="宋体"> 
+              <input type="image" border="0" name="imageField2" src="../image/ok.gif" width="38" height="15">
+              <input type="hidden" name="log" value=2041503101>
+              </font></td>
+          </tr>
+        </table>
+      </form>
+       
+ 
+      <form method="post" action="spgwc.asp" target="spgwc" style="margin-top:0;margin-bottom:0">
+        <table width="100%" border=1 cellspacing="0" cellpadding="0" align="center" height="15" bordercolor="ffffdd" bordercolorlight="#FFFFff">
+          <tr> 
+            <td width="24%" height="8"><font size="2" face="宋体"><a href=# onClick="MM_openBrWindow('spxxzl.asp?bm=2041505101','','width=450,height=250')">“思高”牌胶带切割座</a></font></td>
+         
+            <td width="16%" height="8"><font size="2" face="宋体">C-38</font></td>
+          
+      <td width="26%" height="8"><font size="2" face="宋体">3M</font></td>
+            <script language="javascript">
+  function pop()
+  {
+  window.open("", "parent", "width=450; height=280");
+  }
+  </script>
+         <td width="11%" height="8"><font size="2" face="宋体" color="green">30</font></td>
+            <td width="10%" height="8"><font size="2" face="宋体"> 
+              <input type="text" name="spsl" size="2" value="1">
+              </font></td>
+<!--            <td width="14%" height="8"><font size="2" face="宋体"><a href=# onClick="MM_openBrWindow('spxxzl.asp?bm=2041505101','','width=450,height=250')">详细资料</a></font></td> -->            
+            <td width="9%" height="8"><font size="2" face="宋体"> 
+              <input type="image" border="0" name="imageField2" src="../image/ok.gif" width="38" height="15">
+              <input type="hidden" name="log" value=2041505101>
+              </font></td>
+          </tr>
+        </table>
+      </form>
+       
+ 
+      <form method="post" action="spgwc.asp" target="spgwc" style="margin-top:0;margin-bottom:0">
+        <table width="100%" border=1 cellspacing="0" cellpadding="0" align="center" height="15" bordercolor="ffffdd" bordercolorlight="#FFFFff">
+          <tr> 
+            <td width="24%" height="8"><font size="2" face="宋体"><a href=# onClick="MM_openBrWindow('spxxzl.asp?bm=2011601001','','width=450,height=250')">"报事贴"便条纸</a></font></td>
+         
+            <td width="16%" height="8"><font size="2" face="宋体">653-2PK</font></td>
+          
+      <td width="26%" height="8"><font size="2" face="宋体">3M</font></td>
+            <script language="javascript">
+  function pop()
+  {
+  window.open("", "parent", "width=450; height=280");
+  }
+  </script>
+         <td width="11%" height="8"><font size="2" face="宋体" color="green">6.5</font></td>
+            <td width="10%" height="8"><font size="2" face="宋体"> 
+              <input type="text" name="spsl" size="2" value="1">
+              </font></td>
+<!--            <td width="14%" height="8"><font size="2" face="宋体"><a href=# onClick="MM_openBrWindow('spxxzl.asp?bm=2011601001','','width=450,height=250')">详细资料</a></font></td> -->            
+            <td width="9%" height="8"><font size="2" face="宋体"> 
+              <input type="image" border="0" name="imageField2" src="../image/ok.gif" width="38" height="15">
+              <input type="hidden" name="log" value=2011601001>
+              </font></td>
+          </tr>
+        </table>
+      </form>
+       
+ 
+      <form method="post" action="spgwc.asp" target="spgwc" style="margin-top:0;margin-bottom:0">
+        <table width="100%" border=1 cellspacing="0" cellpadding="0" align="center" height="15" bordercolor="ffffdd" bordercolorlight="#FFFFff">
+          <tr> 
+            <td width="24%" height="8"><font size="2" face="宋体"><a href=# onClick="MM_openBrWindow('spxxzl.asp?bm=2011603001','','width=450,height=250')">"报事贴"便条纸</a></font></td>
+         
+            <td width="16%" height="8"><font size="2" face="宋体">653A</font></td>
+          
+      <td width="26%" height="8"><font size="2" face="宋体">3M</font></td>
+            <script language="javascript">
+  function pop()
+  {
+  window.open("", "parent", "width=450; height=280");
+  }
+  </script>
+         <td width="11%" height="8"><font size="2" face="宋体" color="green">38.8</font></td>
+            <td width="10%" height="8"><font size="2" face="宋体"> 
+              <input type="text" name="spsl" size="2" value="1">
+              </font></td>
+<!--            <td width="14%" height="8"><font size="2" face="宋体"><a href=# onClick="MM_openBrWindow('spxxzl.asp?bm=2011603001','','width=450,height=250')">详细资料</a></font></td> -->            
+            <td width="9%" height="8"><font size="2" face="宋体"> 
+              <input type="image" border="0" name="imageField2" src="../image/ok.gif" width="38" height="15">
+              <input type="hidden" name="log" value=2011603001>
+              </font></td>
+          </tr>
+        </table>
+      </form>
+       
+ 
+      <form method="post" action="spgwc.asp" target="spgwc" style="margin-top:0;margin-bottom:0">
+        <table width="100%" border=1 cellspacing="0" cellpadding="0" align="center" height="15" bordercolor="ffffdd" bordercolorlight="#FFFFff">
+          <tr> 
+            <td width="24%" height="8"><font size="2" face="宋体"><a href=# onClick="MM_openBrWindow('spxxzl.asp?bm=2011608001','','width=450,height=250')">"报事贴"便条纸</a></font></td>
+         
+            <td width="16%" height="8"><font size="2" face="宋体">655</font></td>
+          
+      <td width="26%" height="8"><font size="2" face="宋体">3M</font></td>
+            <script language="javascript">
+  function pop()
+  {
+  window.open("", "parent", "width=450; height=280");
+  }
+  </script>
+         <td width="11%" height="8"><font size="2" face="宋体" color="green">9.8</font></td>
+            <td width="10%" height="8"><font size="2" face="宋体"> 
+              <input type="text" name="spsl" size="2" value="1">
+              </font></td>
+<!--            <td width="14%" height="8"><font size="2" face="宋体"><a href=# onClick="MM_openBrWindow('spxxzl.asp?bm=2011608001','','width=450,height=250')">详细资料</a></font></td> -->            
+            <td width="9%" height="8"><font size="2" face="宋体"> 
+              <input type="image" border="0" name="imageField2" src="../image/ok.gif" width="38" height="15">
+              <input type="hidden" name="log" value=2011608001>
+              </font></td>
+          </tr>
+        </table>
+      </form>
+       
+ 
+      <form method="post" action="spgwc.asp" target="spgwc" style="margin-top:0;margin-bottom:0">
+        <table width="100%" border=1 cellspacing="0" cellpadding="0" align="center" height="15" bordercolor="ffffdd" bordercolorlight="#FFFFff">
+          <tr> 
+            <td width="24%" height="8"><font size="2" face="宋体"><a href=# onClick="MM_openBrWindow('spxxzl.asp?bm=202211011d','','width=450,height=250')">F/C双按扣公文包</a></font></td>
+         
+            <td width="16%" height="8"><font size="2" face="宋体">f406</font></td>
+          
+      <td width="26%" height="8"><font size="2" face="宋体"></font></td>
+            <script language="javascript">
+  function pop()
+  {
+  window.open("", "parent", "width=450; height=280");
+  }
+  </script>
+         <td width="11%" height="8"><font size="2" face="宋体" color="green">5.79</font></td>
+            <td width="10%" height="8"><font size="2" face="宋体"> 
+              <input type="text" name="spsl" size="2" value="1">
+              </font></td>
+<!--            <td width="14%" height="8"><font size="2" face="宋体"><a href=# onClick="MM_openBrWindow('spxxzl.asp?bm=202211011d','','width=450,height=250')">详细资料</a></font></td> -->            
+            <td width="9%" height="8"><font size="2" face="宋体"> 
+              <input type="image" border="0" name="imageField2" src="../image/ok.gif" width="38" height="15">
+              <input type="hidden" name="log" value=202211011d>
+              </font></td>
+          </tr>
+        </table>
+      </form>
+       
+ 
+      <form method="post" action="spgwc.asp" target="spgwc" style="margin-top:0;margin-bottom:0">
+        <table width="100%" border=1 cellspacing="0" cellpadding="0" align="center" height="15" bordercolor="ffffdd" bordercolorlight="#FFFFff">
+          <tr> 
+            <td width="24%" height="8"><font size="2" face="宋体"><a href=# onClick="MM_openBrWindow('spxxzl.asp?bm=214080002N','','width=450,height=250')">卓联A4 打印标签</a></font></td>
+         
+            <td width="16%" height="8"><font size="2" face="宋体">ZL1801</font></td>
+          
+      <td width="26%" height="8"><font size="2" face="宋体">卓联</font></td>
+            <script language="javascript">
+  function pop()
+  {
+  window.open("", "parent", "width=450; height=280");
+  }
+  </script>
+         <td width="11%" height="8"><font size="2" face="宋体" color="green">18.72</font></td>
+            <td width="10%" height="8"><font size="2" face="宋体"> 
+              <input type="text" name="spsl" size="2" value="1">
+              </font></td>
+<!--            <td width="14%" height="8"><font size="2" face="宋体"><a href=# onClick="MM_openBrWindow('spxxzl.asp?bm=214080002N','','width=450,height=250')">详细资料</a></font></td> -->            
+            <td width="9%" height="8"><font size="2" face="宋体"> 
+              <input type="image" border="0" name="imageField2" src="../image/ok.gif" width="38" height="15">
+              <input type="hidden" name="log" value=214080002N>
+              </font></td>
+          </tr>
+        </table>
+      </form>
+       
+ 
+      <form method="post" action="spgwc.asp" target="spgwc" style="margin-top:0;margin-bottom:0">
+        <table width="100%" border=1 cellspacing="0" cellpadding="0" align="center" height="15" bordercolor="ffffdd" bordercolorlight="#FFFFff">
+          <tr> 
+            <td width="24%" height="8"><font size="2" face="宋体"><a href=# onClick="MM_openBrWindow('spxxzl.asp?bm=20803a0095','','width=450,height=250')">三菱水笔</a></font></td>
+         
+            <td width="16%" height="8"><font size="2" face="宋体">UB-150</font></td>
+          
+      <td width="26%" height="8"><font size="2" face="宋体">三菱</font></td>
+            <script language="javascript">
+  function pop()
+  {
+  window.open("", "parent", "width=450; height=280");
+  }
+  </script>
+         <td width="11%" height="8"><font size="2" face="宋体" color="green">7.4</font></td>
+            <td width="10%" height="8"><font size="2" face="宋体"> 
+              <input type="text" name="spsl" size="2" value="1">
+              </font></td>
+<!--            <td width="14%" height="8"><font size="2" face="宋体"><a href=# onClick="MM_openBrWindow('spxxzl.asp?bm=20803a0095','','width=450,height=250')">详细资料</a></font></td> -->            
+            <td width="9%" height="8"><font size="2" face="宋体"> 
+              <input type="image" border="0" name="imageField2" src="../image/ok.gif" width="38" height="15">
+              <input type="hidden" name="log" value=20803a0095>
+              </font></td>
+          </tr>
+        </table>
+      </form>
+       
+ 
+      <form method="post" action="spgwc.asp" target="spgwc" style="margin-top:0;margin-bottom:0">
+        <table width="100%" border=1 cellspacing="0" cellpadding="0" align="center" height="15" bordercolor="ffffdd" bordercolorlight="#FFFFff">
+          <tr> 
+            <td width="24%" height="8"><font size="2" face="宋体"><a href=# onClick="MM_openBrWindow('spxxzl.asp?bm=201160C001','','width=450,height=250')">"报事贴"便条纸</a></font></td>
+         
+            <td width="16%" height="8"><font size="2" face="宋体">656</font></td>
+          
+      <td width="26%" height="8"><font size="2" face="宋体">3M</font></td>
+            <script language="javascript">
+  function pop()
+  {
+  window.open("", "parent", "width=450; height=280");
+  }
+  </script>
+         <td width="11%" height="8"><font size="2" face="宋体" color="green">5.9</font></td>
+            <td width="10%" height="8"><font size="2" face="宋体"> 
+              <input type="text" name="spsl" size="2" value="1">
+              </font></td>
+<!--            <td width="14%" height="8"><font size="2" face="宋体"><a href=# onClick="MM_openBrWindow('spxxzl.asp?bm=201160C001','','width=450,height=250')">详细资料</a></font></td> -->            
+            <td width="9%" height="8"><font size="2" face="宋体"> 
+              <input type="image" border="0" name="imageField2" src="../image/ok.gif" width="38" height="15">
+              <input type="hidden" name="log" value=201160C001>
+              </font></td>
+          </tr>
+        </table>
+      </form>
+       
+ 
+      <form method="post" action="spgwc.asp" target="spgwc" style="margin-top:0;margin-bottom:0">
+        <table width="100%" border=1 cellspacing="0" cellpadding="0" align="center" height="15" bordercolor="ffffdd" bordercolorlight="#FFFFff">
+          <tr> 
+            <td width="24%" height="8"><font size="2" face="宋体"><a href=# onClick="MM_openBrWindow('spxxzl.asp?bm=201160D001','','width=450,height=250')">"报事贴"便条纸</a></font></td>
+         
+            <td width="16%" height="8"><font size="2" face="宋体">656</font></td>
+          
+      <td width="26%" height="8"><font size="2" face="宋体">3M</font></td>
+            <script language="javascript">
+  function pop()
+  {
+  window.open("", "parent", "width=450; height=280");
+  }
+  </script>
+         <td width="11%" height="8"><font size="2" face="宋体" color="green">5.9</font></td>
+            <td width="10%" height="8"><font size="2" face="宋体"> 
+              <input type="text" name="spsl" size="2" value="1">
+              </font></td>
+<!--            <td width="14%" height="8"><font size="2" face="宋体"><a href=# onClick="MM_openBrWindow('spxxzl.asp?bm=201160D001','','width=450,height=250')">详细资料</a></font></td> -->            
+            <td width="9%" height="8"><font size="2" face="宋体"> 
+              <input type="image" border="0" name="imageField2" src="../image/ok.gif" width="38" height="15">
+              <input type="hidden" name="log" value=201160D001>
+              </font></td>
+          </tr>
+        </table>
+      </form>
+       
+ 
+      <form method="post" action="spgwc.asp" target="spgwc" style="margin-top:0;margin-bottom:0">
+        <table width="100%" border=1 cellspacing="0" cellpadding="0" align="center" height="15" bordercolor="ffffdd" bordercolorlight="#FFFFff">
+          <tr> 
+            <td width="24%" height="8"><font size="2" face="宋体"><a href=# onClick="MM_openBrWindow('spxxzl.asp?bm=201160E001','','width=450,height=250')">"报事贴"便条纸</a></font></td>
+         
+            <td width="16%" height="8"><font size="2" face="宋体">656</font></td>
+          
+      <td width="26%" height="8"><font size="2" face="宋体">3M</font></td>
+            <script language="javascript">
+  function pop()
+  {
+  window.open("", "parent", "width=450; height=280");
+  }
+  </script>
+         <td width="11%" height="8"><font size="2" face="宋体" color="green">5.9</font></td>
+            <td width="10%" height="8"><font size="2" face="宋体"> 
+              <input type="text" name="spsl" size="2" value="1">
+              </font></td>
+<!--            <td width="14%" height="8"><font size="2" face="宋体"><a href=# onClick="MM_openBrWindow('spxxzl.asp?bm=201160E001','','width=450,height=250')">详细资料</a></font></td> -->            
+            <td width="9%" height="8"><font size="2" face="宋体"> 
+              <input type="image" border="0" name="imageField2" src="../image/ok.gif" width="38" height="15">
+              <input type="hidden" name="log" value=201160E001>
+              </font></td>
+          </tr>
+        </table>
+      </form>
+       
+ 
+      <form method="post" action="spgwc.asp" target="spgwc" style="margin-top:0;margin-bottom:0">
+        <table width="100%" border=1 cellspacing="0" cellpadding="0" align="center" height="15" bordercolor="ffffdd" bordercolorlight="#FFFFff">
+          <tr> 
+            <td width="24%" height="8"><font size="2" face="宋体"><a href=# onClick="MM_openBrWindow('spxxzl.asp?bm=201160F001','','width=450,height=250')">"报事贴"便条纸</a></font></td>
+         
+            <td width="16%" height="8"><font size="2" face="宋体">657</font></td>
+          
+      <td width="26%" height="8"><font size="2" face="宋体">3M</font></td>
+            <script language="javascript">
+  function pop()
+  {
+  window.open("", "parent", "width=450; height=280");
+  }
+  </script>
+         <td width="11%" height="8"><font size="2" face="宋体" color="green">8.2</font></td>
+            <td width="10%" height="8"><font size="2" face="宋体"> 
+              <input type="text" name="spsl" size="2" value="1">
+              </font></td>
+<!--            <td width="14%" height="8"><font size="2" face="宋体"><a href=# onClick="MM_openBrWindow('spxxzl.asp?bm=201160F001','','width=450,height=250')">详细资料</a></font></td> -->            
+            <td width="9%" height="8"><font size="2" face="宋体"> 
+              <input type="image" border="0" name="imageField2" src="../image/ok.gif" width="38" height="15">
+              <input type="hidden" name="log" value=201160F001>
+              </font></td>
+          </tr>
+        </table>
+      </form>
+       
+      <form method="post" action="spzx1.asp?page=2&amp;x=5&amp;lb=">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr align="center"> 
+            <td height="30" width="11%"><a href="spzx1.asp?page=1&x=0">首页</a></td>
+            <td height="30" width="12%"><a href="spzx1.asp?page=2&x=0&lb=">上一页</a></td>
+            <td height="30" width="13%"><a href="spzx1.asp?page=2&x=1&lb=">下一页</a></td>
+            <td height="30" width="14%"><a href="spzx1.asp?page=93&x=0">尾页</a></td>
+            <td height="30" width="23%">当前纪录:3/93</td>
+            <td height="30" width="27%">跳转页面: 
+              <input type="text" name="ym" size="5">
+              <input type="image" border="0" name="imageField3" src="image/go.gif" width="20" height="12">
+              <input type="hidden" name="log" value="4">
+            </td>
+          </tr>
+        </table>
+      </form>
+ </td>
+  </tr>
+</table>
+</body>
+</html>
+
+
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+

@@ -1,0 +1,223 @@
+///////////////////////////////////////////////////////////////////////////////
+
+//                       DELPHI3000.com ARTICLE BACKUP                         
+//                               Date: 5/30/00
+
+///////////////////////////////////////////////////////////////////////////////
+
+
+
+//_______________________________________________________________________________
+
+//ARTICLE TITLE:      Extracting information from unformatted sources (HTML-pages, e-mails, etc)
+//UNDERTITLE:         Text searching and matching from bird's eye view
+//-------------------------------------------------------------------------------
+//QUESTION:
+//....................
+//How can I extract the information from unformatted sources (HTML-pages, e-mails, etc).
+
+//....................
+//ANSWER:
+//....................
+//Do You want to write program for extracting weather forecast or currency rates or e-mails or whatsever You want from HTML-pages or other unformatted source ? Or do You need import data into Your database from old DB's ugly export format ?
+
+There are two ways.
+
+The tradional one - You must make full featured text parser. This is awful peace of work ! For example, try to implement rules for e-mail addresses ;)
+
+The second - look at the text from bird's eye view with help of regular expressions engine. Your application will be implemented very fast and will be robust and easy to support !
+
+Unfortunately, Delphi component palette contains no TRegularExpression component. But there are some third-party implementations.
+
+I'll use in my examples the TRegExpr (You can download it from http://anso.virtualave.net/delphi_stuff.htm).
+
+
+Example 1
+
+How to extract phone numbers from unformatted text (web-pages, e-mails, etc).
+For example, we need only St-Petersburg (Russia) phones (city code 812).
+
+procedure ExtractPhones (const AText : string; APhones : TStrings);
+ begin
+  with TRegExpr.Create do try
+     Expression := '(\+\d *)?(\((\d+)\) *)?(\d+(-\d*)*)'; 
+     if Exec (AText) then
+      REPEAT
+        if Match [3] = '812'
+         then APhones.Add (Match [4])
+      UNTIL not ExecNext;
+    finally Free;
+   end;
+ end;
+
+For input text 
+"Hi !
+Please call me at work (812)123-4567 or at home +7 (812) 12-345-67
+truly yours .."
+
+this procedure returns 
+ APhones[0]='123-4567'
+ APhones[1]='12-345-67'
+
+
+Example 2
+
+Extracting currency rate from Russian Bank web page.
+
+Create new project and place at the main form TBitBtn, TLabel and TNMHTTP components.
+
+Add following code as BitBtn1 OnClick event handler (don't mind Russian letter - they need for Russian web-page parsing):
+
+procedure TForm1.BitBtn1Click(Sender: TObject);
+ const
+  Template = '(?i)Официальный курс ЦБ по доллару'
+   + '.*Дата\s*Курс\s*Курс пок.\s*Курс прод. [^&lt;\d]*'
+   + '(\d?\d)/(\d?\d)/(\d\d)\s*[\d.]+\s*([\d.]+)';
+ begin
+  NMHTTP1.Get ('http://win.www.citycat.ru/finance/finmarket/_CBR/');
+  with TRegExpr.Create do try
+     Expression := Template;
+     if Exec (NMHTTP1.Body) then begin
+       Label1.Caption := Format ('Russian rouble rate %s.%s.%s: %s',
+         [Match [2], Match [1], Match [3], Match [4]]);
+      end;
+    finally Free;
+   end;
+ end;
+
+Now, then You click at the BitBtn1, programm connects to specified web-server and extract current rate.
+
+
+
+Conclusion 
+
+"Free You mind" ((c) The Matrix ;)) and You'll find many other tasks there regular expressions can save You incredible part of stupid coding work !
+
+P.S. I'll keenly appreciate ANY remarks about English grammar of this article. I have too little practice in English language.
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+//_______________________________________________________________________________
+
+//ARTICLE TITLE:      Decorate url''s (plain text to HTML conversion)
+//UNDERTITLE:         Text processing from bird''s eye view
+//-------------------------------------------------------------------------------
+//QUESTION:
+//....................
+//How to decorate url''s while plain text to HTML conversion (replace http://delphi3000.com with <a href="http://delphi3000.com">delphi3000.com</a>)
+
+//....................
+//ANSWER:
+//....................
+//There are two ways.
+
+The tradional one - You must make full featured text parser. This is awful peace of work ! For example, try to implement rules for URL search ;)
+
+The second - look at the text from bird's eye view with help of regular expressions engine. Your application will be implemented very fast and will be robust and easy to support !
+
+Unfortunately, Delphi component palette contains no TRegularExpression component. But there are some third-party implementations.
+
+I'll use in my examples the TRegExpr (You can download it from http://anso.virtualave.net/delphi_stuff.htm).
+
+function DecorateURLs (const AText : string) : string;
+ const
+  URLTemplate =
+   '(?i)(FTP|HTTP)://(' // Protocol
+   + '[\w\d\-]+(\.[\w\d\-]+)+' // TCP addr / domain name
+   + ')((/[ \w\d\-\\\.]+)+)*' // unix path
+   + '(\?[^ =&]+=[^ =&]+(&[^ =&]+=[^ =&]+)*)?'; // request params
+ var
+  PrevPos : integer;
+ begin
+  Result := '';
+  PrevPos := 1;
+  with TRegExpr.Create do try
+     Expression := URLTemplate; 
+     if Exec (AText) then
+      REPEAT
+        Result := Result + System.Copy (AText, PrevPos,
+         MatchPos [0] - PrevPos) +
+         '&lt;a href="' + Match [0] + '"&gt;' + Match [0] + '&lt;/a&gt;';
+        PrevPos := MatchPos [0] + MatchLen [0];
+      UNTIL not ExecNext;
+     Result := Result + System.Copy (AText, PrevPos, MaxInt); // Tail
+    finally Free;
+   end;
+ end;
+
+Note, that You can easely extract any part of URL. For example, if You want to show only domain name under hyper-link, the only changes will be:
+
+        Result := Result + System.Copy (AText, PrevPos, 
+         MatchPos [0] - PrevPos) +
+         '&lt;a href="' + Match [0] + '"&gt;' + Match [2] + '&lt;/a&gt;';
+
+
+
+Conclusion 
+
+"Free You mind" ((c) The Matrix ;)) and You'll find many other tasks there regular expressions can save You incredible part of stupid coding work !
+
+P.S. I'll keenly appreciate ANY remarks about English grammar of this article. I have too little practice in English language.
+
+
+
+
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+//_______________________________________________________________________________
+
+//ARTICLE TITLE:      E-mail address syntax checking
+//UNDERTITLE:         Text processing from bird's eye view
+//-------------------------------------------------------------------------------
+//QUESTION:
+//....................
+//How to check e-mail address syntax validity
+//....................
+//ANSWER:
+//....................
+//Contemporary applications often need to check syntax of e-mail address entered by user.
+
+How to perform this check ?
+
+Simple code like 
+
+ p := Pos ('@', email);
+ if (p > 1) and (p < length (email))
+  then ...
+
+don't filter many common errors (for example, users frequently forget enter domain-part of e-mail).
+
+
+It seems there are two ways.
+
+The tradional one - You must make full featured text parser. This is awful peace of work !
+
+The second - look at the text from bird's eye view with help of regular expressions engine. Your application will be implemented very fast and will be robust and easy to support !
+
+Unfortunately, Delphi component palette contains no TRegularExpression component. But there are some third-party implementations.
+
+I'll use in my examples the TRegExpr (You can download it from http://anso.virtualave.net/delphi_stuff.htm).
+
+
+
+The answer to our question is VERY simple.
+Just look at this TWO line of code:
+
+if ExecRegExpr ('[\w\d\-\.]+@[\w\d\-]+(\.[\w\d\-]+)+', email) 
+ then ... gotcha! e-mail is valid ...
+
+
+
+Conclusion 
+
+"Free You mind" ((c) The Matrix ;)) and You'll find many other tasks there regular expressions can save You incredible part of stupid coding work !
+
+P.S. I'll keenly appreciate ANY remarks about English grammar of this article. I have too little practice in English language.
+
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+

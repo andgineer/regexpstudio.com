@@ -1,0 +1,11 @@
+:BASE TRegExpr_FR.hlp
+1 A propos=About@TRegExpr_FR.hlp
+1 Question Légale=Disclaimer@TRegExpr_FR.hlp
+1 Installation et liste de fichier=Installation@TRegExpr_FR.hlp
+1 Comment ça Fonctionne=Demos@TRegExpr_FR.hlp
+1 Syntaxe des Expressions Régulières=RegExp_Syntax@TRegExpr_FR.hlp
+1 Interface de TRegExpr=TRegExpr_Interface@TRegExpr_FR.hlp
+1 Projet Demo (TestRExp)=tregexpr_testrexp@TRegExpr_FR.hlp
+1 Exemple: Décorateur HyperLinks=HyperLinksDecorator@TRegExpr_FR.hlp
+1 FAQ=FAQ@TRegExpr_FR.hlp
+1 Auteur=Author@TRegExpr_FR.hlp

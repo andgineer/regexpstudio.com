@@ -1,0 +1,655 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<HEAD>
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-8859-1">
+  <meta name="Content-Language" content="spanish">
+  <TITLE>Sintaxis de las Expresiones Regulares&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;���������� ���������,perl,regexp,Delphi,Pascal,FreePascal,Kylix,Libraries,VCL,CLX,Tools,files utils</TITLE>
+  <!--  TRegExpr Expresiones Regulares (r.e. RegExpr regexp tregexpr), egrep perl unix; delphi pascal FreePascal Kylix freeware component Andrey Sorokin -->
+  <meta name="home_url" content="http://regexpstudio.com/">
+  <meta name="GENERATOR" content="Help & Manual">
+  <LINK REL="stylesheet" HREF="../../../styles/default.css" TYPE="text/css">
+  <meta name="description" content=" delphi pascal FreePascal Kylix freeware components: regular expressions (r.e. RegExpr regexp tregexpr), egrep perl unix; Andrey V. Sorokin">
+  <meta name="abstract" content=" TRegExpr Expresiones Regulares (r.e. RegExpr regexp tregexpr), egrep perl unix; Andrey V. Sorokin">
+  <meta name="keywords" content=" TRegExpr Expresiones Regulares (r.e. RegExpr regexp tregexpr), egrep perl unix; delphi pascal FreePascal Kylix freeware component Andrey V. Sorokin">
+  <META NAME="distribution" CONTENT="world">
+  <meta name="audience" content="all">
+  <meta name="robots" content="index,all">
+  <meta name="revisit" content="30 days">
+  <meta name="revisit-after" content="30 days">
+  <meta name="site-created" content="01-01-2004">
+  <META NAME="author" CONTENT="RegExpStudio.com, Andrey V. Sorokin, Saint Petersburg, Russia.">
+  <META NAME="copyright" CONTENT="Copyright &copy; RegExpStudio.com, Andrey V. Sorokin, Saint Petersburg, Russia. All rights reserved">
+</HEAD>
+  
+<BODY bgcolor=#FFFFFF leftmargin="0" topmargin="0" marginwidth="0" 
+      marginheight="0">
+
+<TABLE bgColor=#0054a6 cellspacing="2" cellpadding="2" border="0" 
+       width="780">
+<TR>
+  <TD align="left"><div class="MainTitle"><a href="http://regexpstudio.com"
+   title="" class="MainTitle"><span class="MainTitle">RegExp Studio</span></a>
+<br>TRegExpr v.0.947 - Delphi Expresiones Regulares
+<br><img src="../../../imgs/0.gif" width="1" height="15" alt=""><br>
+</div></TD>
+  <TD align="right"><A class=LangSwitch
+   href="../../../BG/tregexpr/Help/about.html">Bulgarian</A><BR>
+  <A class=LangSwitch
+   href="../../../tregexpr/Help/about.html">English</A><BR>
+  <A class=LangSwitch
+   href="../../../FR/tregexpr/Help/about.html">French</A><BR>
+  <A class=LangSwitch
+   href="../../../DE/tregexpr/Help/about.html">German</A><BR>
+  <A class=LangSwitch
+   href="../../../ru/tregexpr/Help/about.html">Russian</A><BR>
+  <DIV class=LangSwitch>Spanish</DIV>
+  </TD>
+</TR>
+</TABLE>
+
+<TABLE height=1 cellSpacing=0 cellPadding=0 width=780 bgColor="white" border=0>
+<TR><TD><IMG height=1 alt="" src="../../../imgs/0.gif" width=1 border=0></TD></TR>
+</TABLE>
+
+
+<TABLE width="780" height=24 cellspacing="2" cellpadding="2" border="0"
+  bgColor=#0054a6>
+<TR>
+  <TD><img src="../../../imgs/HomeSmall.gif" alt="About TRegExpr" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="about.html">Acerca&nbsp;de</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../../imgs/0.gif" width=5 border=0></TD>
+  <TD><img src="../../../imgs/DownloadsSmall.gif" alt="Installation" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="installation.html">Instalaci�n</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../../imgs/0.gif" width=5 border=0></TD>
+  <TD><img src="../../../imgs/RegExpSyntaxSmall.gif" alt="Regular Expressions Syntax" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="regexp_syntax.html">Sintaxis</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../../imgs/0.gif" width=5 border=0></TD>
+  <TD><img src="../../../imgs/TRegExprInterfaceSmall.gif" alt="TRegExpr Interface" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="tregexpr_interface.html">Interface</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../../imgs/0.gif" width=5 border=0></TD>
+  <TD><img src="../../../imgs/FAQSmall.gif" alt="FAQ" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="faq.html">FAQ</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../../imgs/0.gif" width=5 border=0></TD>
+  <TD><img src="../../../imgs/DemosSmall.gif" alt="TRegExpr usage demos" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="demos.html">Demos</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../../imgs/0.gif" width=5 border=0></TD>
+  <TD><IMG src="../../../imgs/AnSoHomePageSmall.gif" alt="Author" height=16 width=18 border=0></TD>
+  <TD><A class=top_menu href="author.html">Autor</A></TD>
+
+  <TD width="100%">&nbsp;</TD>
+</TR>
+</TABLE>
+
+
+
+<TABLE cellSpacing=14 cellPadding=0 width=779 bgColor="white" border=0>
+<TR>
+  <TD vAlign=top width=769 height="100%">
+
+
+<span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:12pt; color:#0000FF"><b>Sintaxis de las Expresiones Regulares
+<br>
+</b></span></span></span>
+
+
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#0000FF"><b>Introducci&#243;n
+<br>
+
+<br>
+</b></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Las Expresiones Regulares son un m&#233;todo ampliamente empleado para especificar "plantillas" de texto a buscar. Los <b>metacaracteres</b> especiales permiten especificar, por ejemplo, que una cadena en particular que se est&#225; buscado aparezca al inicio o al fin de una l&#237;nea, o que contenga <b>n</b> repeticiones de cierto caracter.
+<br>
+
+<br>
+Las expresiones regulares lucen incomprensibles para los novatos, pero en realidad son muy simples (bueno, usualmente simples ;) ), y son una herramienta pr&#225;ctica y poderosa.
+<br>
+
+<br>
+Les recomiendo especialmente hacer pruebas con e.r. usando <a href=tregexpr_testrexp.html>TestRExp.dpr</a> - ayuda a comprender muchos conceptos. Adem&#225;s hay muchos ejemplos predefinidos con comentarios, incluidos en este proyecto.
+<br>
+
+<br>
+Iniciemos el recorrido de aprendizaje!
+<br>
+
+<br>
+
+<br>
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#0000FF"><b>B&#250;squedas simples
+<br>
+
+<br>
+</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Cualquier caracter se encuentra a s&#237; mismo, a menos que se trate de un <b>metacaracter</b> con significado especial, descriptos abajo.
+<br>
+
+<br>
+Una serie de caracteres encuentra esa misma serie en la cadena objetivo, por lo tanto la plantilla "bluh" encontrar&#225; "bluh'' en la cadena objetico. Simple, no?
+<br>
+
+<br>
+Se puede conseguir que los caracteres que normalmente funcionan como <b>metacaracteres</b> o <b>secuencias de escape</b> sean interpretadas literalmente precedi&#233;ndolas con el s&#237;mbolo "\" (backslash). Por ejemplo, el metacaracter "^" significa inicio de la cadena, pero "\^" encuentra el s&#237;mbolo "^", "\\" encuentra "\", y as&#237; para todos los casos especiales.
+<br>
+
+<br>
+<b>Ejemplos:
+<br>
+</b></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;foobar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>encuentra la cadena 'foobar'
+<br>
+</i></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;\^FooBarPtr&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>encuentra '^FooBarPtr'
+<br>
+
+<br>
+
+<br>
+</i><span style="font-family:Helvetica,Arial; font-size:10pt; color:#0000FF"><b>Secuencias de escape
+<br>
+
+<br>
+</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Algunos casos especiales pueden ser especificados usando sintaxis de <b>secuencias de escape</b> como las empleadas en C y Perl: "\n'' significa nueva l&#237;nea, "\t'' equivale a tab, etc. M&#225;s generalmente, \xnn, donde nn es un n&#250;mero hexadecimal, encuentra el caracter cuyo valor  ASCII es nn. Para usar c&#243;digos dobles de Unicode, se puede especificar '\x{nnnn}', donde 'nnnn' - es uno o m&#225;s valores hexadecimales.
+<br>
+
+<br>
+</span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;\xnn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>caracter con c&#243;digo hexadecimal nn
+<br>
+</i></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;\x{nn}&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>caracter con c&#243;digo hexadecimal nnnn (un byte para texto com&#250;n y dos para </i><i><a href=tregexpr_interface.html>Unicode</a></i><i>)
+<br>
+</i></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;\t&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>tab (HT/TAB), lo mismo que \x09
+<br>
+</i></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>l&#237;nea nueva (NL), lo mismo que \x0a
+<br>
+</i></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;\r&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>retorno de carro (CR), lo mismo que \x0d
+<br>
+</i></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;\f&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>salto de hoja (FF), lo mismo que \x0c
+<br>
+</i></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;\a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>alarma (bell) (BEL), lo mismo que \x07
+<br>
+</i></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;\e&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>escape (ESC), lo mismo que \x1b
+<br>
+
+<br>
+</i><b>Ejemplos:
+<br>
+</b></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;foo\x20bar&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>encuentra 'foo bar' (notar el espacio en el medio)
+<br>
+</i></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;\tfoobar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>encuentra 'foobarar' precedido por tab
+<br>
+
+<br>
+
+<br>
+</i><span style="font-family:Helvetica,Arial; font-size:10pt; color:#0000FF"><b>Clases de caracteres
+<br>
+
+<br>
+</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Se pueden especificar <b>clases de caracteres</b> encerrando una lista de caracteres entre corchetes [], la que que encontrar&#225; <b>uno</b> cualquiera de los caracteres de la lista.
+<br>
+
+<br>
+Si el primer s&#237;mbolo despu&#233;s deI "['' es "^'', la clase encuentra cualquier caracter que <b>no</b> est&#225; en la lista.
+<br>
+
+<br>
+<b>Ejemplos:
+<br>
+</b></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;foob[aeiou]r&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>encuentra las cadenas 'foobar', 'foober' etc. pero no 'foobbr', 'foobcr' etc.
+<br>
+</i></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;foob[^aeiou]r&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>encuentra las cadenas 'foobbr', 'foobcr' etc. pero no 'foobar', 'foober' etc.
+<br>
+
+<br>
+</i>Dentro de una lista, el s&#237;bolo "-'' es utilizado para especificar un <b>rango</b>, entonces a-z representa todos los caracteres entre "a'' y "z'' inclusive. 
+<br>
+
+<br>
+Para que "-'' forme parte de la clase hay que ubicarlo al inicio o final de la lista, o usar la secuencia de escape "\-". Para usar ']' en la lista hay que ubicarlo al inicio de la lista o usar la secuencia "\]".
+<br>
+
+<br>
+<b>Ejemplos:
+<br>
+</b></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;[-az]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>encuentra 'a', 'z' y '-'
+<br>
+</i></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;[az-]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>encuentra 'a', 'z' y '-'
+<br>
+</i></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;[a\-z]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>encuentra 'a', 'z' y '-'
+<br>
+</i></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;[a-z]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>encuentra todas las min&#250;sculas de 'a' hasta 'z'
+<br>
+</i></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;[\n-\x0D]&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>encuentra cualquiera de #10,#11,#12,#13.
+<br>
+</i></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;[\d-t]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>encuentra cualquier d&#237;gito, '-' or 't'.</i> 
+<br>
+</span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;[]-a]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>encuentra cualquier caracter de ']' hasta 'a'.
+<br>
+
+<br>
+
+<br>
+</i><span style="font-family:Helvetica,Arial; font-size:10pt; color:#0000FF"><b>Metacaracteres
+<br>
+
+<br>
+</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Los metacaracteres son caracteres especiales que son la esencia de las Expresiones Regulares. Hay diferentes tipos:
+<br>
+<a name="idha88fzy"></a>
+<br>
+
+<br>
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#0000FF"><b>Metacaracteres - separadores de l&#237;neas
+<br>
+
+<br>
+</b></span></span></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;^&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>inicio de l&#237;nea
+<br>
+</i></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;$&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>fin de l&#237;nea
+<br>
+</i></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;\A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>inicio de texto
+<br>
+</i></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;\Z&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>fin de texto
+<br>
+</i></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>cualquier caracter en la l&#237;nea
+<br>
+
+<br>
+</i><b>Ejemplos:
+<br>
+</b></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;^foobar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>encuentra 'foobar' s&#243;lo si est&#225; al principio de una l&#237;nea
+<br>
+</i></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;foobar$&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>encuentra 'foobar' s&#243;lo si est&#225; al final de una l&#237;nea
+<br>
+</i></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;^foobar$&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>encuentra 'foobar' s&#243;lo si es la &#250;nica cadena en la l&#237;nea
+<br>
+</i></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;foob.r&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>encuentra cadenas tipo 'foobar', 'foobbr', 'foob1r' 
+<br>
+
+<br>
+</i>El metacaracter "^" por defecto s&#243;lo garantiza encontrar coincidencias al principio de la cadena/texto analizados, y "$" s&#243;lo al final. Los separadores de l&#237;nea intermedios no son encontrados por "^'' o "$''.
+<br>
+Sin embargo, se puede tratar una cadena como multil&#237;nea, de esta forma "^'' encontrar&#225; coincidencias despu&#233;s de cualquier separador de l&#237;nea dentro de esta cadena, y "$'' dar&#225; resultados positivos antes de cualquier separador. Esto se logra activando el <a href=dmn532.html>modificador /m</a>.
+<br>
+Las secuencias \A y \Z son como "^'' y "$'', excepto que no dan resultados m&#250;ltiples aunque est&#233; activado el <a href=dmn532.html>modificador /m</a>, mientras que "^'' y "$'' encontrar&#225;n coincidencias en todos los separadores de l&#237;nea internos. 
+<br>
+
+<br>
+El metacaracter ".'' por defecto encuentra cualquier caracter, pero si se desactiva el <a href=dmn538.html>modificador /s</a> entonces '.' no encuentra separadores de l&#237;nea internos.
+<br>
+
+<br>
+TRegExpr trabaja con los separadores de l&#237;nea seg&#250;n las recomendaciones de www.unicode.org ( http://www.unicode.org/unicode/reports/tr18/ ):
+<br>
+
+<br>
+ "^" al inicio de la cadena ingresada, y si el <a href=dmn532.html>modificador /m</a> est&#225; activado, tambi&#233;n inmediatamente despu&#233;s de toda ocurrencia de \x0D\x0A, \x0A o \x0D (si se usa la versi&#243;n <a href=tregexpr_interface.html>Unicode</a> de TRegExpr, tambi&#233;n \x2028,  \x2029, \x0B, \x0C o \x85). Notar que no hay una l&#237;nea vac&#237;a dentro de la secuencia \x0D\x0A.
+<br>
+
+<br>
+"$" al final de la cadena ingresada, y si el <a href=dmn532.html>modificador /m</a> est&#225; activado, tambi&#233;n inmediatamente antes de toda ocurrencia de  \x0D\x0A, \x0A, o \x0D (si se usa la versi&#243;n Unicode de TRegExpr, tambi&#233;n \x2028,  \x2029, \x0B, \x0C o \x85). Notar que no hay una l&#237;nea vac&#237;a dentro de la secuencia \x0D\x0A.
+<br>
+
+<br>
+"." encuentra cualquier caracter, pero si se desactiva el <a href=dmn538.html>modificador /s</a> entonces "." no encuentra \x0D\x0A, \x0A y \x0D (si se usa la versi&#243;n Unicode de TRegExpr, tambi&#233;n \x2028,  \x2029, \x0B, \x0C y \x85).
+<br>
+ 
+<br>
+Notar que "^.*$" (plantilla de l&#237;nea vac&#237;a) no encuentra la cadena vac&#237;a dentro de la secuencia \x0D\x0A, pero s&#237; dentro de la secuencia \x0A\x0D.
+<br>
+
+<br>
+El procesamiento multil&#237;nea puede ser f&#225;cilmenet afinado para sus prop&#243;sitos con la ayuda de las propiedades <a href=_hlqzt.html>LineSeparators</a> y <a href=indcj_mwd.html>LinePairedSeparator</a> de TRegExpr. Se pueden usar s&#243;lo separadores tipo Unix ( \n ) o s&#243;lo tipo DOS/Windows ( \r\n) o todos juntos (como se describe arriba y usado por defecto), o incluso definir sus propios deparadores de l&#237;nea !
+<br>
+<a name="idh4na0e"></a>
+<br>
+
+<br>
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#0000FF"><b>Metacaracteres - clases predefinidas
+<br>
+
+<br>
+</b></span></span></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;\w&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>un caracter alfanum&#233;rico (incluye "_")
+<br>
+</i></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;\W&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>un caracter no alfanum&#233;rico
+<br>
+</i></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;\d&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>un caracter num&#233;rico
+<br>
+</i></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;\D&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>un caracter no num&#233;rico
+<br>
+</i></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;\s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>cualquier espacio (lo mismo que [ \t\n\r\f])
+<br>
+</i></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;\S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>un no espacio
+<br>
+
+<br>
+</i>Se pueden usar las clases \w, \d y \s dentro de las <b>clases de caracteres</b> personales.
+<br>
+
+<br>
+<b>Ejemplos:
+<br>
+</b></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;foob\dr&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>encuentra cadenas como 'foob1r', ''foob6r' pero no 'foobar', 'foobbr' 
+<br>
+</i></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;foob[\w\s]r&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>encuentra cadenas como 'foobar', 'foob r', 'foobbr' pero no 'foob1r', 'foob=r'
+<br>
+
+<br>
+</i>TRegExpr usa las propiedades <a href=idhtvxan.html>SpaceChars</a> y <a href=gxw5c8.html>WordChars</a> para definir las clases de caracteres \w, \W, \s, \S, por lo tanto se pueden redefinir f&#225;cilmente.
+<br>
+
+<br>
+<b>NOTA PARA USUARIOS DE IDIOMA ESPA&#209;OL:
+<br>
+
+<br>
+</b>La propiedad WordChars por defecto est&#225; definida con el siguiente conjunto de caracteres:
+<br>
+
+<br>
+</span><span style="font-family:Courier New; font-size:9pt; color:#000000">WordChars&nbsp;=&nbsp;'0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_'
+<br>
+
+<br>
+Para&nbsp;nuestro&nbsp;idioma&nbsp;lo&nbsp;correcto&nbsp;ser&#237;a:
+<br>
+<a name="idnn9d1"></a>
+<br>
+WordChars&nbsp;=&nbsp;'0123456789a&#225;bcde&#233;fghi&#237;jklmn&#241;o&#243;pqrstu&#250;vwxyzA&#193;BCDE&#201;FGHIJKLMN&#209;O&#211;PQRSTU&#218;VWXYZ_'
+<br>
+
+<br>
+
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#0000FF"><b>Metacaracteres - l&#237;mites de palabras
+<br>
+
+<br>
+</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">   \b &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>encuentra l&#237;mite de palabra 
+<br>
+</i>   \B &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>encuentra distinto a l&#237;mite de palabra
+<br>
+
+<br>
+</i>Un l&#237;mite de palabra (\b) es un punto entre dos caracteres que est&#225; limitado por un \w de un lado y un \W en el otro (en cualquier orden), contando los caracteres imaginarios del inicio y final de la cadena como coincidencias con \W.
+<br>
+
+<br>
+
+<br>
+
+<br>
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#0000FF"><b>Metacaracteres - iteradores
+<br>
+
+<br>
+</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Cualquier item de una expresi&#243;n regular puede ser seguido por otro tipo de metacaracteres, los <b>iteradores</b>. Usando estos metacaracteres se puede especificar el n&#250;mero de ocurrencias del caracter previo, de un <b>metacaracter</b> o de una <b>subexpresion</b>.
+<br>
+
+<br>
+</span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>cero o m&#225;s</i><i> ("voraz"), similar a {0,}
+<br>
+</i></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;+&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:Courier; font-size:12pt; color:#000000">&nbsp;</span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>una o m&#225;s</i><i> ("voraz"), similar a {1,}
+<br>
+</i></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;</span><span style="font-family:Courier; font-size:12pt; color:#000000">&nbsp;</span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>cero o una ("voraz"), similar a {0,1}
+<br>
+</i></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;{n}&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>exactamente n veces ("voraz")
+<br>
+</i></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;{n,}&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>por lo menos n veces ("voraz")
+<br>
+</i></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;{n,m}&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>por lo menos n pero no m&#225;s de m veces ("voraz")
+<br>
+</i></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;*?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>cero o m&#225;s</i><i> ("no voraz"), similar a {0,}?
+<br>
+</i></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;+?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>una o m&#225;s</i><i> ("no voraz"), similar a {1,}?
+<br>
+</i></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;??&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>cero o una ("no voraz"), similar a {0,1}?
+<br>
+</i></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;{n}?&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>exactamente n veces ("no voraz")
+<br>
+</i></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;{n,}?&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>por lo menos n veces ("no voraz")
+<br>
+</i></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;{n,m}?&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>por lo menos n pero no m&#225;s de m veces ("no voraz")
+<br>
+
+<br>
+</i>Entonces, los d&#237;gitos entre llaves de la forma {n,m}, especifican el m&#237;nimo n&#250;mero de ocurrencias en n y el m&#225;ximo en m. La forma {n} es equivalente a {n,n} y coincide exactamente n veces. La forma {n,} encuentra ocurrencias de n o m&#225;s veces. No hay l&#237;mites para los n&#250;mero n o m, pero si son muy grandes se consume m&#225;s memoria y la ejecuci&#243;n de la e.r. se hace m&#225;s lenta.
+<br>
+
+<br>
+Si una llave aparece en otro contexto se la trata como un caracter regular.
+<br>
+
+<br>
+<b>Ejemplos:
+<br>
+</b></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;foob.*r&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>encuentra cadenas como 'foobar', 'foobalkjdflkj9r' y 'foobr'
+<br>
+</i></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;foob.+r&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>encuentra cadenas como 'foobar', 'foobalkjdflkj9r' pero no 'foobr'
+<br>
+</i></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;foob.?r&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>encuentra cadenas como 'foobar', 'foobbr' y 'foobr' pero no 'foobalkj9r'
+<br>
+</i></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;fooba{2}r&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>encuentra la cadena 'foobaar'
+<br>
+</i></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;fooba{2,}r&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">encuentra cadenas como<i> 'foobaar', 'foobaaar', 'foobaaaar' etc.
+<br>
+</i></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;fooba{2,3}r&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>encuentra cadenas como 'foobaar', o 'foobaaar' pero no 'foobaaaar'
+<br>
+
+<br>
+</i>Una m&#237;nima explicacion acerca de la "voracidad". "Voraz" toma la mayor cantidad posible, "no voraz" toma la m&#237;nima cantidad posible. Por ejemplo, 'b+' y 'b*' aplicados a la cadena 'abbbbc' devuelven 'bbbb', 'b+?' devuelve 'b', 'b*?' devuelve unacadena vac&#237;a, 'b{2,3}?' devuelve 'bb', 'b{2,3}' devuelve 'bbb'.
+<br>
+
+<br>
+Se pueden activar todos los iteradores para que funcione en modo "no voraz" (ver el  <a href=dmn52w.html>modificador /g</a>).
+<br>
+
+<br>
+
+<br>
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#0000FF"><b>Metacaracteres - alternativas
+<br>
+
+<br>
+</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Se puede especificar una serie de <b>alternativas</b> para una plantilla usando "|'' para separarlas, entonces fee|fie|foe encontrar&#225; cualquier "fee'', "fie'', o "foe'' en la cadena objetivo (lo mismo ser&#237;a f(e|i|o)e). La primera alternativa incluye todo desde el ultimo delimitador ( "('', "['', o el inicio de la plantilla) hasta el primer "|'', y la &#250;ltima alternativa contiene todo desde el &#250;ltimo "|''hasta el siguiente delimitador de plantilla. Por esta raz&#243;n es una pr&#225;ctica com&#250;n incluir las alternativas entre par&#233;ntesis, para minimizar la confusi&#243;n de d&#243;nde se inician y d&#243;nde terminan.
+<br>
+Las alternativas son evaluadas de izquierda a derecha, por lo tanto la primera alternativa que coincide plenamente con la expresi&#243;n analizada es la que se selecciona. Esto significa que las alternativas no son necesariamente voraces. Por ejemplo: si se buscam foo|foot en "barefoot'', s&#243;lo la parte "foo'' da resultado positivo, porque es la primera alternativa probada, y porque tiene &#233;xito en la b&#250;squeda de la cadena analizada. (Esto puede no parecer importante, pero lo es cuando se est&#225; capturando el texto buscado usando par&#233;ntesis.)
+<br>
+Tambi&#233;n recordar que "|'' es interpretado literalmente dentro de los corchetes, entonces si se escribe [fee|fie|foe] lo &#250;nico que se encuentra es [feio|].
+<br>
+
+<br>
+<b>Ejemplo:
+<br>
+</b></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;foo(bar|foo)&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>encuentra las cadenas 'foobar' o 'foofoo'.
+<br>
+
+<br>
+
+<br>
+</i><span style="font-family:Helvetica,Arial; font-size:10pt; color:#0000FF"><b>Metacaracteres - subexpresiones
+<br>
+
+<br>
+</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">La construcci&#243;n ( ... ) tambi&#233;n puede ser empleada para definir subexpresiones de e.r. (despu&#233;s del an&#225;lisis se obtienen las posiciones de las subexpresiones, su longitud y el valor actual en las propiedades MatchPos, MatchLen y <a href=ed22i8.html>Match</a> de TRegExpr; y se pueden substituir en cadenas de plantillas con <a href=d7fv35.html>TRegExpr.Substitute</a>).
+<br>
+
+<br>
+Las subexpresiones son numeradas de izquierda a derecha en base al orden de sus par&#233;ntesis de apertura. La primera subexpresi&#243;n es la '1' (la e.r. completa tiene el n&#250;mero '0' - Se puede substituir en <a href=d7fv35.html>TRegExpr.Substitute</a> como '$0' o '$&amp;').
+<br>
+
+<br>
+<b>Ejemplos:
+<br>
+</b></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;(foobar){10}&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>encuentra cadenas que contienen 8, 9 o 10 instancias de 'foobar'
+<br>
+</i></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;foob([0-9]|a+)r&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>encuentra 'foob0r', 'foob1r' , 'foobar', 'foobaar', 'foobaar' etc.
+<br>
+</i>    
+<br>
+
+<br>
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#0000FF"><b>Metacaracteres - memorias (backreferences)
+<br>
+
+<br>
+</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Los <b>metacaracteres</b> \1 a \9 son interpretados como memorias. \&lt;n&gt; encuentra la subexpresi&#243;n previamente encontrada #&lt;n&gt;.
+<br>
+
+<br>
+<b>Ejemplos:
+<br>
+</b></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;(.)\1+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>encuentra 'aaaa' y 'cc'. 
+<br>
+</i></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;(.+)\1+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>tambi&#233;n encuentra 'abab' y '123123'
+<br>
+</i></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;(['"]?)(\d+)\1<i>&nbsp;</i></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>encuentra '"13" (entre comillas dobles), o '4' (entre comillas simples) o 77 (sin comillas) etc
+<br>
+
+<br>
+
+<br>
+</i><span style="font-family:Helvetica,Arial; font-size:10pt; color:#0000FF"><b>Modificadores
+<br>
+</b><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#0000FF"></span></span></span></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#0000FF"><b>
+&nbsp;<br>
+</b></span></b></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#0000FF"><b></b></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#0000FF"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Los modificadores son para cambiar el comportamiento de TRegExpr.
+<br>
+
+<br>
+Hay varias formas de configurar los modificadores. 
+<br>
+Cualquiera de estos modificadores pueden incluirse dentro de las expresiones regulares usando la estructura <a href=5o226t.html>(?...)</a>.
+<br>
+Tambi&#233;n se pueden asignar las propiedades adecuadas de TRegExpr (<a href=261bf6.html>ModifierX</a> por ejemplo, para cambiar /x, o ModifierStr para cambiar todos los modificadores simult&#225;neamente). Los valores por defecto para nuevas instancias de TRegExpr est&#225;n definidos en variables globales, por ejemplo la variable global RegExprModifierX define el valor de la propiedad ModifierX en las nuevas instacias del objeto TRegExpr.
+<br>
+
+<br>
+<b>i
+<br>
+</b><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">B&#250;squedas insensibles a may&#250;sculas, ver tambi&#233;n <a href=5wc2s8.html>InvertCase</a>.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><b>m 
+<br>
+</b><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Tratamiento de cadenas como m&#250;ltiples l&#237;neas. Esto es, cambia a "^'' y "$'' de encontrar solo en el inicio y fin de la cadena al inicio y fin de cada l&#237;nea dentro de la cadena, ver tambi&#233;n Separadores de l&#237;neas.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><b>s 
+<br>
+</b><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Tratamiento de cadenas c&#243;mo l&#237;nea simple. Esto es, cambia ".'' para encontrar cualquier caracter en cualquier lado, incluso separadores de l&#237;nea (ver Separadores de l&#237;nea), que  normalmente no son encontradod.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><b>g 
+<br>
+</b><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Modificador no standard. Al desactivarlo se cambian todos los operadores siguientes en modo no voraz (por defecto este modificador esta activado). Entonces, si el modificador /g est&#225; Off entonces '+' funciona como '+?', '*' como '*?', etc.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><b>x 
+<br>
+</b><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Aumenta la legibilidad de las plantillas al permitir espacios en blanco y comentarios (ver la explicaci&#243;n m&#225;s abajo)</span></span></span><span style="font-family:Times New Roman; font-size:12pt; color:#000000">. 
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Times New Roman; font-size:12pt; color:#000000"></span></td></tr></table><span style="font-family:Times New Roman; font-size:12pt; color:#000000"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><b>r
+<br>
+</b><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Modificador no standard para incluir letras rusas en el rango de caracteres.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Perd&#243;n a los usuarios extranjeros, pero est&#225; activado por defecto. Para desactivarlo por defecto cambiar a False la variable global <a href=indetcg35.html>RegExprModifierR</a>.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">El <a href=dmn53_.html>modificador /x</a> necesita un poco m&#225;s de explicaci&#243;n. Le dice a TRegExpr que ignore los espacios blancos que no est&#225;n precedidos por "\" o no inclu&#237;dos en una clase de caracteres. Se puede usar para separar las expresiones regulares en partes m&#225;s legibles. El caracter # es tratado como metacaracter para comentarios, por ejemplo:
+<br>
+
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="19"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></span></span><span style="font-family:Courier; font-size:10pt; color:#000000">(&nbsp;
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="19"></td><td><span style="font-family:Courier; font-size:10pt; color:#000000">(abc)&nbsp;#comentario&nbsp;1
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="19"></td><td><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;#Se&nbsp;pueden&nbsp;usar&nbsp;espacios&nbsp;para&nbsp;formatear&nbsp;e.r.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="19"></td><td><span style="font-family:Courier; font-size:10pt; color:#000000">(efg)&nbsp;#comentario&nbsp;2
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="19"></td><td><span style="font-family:Courier; font-size:10pt; color:#000000">)
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="19"></td><td><span style="font-family:Courier; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:Courier; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Esto significa que si se desea usar realmente un espacio o # en una plantilla (fuera de clases de caracteres, donde no son afectadas por /x), hay que usar "\" o codificarlos en su valor ASCII en octal o hexadecimal. 
+<br>
+
+<br>
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#0000FF"><b>Extensiones de Perl
+<br>
+
+<br>
+</b></span></span></span><span style="font-family:Times New Roman; font-size:12pt; color:#000000">(?imsxr-imsxr)
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Se pueden usar dentro de las e.r. para cambiar modificaciones instant&#225;neamente. Si esta construcci&#243;n est&#225; inclu&#237;da dentro de una subexpresi&#243;n, entonces s&#243;lo afecta a la subexpresi&#243;n.
+<br>
+
+<br>
+<b>Ejemplos:
+<br>
+</b></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;(?i)Saint-Petersburg&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>encuentra 'Saint-petersburg' y 'Saint-Petersburg'
+<br>
+</i></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;(?i)Saint-(?-i)Petersburg&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>encuentra 'Saint-Petersburg' pero no 'Saint-petersburg'
+<br>
+</i></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;(?i)(Saint-)?Petersburg&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>encuentra 'Saint-petersburg' y 'saint-petersburg'
+<br>
+</i></span><span style="font-family:Courier; font-size:10pt; color:#000000">&nbsp;&nbsp;((?i)Saint-)?Petersburg&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><i>encuentra 'saint-Petersburg', pero no 'saint-petersburg' 
+<br>
+
+<br>
+
+<br>
+</i></span><span style="font-family:Times New Roman; font-size:12pt; color:#000000">(?#text) 
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Comentario, el texto es ignorado. Notar que TRegExpr cierra el comentario apenas encuentra un ")", por lo tanto no hay forma de poner un ")" literal en el comentario. 
+<br>
+
+<br>
+
+<br>
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#0000FF"><b><a name="engine_internals"></a>Explicaci&oacute;n del mecanismo interno</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#0000FF"><b>
+<br>
+
+<br>
+</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Le parece que necesita algunos de los secretos internos de TRegExpr?
+<br>
+Bien, est&#225; en construcci&#243;n, por favor espere un tiempo...
+<br>
+Por ahora, no olvide de leer las <a href=faq.html>FAQ</a> (especialmente la <a href=faq.html>pregunta</a> de optimizaci&#243;n de 'no voracidad').
+<br>
+</span></span></span>
+
+  </TD>
+  <TD vAlign=top align=left bgColor="white" height="100%"
+       width=10>
+  </TD>
+</TR>
+</TABLE><BR><BR>
+
+<TABLE height=1 cellSpacing=0 cellPadding=0 width=780 bgColor=#0054a6 
+       border=0>
+<TR>
+  <TD><IMG height=1 alt="" src="../../../imgs/0.gif" width=1 border=0></TD>
+</TR>
+</TABLE>
+
+<TABLE height=70 cellSpacing=2 cellPadding=0 width=779 bgColor="white"
+       border=0>
+<TR>
+  <TD align=right width=2><IMG src="../../../imgs/0.gif" width=2 height=1 border=0></TD>
+  <TD vAlign=top align=left width="100%"><P class=pageauthor><I>&copy;&nbsp;<A 
+      class=pageauthor href="http://regexpstudio.com/">2004 Andrey V. Sorokin</A></I>,
+      Saint Petersburg, Russia
+      <BR><A class=pageauthor href="mailto:anso@mail.ru">anso@mail.ru</A>
+      <BR><A class=pageauthor href="http://regexpstudio.com/">RegExpStudio.com</A></P></TD>
+  <TD vAlign=top align=right width=468><A href="http://www.helpandmanual.com"
+      target="_blank"><img src="../../../tregexpr/Help/hmad468x60.gif" width="468" height="60"
+      border="0" alt="Help&Manual - the best help authoring tool!"></A></TD>
+  <TD align=right width=4><IMG src="../../../imgs/0.gif" width=4 height=1 border=0></TD>
+</TR>
+</TABLE><BR>
+
+</body>
+</html>

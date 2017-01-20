@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: en
 title: "Saint-Petersburg 300-year anniversary"
 categories: Saint-Petersburg
 ---

@@ -1,0 +1,53 @@
+<div class="tag-cloud">
+
+    {% capture site_tags %}{% for tag in site.tags %}{% for post in tag[1] %}{% if post.lang == page.lang %}{{tag[0]}},{% break %}{% endif %}{% endfor %}{% endfor %}{% endcapture %}
+    {% assign site_tags = site_tags | split: ',' %}
+
+    {% for tag in site.tags %}
+        {% assign show = 0 %}
+        {% for tt in site_tags %}
+            {% if tt == tag[0] %}
+                {% assign show = 1 %}
+            {% endif %}
+        {% endfor %}
+        {% if show == 1 %}
+            <a href="#posts-tag" id="{{ forloop.index }}" class="__tag" style="margin: 5px">{{ tag[0] }}</a>
+            <ul id="list_{{ forloop.index }}" style="display:none;">
+                {% for post in tag[1] %}
+                    {% if post.lang == page.lang %}
+                        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endfor %}
+</div>
+
+<div id ="posts-tags" class="post-list" style="margin: 50px;"></div>
+
+<script type="text/javascript">
+    $(function() {
+        var minFont = 15.0,
+                maxFont = 40.0,
+                diffFont = maxFont - minFont,
+                size = 0;
+
+        {% assign max = 1.0 %}
+        {% for tag in site.tags %}
+        {% if tag[1].size > max %}
+        {% assign max = tag[1].size %}
+        {% endif %}
+        {% endfor %}
+
+        {% for tag in site.tags %}
+        size = (Math.log({{ tag[1].size }}) / Math.log({{ max }})) * diffFont + minFont;
+        $("#{{ forloop.index }}").css("font-size", size + "px");
+        {% endfor %}
+        $('.tag-cloud a[class^="__tag"]').click(function() {
+            $('.post-list').empty();
+            $('#list_' + $(this).attr('id')).each(function() {
+                $('.post-list').append('<ul>' + $(this).html() + '</ul>');
+            });
+        });
+    });
+</script>

@@ -49,6 +49,43 @@ url: http:/masterandrey.com
 # then add in the baseurl here, like this: "/repository-name"
 baseurl: ""
 
+t:
+  en:
+    home:
+      name: "Home"
+      url: "/"
+    syntax:
+      name: "Syntax"
+      url: "/regexp_syntax/"
+    interface:
+      name: "Interface"
+      url: "/tregexp_interface/"
+    about:
+      name: "About me"
+      url: "/about/"
+  ru:
+    home:
+      name: "Главная"
+      url: "index_ru.html"
+    syntax:
+      name: "Синтаксис"
+      url: "/regexp_syntax_ru/"
+    interface:
+      name: "Интерфейс"
+      url: "/tregexp_interface_ru/"
+    about:
+      name: "Обо мне"
+      url: "/about_ru/"
+
+lang_names:
+  en: "English"
+  ru: "Русский"
+
+search:
+  en: "Search on the site..."
+  ru: "Поиск по сайту..."
+
+
 #
 # !! You don't need to change any of the configuration flags below !!
 #

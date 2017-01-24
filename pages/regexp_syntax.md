@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Regular expressions syntax
 lang: en
 ref: syntax
+title: Regular expressions syntax
 permalink: /regexp_syntax/
 ---
 

@@ -1,8 +1,8 @@
 ---
 layout: page
-title: TRegExr interface
 lang: en
 ref: interface
+title: TRegExr interface
 permalink: /tregexpr_interface/
 ---
 

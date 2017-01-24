@@ -1,9 +1,8 @@
 ---
 layout: page
-title: TRegExr interface
 lang: ru
-locale: ru_RU
 ref: interface
+title: Интерфейс TRegExr
 permalink: /tregexpr_interface_ru/
 ---
 

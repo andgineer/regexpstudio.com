@@ -1,10 +1,9 @@
 ---
 layout: page
+lang: ru
+ref: about
 title: Обо мне
 permalink: /about_ru/
-lang: ru
-locale: ru_RU
-ref: about
 ---
 
 Мой родной город - Санкт-Петербург

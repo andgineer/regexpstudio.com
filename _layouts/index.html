@@ -11,7 +11,7 @@ layout: default
   </div>
   <div class="panel-group">
     <div class="panel panel-default">
-    <div class="panel-heading">History</div>
+    <div class="panel-heading">{{ site.strings.history[page.lang] }}</div>
         <div class="panel-body">
             <table>
               {% for post in site.posts %}
@@ -28,4 +28,32 @@ layout: default
         </div>
     </div>
   </div>
+
+    <div class="panel-group">
+        <div class="panel panel-default">
+            <div class="panel-heading">{{ site.strings.reviews[page.lang] }}</div>
+            <div class="panel-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>{{ site.strings.author[page.lang] }}</th>
+                            <th>{{ site.strings.text[page.lang] }}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for review in site.data.reviews %}
+                        <tr>
+                            <td>
+                                {{ review.author }}
+                            </td>
+                            <td>
+                                {{ review.text }}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </article>

@@ -1,9 +1,9 @@
 ---
 layout: page
-title: About
-permalink: /about/
 lang: en
 ref: about
+title: About
+permalink: /about/
 ---
 
 I'm software developer from St-Petersburg, Russia

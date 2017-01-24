@@ -49,7 +49,7 @@ url: http:/masterandrey.com
 # then add in the baseurl here, like this: "/repository-name"
 baseurl: ""
 
-t:
+top_menu:
   en:
     home:
       name: "Home"
@@ -80,6 +80,20 @@ t:
 lang_names:
   en: "English"
   ru: "Русский"
+
+strings:
+  history:
+    en: "History"
+    ru: "История"
+  reviews:
+    en: "Reviews"
+    ru: "Отзывы"
+  author:
+    en: "Author"
+    ru: "Автор"
+  text:
+    en: "Review"
+    ru: "Отзыв"
 
 search:
   en: "Search on the site..."

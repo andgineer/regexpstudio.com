@@ -1,9 +1,8 @@
 ---
 layout: page
-title: Regular expressions syntax
 lang: ru
-locale: ru_RU
 ref: syntax
+title: Синтаксис регулярных выражений
 permalink: /regexp_syntax_ru/
 ---
 

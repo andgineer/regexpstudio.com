@@ -1,7 +1,6 @@
 ---
-layout: index_ru
+layout: index
 lang: ru
-locale: ru_RU
 ref: index
 title:
 permalink: /index_ru.html

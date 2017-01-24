@@ -1,7 +1,8 @@
 ---
-layout: default
+layout: index
 lang: en
 ref: index
+title:
 permalink: /index.html
 ---
 
@@ -28,7 +29,7 @@ Documentation in English, Russian, German, Bulgarian, French and Spanish availab
 <a href="http://regexpstudio.com/tregexpr/TRegExpr.html" target="_blank">home page</a>
 
 Installation is very simple, the implementation encapsulated completely into class
-[TRegExpr](http://regexpstudio.com/tregexpr_interface/).
+[TRegExpr](/tregexpr_interface/).
 
 [Demos projects](https://github.com/masterandrey/TRegExpr/tree/master/examples) and
 [usage articles](http://masterandrey.com/text_processing_from_birds_eye_view/) illustrate simplicity and power of text processing with the library.

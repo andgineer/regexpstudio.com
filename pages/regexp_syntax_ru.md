@@ -2,6 +2,7 @@
 layout: page
 title: Regular expressions syntax
 lang: ru
+locale: ru_RU
 ref: syntax
 permalink: /regexp_syntax_ru/
 ---
@@ -11,6 +12,7 @@ permalink: /regexp_syntax_ru/
 (см.также свободно распространяемые процедуры V8 Генри Спенсера (Henry Spencer).
 
 #### Примеры регулярных выражений:
+
 ##### Вещественное число (например '13.88e-4', '-7E2'):
     ([+\-]?\d+(\.\d+)?([eE][+\-]?\d+)?)
 

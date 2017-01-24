@@ -1,10 +1,11 @@
 ---
 layout: post
-lang: en
+lang: ru
+locale: ru_RU
 ref: regexpstudio_site_is_lunched
 comments: false
-title: "The regexpstudio.com site have been lunched"
+title: "Запущен сайт regexpstudio.com"
 categories: pascal regexp delphi TRegExpr
 ---
 
-The site have been lunched
+Создан этот сайт

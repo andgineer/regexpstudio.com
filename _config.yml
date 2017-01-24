@@ -59,20 +59,20 @@ t:
       url: "/regexp_syntax/"
     interface:
       name: "Interface"
-      url: "/tregexp_interface/"
+      url: "/tregexpr_interface/"
     about:
       name: "About me"
       url: "/about/"
   ru:
     home:
       name: "Главная"
-      url: "index_ru.html"
+      url: "/index_ru.html"
     syntax:
       name: "Синтаксис"
       url: "/regexp_syntax_ru/"
     interface:
       name: "Интерфейс"
-      url: "/tregexp_interface_ru/"
+      url: "/tregexpr_interface_ru/"
     about:
       name: "Обо мне"
       url: "/about_ru/"

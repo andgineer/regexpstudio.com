@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<HEAD>
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Windows-1251">
+  <meta name="Content-Language" content="bulgarian">
+  <TITLE>&Ccedil;&agrave; &agrave;&acirc;&ograve;&icirc;&eth;&agrave;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;регулярные выражения,perl,regexp,Delphi,Pascal,FreePascal,Kylix,Libraries,VCL,CLX,Tools,files utils</TITLE>
+  <!--  TRegExpr Regular Expressions (r.e. RegExpr regexp tregexpr), egrep perl unix; delphi pascal FreePascal Kylix freeware component Andrey Sorokin -->
+  <meta name="home_url" content="http://RegExpStudio.com/">
+  <meta name="GENERATOR" content="Help & Manual">
+  <LINK REL="stylesheet" HREF="../../../styles/default.css" TYPE="text/css">
+  <meta name="description" content=" delphi pascal FreePascal Kylix freeware components: regular expressions (r.e. RegExpr regexp tregexpr), egrep perl unix; Andrey V. Sorokin">
+  <meta name="abstract" content=" TRegExpr Regular Expressions (r.e. RegExpr regexp tregexpr), egrep perl unix; Andrey V. Sorokin">
+  <meta name="keywords" content=" TRegExpr Regular Expressions (r.e. RegExpr regexp tregexpr), egrep perl unix; delphi pascal FreePascal Kylix freeware component Andrey V. Sorokin">
+  <META NAME="distribution" CONTENT="world">
+  <meta name="audience" content="all">
+  <meta name="robots" content="index,all">
+  <meta name="revisit" content="30 days">
+  <meta name="revisit-after" content="30 days">
+  <meta name="site-created" content="01-01-2004">
+  <META NAME="author" CONTENT="RegExpStudio.com, Andrey V. Sorokin, Saint Petersburg, Russia.">
+  <META NAME="copyright" CONTENT="Copyright &copy; RegExpStudio.com, Andrey V. Sorokin, Saint Petersburg, Russia. All rights reserved">
+</HEAD>
+  
+<BODY bgcolor=#FFFFFF leftmargin="0" topmargin="0" marginwidth="0" 
+      marginheight="0">
+
+<TABLE bgColor=#0054a6 cellspacing="2" cellpadding="2" border="0" 
+       width="780">
+<TR>
+  <TD align="left"><div class="MainTitle"><a href="http://RegExpStudio.com"
+   title="" class="MainTitle"><span class="MainTitle">RegExp Studio</span></a>
+<br>TRegExpr v.0.942 - Delphi Regular Expressions
+<br><img src="../../../imgs/0.gif" width="1" height="15" alt=""><br>
+</div></TD>
+  <TD align="right"><DIV class=LangSwitch>Bulgarian<BR></DIV>
+  <A class=LangSwitch
+   href="../../../TRegExpr/Help/About.html">English</A><BR>
+  <A class=LangSwitch
+   href="../../../FR/TRegExpr/Help/About.html">French</A><BR>
+  <A class=LangSwitch
+   href="../../../DE/TRegExpr/Help/About.html">German</A><BR>
+  <A class=LangSwitch
+   href="../../../RU/TRegExpr/Help/About.html">Russian</A><BR>
+  <A class=LangSwitch
+   href="../../../ES/TRegExpr/Help/About.html">Spanish</A>
+  </TD>
+</TR>
+</TABLE>
+
+<TABLE height=1 cellSpacing=0 cellPadding=0 width=780 bgColor="white" border=0>
+<TR><TD><IMG height=1 alt="" src="../../../imgs/0.gif" width=1 border=0></TD></TR>
+</TABLE>
+
+
+<TABLE width="780" height=24 cellspacing="2" cellpadding="2" border="0"
+  bgColor=#0054a6>
+<TR>
+  <TD><img src="../../../imgs/HomeSmall.gif" alt="About TRegExpr" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="About.html">Предназначение</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../../imgs/0.gif" width=5 border=0></TD>
+  <TD><img src="../../../imgs/DownloadsSmall.gif" alt="Installation" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="Installation.html">Инсталиране</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../../imgs/0.gif" width=5 border=0></TD>
+  <TD><img src="../../../imgs/RegExpSyntaxSmall.gif" alt="Regular Expressions Syntax" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="RegExp_Syntax.html">Синтаксис</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../../imgs/0.gif" width=5 border=0></TD>
+  <TD><img src="../../../imgs/TRegExprInterfaceSmall.gif" alt="TRegExpr Interface" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="TRegExpr_Interface.html">Интерфейс</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../../imgs/0.gif" width=5 border=0></TD>
+  <TD><img src="../../../imgs/FAQSmall.gif" alt="FAQ" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="FAQ.html">ЧЕВО</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../../imgs/0.gif" width=5 border=0></TD>
+  <TD><img src="../../../imgs/DemosSmall.gif" alt="TRegExpr usage demos" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="Demos.html">Демо</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../../imgs/0.gif" width=5 border=0></TD>
+  <TD><IMG src="../../../imgs/AnSoHomePageSmall.gif" alt="Author" height=16 width=18 border=0></TD>
+  <TD><A class=top_menu href="Author.html">Автор</A></TD>
+
+  <TD width="100%">&nbsp;</TD>
+</TR>
+</TABLE>
+
+
+
+<TABLE cellSpacing=14 cellPadding=0 width=779 bgColor="white" border=0>
+<TR>
+  <TD vAlign=top width=769 height="100%">
+
+
+<span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:12pt; color:#0000FF"><b>&#199;&#224; &#224;&#226;&#242;&#238;&#240;&#224;</b></span><span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:12pt; color:#010100"><b>
+<br>
+</b></span></span></span></span></span></span>
+
+
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">     Andrey V. Sorokin
+<br>
+     Saint Petersburg, Russia
+<br>
+     <a href="mailto:anso@mail.ru">anso@mail.ru</a>
+<br>
+     <a href="http://RegExpStudio.com/" target="_blank">http://RegExpStudio.com</a>
+<br>
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b>&#204;&#238;&#235;&#255; &#194;&#232;, &#224;&#234;&#238; &#236;&#232;&#241;&#235;&#232;&#242;&#229;, &#247;&#229; &#241;&#242;&#229; &#238;&#242;&#234;&#240;&#232;&#235;&#232; &#227;&#240;&#229;&#248;&#234;&#224; &#232;&#235;&#232; &#232;&#236;&#224;&#242;&#229; &#226;&#250;&#239;&#240;&#238;&#241;&#232; &#238;&#242;&#237;&#238;&#241;&#237;&#238; TRegExpr, &#241;&#226;&#224;&#235;&#229;&#242;&#229; &#241;&#232; &#239;&#238;&#241;&#235;&#229;&#228;&#237;&#224;&#242;&#224; &#226;&#229;&#240;&#241;&#232;&#255; &#237;&#224; TRegExpr &#238;&#242; &#236;&#238;&#255; &#241;&#224;&#233;&#242; &#232; &#239;&#240;&#238;&#247;&#229;&#242;&#229;&#242;&#229; </b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b><a href=faq.html>FAQ</a></b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><b> &#239;&#240;&#229;&#228;&#232; &#228;&#224; &#236;&#232; &#232;&#231;&#239;&#240;&#224;&#249;&#224;&#242;&#229; &#226;&#250;&#239;&#240;&#238;&#241;&#232;!</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+&#210;&#224;&#231;&#232; &#225;&#232;&#225;&#235;&#232;&#238;&#242;&#229;&#234;&#224; &#241;&#229; &#225;&#224;&#231;&#232;&#240;&#224; &#237;&#224; &#241;&#238;&#240;&#241;-&#234;&#238;&#228;&#224; &#237;&#224; Henry Spencer.
+<br>
+&#192;&#231; &#239;&#240;&#229;&#226;&#229;&#228;&#238;&#245; &#241;&#238;&#240;&#241;&#238;&#226;&#229;&#242;&#229; &#238;&#242; C &#237;&#224; Object Pascal,
+<br>
+&#234;&#224;&#242;&#238; &#240;&#229;&#224;&#235;&#232;&#231;&#232;&#240;&#224;&#245; object wrapper &#232; &#237;&#255;&#234;&#238;&#235;&#234;&#238; &#237;&#238;&#226;&#232; &#226;&#250;&#231;&#236;&#238;&#230;&#237;&#238;&#241;&#242;&#232;.
+<br>
+&#204;&#237;&#238;&#227;&#238; &#226;&#250;&#231;&#236;&#238;&#230;&#237;&#238;&#241;&#242;&#232; &#241;&#224; &#239;&#240;&#229;&#228;&#235;&#238;&#230;&#229;&#237;&#232; &#232;&#235;&#232; &#247;&#224;&#241;&#242;&#232;&#247;&#237;&#238; &#240;&#229;&#224;&#235;&#232;&#231;&#232;&#240;&#224;&#237;&#232;
+<br>
+&#238;&#242; &#239;&#238;&#242;&#240;&#229;&#225;&#232;&#242;&#229;&#235;&#232;&#242;&#229; &#237;&#224; TRegExpr (&#226;&#232;&#230; &#225;&#235;&#224;&#227;&#238;&#228;&#224;&#240;&#237;&#238;&#241;&#242;&#232;&#242;&#229; &#239;&#238;-&#228;&#238;&#235;&#243;).
+<br>
+
+<br>
+---------------------------------------------------------------
+<br>
+     &#193;&#235;&#224;&#227;&#238;&#228;&#224;&#240;&#237;&#238;&#241;&#242;&#232;
+<br>
+---------------------------------------------------------------
+<br>
+</span></span></span><span style="font-family:Symbol; font-size:10pt; color:#000000"><span style="font-family:Symbol; font-size:10pt; color:#010100"><font face="Symbol" size="2" color="#000000">&#183;</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Guido Muehlwitz </span></span></span><span style="font-family:Times New Roman; font-size:10pt; color:#000000"><span style="font-family:Times New Roman; font-size:10pt; color:#010100">&#150;</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> &#237;&#224;&#236;&#229;&#240;&#232;&#235; &#232; &#232;&#231;&#247;&#232;&#241;&#242;&#232;&#235; &#227;&#240;&#238;&#231;&#229;&#237; &#225;&#250;&#227; &#226; &#238;&#225;&#240;&#224;&#225;&#238;&#242;&#234;&#224;&#242;&#224; &#237;&#224; &#227;&#238;&#235;&#229;&#236;&#232; &#241;&#242;&#240;&#232;&#237;&#227;&#238;&#226;&#229;
+<br>
+</span></span></span><span style="font-family:Symbol; font-size:10pt; color:#000000"><span style="font-family:Symbol; font-size:10pt; color:#010100"><font face="Symbol" size="2" color="#000000">&#183;</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Stephan Klimek </span></span></span><span style="font-family:Times New Roman; font-size:10pt; color:#000000"><span style="font-family:Times New Roman; font-size:10pt; color:#010100">&#150;</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> &#242;&#229;&#241;&#242;&#226;&#224;&#235; &#226; CPPB &#232; &#239;&#240;&#229;&#228;&#235;&#238;&#230;&#232;&#235;/&#240;&#229;&#224;&#235;&#232;&#231;&#232;&#240;&#224;&#235; &#236;&#237;&#238;&#227;&#238; &#226;&#250;&#231;&#236;&#238;&#230;&#237;&#238;&#241;&#242;&#232;
+<br>
+</span></span></span><span style="font-family:Symbol; font-size:10pt; color:#000000"><span style="font-family:Symbol; font-size:10pt; color:#010100"><font face="Symbol" size="2" color="#000000">&#183;</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Steve Mudford </span></span></span><span style="font-family:Times New Roman; font-size:10pt; color:#000000"><span style="font-family:Times New Roman; font-size:10pt; color:#010100">&#150;</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> &#240;&#229;&#224;&#235;&#232;&#231;&#232;&#240;&#224;&#235; &#239;&#224;&#240;&#224;&#236;&#229;&#242;&#250;&#240;&#224; Offset
+<br>
+</span></span></span><span style="font-family:Symbol; font-size:10pt; color:#000000"><span style="font-family:Symbol; font-size:10pt; color:#010100"><font face="Symbol" size="2" color="#000000">&#183;</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Martin Baur (</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"><a href="http://www.mindpower.com',`',1)" target="_blank">www.mindpower.com</a></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">) - &#239;&#238;&#236;&#238;&#249; &#237;&#224; &#237;&#229;&#236;&#241;&#234;&#232;, &#239;&#238;&#235;&#229;&#231;&#237;&#232; &#241;&#250;&#226;&#229;&#242;&#232;
+<br>
+</span></span></span><span style="font-family:Symbol; font-size:10pt; color:#000000"><span style="font-family:Symbol; font-size:10pt; color:#010100"><font face="Symbol" size="2" color="#000000">&#183;</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Yury Finkel </span></span></span><span style="font-family:Times New Roman; font-size:10pt; color:#000000"><span style="font-family:Times New Roman; font-size:10pt; color:#010100">&#150;</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> &#240;&#229;&#224;&#235;&#232;&#231;&#232;&#240;&#224;&#235; &#239;&#238;&#228;&#228;&#240;&#250;&#230;&#234;&#224;&#242;&#224; &#237;&#224; UniCode, &#237;&#224;&#236;&#229;&#240;&#232;&#235; &#232; &#239;&#238;&#239;&#240;&#224;&#226;&#232;&#235; &#227;&#240;&#229;&#248;&#234;&#232;
+<br>
+</span></span></span><span style="font-family:Symbol; font-size:10pt; color:#000000"><span style="font-family:Symbol; font-size:10pt; color:#010100"><font face="Symbol" size="2" color="#000000">&#183;</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Ralf Junker </span></span></span><span style="font-family:Times New Roman; font-size:10pt; color:#000000"><span style="font-family:Times New Roman; font-size:10pt; color:#010100">&#150;</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> &#237;&#255;&#234;&#238;&#232; &#237;&#238;&#226;&#232; &#226;&#250;&#231;&#236;&#238;&#230;&#237;&#238;&#241;&#242;&#232;, &#236;&#237;&#238;&#227;&#238; &#241;&#250;&#226;&#229;&#242;&#232; &#239;&#238; &#238;&#239;&#242;&#232;&#236;&#232;&#231;&#224;&#246;&#232;&#255;&#242;&#224;
+<br>
+</span></span></span><span style="font-family:Symbol; font-size:10pt; color:#000000"><span style="font-family:Symbol; font-size:10pt; color:#010100"><font face="Symbol" size="2" color="#000000">&#183;</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Simeon Lilov </span></span></span><span style="font-family:Times New Roman; font-size:10pt; color:#000000"><span style="font-family:Times New Roman; font-size:10pt; color:#010100">&#150;</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> &#239;&#238;&#236;&#238;&#249; &#237;&#224; &#225;&#250;&#235;&#227;&#224;&#240;&#241;&#234;&#232;
+<br>
+</span></span></span><span style="font-family:Symbol; font-size:10pt; color:#000000"><span style="font-family:Symbol; font-size:10pt; color:#010100"><font face="Symbol" size="2" color="#000000">&#183;</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Filip Jirs&#225;k &#232; Matthew Winter (wintermi@yahoo.com) - &#239;&#238;&#236;&#238;&#249; &#239;&#240;&#232; &#240;&#229;&#224;&#235;&#232;&#231;&#224;&#246;&#232;&#255;&#242;&#224; &#237;&#224;  &#237;&#229;&#230;&#224;&#228;&#237;&#232;&#255; &#240;&#229;&#230;&#232;&#236;
+<br>
+</span></span></span><span style="font-family:Symbol; font-size:10pt; color:#000000"><span style="font-family:Symbol; font-size:10pt; color:#010100"><font face="Symbol" size="2" color="#000000">&#183;</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Kit Eason </span></span></span><span style="font-family:Times New Roman; font-size:10pt; color:#000000"><span style="font-family:Times New Roman; font-size:10pt; color:#010100">&#150;</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> &#236;&#237;&#238;&#227;&#238; &#239;&#240;&#232;&#236;&#229;&#240;&#232;, &#232;&#231;&#239;&#238;&#235;&#231;&#226;&#224;&#237;&#232; &#226; &#242;&#224;&#231;&#232; &#239;&#238;&#236;&#238;&#249;
+<br>
+</span></span></span><span style="font-family:Symbol; font-size:10pt; color:#000000"><span style="font-family:Symbol; font-size:10pt; color:#010100"><font face="Symbol" size="2" color="#000000">&#183;</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Juergen Schroth </span></span></span><span style="font-family:Times New Roman; font-size:10pt; color:#000000"><span style="font-family:Times New Roman; font-size:10pt; color:#010100">&#150;</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> &#232;&#231;&#247;&#232;&#241;&#242;&#226;&#224;&#237;&#229; &#237;&#224; &#227;&#240;&#229;&#248;&#234;&#232; &#232; &#239;&#238;&#235;&#229;&#231;&#237;&#232; &#239;&#240;&#229;&#228;&#235;&#238;&#230;&#229;&#237;&#232;&#255;
+<br>
+</span></span></span><span style="font-family:Symbol; font-size:10pt; color:#000000"><span style="font-family:Symbol; font-size:10pt; color:#010100"><font face="Symbol" size="2" color="#000000">&#183;</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">Diego Calp (mail@diegocalp.com), &#192;&#240;&#230;&#229;&#237;&#242;&#232;&#237;&#224; </span></span></span><span style="font-family:Times New Roman; font-size:10pt; color:#000000"><span style="font-family:Times New Roman; font-size:10pt; color:#010100">&#150;</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> &#239;&#238;&#236;&#238;&#249; &#237;&#224; &#232;&#241;&#239;&#224;&#237;&#241;&#234;&#232;
+<br>
+</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+&#200; &#237;&#224; &#236;&#237;&#238;&#227;&#238; &#228;&#240;&#243;&#227;&#232; </span></span></span><span style="font-family:Times New Roman; font-size:10pt; color:#000000"><span style="font-family:Times New Roman; font-size:10pt; color:#010100">&#150;</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#010100"> &#231;&#224; &#227;&#238;&#235;&#255;&#236;&#238;&#242;&#238; &#247;&#232;&#241;&#242;&#229;&#237;&#229; &#237;&#224; &#227;&#240;&#229;&#248;&#234;&#232; !
+<br>
+
+<br>
+&#194;&#241;&#229; &#238;&#249;&#229; &#242;&#250;&#240;&#241;&#255; &#237;&#255;&#234;&#238;&#233;, &#234;&#238;&#233;&#242;&#238; &#228;&#224; &#236;&#232; &#239;&#238;&#236;&#238;&#227;&#237;&#229; &#226; &#239;&#240;&#229;&#226;&#238;&#228;&#224; &#237;&#224; &#242;&#224;&#231;&#232; &#228;&#238;&#234;&#243;&#236;&#229;&#237;&#242;&#224;&#246;&#232;&#255; &#237;&#224; &#228;&#240;&#243;&#227;&#232; &#229;&#231;&#232;&#246;&#232;! 
+<br>
+
+<br>
+</span></span></span></span></span></span>
+
+  </TD>
+  <TD vAlign=top align=left bgColor="white" height="100%"
+       width=10>
+  </TD>
+</TR>
+</TABLE><BR><BR>
+
+<TABLE height=1 cellSpacing=0 cellPadding=0 width=780 bgColor=#0054a6 
+       border=0>
+<TR>
+  <TD><IMG height=1 alt="" src="../../../imgs/0.gif" width=1 border=0></TD>
+</TR>
+</TABLE>
+
+<TABLE height=70 cellSpacing=2 cellPadding=0 width=779 bgColor="white"
+       border=0>
+<TR>
+  <TD align=right width=2><IMG src="../../../imgs/0.gif" width=2 height=1 border=0></TD>
+  <TD vAlign=top align=left width="100%"><P class=pageauthor><I>&copy;&nbsp;<A 
+      class=pageauthor href="http://RegExpStudio.com/">2004 Andrey V. Sorokin</A></I>,
+      Saint Petersburg, Russia
+      <BR><A class=pageauthor href="mailto:anso@mail.ru">anso@mail.ru</A>
+      <BR><A class=pageauthor href="http://RegExpStudio.com/">RegExpStudio.com</A></P></TD>
+  <TD vAlign=top align=right width=468><A href="http://www.helpandmanual.com"
+      target="_blank"><img src="../../../TRegExpr/Help/hmad468x60.gif" width="468" height="60"
+      border="0" alt="Help&Manual - the best help authoring tool!"></A></TD>
+  <TD align=right width=4><IMG src="../imgs/0.gif" width=4 height=1 border=0></TD>
+</TR>
+</TABLE><BR>
+
+</body>
+</html>

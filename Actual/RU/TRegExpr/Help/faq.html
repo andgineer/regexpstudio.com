@@ -1,0 +1,256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<HEAD>
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Windows-1251">
+  <meta name="Content-Language" content="russian">
+  <TITLE>ЧАВО&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;регулярные выражения,perl,regexp,Delphi,Pascal,FreePascal,Kylix,Libraries,VCL,CLX,Tools,files utils</TITLE>
+  <!--  TRegExpr регулярные выражения (r.e. RegExpr regexp tregexpr), egrep perl unix; delphi pascal FreePascal Kylix freeware component Andrey Sorokin -->
+  <meta name="home_url" content="http://RegExpStudio.com/">
+  <meta name="GENERATOR" content="Help & Manual">
+  <LINK REL="stylesheet" HREF="../../../styles/default.css" TYPE="text/css">
+  <meta name="description" content=" delphi pascal FreePascal Kylix freeware components: regular expressions (r.e. RegExpr regexp tregexpr), egrep perl unix; Андрей Сорокин">
+  <meta name="abstract" content=" TRegExpr регулярные выражения (r.e. RegExpr regexp tregexpr), egrep perl unix; Андрей Сорокин">
+  <meta name="keywords" content=" TRegExpr регулярные выражения (r.e. RegExpr regexp tregexpr), egrep perl unix; delphi pascal FreePascal Kylix freeware component Андрей Сорокин">
+  <META NAME="distribution" CONTENT="world">
+  <meta name="audience" content="all">
+  <meta name="robots" content="index,all">
+  <meta name="revisit" content="30 days">
+  <meta name="revisit-after" content="30 days">
+  <meta name="site-created" content="01-01-2004">
+  <META NAME="author" CONTENT="RegExpStudio.com, Andrey V. Sorokin, Saint Petersburg, Russia.">
+  <META NAME="copyright" CONTENT="Copyright &copy; RegExpStudio.com, Andrey V. Sorokin, Saint Petersburg, Russia. All rights reserved">
+</HEAD>
+  
+<BODY bgcolor=#FFFFFF leftmargin="0" topmargin="0" marginwidth="0" 
+      marginheight="0">
+
+<TABLE bgColor=#0054a6 cellspacing="2" cellpadding="2" border="0" 
+       width="780">
+<TR>
+  <TD align="left"><div class="MainTitle"><a href="http://RegExpStudio.com"
+   title="" class="MainTitle"><span class="MainTitle">RegExp Studio</span></a>
+<br>TRegExpr v.0.952 - Регулярные выражения для Delphi
+<br><img src="../../../imgs/0.gif" width="1" height="15" alt=""><br>
+</div></TD>
+  <TD align="right"><A class=LangSwitch
+   href="../../../BG/TRegExpr/Help/About.html">Болгарский</A><BR>
+  <A class=LangSwitch
+   href="../../../RU/TRegExpr/Help/About.html">Английский</A><BR>
+  <A class=LangSwitch
+   href="../../../FR/TRegExpr/Help/About.html">Французский</A><BR>
+  <A class=LangSwitch
+   href="../../../DE/TRegExpr/Help/About.html">Немецкий</A><BR>
+  <DIV class=LangSwitch>Русский<BR></DIV>
+  <A class=LangSwitch
+   href="../../../ES/TRegExpr/Help/About.html">Испанский</A></TD>
+</TR>
+</TABLE>
+
+<TABLE height=1 cellSpacing=0 cellPadding=0 width=780 bgColor="white" border=0>
+<TR><TD><IMG height=1 alt="" src="../../../imgs/0.gif" width=1 border=0></TD></TR>
+</TABLE>
+
+
+<TABLE width="780" height=24 cellspacing="2" cellpadding="2" border="0"
+  bgColor=#0054a6>
+<TR>
+  <TD><img src="../../../imgs/HomeSmall.gif" alt="About TRegExpr" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="About.html">Введение</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../../imgs/0.gif" width=5 border=0></TD>
+  <TD><img src="../../../imgs/DownloadsSmall.gif" alt="Installation" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="Installation.html">Установка</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../../imgs/0.gif" width=5 border=0></TD>
+  <TD><img src="../../../imgs/RegExpSyntaxSmall.gif" alt="Regular Expressions Syntax" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="RegExp_Syntax.html">Синтаксис</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../../imgs/0.gif" width=5 border=0></TD>
+  <TD><img src="../../../imgs/TRegExprInterfaceSmall.gif" alt="TRegExpr Interface" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="TRegExpr_Interface.html">Интерфейс</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../../imgs/0.gif" width=5 border=0></TD>
+  <TD><img src="../../../imgs/FAQSmall.gif" alt="FAQ" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="FAQ.html">ЧАВО</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../../imgs/0.gif" width=5 border=0></TD>
+  <TD><img src="../../../imgs/DemosSmall.gif" alt="TRegExpr usage demos" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="Demos.html">Демо</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../../imgs/0.gif" width=5 border=0></TD>
+  <TD><IMG src="../../../imgs/AnSoHomePageSmall.gif" alt="AnSo@Web" height=16 width=18 border=0></TD>
+  <TD><A class=top_menu href="Author.html">Автор</A></TD>
+
+  <TD width="100%">&nbsp;</TD>
+</TR>
+</TABLE>
+
+
+
+<TABLE cellSpacing=14 cellPadding=0 width=779 bgColor="white" border=0>
+<TR>
+  <TD vAlign=top width=769 height="100%">
+
+
+<span style="font-family:Arial; font-size:12pt; color:#000000"><span style="font-family:Arial; font-size:12pt; color:#0000FF"><b>ЧАсто задаваемые ВОпросы</b></span><span style="font-family:Arial; font-size:14pt; color:#000000"><span style="font-family:Arial; font-size:14pt; color:#0000FF"><b>
+<br>
+</b></span></span></span></span></span></span>
+
+
+<span style="font-family:Arial; font-size:10pt; color:#000000">В.
+<br>
+<b>Ничего не работает! Какой-то </b><b>Access violation </b><b>выдает!</b><b>
+<br>
+</b>О.
+<br>
+Пожалуйста. Проверьте. Что. Вы. Создали. Эземпляр. Объекта.
+<br>
+После того как вы описали что-то вроде var r : TRegExpr; нужно еще и сам объект создать r := TRegExpr.Create. Рекомендую вообще почитать что-нибудь по программированию на Delphi language, не относящиеся к TRegExpr вопросы эффективнее задавать в ФИДО, на <a href="http://delphi.mastak.ru/" target="_blank">delphi.mastak.ru</a> или в <a href="http://delphi.vitpc.com/" target="_blank">Королевстве Delphi</a>.
+<br>
+
+<br>
+В.
+<br>
+<b>Как использовать TRegExpr в Borland C++ Builder?</b><b>
+<br>
+</b>Я не могу это сделать, потому что нет заголовочных файлов (.h или .hpp).
+<br>
+О.
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="14"><span style="font-family:Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></td><td><span style="font-family:Arial; font-size:10pt; color:#000000">Добавьте RegExpr.pas в Ваш bcb-проект
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="14"><span style="font-family:Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></td><td><span style="font-family:Arial; font-size:10pt; color:#000000">Откомпилируйте проект. В результате автоматически будет создан hpp-файл (сообщения об ошибках можно проигнорировать)
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="14"><span style="font-family:Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></td><td><span style="font-family:Arial; font-size:10pt; color:#000000">Теперь Вы можете использовать класс TRegExpr в своем проекте. Не забывайте добавлять #include "RegExpr.hpp" в соответствующие cpp-файлы
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="14"><span style="font-family:Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></td><td><span style="font-family:Arial; font-size:10pt; color:#000000">Не забудьте заменить в регулярных выражениях все символы '\' на '\\'.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td><span style="font-family:Arial; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Arial; font-size:10pt; color:#000000">
+<br>
+В.
+<br>
+<b>А почему почти все выражения (даже приведенные здесь как примеры) </b><b>неверно работают в Borland C++ Builder?
+<br>
+</b>О.
+<br>
+А Вы еще раз перечитайте ответ на пред.вопрос ;) Символ '\' воспринимается в C++ как "эскейп"-символ, поэтому его самого нужно всегда "эскейпить". Когда Вам надоест работать с кошмаром вида '\\w+\\\\\\w+\\.\\w+', Вы можете переопределить константу EscChar (RegExpr.pas), например, если EscChar='/' - то приведенное выше выражение нужно записать как '/w+\/w+/./w+' - немножко непривычно\нестандартно, но намного обозримее\читаемее..
+<br>
+
+<br>
+В.
+<br>
+<b>Почему TRegExpr возвращает более одной строки?</b>
+<br>
+Например, выражение &lt;font .*&gt; возвращает &lt;font, а затем - весь оставшийся файл включая завершающий &lt;/html&gt;...
+<br>
+О.
+<br>
+Для обеспечения обратной совместимости, <a href=regexp_syntax.html#modifier_s>модификатор /s</a> по умолчанию включен.
+<br>
+Если Вы его выключите, то мета-символ '.' перестанет совпадать с <a href=regexp_syntax.html#syntax_line_separators>разделителями строк</a> - и Вы получите ожидаемый Вами результат.
+<br>
+Кстати, данное конкретное выражение было бы эффективнее переписать как '&lt;font ([^\n&gt;]*)&gt;', (в Match[1] Вы получите URL).
+<br>
+
+<br>
+В.
+<br>
+<b>Почему </b><b>TRegExpr </b><b>возвращает больше чем я ожидал</b><b>?</b>
+<br>
+Например, выражение '&lt;p&gt;(.+)&lt;/p&gt;' примененное к строке '&lt;p&gt;a&lt;/p&gt;&lt;p&gt;b&lt;/p&gt;' возвращает 'a&lt;/p&gt;&lt;p&gt;b' а не 'a' как я ожидал.
+<br>
+О.
+<br>
+По умолчанию, все операторы работают в "жадном" ('greedy') режиме и пытаются захватить как можно большую часть входной строки.
+<br>
+Если Вам необходим "не жадный" ('non-greedy') режим, то Вы можете использовать либо специальные "не жадные" варианты операторов ('+?' и т.п.) либо вообще переключить модификатор "жадности" ModifierG. Прим.: эта возможность появилась начиная с версии 0.940).
+<br>
+
+<br>
+В.
+<br>
+<b>Как анализировать </b><b>HTML </b><b>с помощью</b><b> TRegExpr</b>
+<br>
+О.
+<br>
+Мне очень часто задают этот вопрос! Должен вас огорчить, корректный ответ - "никак".
+<br>
+Конечно, вполне возможно (и очень удобно) использовать TRegExpr для извлечения каких-то специфичных фрагментов HTML, я сам часто этим пользуюсь, но если Вам нужен полноценный синтаксический разбор, то возьмите подходящий инструмент - синтаксический анализатор, а не регулярные выражения!
+<br>
+Мне не хочется занимать здесь место объяснениями почему это так - просто поверьте или почитайте например книжку Tom Christiansen и Nathan Torkington 'Perl Cookbook' (в русском переводе вышла в серии "Библиотека программиста" и называется просто "Perl"). Если в двух словах - мало того что отдельные случаи даже теоретически невозможно обработать с помощью регулярных выражений, так еще и не стоит забывать, что регулярные выражения это достаточно ресурсоемкий <a href=regexp_syntax.html#mechanism>механизм</a> выполняющий оптимизационный поиск, в то время как синтаксический анализ обычно линеен и работает гораздо быстрее. Используйте подходящие инструменты для каждого вида работ!
+<br>
+
+<br>
+В.
+<br>
+<b>Как мне получить все вхождения регулярного выражения а не только первое</b><b>?</b>
+<br>
+О.
+<br>
+Очень просто - напишите цикл, который будет вызывать метод ExecNext и тем самым переберет все вхождения.
+<br>
+Пример Вы можете посмотреть в реализации метода TRegExpr.Replace или в исходных текстах модуля <a href=hyperlinksdecorator.html>HyperLinksDecorator.pas</a>
+<br>
+
+<br>
+В.
+<br>
+<b>Я хочу проверить вводимые пользователем строки. Но почему-то </b><b>TRegExpr </b><b>иногда возвращает </b><b>True </b><b>для явно ошибочных строк.</b>
+<br>
+О.
+<br>
+Возможно, Вы просто забыли о том, что регулярные выражения ИЩУТ заданный Вами шаблон во входной строке. Поэтому, если например задать шаблон типа '\d{4,4}' то он "сработает" не только для строк, состоящих из четырех цифр, но и для таких строк как '12345' или даже  'что угодно 1234 и опять что угодно'. Если Вам необходимо убедиться что во входной строке ТОЛЬКО искомый шаблон, не забудьте обрамлять выражение метасимволами начала и конца строки: '^\d{4,4}$'.
+<br>
+
+<br>
+<a name="nongreedyoptimization"></a>В.
+<br>
+<b>Почему "не жадные" повторители иногда ведут себя "жадно"</b><b>?</b>
+<br>
+Например, выражение 'a+?,b+?', примененное к строке 'aaa,bbb' находит 'aaa,b', в то время как я ожидал что будет найдено 'a,b', ведь первый повторитель написан в "нежадной" форме!
+<br>
+О.
+<br>
+Это особенность используемой TRegExpr (а также Perl-ом и многими Unix-скими регулярными выражениями) математики - выполняется только "простая" оптимизация при поиске и не делается попыток найти наиболее <b>оптимальный вариант</b>. В некоторых ситуациях это неудобно, однако, в основном, это можно воспринимать как преимущество а не недостаток, поскольку это обеспечивает большую скорость работы и предсказуемость результатов.
+<br>
+Основное правило - вначале TRegExpr пытается найти соответствие выражению начиная с текущей позиции во входном тексте. И только если это абсолютно невозможно, передвигается на символ вперед и повторяет все сначала. Поэтому, для выражения 'a,b+?' будет найдено 'a,b', а вот в случае 'a+?,b+?' выражение <b>не рекомендует</b> (с помощью "нежадной" формы повторителя) но и <b>не запрещает</b> вовсе совпадение более одного символа 'a', поэтому TRegExpr, пытаясь найти соответствие для текущей позиции, захватывает все больше этих символов, пока не находит соответствие. На этом он завершает поиск, не пытаясь выяснить, нельзя ли, сдвинувшись вперед, найти лучший вариант. Впрочем, строго говоря, нет способа понять - что значит "лучший"
+<br>
+Вы можете также найти более детальные пояснения в разделе '<a href=regexp_syntax.html#mechanism>Синтаксис</a>'.
+<br>
+
+<br>
+</span></span></span>
+
+  </TD>
+  <TD vAlign=top align=left bgColor="white" height="100%"
+       width=10>
+  </TD>
+</TR>
+</TABLE><BR><BR>
+
+<TABLE height=1 cellSpacing=0 cellPadding=0 width=780 bgColor=#0054a6 
+       border=0>
+<TR>
+  <TD><IMG height=1 alt="" src="../../../imgs/0.gif" width=1 border=0></TD>
+</TR>
+</TABLE>
+
+<TABLE height=70 cellSpacing=2 cellPadding=0 width=779 bgColor="white"
+       border=0>
+<TR>
+  <TD align=right width=2><IMG src="../../../imgs/0.gif" width=2 height=1 border=0></TD>
+  <TD vAlign=top align=left width="100%"><P class=pageauthor><I>&copy;&nbsp;<A 
+      class=pageauthor href="http://RegExpStudio.com/">2004 Andrey V. Sorokin</A></I>,
+      Saint Petersburg, Russia
+      <BR><A class=pageauthor href="mailto:anso@mail.ru">anso@mail.ru</A>
+      <BR><A class=pageauthor href="http://RegExpStudio.com/">RegExpStudio.com</A></P></TD>
+  <TD vAlign=top align=right width=468><A href="http://www.helpandmanual.com"
+      target="_blank"><img src="../../../TRegExpr/Help/hmad468x60.gif" width="468" height="60"
+      border="0" alt="Help&Manual - the best help authoring tool!"></A></TD>
+  <TD align=right width=4><IMG src="../../../imgs/0.gif" width=4 height=1 border=0></TD>
+</TR>
+</TABLE><BR>
+
+</body>
+</html>

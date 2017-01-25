@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<HEAD>
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-8859-1">
+  <TITLE>Exemple: Décorateur HyperLinks&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ðåãóëÿðíûå âûðàæåíèÿ,perl,regexp,Delphi,Pascal,FreePascal,Kylix,Libraries,VCL,CLX,Tools,files utils</TITLE>
+  <!--  TRegExpr ðåãóëÿðíûå âûðàæåíèÿ (r.e. RegExpr regexp tregexpr), egrep perl unix; delphi pascal FreePascal Kylix freeware component Andrey Sorokin -->
+  <meta name="home_url" content="http://RegExpStudio.com/">
+  <meta name="GENERATOR" content="Help & Manual">
+  <LINK REL="stylesheet" HREF="../../../styles/default.css" TYPE="text/css">
+  <meta name="description" content=" delphi pascal FreePascal Kylix freeware components: regular expressions (r.e. RegExpr regexp tregexpr), egrep perl unix; Àíäðåé Ñîðîêèí">
+  <meta name="abstract" content=" TRegExpr ðåãóëÿðíûå âûðàæåíèÿ (r.e. RegExpr regexp tregexpr), egrep perl unix; Àíäðåé Ñîðîêèí">
+  <meta name="keywords" content=" TRegExpr ðåãóëÿðíûå âûðàæåíèÿ (r.e. RegExpr regexp tregexpr), egrep perl unix; delphi pascal FreePascal Kylix freeware component Àíäðåé Ñîðîêèí">
+  <META NAME="distribution" CONTENT="world">
+  <meta name="audience" content="all">
+  <meta name="robots" content="index,all">
+  <meta name="revisit" content="30 days">
+  <meta name="revisit-after" content="30 days">
+  <meta name="site-created" content="01-01-2004">
+  <META NAME="author" CONTENT="RegExpStudio.com, Andrey V. Sorokin, Saint Petersburg, Russia.">
+  <META NAME="copyright" CONTENT="Copyright &copy; RegExpStudio.com, Andrey V. Sorokin, Saint Petersburg, Russia. All rights reserved">
+</HEAD>
+  
+<BODY bgcolor=#FFFFFF leftmargin="0" topmargin="0" marginwidth="0" 
+      marginheight="0">
+
+<TABLE bgColor=#0054a6 cellspacing="2" cellpadding="2" border="0" 
+       width="780">
+<TR>
+  <TD align="left"><div class="MainTitle"><a href="http://RegExpStudio.com"
+   title="" class="MainTitle"><span class="MainTitle">RegExp Studio</span></a>
+<br>TRegExpr - Delphi Regular Expressions
+<br><img src="../../../imgs/0.gif" width="1" height="15" alt=""><br>
+</div></TD>
+  <TD align="right"><A class=LangSwitch
+   href="../../../TRegExpr/Help/About.html">English</A><BR>
+  <DIV class=LangSwitch>French<BR></DIV>
+  <A class=LangSwitch
+   href="../../../DE/TRegExpr/Help/About.html">German</A><BR>
+  <A class=LangSwitch
+   href="../../../RU/TRegExpr/Help/About.html">Russian</A><BR>
+  </TD>
+</TR>
+</TABLE>
+
+<TABLE height=1 cellSpacing=0 cellPadding=0 width=780 bgColor="white" border=0>
+<TR><TD><IMG height=1 alt="" src="../../../imgs/0.gif" width=1 border=0></TD></TR>
+</TABLE>
+
+
+<TABLE width="780" height=24 cellspacing="2" cellpadding="2" border="0"
+  bgColor=#0054a6>
+<TR>
+  <TD><img src="../../../imgs/HomeSmall.gif" alt="About TRegExpr" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="About.html">About</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../../imgs/0.gif" width=5 border=0></TD>
+  <TD><img src="../../../imgs/WhatsNewSmall.gif" alt="What's new" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="../../../TRegExpr/Help/Whats_new.html">What's&nbsp;new</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../../imgs/0.gif" width=5 border=0></TD>
+  <TD><img src="../../../imgs/DownloadsSmall.gif" alt="Installation" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="Installation.html">Installation</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../../imgs/0.gif" width=5 border=0></TD>
+  <TD><img src="../../../imgs/RegExpSyntaxSmall.gif" alt="Regular Expressions Syntax" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="RegExp_Syntax.html">Syntax</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../../imgs/0.gif" width=5 border=0></TD>
+  <TD><img src="../../../imgs/TRegExprInterfaceSmall.gif" alt="TRegExpr Interface" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="TRegExpr_Interface.html">Interface</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../../imgs/0.gif" width=5 border=0></TD>
+  <TD><img src="../../../imgs/FAQSmall.gif" alt="FAQ" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="FAQ.html">FAQ</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../../imgs/0.gif" width=5 border=0></TD>
+  <TD><img src="../../../imgs/DemosSmall.gif" alt="TRegExpr usage demos" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="Demos.html">Demos</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../../imgs/0.gif" width=5 border=0></TD>
+  <TD><IMG src="../../../imgs/AnSoHomePageSmall.gif" alt="Author" height=16 width=18 border=0></TD>
+  <TD><A class=top_menu href="Author.html">Author</A></TD>
+
+  <TD width="100%">&nbsp;</TD>
+</TR>
+</TABLE>
+
+
+
+<TABLE cellSpacing=14 cellPadding=0 width=779 bgColor="white" border=0>
+<TR>
+  <TD vAlign=top width=769 height="100%">
+
+
+<span style="font-family:Arial; font-size:12pt; color:#000000"><span style="font-family:Arial; font-size:12pt; color:#0000FF"><b>Exemple: Décorateur HyperLinks</b></span><span style="font-family:Arial; font-size:14pt; color:#000000"><span style="font-family:Arial; font-size:14pt; color:#0000FF"><b>
+<br>
+</b></span></span></span><span style="font-family:Arial; font-size:9pt; color:#000000"><span style="font-family:Arial; font-size:9pt; color:#0000FF"><a href=indc3blkk.html>Décorer les URLs</a></span></span></span><span style="font-family:Arial; font-size:14pt; color:#000000"><span style="font-family:Arial; font-size:14pt; color:#0000FF"><b>   </b></span></span></span><span style="font-family:Arial; font-size:9pt; color:#000000"><span style="font-family:Arial; font-size:9pt; color:#0000FF"><a href=cc7l98.html>Décorer les E-Mails</a></span></span></span><span style="font-family:Arial; font-size:14pt; color:#000000"><span style="font-family:Arial; font-size:14pt; color:#0000FF"><b>
+<br>
+</b></span></span></span></span></span></span>
+
+
+<span style="font-family:Arial; font-size:10pt; color:#000000"><span style="font-family:Arial; font-size:10pt; color:#010100">
+<br>
+Fonctions pour décorer les liens hyperlinks en convertissant le texte standard en format HTML.
+<br>
+
+<br>
+Par exemple, remplace '</span><span style="font-family:Arial; font-size:10pt; color:#000000"><span style="font-family:Arial; font-size:10pt; color:#010100"><i>http://anso.da.ru</i></span></span></span><span style="font-family:Arial; font-size:10pt; color:#000000"><span style="font-family:Arial; font-size:10pt; color:#010100">'  avec  '</span></span></span><span style="font-family:Arial; font-size:10pt; color:#000000"><span style="font-family:Arial; font-size:10pt; color:#010100"><i>&lt;a href="http://anso.da.ru"&gt;anso.da.ru&lt;/a&gt;</i></span></span></span><span style="font-family:Arial; font-size:10pt; color:#000000"><span style="font-family:Arial; font-size:10pt; color:#010100">' ou '</span></span></span><span style="font-family:Arial; font-size:10pt; color:#000000"><span style="font-family:Arial; font-size:10pt; color:#010100"><i>anso@mail.ru</i></span></span></span><span style="font-family:Arial; font-size:10pt; color:#000000"><span style="font-family:Arial; font-size:10pt; color:#010100">'  avec  '</span></span></span><span style="font-family:Arial; font-size:10pt; color:#000000"><span style="font-family:Arial; font-size:10pt; color:#010100"><i>&lt;a href="mailto:anso@mail.ru"&gt;anso@mail.ru&lt;/a&gt;</i></span></span></span><span style="font-family:Arial; font-size:10pt; color:#000000"><span style="font-family:Arial; font-size:10pt; color:#010100">'.
+<br>
+
+<br>
+</span></span></span><span style="font-family:Arial; font-size:10pt; color:#000000"><span style="font-family:Arial; font-size:10pt; color:#0000FF"><b>fonction Décorer les URLs
+<br>
+</b></span></span></span><span style="font-family:Arial; font-size:10pt; color:#000000"><span style="font-family:Arial; font-size:10pt; color:#010100">
+<br>
+Trouve et remplace les liens comme 'http://...' ou 'ftp://..' aussi bien que les liens sans protocol, mais qui commence avec 'www.' Si vous voulez décorer les e-mails, vous pouvez utiliser la fonction </span></span></span><span style="font-family:Arial; font-size:10pt; color:#000000"><span style="font-family:Arial; font-size:10pt; color:#010100"><a href=cc7l98.html>DecorateEMails</a></span></span></span><span style="font-family:Arial; font-size:10pt; color:#000000"><span style="font-family:Arial; font-size:10pt; color:#010100">.
+<br>
+
+<br>
+</span></span></span><span style="font-family:Arial; font-size:10pt; color:#000000"><span style="font-family:Arial; font-size:10pt; color:#010100"><b>function DecorateURLs</b></span></span></span><span style="font-family:Arial; font-size:10pt; color:#000000"><span style="font-family:Arial; font-size:10pt; color:#010100"> (const AText : string; AFlags : TDecorateURLsFlagSet = [durlAddr, durlPath]) : string;
+<br>
+
+<br>
+</span></span></span><span style="font-family:Arial; font-size:10pt; color:#000000"><span style="font-family:Arial; font-size:10pt; color:#010100"><b>Description</b></span></span></span><span style="font-family:Arial; font-size:10pt; color:#000000"><span style="font-family:Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+retourne le texte d'entrée AText avec les liens hyperliens décorés.
+<br>
+
+<br>
+AFlags décris quelle partie de l'hyperlien lien doit être inclus dans la partie VISIBLE du lien:
+<br>
+Par exemple, si [durlAddr]  alors  hyperlien 'http://anso.da.ru/index.htm'  sera décoré comme  '&lt;a href="http://anso.da.ru/index.htm"&gt;anso.da.ru&lt;/a&gt;'.
+<br>
+
+<br>
+</span></span></span><span style="font-family:Arial; font-size:10pt; color:#000000"><span style="font-family:Arial; font-size:10pt; color:#010100"><b>type 
+<br>
+ TDecorateURLsFlags</b></span></span></span><span style="font-family:Arial; font-size:10pt; color:#000000"><span style="font-family:Arial; font-size:10pt; color:#010100"> = (durlProto, durlAddr, durlPort, durlPath, durlBMark, durlParam);
+<br>
+</span></span></span><span style="font-family:Arial; font-size:10pt; color:#000000"><span style="font-family:Arial; font-size:10pt; color:#010100"><b> TDecorateURLsFlagSet</b></span></span></span><span style="font-family:Arial; font-size:10pt; color:#000000"><span style="font-family:Arial; font-size:10pt; color:#010100"> = jeux de TDecorateURLsFlags;
+<br>
+
+<br>
+</span></span></span><span style="font-family:Arial; font-size:10pt; color:#000000"><span style="font-family:Arial; font-size:10pt; color:#010100"><b>Description</b></span></span></span><span style="font-family:Arial; font-size:10pt; color:#000000"><span style="font-family:Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+Voici les valeurs possibles pour TDecorateURLsFlagSet:
+<br>
+
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Arial; font-size:10pt; color:#010100"></span></span></span></span></span></span><span style="font-family:Arial; font-size:10pt; color:#000000"><span style="font-family:Arial; font-size:10pt; color:#010100"><b>Value&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Meaning</b></span></span></span><span style="font-family:Arial; font-size:10pt; color:#000000"><span style="font-family:Arial; font-size:10pt; color:#010100">
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Arial; font-size:10pt; color:#010100"></span><span style="font-family:Arial; font-size:1pt; color:#000000"><span style="font-family:Arial; font-size:1pt; color:#010100">
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Arial; font-size:1pt; color:#010100"></span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"> </span><span style="font-family:Arial; font-size:1pt; color:#000000"><span style="font-family:Arial; font-size:1pt; color:#010100">
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Arial; font-size:1pt; color:#010100">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Arial; font-size:1pt; color:#010100"></span></td></tr></table><span style="font-family:Arial; font-size:1pt; color:#010100"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="27"></td><td width="88"><span style="font-family:Arial; font-size:1pt; color:#010100"></span></span></span><span style="font-family:Arial; font-size:10pt; color:#000000"><span style="font-family:Arial; font-size:10pt; color:#010100">durlProto</span></span></span></td><td><span style="font-family:Arial; font-size:10pt; color:#010100">&nbsp;&nbsp;&nbsp;Protocole (comme 'ftp://' ou 'http://').
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="27"></td><td width="88"><span style="font-family:Arial; font-size:10pt; color:#010100"></span></td><td></td></tr></table><span style="font-family:Arial; font-size:10pt; color:#010100"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="27"></td><td width="88"><span style="font-family:Arial; font-size:10pt; color:#010100"></span></span></span><span style="font-family:Arial; font-size:10pt; color:#000000"><span style="font-family:Arial; font-size:10pt; color:#010100">durlAddr</span></span></span></td><td><span style="font-family:Arial; font-size:10pt; color:#010100">&nbsp;&nbsp;&nbsp;Adresse TCP ou nom de domaine (comme 'anso.da.ru').
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="27"></td><td width="88"><span style="font-family:Arial; font-size:10pt; color:#010100">durlPort</span></td><td><span style="font-family:Arial; font-size:10pt; color:#010100">&nbsp;&nbsp;&nbsp;Numéro de port si spécifié (comme ':8080').
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="27"></td><td width="88"><span style="font-family:Arial; font-size:10pt; color:#010100">durlPath</span></td><td><span style="font-family:Arial; font-size:10pt; color:#010100">&nbsp;&nbsp;&nbsp;Chemin au document (comme 'index.htm').
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="27"></td><td width="88"><span style="font-family:Arial; font-size:10pt; color:#010100">durlBMark</span></td><td><span style="font-family:Arial; font-size:10pt; color:#010100">&nbsp;&nbsp;&nbsp;Bookmark (comme '#mark').
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="27"></td><td width="88"><span style="font-family:Arial; font-size:10pt; color:#010100">durlParam</span></td><td><span style="font-family:Arial; font-size:10pt; color:#010100">&nbsp;&nbsp;&nbsp;Paramètres URL (comme '?ID=2&amp;User=13').
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="27"></td><td width="88"><span style="font-family:Arial; font-size:10pt; color:#010100"></span></td><td></td></tr></table><span style="font-family:Arial; font-size:10pt; color:#010100"></span><span style="font-family:Arial; font-size:10pt; color:#000000"><span style="font-family:Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+
+<br>
+
+<br>
+</span></span></span><span style="font-family:Arial; font-size:10pt; color:#000000"><span style="font-family:Arial; font-size:10pt; color:#0000FF"><b>Fonction Décorer les EMails</b></span></span></span><span style="font-family:Arial; font-size:10pt; color:#000000"><span style="font-family:Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+Remplace les e-mails avec '&lt;a href="mailto:ADDR"&gt;ADDR&lt;/a&gt;'. Par exemple, remplace 'anso@mail.ru' avec '&lt;a href="mailto:anso@mail.ru"&gt;anso@mail.ru&lt;/a&gt;'.
+<br>
+
+<br>
+</span></span></span><span style="font-family:Arial; font-size:10pt; color:#000000"><span style="font-family:Arial; font-size:10pt; color:#010100"><b>function DecorateEMails</b></span></span></span><span style="font-family:Arial; font-size:10pt; color:#000000"><span style="font-family:Arial; font-size:10pt; color:#010100"> (const AText : string) : string;
+<br>
+
+<br>
+</span></span></span><span style="font-family:Arial; font-size:10pt; color:#000000"><span style="font-family:Arial; font-size:10pt; color:#010100"><b>Description</b></span></span></span><span style="font-family:Arial; font-size:10pt; color:#000000"><span style="font-family:Arial; font-size:10pt; color:#010100">
+<br>
+
+<br>
+Retourne le texte d'entrée avec les décoration e-mails dans Atext.
+<br>
+
+<br>
+</span></span></span></span></span></span>
+
+  </TD>
+  <TD vAlign=top align=left bgColor="white" height="100%"
+       width=10>
+  </TD>
+</TR>
+</TABLE><BR><BR>
+
+<TABLE height=1 cellSpacing=0 cellPadding=0 width=780 bgColor=#0054a6 
+       border=0>
+<TR>
+  <TD><IMG height=1 alt="" src="../../imgs/0.gif" width=1 border=0></TD>
+</TR>
+</TABLE>
+
+<TABLE height=70 cellSpacing=2 cellPadding=0 width=779 bgColor="white"
+       border=0>
+<TR>
+  <TD align=right width=2><IMG src="../../imgs/0.gif" width=2 height=1 border=0></TD>
+  <TD vAlign=top align=left width="100%"><P class=pageauthor><I>&copy;&nbsp;<A 
+      class=pageauthor href="http://RegExpStudio.com/">2004 Andrey V. Sorokin</A></I>,
+      Saint Petersburg, Russia
+      <BR><A class=pageauthor href="mailto:anso@mail.ru">anso@mail.ru</A>
+      <BR><A class=pageauthor href="http://RegExpStudio.com/">RegExpStudio.com</A></P></TD>
+  <TD vAlign=top align=right width=468><A href="http://www.helpandmanual.com"
+      target="_blank"><img src="hmad468x60.gif"" width="468" height="60"
+      border="0" alt="Help&Manual - the best help authoring tool!"></A></TD>
+  <TD align=right width=4><IMG src="../imgs/0.gif" width=4 height=1 border=0></TD>
+</TR>
+</TABLE><BR>
+
+</body>
+</html>

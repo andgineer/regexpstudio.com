@@ -1,0 +1,407 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<HEAD>
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=windows-1251">
+  <meta name="Content-Language" content="russian">
+  <TITLE>TRegExpr library&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Regular Expressions,perl,regexp,Delphi,Pascal,FreePascal,Kylix,Libraries,VCL,CLX,Tools,files utils</TITLE>
+  <!-- TRegExpr regular expressions (r.e. RegExpr regexp tregexpr), egrep perl unix; delphi pascal FreePascal Kylix freeware component Andrey Sorokin -->
+  <meta name="home_url" content="http://RegExpStudio.com/">
+  <meta name="GENERATOR" content="FAR 1.70">
+  <LINK REL="stylesheet" HREF="../../styles/default.css" TYPE="text/css">
+  <meta name="description" content="delphi pascal FreePascal Kylix freeware components: regular expressions (r.e. RegExpr regexp tregexpr), egrep perl unix; Andrey Sorokin">
+  <meta name="abstract" content="TRegExpr regular expressions (r.e. RegExpr regexp tregexpr), egrep perl unix; Andrey Sorokin">
+  <meta name="keywords" content="TRegExpr regular expressions (r.e. RegExpr regexp tregexpr), egrep perl unix; delphi pascal FreePascal Kylix freeware component Andrey Sorokin">
+  <META NAME="distribution" CONTENT="world">
+  <meta name="audience" content="all">
+  <meta name="robots" content="index,all">
+  <meta name="revisit" content="30 days">
+  <meta name="revisit-after" content="30 days">
+  <meta name="site-created" content="01-01-2004">
+  <META NAME="author" CONTENT="RegExpStudio.com, Andrey V. Sorokin, Saint Petersburg, Russia.">
+  <META NAME="copyright" CONTENT="Copyright &copy; RegExpStudio.com, Andrey V. Sorokin, Saint Petersburg, Russia. All rights reserved">
+</HEAD>
+  
+<BODY bgcolor="white" leftmargin="0" topmargin="0" marginwidth="0" 
+      marginheight="0">
+
+<TABLE bgColor=#0054a6 cellspacing="2" cellpadding="2" border="0" 
+       width="780">
+<TR>
+  <TD align="left"><div class="MainTitle"><a href="http://RegExpStudio.com"
+   title="" class="MainTitle"><span class="MainTitle">RegExp Studio</span></a>
+<br><a href="http://RegExpStudio.com/RU" class="MainTitle"
+ title="RegExp Studio">Regular Expressions Visual Designer</a>
+<br><img src="../../imgs/0.gif" width="1" height="15" alt=""><br>
+</div></TD>
+  <TD>
+  <A class=LangSwitch
+   href="../../TRegExpr/TRegExpr.html">English</A><BR>
+  <DIV class=LangSwitch>Russian<BR></DIV>
+  </TD>
+</TR>
+</TABLE>
+
+<TABLE height=1 cellSpacing=0 cellPadding=0 width=780 bgColor="white" border=0>
+<TR><TD><IMG height=1 alt="" src="../../imgs/0.gif" width=1 border=0></TD></TR>
+</TABLE>
+
+<TABLE width="780" height=24 cellspacing="2" cellpadding="2" border="0"
+  bgColor=#0054a6>
+<TR>
+  <TD><img src="../../imgs/HomeSmall.gif" alt="RegExpStudio.com" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="http://RegExpStudio.com/">Home</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../imgs/0.gif" width=5 border=0></TD>
+  <TD><img src="../../imgs/RegExpStudioSmall.gif" alt="RegExp Studio" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="../RegExpStudio.html">RegExp&nbsp;Studio</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../imgs/0.gif" width=5 border=0></TD>
+  <TD><img src="../../imgs/RegExpSyntaxSmall.gif" alt="RegExp Syntax" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="../TRegExpr/Help/RegExp_Syntax.html">RegExp&nbsp;Syntax</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../imgs/0.gif" width=5 border=0></TD>
+  <TD><img src="../../imgs/TRegExprSmall.gif" alt="TRegExpr library" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="TRegExpr.html">TRegExpr&nbsp;library</A></TD>
+
+  <TD width=5><IMG height=1 alt="" src="../../imgs/0.gif" width=5 border=0></TD>
+  <TD><img src="../../imgs/ContactsSmall.gif" alt="Contacts" height=16 width=16 border=0></TD>
+  <TD><A class=top_menu href="../Contacts.html">Contacts</A></TD>
+
+  <TD width="100%">&nbsp;</TD>
+</TR>
+</TABLE>
+
+<TABLE cellSpacing=14 cellPadding=0 width=779 bgColor="white" border=0>
+<TR>
+  <TD vAlign=top width=469 height="100%">
+
+<TABLE cellSpacing=1 cellPadding=0 bgColor=#0054a6 border=0 width="100%">
+<TR><TD>
+ <TABLE cellSpacing=0 cellPadding=0 height=16 border=0 width="100%"><TR>
+ <TD><IMG height=16 alt="" src="../../imgs/blue_arrow.gif" width=20 border=0></TD>
+ <TD><IMG height=16 alt="" src="../../imgs/0.gif" width=8 border=0></TD>
+ <TD><IMG src="../../imgs/TRegExprSmall.gif" alt="TRegExpr library" height=16 width=16 border=0></TD>
+ <TD><FONT class=topic_title>&nbsp;&nbsp;TRegExpr&nbsp;library&nbsp;&nbsp;&nbsp;&nbsp;</FONT></TD>
+ <TD width="100%" bgColor=#eeeeee height=16><IMG height=1 alt="" src="../../imgs/0.gif" 
+     width=1 border=0></TD>
+ </TR></TABLE>
+</TD></TR>
+<TR><TD>
+<TABLE cellSpacing=0 cellPadding=8 width="100%" border=0><TR><TD bgColor="white">
+
+
+<H2><A class=topic_hdr href="TRegExpr/TRegExpr.html">TRegExpr - Freeware Регулярные Выражения для Delphi (Regular Expressions)</A></H2>
+Универсальный инструмент для проверки пользовательского ввода на соответствие
+шаблонам, для самого изощренного поиска, а также замены подстрок.
+<BR>
+Убедитесь сами, насколько возрастает производительность если оторваться
+от традиционного процедурного подхода и посмотреть на <A class=news_link 
+href="Help/articles.html">текст с высоты птичьего полета</A>! 
+Free Your mind (c) Matrix 8-)
+<BR>
+Вы можете проверить синтаксическую корректность e-mail адреса, извлечь
+номера телефонов из неформализованного текста, найти необходимую информацию в
+web-странице - возможности ограничены только Вашим воображением. Правила
+(шаблоны) можно изменять не перекомпилируя Вашу программу !
+<p>
+В качестве языка правил используется подмножество <A class=news_link 
+href="Help/regexp_syntax.html">регулярных выражений</A> Перла
+(Perl regular expressions, regexp).
+<p>
+Распространяется в исходных текстах, полностью на Object Pascal (совместим
+с Delphi, C++ Builder, Kylix и FreePascal), не нужны никакие DLL.
+<BR>
+Не забудьте загрузить лучшую утилиту для <B>работы с регулярными выражениями</B>
+<A class=news_link href="../RegExpStudio.html">RegExp Studio</A>!
+<BR><BR>
+Поддержка Unicode.
+<BR><BR>
+Документация есть на
+<A class=news_link href="Help/About.html">Русском</A>, 
+<A class=news_link href="../../EN/TRegExpr/Help/About.html">Английском</A>, 
+<A class=news_link href="../../DE/TRegExpr/Help/About.html">Немецком</A>, 
+<A class=news_link href="../../FR/TRegExpr/Help/About.html">Французском</A>,
+<A class=news_link href="../../ES/TRegExpr/Help/About.html">Испанском</A> и
+<A class=news_link href="../../BG/TRegExpr/Help/About.html">Болгарском</A>, 
+</TD></TR></TABLE>
+</TD></TR></TABLE>
+<TABLE cellSpacing=1 cellPadding=0 bgColor="white" border=0 width="100%">
+<TR><TD><IMG alt="" src="../../Imgs/0.gif" width=1 height=16 border=0></TD></TR>
+</TABLE>
+
+<TABLE cellSpacing=1 cellPadding=0 bgColor=#0054a6 border=0 width="100%">
+<TR><TD>
+ <TABLE cellSpacing=0 cellPadding=0 height=16 border=0 width="100%"><TR>
+ <TD><IMG height=16 alt="" src="../../imgs/blue_arrow.gif" width=20 border=0></TD>
+ <TD><IMG height=16 alt="" src="../../imgs/0.gif" width=8 border=0></TD>
+ <TD><IMG src="../../imgs/TRegExprSmall.gif" alt="TRegExpr downloads" height=16 width=16 border=0></TD>
+ <TD><FONT class=topic_title>&nbsp;&nbsp;TRegExpr&nbsp;downloads&nbsp;&nbsp;&nbsp;&nbsp;</FONT></TD>
+ <TD width="100%" bgColor=#eeeeee height=16><IMG height=1 alt="" src="../../imgs/0.gif" 
+     width=1 border=0></TD>
+ </TR></TABLE>
+</TD></TR>
+<TR><TD>
+<TABLE cellSpacing=0 cellPadding=8 width="100%" border=0 bgColor="white"><TR><TD>
+
+
+<H2>TRegExpr downloads</H2>
+
+<TABLE cellSpacing=1 cellPadding=0 bgColor=#0054a6 border=0 width="100%">
+<TR><TD>
+<FONT size=-1>
+<TABLE align=center cellspacing=0 border=0 cellpadding=5 class=downloads width="100%">
+<tr bgColor=#0054a6>
+<td rowspan=2 valign=top><FONT color="white">TRegExpr with documentation</FONT></td>
+<td align="center" colspan=2><FONT color="white">Documentation</FONT></td>
+<td align="right" rowspan=2 valign=top><FONT color="white">Translation contributor</FONT></td>
+</tr>
+<tr bgColor=#0054a6>
+<td align="center"><FONT color="white">WinHelp (.hlp)</FONT></td>
+<td align="center"><FONT color="white">On-Line</FONT></td>
+</tr>
+<tr>
+<td><img src="../../imgs/DownloadsInline.gif" width="16" height="16"
+ border="0">&nbsp;TRegExpr 0.952 & <B>English</B> help 0.952<BR><a
+ href="../../Downloads/regexpr.zip">ZIP (118K)</a><BR><a
+ href="../../Downloads/regexpr.rar">RAR (102K)</a></td>
+<td align="center"><a href="../../Downloads/regexpr_hlp.zip"><img src="../../imgs/hlp_22x17.gif"
+ width="22" height="17" border="0"><BR>HLP</a></td>
+<td align="center"><a href="../../TRegExpr/Help/About.html">
+<img src="../../imgs/ie_22x17.gif" width="22" height="17" border="0"><BR>HTML</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr bgColor=#eeeeee>
+<td><img src="../../imgs/DownloadsInline.gif" width="16" height="16"
+ border="0">&nbsp;TRegExpr 0.952 & <B>Russian</B> help 0.952<BR><a
+ href="../../Downloads/regexpr_RU.zip">ZIP</a><BR><a
+ href="../../Downloads/regexpr_RU.rar">RAR</a></td>
+<td align="center"><a href="../../Downloads/regexpr_hlp_RU.zip"><img src="../../imgs/hlp_22x17.gif"
+ width="22" height="17" border="0"><BR>HLP</a></td>
+<td align="center"><a href="Help/About.html">
+<img src="../../imgs/ie_22x17.gif" width="22" height="17" border="0"><BR>HTML</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td><img src="../../imgs/DownloadsInline.gif" width="16" height="16"
+ border="0">&nbsp;TRegExpr 0.952 & <B>Bulgarian</B> help 0.942<BR><a
+ href="../../Downloads/regexpr_BG.zip">ZIP</a><BR><a
+ href="../../Downloads/regexpr_BG.rar">RAR</a></td>
+<td align="center"><a href="../../Downloads/regexpr_hlp_BG.zip"><img src="../../imgs/hlp_22x17.gif"
+ width="22" height="17" border="0"><BR>HLP</a></td>
+<td align="center"><a href="../../BG/TRegExpr/Help/About.html">
+<img src="../../imgs/ie_22x17.gif" width="22" height="17" border="0"><BR>HTML</a></td>
+<td align="right">Simeon<BR>Lilov</td>
+</tr>
+<tr bgColor=#eeeeee>
+<td><img src="../../imgs/DownloadsInline.gif" width="16" height="16"
+ border="0">&nbsp;TRegExpr 0.952 & <B>German</B> help 0.947<BR><a
+ href="../../Downloads/regexpr_DE.zip">ZIP</a><BR><a
+ href="../../Downloads/regexpr_DE.rar">RAR</a></td>
+<td align="center"><a href="../../Downloads/regexpr_hlp_DE.zip"><img src="../../imgs/hlp_22x17.gif"
+ width="22" height="17" border="0"><BR>HLP</a></td>
+<td align="center"><a href="../../DE/TRegExpr/Help/About.html">
+<img src="../../imgs/ie_22x17.gif" width="22" height="17" border="0"><BR>HTML</a></td>
+<td align="right"><a href="http://www.mindpower.com/">Martin<BR>Baur</a></td>
+</tr>
+<tr>
+<td><img src="../../imgs/DownloadsInline.gif" width="16" height="16"
+ border="0">&nbsp;TRegExpr 0.952 & <B>French</B> help 0.942<BR><a
+ href="../../Downloads/regexpr_FR.zip">ZIP</a><BR><a
+ href="../../Downloads/regexpr_FR.rar">RAR</a></td>
+<td align="center"><a href="../../Downloads/regexpr_hlp_FR.zip"><img src="../../imgs/hlp_22x17.gif"
+ width="22" height="17" border="0"><BR>HLP</a></td>
+<td align="center"><a href="../../FR/TRegExpr/Help/About.html">
+<img src="../../imgs/ie_22x17.gif" width="22" height="17" border="0"><BR>HTML</a></td>
+<td align="right">Martin<BR>Ledoux</td>
+</tr>
+<tr bgColor=#eeeeee>
+<td><img src="../../imgs/DownloadsInline.gif" width="16" height="16"
+ border="0">&nbsp;TRegExpr 0.952 & <B>Spanish</B> help 0.947<BR><a
+ href="../../Downloads/regexpr_ES.zip">ZIP</a><BR><a
+ href="../../Downloads/regexpr_ES.rar">RAR</a></td>
+<td align="center"><a href="../../Downloads/regexpr_hlp_ES.zip"><img src="../../imgs/hlp_22x17.gif"
+ width="22" height="17" border="0"><BR>HLP</a></td>
+<td align="center"><a href="../../ES/TRegExpr/Help/About.html">
+<img src="../../imgs/ie_22x17.gif" width="22" height="17" border="0"><BR>HTML</a></td>
+<td align="right">Diego<BR>Calp</td>
+</tr>
+</table>
+</FONT>
+</TD></TR>
+</TABLE>
+
+<p>
+Previous version &nbsp;<a href="http://RegExpStudio.com/Downloads/regexpr0947.zip"><img src="../../imgs/DownloadsInline.gif" width="16" height="16" border="0">&nbsp;TRegExpr 0.947</a>.
+<p>
+Mirrors (attention! they often distribute old version) at:
+<a href="http://www.delphicity.net/component.cfm?componentid=239" target=_blank>DelphiCity</a>,
+<a href="http://www.torry.net/text.htm#4001" target=_blank>Torry</a>,
+<a href="http://www.delphipages.com/result.cfm?ID=1216" target=_blank>Delphi Pages</a>.
+
+
+</TD></TR></TABLE>
+</TD></TR></TABLE>
+
+
+  </TD>
+  <TD vAlign=top align=left bgColor="white" height="100%"
+       width=310>
+
+<TABLE cellSpacing=1 cellPadding=0 bgColor=#f7941d border=0 width="100%">
+<TR><TD>
+ <TABLE cellSpacing=0 cellPadding=0 height=16 border=0 width="100%"><TR>
+ <TD><IMG height=16 alt="" src="../../imgs/yellow_arrow.gif" width=20 border=0></TD>
+ <TD width="100%"><FONT class=news_date>&nbsp;Guestbook</FONT></TD>
+ </TR></TABLE>
+</TD></TR>
+<TR><TD>
+<TABLE cellSpacing=0 cellPadding=8 width="100%" border=0><TR><TD bgColor="white">
+
+<DIV class=GB>
+You can <A class=topic_link href="mailto:anso@mail.ru?Subject=GUESTBOOK">add 
+Your comment</A> to the guestbook.
+<BR><BR></DIV>
+
+<H4>What developers are saying</H4>
+
+<DIV class=GB>
+<P class=GB><BR>Jelmer Vos, Netherlands</P>
+I just want to say that TRegExpr is great. It is so functional why does 
+Borland put TRegExpr default in Delphi?  Is is so cool for a programmer.
+I do not send such e-mails, but for this I do, because I just want to say
+thanks! :)
+And I hope that you are developing TRegExpr in de future so it will even
+greater and better.
+If someone ask me for a good RegEx component/unit for Delphi I wil alway
+give your homepage! :)
+<P class=GB><BR>Matthias Fichtner</P>
+thanks again for your great RegEx implementation. I use it
+so often, I wouldn't know what to do without it. :)
+<P class=GB><BR>Damien Mangin, France</P>
+thank's a lot for your amazing work with the TRegExpr library !
+I spent hours trying to embed perl into Delphi program (embedded-perl),
+before trying your implementation, which works just fine !
+<P class=GB><BR>Sony Arianto Kurniawan, Indonesia</P>
+Thanks for your great regex library for delphi. I'm using it in my 
+application and perhaps i always use it in all of my app ;) Many of my app 
+is get data from internet and parse it, so i think your regexpr is powerful
+<P class=GB><BR>Diego Calp, Argentina</P>
+Your work is excellent, congratulations! I'm working with Excel 
+DDE connection, parsing strings like 
+  '[BUDGET.XLS]Main table'!R10C10:R30C12,
+piece of cake with your library!! 
+<P class=GB><BR>Fernando Leandro Fernandes, Brasil</P>
+I'm very excited for
+using regular expressions in my projects... it's a very powerful tool
+<P class=GB><BR>Arjuna Diaz, USA</P>
+I've been using your regexp package in my personal software for a while now,
+whenever I need broad matching capabilities. Great job! Very easy to use.  Also,
+I used to work at Bell Labs, so I'm a little familiar with stuff.
+<P class=GB><BR>Atli Bjцrgvin Oddsson, Iceland</P>
+Like your Delphi Regular expression component a lot! 
+Easy to use and comes with good examples. This should be 
+included with standard Delphi! :)
+<P class=GB><BR>Passeggieri Filippo, Italy</P>
+I really like TRegExpr!!!! many compliments for that great components! 
+You really did a good job!
+Many Thanks Andrey.
+<P class=GB><BR>Fabian, Germany</P>
+I am using your RegExpr Component for a long time now with pleasure
+<P class=GB><BR>David Lang, Austria</P>
+I've been using your Delphi regular expressions package, and find it 
+extremely powerful.  I thank you for your efforts.
+<P class=GB><BR>Martin Ledoux, Quebec, Canada</P>
+Thank's a lot for this very good class, this is a very usefull and
+powerfull one. I have big projects with this one.
+<P class=GB><BR>Knud Ole Reffstrup, Denmark</P>
+I am a teacher. The Danish teachers in Computer Science have just 
+held their annual meeting, and I held a presentation, where I introduced 
+the subject Regular Expressions with examples from Perl, Delphi (using 
+your unit) and JavaScript.
+I find your unit very versatile and easy to use. The fact that it is
+distributed as a unit and not a component to be installed in the
+Delphi-system makes it particularly attractive.
+<P class=GB><BR>Edan P.</P>
+After searching for a good regular expression parser on the net, I came 
+across your component, and was very impressed. It got everything I need, and 
+its just a unit that can easily be added to my project.
+<P class=GB><BR>Ramanujan M.S.S, India</P>
+Thanks for the nice component. 
+It will save hours of coding for searching 
+things out from the strings. Great thought.
+<P class=GB><BR>Martin Baur, Switzerland</P>
+I was always lurking for some thing like TRegExpr in native Delphi 
+code ... you gave it to us and this is what need some honorable metion.
+<P class=GB><BR>Simeon Lilov, Bulgaria</P>
+I used TRegExpt to make a DLL and now I use this DLL in Progress 4GL. And it works just fine! I
+did'n encounter any problems yet.
+I like TRgExpr very much! You have done great work!
+<P class=GB><BR>Craig Peterson</P>
+We are using RegExpr in the new version of our product, Beyond Compare 2.0
+and would be very happy to give you a free license as thanks for your great 
+component.
+<P class=GB><BR>David Gerrald, USA</P>
+Keep Up the good work!
+<P class=GB><BR>shukaiyong, China</P>
+Your TRegExpr is very useful, Thanks.
+<P class=GB><BR>Jon Smith</P>
+I would like to thank you for a most excellent component!
+It is truly a joy to use and solves a very troublesome programming problem
+with ease and elegance.
+</DIV>
+
+<DIV align=right><A class=topic_link href="GuestBook.html">More..</A></DIV>
+
+</TD></TR></TABLE>
+</TD></TR></TABLE>
+<TABLE cellSpacing=1 cellPadding=0 bgColor="white" border=0 width="100%">
+<TR><TD><IMG alt="" src="../../Imgs/0.gif" width=1 height=16 border=0></TD></TR>
+</TABLE>
+
+<!--
+    <TABLE cellSpacing=1 cellPadding=0 bgColor="white" border=0 width="100%">
+    <TR><TD><IMG alt="" src="../../Imgs/0.gif" width=1 height=16 border=0></TD></TR>
+    </TABLE>
+
+    <TABLE cellSpacing=10 cellPadding=0 width="100%" bgColor="white" border=0>
+    <TR>
+      <TD align=middle>
+<A href="http://www.rarsoft.com" target=_blank><IMG src="../../imgs/Far88x31.gif" 
+   width="88" height="31" border="0" alt="This page was build with FAR! manager"></A>
+<BR><BR>
+      </TD>
+    </TR>
+    </TABLE><BR>
+-->
+
+  </TD>
+</TR>
+</TABLE><BR><BR>
+
+<TABLE height=1 cellSpacing=0 cellPadding=0 width=780 bgColor=#0054a6 
+       border=0>
+<TR>
+  <TD><IMG height=1 alt="" src="../../imgs/0.gif" width=1 border=0></TD>
+</TR>
+</TABLE>
+
+<TABLE height=70 cellSpacing=2 cellPadding=0 width=779 bgColor="white"
+       border=0>
+<TR>
+  <TD align=right width=32><IMG src="../../imgs/0.gif" width=32 height=1 border=0></TD>
+  <TD vAlign=top align=left width="100%"><P class=pageauthor><I>&copy;&nbsp;<A 
+      class=pageauthor href="http://RegExpStudio.com/">2004 Andrey V. Sorokin</A></I>,
+      Saint Petersburg, Russia
+      <BR><A class=pageauthor href="mailto:anso@mail.ru">anso@mail.ru</A>
+      <BR><A class=pageauthor href="http://RegExpStudio.com/">RegExpStudio.com</A></P></TD>
+  <TD vAlign=top align=right width=468><A href="http://www.helpandmanual.com"
+      target="_blank"><img src="Help/hmad468x60.gif" width="468" height="60"
+      border="0" alt="Help&Manual - the best help authoring tool!"></A></TD>
+  <TD align=right width=4><IMG src="../../imgs/0.gif" width=4 height=1 border=0></TD>
+</TR>
+</TABLE><BR>
+
+</BODY>
+
+</HTML>

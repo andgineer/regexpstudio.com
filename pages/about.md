@@ -40,5 +40,6 @@ Tools: Anything and everywhere 8-)
 Last vacations in Crimea..
 
 ### Contact me
-* [Andrey V. Sorokin anso@mail.ru](mailto:anso@mail.ru)
 * [Blog](http://masterandrey.com)
+* [Andrey V. Sorokin, anso@mail.ru](mailto:anso@mail.ru)
+

@@ -1,110 +1,158 @@
 - date: 2003.11.27
-  author: Passeggieri Filippo, Italy
+  author: Passeggieri Filippo
+  country-code: it
+  country: Italy
   text: I really like TRegExpr!!!! many compliments for that great components!
     You really did a good job!
     Many Thanks Andrey.
+
 - date: 2003.11.24
-  author: Hans J. Klarskov Mortensen, Denmark
+  author: Hans J. Klarskov Mortensen
+  country-code: dk
+  country: Denmark
   text: I have just stumled into your Regular Expression for Delphi. What a gorgeous find!
 
 - date: 2003.10.27
-  author: Fabian, Germany
+  author: Fabian
+  country-code: de
+  country: Germany
   text: I am using your RegExpr Component for a long time now with pleasure
 
 - date: 2003.09.15
-  author: Sebastian, Germany
+  author: Sebastian
+  country-code: de
+  country: Germany
   text: Such good open source thingies must be supported ;-)
 
 - date: 2003.08.20
   author: Bryan Ashby
+  country-code:
+  country:
   text: Thanks for the great code and your help!
 
 - date: 2003.07.20
-  author: Daniele Teti, Italy
+  author: Daniele Teti
+  country-code: it
+  country: Italy
   text: Hi, your is a valuable work. TRegExpr is a great Class...
 
 - date: 2003.07.04
-  author: David Lang, Austria
+  author: David Lang
+  country-code: at
+  country: Austria
   text: I've been using your Delphi regular expressions package, and find it
     extremely powerful.  I thank you for your efforts.
 
 - date: 2003.06.26
-  author: Fernando Leandro Fernandes, Brasil
+  author: Fernando Leandro Fernandes
+  country-code: br
+  country: Brasil
   text: I'm very excited for using regular expressions in my projects... it's a very powerful tool
 
 - date: 2003.06.21
-  author: Arjuna Diaz, USA
+  author: Arjuna Diaz
+  country-code: us
+  country: USA
   text: I've been using your regexp package in my personal software for a while now,
     whenever I need broad matching capabilities. Great job! Very easy to use.  Also,
     I used to work at Bell Labs, so I'm a little familiar with stuff.
 
 - date: 2003.05.12
-  author: Martin Barrowcliff, USA
+  author: Martin Barrowcliff
+  country-code: us
+  country: USA
   text: I have your test-reg exp program. Very nice, you will soon be a top programmer in your country.
     You are also ex military, as I am.
 
 - date: 2003.03.02
-  author: Craig Manley, Netherlands
+  author: Craig Manley
+  country-code: nl
+  country: Netherlands
   text: I'm a Perl and Delphi programmer and therefore find your class very useful.
 
 - date: 2002.10.06
   author: Tom Corcoran
+  country-code:
+  country:
   text: I am using your Regular expression unit in Delphi, superb stuff, thank you.
 
 - date: 2002.09.29
-  author: Jelmer Vos, Netherlands
+  author: Jelmer Vos
+  country-code: nl
+  country: Netherlands
   text: It is very nice to see that you are still working with TRegExpr. I think it is the best in the world for Delphi. Good work!
 
 - date: 2002.08.13
-  author: Celso Rossi, Brasil
+  author: Celso Rossi
+  country-code: br
+  country: Brasil
   text: Im a dephi programmer and find the TRegExpr on the web. It is a Excelent Interface and work Fine !.
 
 - date: 2002.07.26
-  author: Ekki Plicht, Germany
+  author: Ekki Plicht
+  country-code: de
+  country: Germany
   text: big thanks for the TRegExp class... it's really fantastic and works very nicely. Good work!
 
 - date: 2002.06.14
-  author: Riccardo Zorn, Italy
+  author: Riccardo Zorn
+  country-code: it
+  country: Italy
   text: I am using your regexp component and put it on 3 different projects. it's great, congratulations.
 
 - date: 2002.05.07
-  author: Richard.
+  author: Richard
+  country-code:
+  country:
   text: well done on the TRegExp package you created. It looks very good !.
 
 - date: 2002.05.30
-  author: Markus Dauberschmidt, Germany
+  author: Markus Dauberschmidt
+  country-code: de
+  country: Germany
   text: I started using your TRegExpr unit some days ago to use regular expression
     string replacements in my application.
     Let me point out what a powerful class you've written! I'am really impressed
     Siemens Business Services GmbH & Co. OHG
 
 - date: 2002.04.29
-  author: Udo Weik, Germany
+  author: Udo Weik
+  country-code: de
+  country: Germany
   text: greetings from Germany! I'm just testing TRegExpr. Thanxs
     for that wonderful component!
 
 - date: 2002.04.12
   author: Guru Ramnath Kathiresan
-  text: I been using your component for the past 10 months and i'm
-    very satisfied withit...
+  country-code:
+  country:
+  text: I been using your component for the past 10 months and i'm very satisfied withit...
 
 - date: 2002.04.10
   author: Matthias Fichtner
+  country-code:
+  country:
   text: thanks again for your great RegEx implementation. I use it
     so often, I wouldn't know what to do without it. :)
 
 - date: 2002.03.20
-  author: Damien Mangin, France
+  author: Damien Mangin
+  country-code: fr
+  country: France
   text: thank's a lot for your amazing work with the TRegExpr library !
     I spent hours trying to embed perl into Delphi program (embedded-perl),
     before trying your implementation, which works just fine !
 
 - date: 2002.02.26
-  author: Bruno Zeitoun, France
+  author: Bruno Zeitoun
+  country-code: fr
+  country: France
   text: I found your TRegExpr  very usefull
 
 - date: 2002.02.04
   author: Thor Asmund
+  country-code:
+  country:
   text: Your implementation is just the right way to do it!
     I am very pleased that you have taken the time to make the only, I think, regexp
     component for delphi that supports not only matching but also substitution. I
@@ -113,28 +161,36 @@
     image grabber!!
 
 - date: 2002.01.24
-  author: Piero Longhetto, Italy
-  text: i've just finished to download
-    your TRegExp class for delphi and i thing it's very well done.
+  author: Piero Longhetto
+  country-code: it
+  country: Italy
+  text: i've just finished to download your TRegExp class for delphi and i thing it's very well done.
 
 - date: 2002.01.16
   author: Craig Peterson
+  country-code:
+  country:
   text: We are using RegExpr in the new version of our product, Beyond Compare 2.0
-    and would be very happy to give you a free license as thanks for your great
-    component.
+    and would be very happy to give you a free license as thanks for your great component.
 
 - date: 2001.12.24
-  author: Martin Fuller, UK
+  author: Martin Fuller
+  country-code: gb
+  country: UK
   text: I have used your TRegExpr to do some simple parsing of Delphi code.  Thank you!  It is easy to use
     and your demo application is very helpful.  All the expressions I needed worked perfectly.
 
 - date: 2001.12.11
-  author: Tobias Theune, Germany
+  author: Tobias Theune
+  country-code: de
+  country: Germany
   text: i was looking for a regular expression for urls and email and found
     your routines. its working pretty good
 
 - date: 2001.11.15
-  author: Jelmer Vos, Netherlands
+  author: Jelmer Vos
+  country-code: nl
+  country: Netherlands
   text: I just want to say that TRegExpr is great. It is so functional why does
     Borland put TRegExpr default in Delphi?  Is is so cool for a programmer.
     I do not send such e-mails, but for this I do, because I just want to say
@@ -146,47 +202,67 @@
 
 - date: 2001.10.26
   author: John Hocking
+  country-code:
+  country:
   text: Thanks for the great component you have provided. I have used version 0.938 with success.
 
 - date: 2001.10.18
-  author: Gerald Nunn, Canada
+  author: Gerald Nunn
+  country-code: ca
+  country: Canada
   text: I've been looking at your regexp component and it looks very nice.
 
 - date: 2001.10.16
-  author: Sony Arianto Kurniawan, Indonesia
+  author: Sony Arianto Kurniawan
+  country-code: id
+  country: Indonesia
   text: Thanks for your great regex library for delphi. I'm using it in my
     application and perhaps i always use it in all of my app ;) Many of my app
     is get data from internet and parse it, so i think your regexpr is powerful
     :)))
 
 - date: 2001.10.15
-  author: Jim McKay, Oakland, Ca.
+  author: Jim McKay
+  country-code: ca
+  country: Oakland, Ca.
   text: I just wanted to say thanks.  RegExpr is
     very nice, great help file, great demo.  I happy as hell!
 
 - date: 2001.09.27
   author: Bernie
+  country-code:
+  country:
   text: Thank you for the excellent regular expression object for Delphi and
     Builder. I have compiled and the example in Delphi and enjoyed testing it.
 
 - date: 2001.09.24
-  author: Rendenbach Marc, Germany
+  author: Rendenbach Marc
+  country-code: de
+  country: Germany
   text: since a few weeks i use your TRegExpr Class for Delphi. Really great stuff
 
 - date: 2000.09.03
-  author: David Gerrald, USA
+  author: David Gerrald
+  country-code: us
+  country: USA
   text: Keep Up the good work!
 
 - date: 2001.08.29
   author: Armando de la Torre
+  country-code:
+  country:
   text: thank you for creating such a great library.
 
 - date: 2001.08.10
-  author: Janus N. Tondering, DK
+  author: Janus N. Tondering
+  country-code: dk
+  country: DK
   text:  Your component works great and is easy to use (if you know regexp).
 
 - date: 2001.08.06
-  author: Dave Hughes, UK
+  author: Dave Hughes
+  country-code: gb
+  country: UK
   text: thank you so much for releasing a freeware regular expression
     library, especially one so feature packed, fast and reliable as this one (I'd
     written one myself - but it was a bit buggy and used a horribly slow and
@@ -194,62 +270,87 @@
 
 - date: 2001.06.29
   author: Jeremy Echols
+  country-code:
+  country:
   text: I've downloaded and have been using your TRegExpr object, and it's actually
     working very well.
     thanks for your great regular expressions class.
 
 - date: 2001.06.14
-  author: Naguschewski Andreas, Germany
+  author: Naguschewski Andreas
+  country-code: de
+  country: Germany
   text: TRegExpr - TREMENDOUSLY INGENIOUS!
     thx for offering your work for free, man. it's great!
 
 - date: 2001.06.09
   author: Miroslav Vracevic
+  country-code:
+  country:
   text: I think that your TRegExpr is pretty cool!
 
 - date: 2001.05.16
   author: Aaron Chan
+  country-code:
+  country:
   text: Your TRegExpr is great!
 
 - date: 2001.05.04
-  author: Riccardo Zanelli, Italy
+  author: Riccardo Zanelli
+  country-code: it
+  country: Italy
   text: Great stuff this Tregexpr!
-    Do you need an Italian translation of the Help file?
-    I may volounteer...! ;-)
+    Do you need an Italian translation of the Help file? I may volounteer...! ;-)
 
 - date: 2001.04.09
-  author: Anatoly, Russia
+  author: Anatoly
+  country-code: ru
+  country: Russia
   text: Big thank, man!
 
 - date: 2001.03.19
   author: Dennis Gurock
+  country-code:
+  country:
   text: Thank you for TRegExpr. It is very very very usefull :) Keep up the good work.
 
 - date: 2001.03.13
-  author: Andrew Fedorov, Russia
+  author: Andrew Fedorov
+  country-code: ru
+  country: Russia
   text: TRegExpr is very userful component. Thank you.
 
 - date: 2001.03.12
-  author: Peter Furlan, Germany
+  author: Peter Furlan
+  country-code: de
+  country: Germany
   text: Thank you a lot for AudioInfo... it works nice!
 
 - date: 2001.03.01
-  author: Martin Ledoux, Quebec, Canada
+  author: Martin Ledoux, Quebec
+  country-code: ca
+  country: Canada
   text: Thank's a lot for this very good class, this is a very usefull and
     powerfull one. I have big projects with this one.
     By using this class I think the least I can do is to translate it in french.
 
 - date: 2001.02.25
-  author: shukaiyong, China
+  author: shukaiyong
+  country-code: cn
+  country: China
   text: Your TRegExpr is very useful, Thanks.
 
 - date: 2001.01.30
   author: Kit Eason
+  country-code:
+  country:
   text: I'm using TRegExp in a shareware utility I am writing.
     Many thanks for this brilliant component!
 
 - date: 2001.01.20
-  author: Diego Calp, Argentina
+  author: Diego Calp
+  country-code: ar
+  country: Argentina
   text: Your work is excellent, congratulations! I'm working with Excel
     DDE connection, parsing strings like
         '[BUDGET.XLS]Main table'!R10C10:R30C12,
@@ -257,24 +358,34 @@
 
 - date: 2000.12.29
   author: Matthew Winter
+  country-code:
+  country:
   text: I have just started to make use of the Regular Expression package, and I have to say. Excellent work.
 
 - date: 2000.12.28
-  author: Kire Mrceski, Yugoslavia
+  author: Kire Mrceski
+  country-code: hr
+  country: Yugoslavia
   text: thanks
 
 - date: 2000.12.27
-  author: Atli Bj�rgvin Oddsson, Iceland
+  author: Atli Bj�rgvin Oddsson
+  country-code: is
+  country: Iceland
   text: Like your Delphi Regular expression component a lot!
     Easy to use and comes with good examples. This should be
     included with standard Delphi! :)
 
 - date: 2000.12.05
   author: Rob McCormack
+  country-code:
+  country:
   text: Let me say how much I like your TRegExpr. Excellent!
 
 - date: 2000.11.12
-  author: Knud Ole Reffstrup, Denmark
+  author: Knud Ole Reffstrup
+  country-code: dk
+  country: Denmark
   text: I am writing you to inform you about the use I have made of your
     TRegExpr-unit for Delphi.
     I am a teacher. The Danish teachers in Computer Science have just
@@ -287,6 +398,8 @@
 
 - date: 2000.09.20
   author: Dod
+  country-code:
+  country:
   text: veryveryvrey nice job !!! :-) Since I
     discovered Perl, I did a lot of things because of regexp but with no
     Graphical interface...just batch mode, but now I'll be able to go back
@@ -295,54 +408,71 @@
 
 - date: 2000.09.13
   author: Heikko Webers
+  country-code:
+  country:
   text: I like your component !
 
 - date: 2000.08.26
   author: Jon Smith
+  country-code:
+  country:
   text: Finally - I would like to thank you again for a most excellent component!
     It is truly a joy to use and solves a very troublesome programming problem
     with ease and elegance.
 
 - date: 2000.08.12
   author: Edan P.
+  country-code:
+  country:
   text: After searching for a good regular expression parser on the net, I came
     across your component, and was very impressed. It got everything I need, and
     its just a unit that can easily be added to my project.
 
 - date: 2000.07.09
-  author: Andrew, Europe
+  author: Andrew
+  country-code:
+  country: Europe
   text: TRegExpr was a first toolkit I used to solve some string handling problems
     and I found it powerfull enough for that case.
     Generally TRegExpr is stable and very usefull. Thank you.
 
 - date: 2000.06.21
-  author: Terry Thomas, USA
+  author: Terry Thomas
+  country-code: us
+  country: USA
   text: Das Vadonia!
     Sorry, I can't spell in Russian but "Hello" from Atlanta, Georgia in the USA.
     I am just learning Delphi 3 and am amazed with what you are able to do in a few
     lines of code!
-    You have a lot of skill and knowledge and I wish you well.<BR>
+    You have a lot of skill and knowledge and I wish you well.
     Sperseba / Thank You
 
 - date: 2000.06.07
-  author: Ramanujan M.S.S, India
+  author: Ramanujan M.S.S
+  country-code: in
+  country: India
   text: Thanks for the nice component.
-    It will save hours of coding for searching
-    things out from the strings. Great  thought.
+    It will save hours of coding for searching things out from the strings. Great  thought.
 
 - date: 2000.06.03
-  author: Moisey Oysgelt, USA
+  author: Moisey Oysgelt
+  country-code: us
+  country: USA
   text: I'm evaluating you TregExpr.
     You did a grate job with this component. Thank you for doing this job.
 
 - date: 2000.04.27
-  author: Simeon Lilov, Bulgaria
+  author: Simeon Lilov
+  country-code: bg
+  country: Bulgaria
   text: I used TRegExpt to make a DLL and now I use this DLL in Progress 4GL. And it works just fine! I
     did'n encounter any problems yet.
     I like TRgExpr very much! You have done great work!
 
 - date: 2000.04.09
-  author: Gerard Cote, Canada
+  author: Gerard Cote
+  country-code: ca
+  country: Canada
   text: Hello Andrey,
     I'm glad to (Virtually) meet you on the net. It's like
     a great trip for me to the far from America but nevertheless
@@ -357,25 +487,34 @@
 
 - date: 2000.04.05
   author: Joe Ward
+  country-code:
+  country:
   text: I want to say that this is a great library.  Thanks!
 
 - date: 2000.03.28
   author: Basri
-  text: Thank you for your Delphi implementation of
-    RegExpr. An excellent work.
+  country-code:
+  country:
+  text: Thank you for your Delphi implementation of RegExpr. An excellent work.
 
 - date: 2000.03.22
   author: Yvon Labbee
+  country-code:
+  country:
   text: I took your TAudio library it works fine so Thank you.
 
 - date: 2000.03.21
-  author: Zlatka, Russia
+  author: Zlatka
+  country-code: ru
+  country: Russia
   text: Have downloaded your Regular Expression component. :)
     It's a perfectly new thing for me :( , but how much easier
     my work could be if I had had it earlier!
 
 - date: 2000.03.20
-  author: Martin Baur, Switzerland
+  author: Martin Baur
+  country-code: ch
+  country: Switzerland
   text: Hi Andrey
     Fine homepage ... nice look ... everything that's needed is there.
     And of course thank you for your honorable mention of me in your help file ...
@@ -384,16 +523,21 @@
     code ... you gave it to us and this is what need some honorable metion.
 
 - date: 2000.03.08
-  author: Stephan Klimek, Munic, Germany
-  text: You did a hell of a job for integrating this
-    little perlish things ;-)
+  author: Stephan Klimek
+  country-code: de
+  country: Munic, Germany
+  text: You did a hell of a job for integrating this little perlish things ;-)
 
 - date: 2000.02.24
-  author: Vlad, Russia
+  author: Vlad
+  country-code: ru
+  country: Russia
   text: I try to write this on c many years ago :)
     but my small attempt forgotten a long time :)
     thanks for sources and examples :)
 
 - date: 2000.02.22
-  author: chenbm, Fuzhou, China
+  author: chenbm
+  country-code: cn
+  country: Fuzhou, China
   text: Thank Your' regular expressions unit!!

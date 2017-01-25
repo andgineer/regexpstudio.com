@@ -94,6 +94,9 @@ strings:
   text:
     en: "Review"
     ru: "Отзыв"
+  country:
+    en: "Country"
+    ru: "Страна"
 
 search:
   en: "Search on the site..."

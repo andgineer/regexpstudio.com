@@ -37,6 +37,7 @@ layout: default
                     <thead>
                         <tr>
                             <th>{{ site.strings.author[page.lang] }}</th>
+                            <th>{{ site.strings.country[page.lang] }}</th>
                             <th>{{ site.strings.text[page.lang] }}</th>
                         </tr>
                     </thead>
@@ -45,6 +46,10 @@ layout: default
                         <tr>
                             <td>
                                 {{ review.author }}
+                            </td>
+                            <td>
+                                {{ review.country }}
+                                <span class="flag-icon flag-icon-{{review.country-code}}"></span>
                             </td>
                             <td>
                                 {{ review.text }}

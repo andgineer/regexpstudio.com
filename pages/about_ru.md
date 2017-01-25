@@ -41,4 +41,5 @@ Tools: Anything and everywhere 8-)
 Крым..
 
 ### Контакты
-[Andrey V. Sorokin anso@mail.ru](mailto:anso@mail.ru)
+* [Andrey V. Sorokin anso@mail.ru](mailto:anso@mail.ru)
+* [Блог](http://masterandrey.com/index_ru.html)

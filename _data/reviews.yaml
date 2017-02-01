@@ -430,7 +430,7 @@
 
 - date: 2000.07.09
   author: Andrew
-  country-code:
+  country-code: eu
   country: Europe
   text: TRegExpr was a first toolkit I used to solve some string handling problems
     and I found it powerfull enough for that case.

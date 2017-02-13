@@ -3,7 +3,7 @@ layout: page
 lang: en
 ref: syntax
 title: Regular expressions syntax
-permalink: /regexp_syntax/
+permalink: /regexp_syntax.html
 ---
 
 

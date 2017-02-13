@@ -51,57 +51,97 @@ url: http:/masterandrey.com
 baseurl: ""
 
 top_menu:
+  de:
+    home:
+      name: "Kopf"
+      url: "/de/index.html"
+    syntax:
+      name: "Syntax"
+      url: "/de/regexp_syntax.html"
+  bg:
+    home:
+      name: "Основен"
+      url: "/bg/index.html"
+  fr:
+    home:
+      name: "Principal"
+      url: "/fr/index.html"
+  es:
+    home:
+      name: "Principal"
+      url: "/es/index.html"
   en:
     home:
       name: "Home"
-      url: "/"
+      url: "/index.html"
     syntax:
       name: "Syntax"
-      url: "/regexp_syntax/"
+      url: "/regexp_syntax.html"
     interface:
       name: "Interface"
-      url: "/tregexpr_interface/"
+      url: "/tregexpr_interface.html"
     about:
       name: "About me"
-      url: "/about/"
+      url: "/about.html"
   ru:
     home:
       name: "Главная"
-      url: "/index_ru.html"
+      url: "/ru/index.html"
     syntax:
       name: "Синтаксис"
-      url: "/regexp_syntax_ru/"
+      url: "/ru/regexp_syntax.html"
     interface:
       name: "Интерфейс"
-      url: "/tregexpr_interface_ru/"
+      url: "/ru/tregexpr_interface.html"
     about:
       name: "Обо мне"
-      url: "/about_ru/"
+      url: "/ru/about.html"
 
 lang_names:
   en: "English"
   ru: "Русский"
+  de: "Deutsche"
+  fr: "Français"
+  es: "Español"
 
 strings:
   history:
     en: "History"
     ru: "История"
+    de:
+    fr:
+    es:
   reviews:
     en: "Reviews"
     ru: "Отзывы"
+    de:
+    fr:
+    es:
   author:
     en: "Author"
     ru: "Автор"
+    de:
+    fr:
+    es:
   text:
     en: "Review"
     ru: "Отзыв"
+    de:
+    fr:
+    es:
   country:
     en: "Country"
     ru: "Страна"
+    de:
+    fr:
+    es:
 
 search:
   en: "Search on the site..."
   ru: "Поиск по сайту..."
+  de:
+  fr:
+  es:
 
 
 #

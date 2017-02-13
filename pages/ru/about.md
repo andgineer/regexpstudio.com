@@ -3,7 +3,7 @@ layout: page
 lang: ru
 ref: about
 title: Обо мне
-permalink: /about_ru/
+permalink: /ru/about.html
 ---
 
 Мой родной город - Санкт-Петербург

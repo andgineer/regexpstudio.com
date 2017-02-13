@@ -3,7 +3,7 @@ layout: page
 lang: en
 ref: interface
 title: TRegExr interface
-permalink: /tregexpr_interface/
+permalink: /tregexpr_interface.html
 ---
 
 Simple illustrations

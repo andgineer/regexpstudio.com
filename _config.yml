@@ -58,18 +58,48 @@ top_menu:
     syntax:
       name: "Syntax"
       url: "/de/regexp_syntax.html"
+    interface:
+      name: "Interface"
+      url: "/de/tregexpr_interface.html"
+    demos:
+      name: "Demos"
+      url: "/de/demos.html"
+    test:
+      name: "Demo-Projekt"
+      url: "/de/tregexpr_testrexp.html"
+    faq:
+      name: "FAQ"
+      url: "/de/faq.html"
   bg:
     home:
       name: "Основен"
       url: "/bg/index.html"
+    syntax:
+      name: "Синтаксис"
+      url: "/bg/regexp_syntax.html"
+    interface:
+      name: "Интерфейс"
+      url: "/bg/tregexpr_interface.html"
   fr:
     home:
       name: "Principal"
       url: "/fr/index.html"
+    syntax:
+      name: "Syntax"
+      url: "/fr/regexp_syntax.html"
+    interface:
+      name: "Interface"
+      url: "/fr/tregexpr_interface.html"
   es:
     home:
       name: "Principal"
       url: "/es/index.html"
+    syntax:
+      name: "Syntax"
+      url: "/es/regexp_syntax.html"
+    interface:
+      name: "Interface"
+      url: "/es/tregexpr_interface.html"
   en:
     home:
       name: "Home"

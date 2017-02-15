@@ -36,4 +36,31 @@ Installation is very simple, the implementation encapsulated completely into cla
 
 
 If You need Unicode (so called 'WideString' in Delphi) - see
-[How to use unicode](/tregexpr_interface).
+[How to use unicode](tregexpr_interface#unicode).
+
+### Gratitudes
+
+Many features suggested and a lot of bugs founded (and even fixed) by
+TRegExpr's contributors.
+
+I cannot list here all of them (actually I kept listing only on very
+early stage of development), but I do appreciate all
+
+bug-reports, features suggestions and questions that I am receiving from
+You.
+
+
+* Guido Muehlwitz - found and fixed ugly bug in big string processing
+* Stephan Klimek - testing in CPPB and suggesting/implementing many features
+* Steve Mudford - implemented Offset parameter
+* Martin Baur ([www.mindpower.com](http://www.mindpower.com)) - German help, usefull suggetions
+* Yury Finkel - implemented UniCode support, found and fixed some bugs
+* Ralf Junker - Implemented some features, many optimization suggestions
+* Simeon Lilov - Bulgarian help
+* Filip Jirsбk and Matthew Winter - help in Implementation non-greedy mode
+* Kit Eason many examples for introduction help section
+* Juergen Schroth - bug hunting and usefull suggestions
+* Martin Ledoux - French help
+* Diego Calp, Argentina -Spanish help
+
+And many others - for big work in bug hunting!

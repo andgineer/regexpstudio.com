@@ -4,7 +4,6 @@ lang: de
 ref: tregexpr_history
 comments: false
 title: "TRegExpr history"
-categories: pascal regexp delphi TRegExpr
 ---
 
 Legend:
@@ -110,7 +109,7 @@ properties.
 * (+) Non-greedy style
 [iterators](#regexp_syntax.html#metacharacters_iterators) (like '\*?'),
 [modifier /g](#regexp_syntax.html#modifier_g).  Implemented with help
-from Matthew Winter and Filip Jirsбk
+from Matthew Winter and Filip Jirsák
 * (+) [modifier /x](#regexp_syntax.html#modifier_x) (eXtended syntax -
 allow formating r.e.)
 * (+) Procedure Compile to \[re\]compile r.e. Usefull for GUI r.e.

@@ -8,16 +8,13 @@ permalink: /ru/tregexpr_interface.html
 
 ### Методы и свойства TRegExpr:
 
-class function VersionMajor : integer;
-
-class function VersionMinor : integer;
+    class function VersionMajor : integer;
+    class function VersionMinor : integer;
 
 Возвращают соответственно старшую и младшую часть версии, например, для
 v. 0.950 VersionMajor = 0 и VersionMinor = 950
 
- 
-
-property Expression : string;
+    property Expression : string;
 
 Собственно регулярное выражение.
 
@@ -33,75 +30,67 @@ property Expression : string;
 При ошибках компиляции вызывается метод Error (по умолчанию он
 генерирует исключение ERegExpr - см. ниже)
 
- 
-
-property ModifierStr : string;
+    property ModifierStr : string;
 
 Проверка и установка
-[модификаторов](#regexp_syntax.html#about_modifiers) с помощью строки в
+[модификаторов](regexp_syntax.html#about_modifiers) с помощью строки в
 том же формате, что и в конструкции
-[(?ismx-ismx)](#regexp_syntax.html#inline_modifiers). Т.е., например
+[(?ismx-ismx)](regexp_syntax.html#inline_modifiers). Т.е., например
 ModifierStr := 'i-x' включит регистро-независимый режим и выключит режим
 расширенного синтаксиса, прочие модификаторы останутся без изменений.
 
 Если указать несуществующий модификатор, вызывается Error
 
- 
+    property ModifierI : boolean;
 
-property ModifierI : boolean;
-
-[Модификатор /i](#regexp_syntax.html#modifier_i) -
+Модификатор /i <a name="modifier_i"></a> -
 ("регистро-независимый режим"), инициализируется из
-[RegExprModifierI](#tregexpr_interface.html#modifier_defs)
+[RegExprModifierI](#modifier_defs)
 
- 
+    property ModifierR : boolean;
 
-property ModifierR : boolean;
-
-[Модификатор /r](#regexp_syntax.html#modifier_r) ("русские диапазоны"),
+Модификатор /r <a name="#modifier_r"></a> ("русские диапазоны"),
 инициализируется из
-[RegExprModifierR](#tregexpr_interface.html#modifier_defs)
-
- 
+[RegExprModifierR](#modifier_defs)
 
 property ModifierS : boolean
 
-[Модификатор /s](#regexp_syntax.html#modifier_s) - если установлен, то
+[Модификатор /s](regexp_syntax.html#modifier_s) - если установлен, то
 '.' совпадает с любым символом, (если сброшен, то '.' не совпадает с
-[LineSeparators](#tregexpr_interface.html#lineseparators) и
-[LinePairedSeparator](#tregexpr_interface.html#linepairedseparator), ,
+[LineSeparators](tregexpr_interface.html#lineseparators) и
+[LinePairedSeparator](tregexpr_interface.html#linepairedseparator), ,
 инициализируется из
-[RegExprModifierS](#tregexpr_interface.html#modifier_defs)
+[RegExprModifierS](#modifier_defs)
 
  
 
 property ModifierG : boolean;
 
-[Модификатор /g](#regexp_syntax.html#modifier_g), отключение приводит к
+[Модификатор /g](regexp_syntax.html#modifier_g), отключение приводит к
 тому, что все операторы работают в "не жадном" (non-greedy) режиме, т.е.
 когда ModifierG = False, то все '\*' работают как '\*?', все '+' как
 '+?' и т.д.., инициализируется из
-[RegExprModifierG](#tregexpr_interface.html#modifier_defs)
+[RegExprModifierG](#modifier_defs)
 
  
 
 property ModifierM : boolean;
 
-[Модификатор /m](#regexp_syntax.html#modifier_m) -воспринимать входной
+[Модификатор /m](regexp_syntax.html#modifier_m) -воспринимать входной
 текст как многострочный. Если выключен, то метасимволы \`^' и \`$'
 "срабатывают" только в начале и конце входного текста.
 
 Если включен, то эти символы срабатывают также и в начале и в конце
 каждой строки входного текста., инициализируется из
-[RegExprModifierM](#tregexpr_interface.html#modifier_defs)
+[RegExprModifierM](#modifier_defs)
 
  
 
 property ModifierX : boolean;
 
-[Модификатор /x](#regexp_syntax.html#modifier_x) - ("расширенный
+[Модификатор /x](regexp_syntax.html#modifier_x) - ("расширенный
 синтаксис"), инициализируется из
-[RegExprModifierX](#tregexpr_interface.html#modifier_defs)
+[RegExprModifierX](#modifier_defs)
 
  
 
@@ -331,7 +320,7 @@ property LineSeparators : RegExprString
 глобальной константы RegExprLineSeparators)
 
 [см.подробнее о разделителях
-строк](#regexp_syntax.html#syntax_line_separators)
+строк](regexp_syntax.html#syntax_line_separators)
 
  
 
@@ -341,7 +330,7 @@ property LinePairedSeparator : RegExprString
 (инициализируется из глобальной константы RegExprLinePairedSeparator)
 
 [см.подробнее о разделителях
-строк](#regexp_syntax.html#syntax_line_separators)
+строк](regexp_syntax.html#syntax_line_separators)
 
  
 
@@ -357,7 +346,7 @@ LinePairedSeparator := '' (пустую строку), если необходи
 По умолчанию используется "смешанный вариант" (им инициализированы
 константы RegExprLine\[Paired\]Separator\[s\]): LineSeparators :=
 \#$d\#$a; LinePairedSeparator := \#$d\#$a подробно описанный в [описании
-синтаксиса](#regexp_syntax.html#syntax_line_separators).
+синтаксиса](regexp_syntax.html#syntax_line_separators).
 
  
 
@@ -372,7 +361,7 @@ class function InvertCaseFunction  (const Ch : REChar) : REChar;
 property InvertCase : TRegExprInvertCaseFunction;
 
 Позволяет определить свою собственную реализацию
-[регистро-независимого](#regexp_syntax.html#modifier_i) режима работы
+[регистро-независимого]<a name="modifier_i"></a> режима работы
 TRegExpr. Инициализируется из глобальной константы
 RegExprInvertCaseFunction (по умолчанию она указывает на
 InvertCaseFunction)
@@ -404,45 +393,22 @@ avoide ugly constructions
 use '/w+\\/w+/./w+'
 
  
-
+<a name="modifier_defs"></a>
 Значения по умолчанию для модификаторов:
 
-RegExprModifierI : boolean = False;        //
-[TRegExpr.ModifierI](#tregexpr_interface.html#tregexpr.modifier_i)
+    RegExprModifierI : boolean = False;                // TRegExpr.ModifierI
+    RegExprModifierR : boolean = True;                // TRegExpr.ModifierR
+    RegExprModifierS : boolean = True;                // TRegExpr.ModifierS
+    RegExprModifierG : boolean = True;                // TRegExpr.ModifierG
+    RegExprModifierM : boolean = False;                //TRegExpr.ModifierM
+    RegExprModifierX : boolean = False;                //TRegExpr.ModifierX
 
-RegExprModifierR : boolean = True;        //
-[TRegExpr.ModifierR](#tregexpr_interface.html#tregexpr.modifier_r)
-
-RegExprModifierS : boolean = True;        //
-[TRegExpr.ModifierS](#tregexpr_interface.html#tregexpr.modifier_s)
-
-RegExprModifierG : boolean = True;        //
-[TRegExpr.ModifierG](#tregexpr_interface.html#tregexpr.modifier_g)
-
-RegExprModifierM : boolean = False;        //
-[TRegExpr.ModifierM](#tregexpr_interface.html#tregexpr.modifier_m)
-
-RegExprModifierX : boolean = False;        //
-[TRegExpr.ModifierX](#tregexpr_interface.html#tregexpr.modifier_x)
-
- 
-
-RegExprSpaceChars : RegExprString // Значение по умолчанию для
-SpaceChars
-
-   = ' '\#$9\#$A\#$D\#$C;
-
- 
+RegExprSpaceChars : RegExprString // Значение по умолчанию для SpaceChars  = ' '\#$9\#$A\#$D\#$C;
 
 RegExprWordChars : RegExprString // Значение по умолчанию для WordChars
-
-  =  '0123456789'
-
+ =  '0123456789'
  + 'abcdefghijklmnopqrstuvwxyz'
-
  + 'ABCDEFGHIJKLMNOPQRSTUVWXYZ\_';
-
- 
 
 RegExprLineSeparators : RegExprString // Значение по умолчанию для
 LineSeparators

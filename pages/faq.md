@@ -37,7 +37,7 @@ A.
 •Don't forget to add  \#include "RegExpr.hpp" where needed.
 
 •Don't forget to replace all '\\' in regular expressions with '\\\\' or
-redefined [EscChar](#tregexpr_interface.html#escchar) const.
+redefined [EscChar](tregexpr_interface.html#escchar) const.
 
  
 
@@ -67,10 +67,10 @@ rest of the file including last &lt;/html&gt;...
 A.
 
 For backward compatibility, [modifier
-/s](#regexp_syntax.html#modifier_s) is 'On' by default.
+/s](regexp_syntax.html#modifier_s) is 'On' by default.
 
 Switch it Off and '.' will match any but [Line
-separators](#regexp_syntax.html#syntax_line_separators) - as you wish.
+separators](regexp_syntax.html#syntax_line_separators) - as you wish.
 
 BTW I suggest you '&lt;font (\[^\\n&gt;\]\*)&gt;', in Match\[1\] will be
 URL.
@@ -177,5 +177,5 @@ r.e. doesn't attempt to move forward and check - would it be 'better'
 match. Moreover, it cannot be compared in terms 'more or less good
 match' at all..
 
-Please, read '[Syntax](#regexp_syntax.html#mechanism)' section of help
+Please, read '[Syntax](regexp_syntax.html#mechanism)' section of help
 for more explanation.

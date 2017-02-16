@@ -9,20 +9,20 @@ permalink: /es/demos.html
 ### Ejemplos simples
 
 Si no tiene experiencia con las expresiones regulares, por favor vea la
-secciуn [sintaxis](#regexp_syntax.html).
+secciуn [sintaxis](regexp_syntax.html).
 
 ### Usando las rutinas globales
 
 Es simple pero poco flexible y efectivo
 
-    ExecRegExpr ('\\d{3}-(\\d{2}-\\d{2}|\\d{4})', 'Telйfono: 555-1234');
+    ExecRegExpr ('\\d{3}-(\\d{2}-\\d{2}|\\d{4})', 'Teléfono: 555-1234');
 
 devuelve True
 
-    ExecRegExpr ('^\\d{3}-(\\d{2}-\\d{2}|\\d{4})', 'Telйfono: 555-1234');
+    ExecRegExpr ('^\\d{3}-(\\d{2}-\\d{2}|\\d{4})', 'Teléfono: 555-1234');
 
-devuelve False, porque hay algunos sнmbolos antes del nъmero de telйfono
-y estamos usando el metasнmbolo '^' (BeginningOfLine = Inicio de lнnea)
+devuelve False, porque hay algunos símbolos antes del número de teléfono
+y estamos usando el metasímbolo '^' (BeginningOfLine = Inicio de línea)
 
 ReplaceRegExpr ('producto', 'Pruebe producto. producto es el mejor !',
 'TRegExpr');
@@ -31,7 +31,7 @@ devuelve 'Pruebe TRegExpr. TRegExpr es el mejor !'; ;)
 
 ### Usando la clase TRegExpr
 
-Se obtiene todo el poder de la librerнa
+Se obtiene todo el poder de la librería
 
 {% highlight pascal linenos %}
 // Esta simple funciуn extrae todas las direcciones de email de la cadena ingresada
@@ -46,7 +46,7 @@ begin
          r := TRegExpr.Create; // Crea el objeto
          try // asegura la liberaciуn de memoria
                          r.Expression := EmailRE;
-                         // La e.r. se compila automбticamente en estructuras internas
+                         // La e.r. se compila automáticamente en estructuras internas
                          // cuando se asigna la propiedad Expression
                          if r.Exec (AInputString) then
                                          REPEAT
@@ -61,15 +61,15 @@ begin
 end.
 // Nota: la compilaciуn de la r.e. realizada al asignar ;a propiedad Expression
 // toma cierto tiempo, si se usa esta funciуn muchas veces
-// se sobrecarga inъtilmente.
+// se sobrecarga inútilmente.
 // Esto se puede optimizar significativamente creando el objeto TRegExpr
 // y precompilando la expresiуn durante la inicializaciуn del programa.
 {% endhighlight %}
  
 {% highlight pascal linenos %}
-// Este ejemplo extrae nъmeros de telйfono
-// y los descompone en partes (cуdigos de Ciudad y paнs, nъmerotelefуnico                ).
-// Despuйs substituye estas partes en la mбscara ingresada.
+// Este ejemplo extrae números de teléfono
+// y los descompone en partes (cуdigos de Ciudad y país, númerotelefуnico                ).
+// Después substituye estas partes en la máscara ingresada.
 function ParseTel (const AInputString, ATemplate : string) : string;
 const
          IntPhoneRE = '(\\+\\d \*)?(\\(\\d+\\) \*)?\\d+(-\\d\*)\*';
@@ -79,7 +79,7 @@ begin
          r := TRegExpr.Create; // Crea el objeto
          try // asegura la liberaciуn de memoria
                          r.Expression := IntPhoneRE;
-                         // La e.r. se compila automбticamente en estructuras internas
+                         // La e.r. se compila automáticamente en estructuras internas
                          // cuando se asigna la propiedad Expression
                          if r.Exec (AInputString)
                                          then Result := r.Substitute (ATemplate)
@@ -88,22 +88,22 @@ begin
          end;
 end;
 begin
-         ParseTel ('El telйfono de AlkorSoft (proyecto PayCash) es +7(812) 329-44-69',
-         'Cуdigo de Paнs $1, cуdigo de ciudad $2. El nъmero telefуnico completo es $&.');
-         // devuelve 'Cуdigo de Paнs +7, cуdigo de ciudad (812) . El nъmero telefуnico completo es +7(812) 329-44-69.'
+         ParseTel ('El teléfono de AlkorSoft (proyecto PayCash) es +7(812) 329-44-69',
+         'Cуdigo de País $1, cуdigo de ciudad $2. El número telefуnico completo es $&.');
+         // devuelve 'Cуdigo de País +7, cуdigo de ciudad (812) . El número telefуnico completo es +7(812) 329-44-69.'
 end.
 {% endhighlight %}
 
 
-### Ejemplos mбs complejos
+### Ejemplos más complejos
 
-Se pueden encontrar ejemplos mбs complejos del uso de TRegExpr en el
+Se pueden encontrar ejemplos más complejos del uso de TRegExpr en el
 proyecto [TestRExp.dpr](#tregexpr_testrexp.html) y
 [HyperLinkDecorator.pas](#hyperlinksdecorator.html).
 
-Ver tambiйn mis artнculos en
+Ver también mis artículos en
 [Delphi3000.com](%60http://www.delphi3000.com/member.asp?ID=1300',%60',1,%60')
-(Inglйs) y [Delphi
+(Inglés) y [Delphi
 Kingdom](%60http://delphi.vitpc.com/mastering/strings_birds_eye_view.htm',%60',1,%60')
 (Ruso).
 
@@ -111,5 +111,5 @@ Kingdom](%60http://delphi.vitpc.com/mastering/strings_birds_eye_view.htm',%60',1
 
 ### Explicaciуn detallada
 
-Por favor, ver la [descripcion](#tregexpr_interface.html) de la
+Por favor, ver la [descripcion](tregexpr_interface.html) de la
 interface de TRegExpr.

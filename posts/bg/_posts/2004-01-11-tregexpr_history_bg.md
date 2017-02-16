@@ -1,10 +1,9 @@
 ---
 layout: post
-lang: fr
+lang: bg
 ref: tregexpr_history
 comments: false
 title: "TRegExpr history"
-categories: pascal regexp delphi TRegExpr
 ---
 
 Legend:

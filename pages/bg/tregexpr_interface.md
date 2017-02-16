@@ -1,14 +1,14 @@
 ---
 layout: page
 lang: bg
-ref: tregexpr_interface
+ref: interface
 title: Интерфейс на TRegExpr
 permalink: /bg/tregexpr_interface.html
 ---
 
 ### Публични методи и свойства на TRegExpr:
 
-property Expression : string
+    property Expression : string 
 
 Представлява самият RE.
 
@@ -23,9 +23,7 @@ Exec\[Next\], Substitute, Dump и т.н. и само ако самият изр�
 В случай на грешка при \[ре\]компилиране, се извиква методът Error (по
 подразбиране методът Error предизвиква изключение – виж по-долу)
 
- 
-
-property ModifierStr : string
+    property ModifierStr : string
 
 За проверка/установяване на стойностите на модификаторите на RE.
 Форматът на стринга е подобен на този при модификаторите (?ismx-ismx).
@@ -35,21 +33,15 @@ property ModifierStr : string
 Ако се опитате да зададете непознат модификатор, ще се извика методът
 Error (по подразбиране методът Error предизвиква изключение ERegExpr).
 
- 
+    property ModifierI : boolean
 
-property ModifierI : boolean
-
-Модификатор /i – проверка без отчитане главни/малки букви. Приема
+Модификатор /i <a name="modifier_i"></a> – проверка без отчитане главни/малки букви. Приема
 начална стойност от RegExprModifierI.
 
- 
+    property ModifierR : boolean
 
-property ModifierR : boolean
-
-Модификатор /r – използване на диапазони за руски език. Приема начална
+Модификатор /r <a name="#modifier_r"></a> – използване на диапазони за руски език. Приема начална
 стойност от RegExprModifierR.
-
- 
 
 property ModifierS : boolean
 
@@ -362,64 +354,34 @@ class function VersionMinor: integer;
 Връщат главната и второстепенната версия, например за v. 0.944
 VersionMajor = 0 и VersionMinor = 944
 
- 
-
- 
-
-Глобални константи
-
- 
-
+### Глобални константи 
+<a name="modifier_defs"></a>
 Стойности по подразбиране на модификаторите:
 
- RegExprModifierI : boolean = False;                //
-TRegExpr.ModifierI
+    RegExprModifierI : boolean = False;                // TRegExpr.ModifierI
+    RegExprModifierR : boolean = True;                // TRegExpr.ModifierR
+    RegExprModifierS : boolean = True;                // TRegExpr.ModifierS
+    RegExprModifierG : boolean = True;                // TRegExpr.ModifierG
+    RegExprModifierM : boolean = False;                //TRegExpr.ModifierM
+    RegExprModifierX : boolean = False;                //TRegExpr.ModifierX
 
- RegExprModifierR : boolean = True;                // TRegExpr.ModifierR
-
- RegExprModifierS : boolean = True;                // TRegExpr.ModifierS
-
- RegExprModifierG : boolean = True;                // TRegExpr.ModifierG
-
- RegExprModifierM : boolean = False;                //
-TRegExpr.ModifierM
-
- RegExprModifierX : boolean = False;                //
-TRegExpr.ModifierX
-
- 
-
- RegExprSpaceChars : RegExprString = ' '\#$9\#$A\#$D\#$C;
-
-  // стойност по подразбиране за свойството SpaceChars
+ RegExprSpaceChars : RegExprString = ' '\#$9\#$A\#$D\#$C; // стойност по подразбиране за свойството SpaceChars
 
  
 
  RegExprWordChars : RegExprString =
-
     '0123456789'
-
   + 'abcdefghijklmnopqrstuvwxyz'
-
   + 'ABCDEFGHIJKLMNOPQRSTUVWXYZ\_';
-
   // стойност по подразбиране за свойството WordChars
 
- 
-
  RegExprLineSeparators : RegExprString =
-
    \#$d\#$a{$IFDEF UniCode}\#$b\#$c\#$2028\#$2029\#$85{$ENDIF};
-
   // стойност по подразбиране за свойството LineSeparators
 
  RegExprLinePairedSeparator : RegExprString =
-
    \#$d\#$a;
-
   // стойност по подразбиране за свойството LinePairedSeparator
-
- 
 
  RegExprInvertCaseFunction : TRegExprInvertCaseFunction =
 TRegExpr.InvertCaseFunction;

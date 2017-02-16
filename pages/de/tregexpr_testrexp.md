@@ -68,7 +68,7 @@ durlBMark, durlParam);
 
 Beschreibung
 
-Dies sind die mцglichen Werte:
+Dies sind die möglichen Werte:
 
 Benennung        Bedeutungen
 

@@ -36,7 +36,7 @@ Damit hast Du alle Möglichkeiten der Bibliothek zur Verfügung.
 
 {% highlight pascal linenos %}
 // Diese einfache Funktion extrahiert alle E-Mail-Adressen aus dem InputString
-// und legt eine Liste dieser Adressen in den Rьckgabewert
+// und legt eine Liste dieser Adressen in den Rückgabewert
 function ExtractEmails (const AInputString : string) : string;
     const
         EmailRE = '\[\_a-zA-Z\\d\\-\\.\]+@\[\_a-zA-Z\\d\\-\]+(\\.\[\_a-zA-Z\\d\\-\]+)+'
@@ -47,7 +47,7 @@ function ExtractEmails (const AInputString : string) : string;
         r := TRegExpr.Create; // Erzeuge Objekt
         try // garantiere Speicherfreigabe
                 r.Expression := EmailRE;
-                // der R.A. wird automatisch in die interne Struktur ьbersetzt
+                // der R.A. wird automatisch in die interne Struktur übersetzt
                 // innerhalb der Zuweisung an diese Eigenschaft
                 if r.Exec (AInputString) then
                         REPEAT
@@ -58,7 +58,7 @@ function ExtractEmails (const AInputString : string) : string;
     end
 begin
  ExctractEmails ('My e-mails is anso@mail.ru and anso@usa.net');
- // gibt zurьck: 'anso@mail.ru, anso@usa.net, '
+ // gibt zurück: 'anso@mail.ru, anso@usa.net, '
 end.
 {% endhighlight %}
 
@@ -91,7 +91,7 @@ function ParsePhone (const AInputString, ATemplate : string) : string;
 begin
  ParsePhone ('Phone of AlkorSoft (project PayCash) is +7(812)329-44-69',
  'Zone code $1, city code $2. Whole phone number is $&.');
- // Rьckgabe: 'Zone code +7, city code (812) . Whole phone number is +7(812) 329-44-69.'
+ // Rückgabe: 'Zone code +7, city code (812) . Whole phone number is +7(812) 329-44-69.'
 end.
 {% endhighlight %}
 

@@ -8,14 +8,13 @@ permalink: /tregexpr_interface.html
 
 ### Public methods and properties of TRegExpr class:
 
-class function VersionMajor : integer;
-
-class function VersionMinor : integer;
+    class function VersionMajor : integer;
+    class function VersionMinor : integer;
 
 Return major and minor version, for example, for v. 0.944 VersionMajor =
 0 and VersionMinor = 944
 
-property Expression : string
+    property Expression : string
 
 Regular expression.
 
@@ -29,14 +28,12 @@ or other P-code affected properties was changed after last
 If any errors while \[re\]compilation occures, Error method is called
 (by default Error raises exception - see below)
 
- 
-
-property ModifierStr : string
+    property ModifierStr : string
 
 Set/get default values of
-[r.e.modifiers](#regexp_syntax.html#about_modifiers). Format of the
+[r.e.modifiers](regexp_syntax.html#about_modifiers). Format of the
 string is similar as in
-[(?ismx-ismx)](#regexp_syntax.html#inline_modifiers). For example
+[(?ismx-ismx)](regexp_syntax.html#inline_modifiers). For example
 ModifierStr := 'i-x' will switch on modifier /i, switch off /x and leave
 unchanged others.
 
@@ -45,57 +42,57 @@ Error raises exception ERegExpr).
 
  
 
-property ModifierI : boolean
+    property ModifierI : boolean
 
-[Modifier /i](#regexp_syntax.html#modifier_i) - ("caseinsensitive"),
+Modifier /i <a name="modifier_i"></a> - ("caseinsensitive"),
 initialized with
-[RegExprModifierI](#tregexpr_interface.html#modifier_defs) value.
+[RegExprModifierI](#modifier_defs) value.
 
  
 
-property ModifierR : boolean
+    property ModifierR : boolean
 
-[Modifier /r](#regexp_syntax.html#modifier_r) - ("Russian.syntax
+Modifier /r <a name="#modifier_r"></a> - ("Russian.syntax
 extensions), initialized with
-[RegExprModifierR](#tregexpr_interface.html#modifier_defs) value.
+[RegExprModifierR](#modifier_defs) value.
 
  
 
 property ModifierS : boolean
 
-[Modifier /s](#regexp_syntax.html#modifier_s) - '.' works as any char
+[Modifier /s](regexp_syntax.html#modifier_s) - '.' works as any char
 (else doesn't match
-[LineSeparators](#tregexpr_interface.html#lineseparators) and
-[LinePairedSeparator](#tregexpr_interface.html#linepairedseparator)),
+[LineSeparators](tregexpr_interface.html#lineseparators) and
+[LinePairedSeparator](tregexpr_interface.html#linepairedseparator)),
 initialized with
-[RegExprModifierS](#tregexpr_interface.html#modifier_defs) value.
+[RegExprModifierS](#modifier_defs) value.
 
  
 
 property ModifierG : boolean;
 
-[Modifier /g](#regexp_syntax.html#modifier_g) Switching off modifier /g
+[Modifier /g](regexp_syntax.html#modifier_g) Switching off modifier /g
 switchs all operators in non-greedy style, so if ModifierG = False, then
 all '\*' works as '\*?', all '+' as '+?' and so on, initialized with
-[RegExprModifierG](#tregexpr_interface.html#modifier_defs) value.
+[RegExprModifierG](#modifier_defs) value.
 
  
 
 property ModifierM : boolean;
 
-[Modifier /m](#regexp_syntax.html#modifier_m) Treat string as multiple
+[Modifier /m](regexp_syntax.html#modifier_m) Treat string as multiple
 lines. That is, change \`^' and \`$' from matching at only the very
 start or end of the string to the start or end of any line anywhere
 within the string, initialized with
-[RegExprModifierM](#tregexpr_interface.html#modifier_defs) value.
+[RegExprModifierM](#modifier_defs) value.
 
  
 
 property ModifierX : boolean;
 
-[Modifier /x](#regexp_syntax.html#modifier_x) - ("eXtended syntax"),
+[Modifier /x](regexp_syntax.html#modifier_x) - ("eXtended syntax"),
 initialized with
-[RegExprModifierX](#tregexpr_interface.html#modifier_defs) value.
+[RegExprModifierX](#modifier_defs) value.
 
  
 
@@ -320,7 +317,7 @@ line separators (like \\n in Unix), initially filled with
 RegExprLineSeparators global constant)
 
 see also [about line
-separators](#regexp_syntax.html#syntax_line_separators)
+separators](regexp_syntax.html#syntax_line_separators)
 
  
 
@@ -332,7 +329,7 @@ must contain exactly two chars or no chars at all, initially filled with
 RegExprLinePairedSeparator global constant)
 
 see also [about line
-separators](#regexp_syntax.html#syntax_line_separators)
+separators](regexp_syntax.html#syntax_line_separators)
 
  
 
@@ -348,7 +345,7 @@ By default 'mixed' mode is used (defined in
 RegExprLine\[Paired\]Separator\[s\] global constants): LineSeparators :=
 \#$d\#$a; LinePairedSeparator := \#$d\#$a. Behaviour of this mode is
 detailed described in the [syntax
-section](#regexp_syntax.html#syntax_line_separators).
+section](regexp_syntax.html#syntax_line_separators).
 
  
 
@@ -384,7 +381,7 @@ dump a compiled regexp in vaguely comprehensible form
 
  
 
-Global constants
+### Global constants
 
  
 
@@ -398,26 +395,15 @@ avoide ugly constructions
 use '/w+\\/w+/./w+'
 
  
-
+<a name="modifier_defs"></a>
 Modifiers default values:
 
-RegExprModifierI : boolean = False;        //
-[TRegExpr.ModifierI](#tregexpr_interface.html#tregexpr.modifier_i)
-
-RegExprModifierR : boolean = True;        //
-[TRegExpr.ModifierR](#tregexpr_interface.html#tregexpr.modifier_r)
-
-RegExprModifierS : boolean = True;        //
-[TRegExpr.ModifierS](#tregexpr_interface.html#tregexpr.modifier_s)
-
-RegExprModifierG : boolean = True;        //
-[TRegExpr.ModifierG](#tregexpr_interface.html#tregexpr.modifier_g)
-
-RegExprModifierM : boolean = False;        //
-[TRegExpr.ModifierM](#tregexpr_interface.html#tregexpr.modifier_m)
-
-RegExprModifierX : boolean = False;        //
-[TRegExpr.ModifierX](#tregexpr_interface.html#tregexpr.modifier_x)
+    RegExprModifierI : boolean = False;                // TRegExpr.ModifierI
+    RegExprModifierR : boolean = True;                // TRegExpr.ModifierR
+    RegExprModifierS : boolean = True;                // TRegExpr.ModifierS
+    RegExprModifierG : boolean = True;                // TRegExpr.ModifierG
+    RegExprModifierM : boolean = False;                //TRegExpr.ModifierM
+    RegExprModifierX : boolean = False;                //TRegExpr.ModifierX
 
  
 

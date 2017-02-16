@@ -13,7 +13,7 @@ Q.
 
 Comment utiliser TRegExpr avec Borland C++ Builder?
 
-J'ai un problиme depuis qu'il n'y a plus aucun fichier d'en-tкte (.h or
+J'ai un problème depuis qu'il n'y a plus aucun fichier d'en-tête (.h or
 .hpp) n'est pas disponible.
 
 R.
@@ -37,31 +37,31 @@ ensuite le reste du fichier incluant le dernier &lt;/html&gt;...
 
 R.
 
-Pour la compatibilitй prйcйdente le modifier /s est а 'On' par dйfaut.
+Pour la compatibilité précédente le modifier /s est а 'On' par défaut.
 
-Le mettre а off et ensuite le '.' concordera а tout exceptй les
+Le mettre а off et ensuite le '.' concordera а tout excepté les
 séparateurs de ligne - comme voulu.
 
-Mais je suggиre aussi l'e.r. suivante '&lt;font (\[^\\n&gt;\]\*)&gt;',
+Mais je suggère aussi l'e.r. suivante '&lt;font (\[^\\n&gt;\]\*)&gt;',
 dans Match\[1\] sera l'url.
 
  
 
 Q.
 
-Pourquoi TRegExpr retourne plus que prйvu?
+Pourquoi TRegExpr retourne plus que prévu?
 
-Par exemple l'e.r. '&lt;p&gt;(.+)&lt;/p&gt;' appliquй а la chaоne
+Par exemple l'e.r. '&lt;p&gt;(.+)&lt;/p&gt;' appliqué а la chaîne
 '&lt;p&gt;a&lt;/p&gt;&lt;p&gt;b&lt;/p&gt;' retourne
-'a&lt;/p&gt;&lt;p&gt;b' mais pas 'a' comme prйvu.
+'a&lt;/p&gt;&lt;p&gt;b' mais pas 'a' comme prévu.
 
 R.
 
-Par dйfaut tous les opйrateurs fonctionne en mode "vorace", aussi il
+Par défaut tous les opérateurs fonctionne en mode "vorace", aussi il
 correspond а compare le plus possible. Si vous voulez le mode
-"non-vorace" vous pouvez utiliser les opйrateurs '+?' et ainsi de suite
-(nouveau dans la v. 0.940) ou changer tous les opйrateurs en mode
-"non-vorace" avec l'aide du modifier "g" (utiliser les propriйtйs
+"non-vorace" vous pouvez utiliser les opérateurs '+?' et ainsi de suite
+(nouveau dans la v. 0.940) ou changer tous les opérateurs en mode
+"non-vorace" avec l'aide du modifier "g" (utiliser les propriétés
 convenablement dans TRegExpr ou avec une inscription dans l'e.r. comme
 '?(-g)').
 
@@ -73,37 +73,37 @@ Comment analyser des sources comme du HTML avec l'aide deTRegExpr
 
 R.
 
-Dйsolй les gars, mais c'est pratiquement impossible!
+Désolé les gars, mais c'est pratiquement impossible!
 
 Bien sur que vous pouvez utiliser TRegExpr pour extraire des
-informations comme dйmontrй dans mes exemples, mais si vous voulez faire
-une analyse prйcise, vous devez utiliser un vrai analyseur, pas l'e.r.!
+informations comme démontré dans mes exemples, mais si vous voulez faire
+une analyse précise, vous devez utiliser un vrai analyseur, pas l'e.r.!
 
 Vous pouvez lire les explications de Tom Christiansen et Nathan
 Torkington dans le document 'Perl Cookbook', par exemple. Pour faire une
-histoire courte, il y a plusieurs expressions qui peuvent кtre analyser
+histoire courte, il y a plusieurs expressions qui peuvent être analyser
 facilement avec un vrai analyseur mais pas toutes par e.r., et les vrai
 analyseurs sont PLUS rapide pour faire l'analyse, parce que l'e.r. ne
-scanne pas l'entrйe avant, il fait plutфt une optimisation de recherche
+scanne pas l'entrée avant, il fait plutфt une optimisation de recherche
 qui peut prendre beaucoup de temps.
 
  
 
 Q.
 
-Est-ce qu'il y a une faзon d'avoir une correspondance multiple d'un
-modиle sur TRegExpr?
+Est-ce qu'il y a une façon d'avoir une correspondance multiple d'un
+modèle sur TRegExpr?
 
 R.
 
-Vous pouvez faire une loupe et procйder comparaison par comparaison avec
-la mйthode ExecNext.
+Vous pouvez faire une loupe et procéder comparaison par comparaison avec
+la méthode ExecNext.
 
-Зa ne peut кtre plus fait plus facilement parce que delphi n'est pas un
-interprйteur comme Perl (et les interprйteurs fonctionnent gйnйralement
-trиs lentement!).
+ça ne peut être plus fait plus facilement parce que delphi n'est pas un
+interpréteur comme Perl (et les interpréteurs fonctionnent généralement
+très lentement!).
 
-Si vous voulez quelques exemples, svp visionner la mйthode
+Si vous voulez quelques exemples, svp visionner la méthode
 TRegExpr.Replace. ou aux exemples dans
 [HyperLinksDecorator.pas](#hyperlinksdecorator.html).
 
@@ -111,18 +111,18 @@ TRegExpr.Replace. ou aux exemples dans
 
 Q.
 
-Je vйrifie l'entrйe d'utilisateur. Pourquoi TRegExpr retourne 'Vrai'
-pour une mauvaise chaоne d'entrйe?
+Je vérifie l'entrée d'utilisateur. Pourquoi TRegExpr retourne 'Vrai'
+pour une mauvaise chaîne d'entrée?
 
 R.
 
 Dans plusieurs cas de TRegExpr les utilisateurs oublient qu'une
-expression rйguliиre est pour chercher dans les chaоnes d'entrйes.
+expression régulière est pour chercher dans les chaînes d'entrées.
 Aussi, si vous voulez faire que l'utilisateur entre seulement 4
-caractиres numйrique et que vous utiliser l'expression '\\d{4,4}', vous
-pouvez ignorer les mauvaises entrйes comme '12345' ou 'n'importe quel
-caractиre 1234 et n'importe quoi'. Vous devez ajouter une vйrification
-pour le dйbut et la fin de la ligne et vous assurer qu'il n'y a rien
+caractères numérique et que vous utiliser l'expression '\\d{4,4}', vous
+pouvez ignorer les mauvaises entrées comme '12345' ou 'n'importe quel
+caractère 1234 et n'importe quoi'. Vous devez ajouter une vérification
+pour le début et la fin de la ligne et vous assurer qu'il n'y a rien
 d'autre comme dans l'expression suivante: '^\\d{4,4}$'.
 
  
@@ -132,28 +132,28 @@ Q.
 Pourquoi que le mode non-vorace quelquefois fonctionne comme le mode
 vorace?
 
-Par exemple, l'e.r. 'a+?,b+?' appliquй а 'aaa,bbb' retourne 'aaa,b',
+Par exemple, l'e.r. 'a+?,b+?' appliqué а 'aaa,bbb' retourne 'aaa,b',
 mais normalement ne devrait-il pas retourner 'a,b' а cause de la nature
-non-vorace du premier itйrateur ?
+non-vorace du premier itérateur ?
 
 R.
 
-C'est une limite d'utilisation par la mathйmatique de TRegExpr (et
+C'est une limite d'utilisation par la mathématique de TRegExpr (et
 plusieurs autre comme Perl et Unix). E.r. effectue seulement une
 'simple' optimisation de recherche, et ne tente pas d'obtenir la
 meilleure optimisation. Dans plusieurs cas ce n'est pas bon, mais en
-gйnйral cette limite est plutфt avantageuse, а cause des performances et
-des prйvisions de raison.
+général cette limite est plutфt avantageuse, а cause des performances et
+des prévisions de raison.
 
-La rиgle gйnйrale est que premiиrement e.r. essaie de trouver une
+La règle générale est que premièrement e.r. essaie de trouver une
 correspondance а partir de sa position actuelle et seulement si c'est
-complиtement impossible de trouver une correspondance alors il avance
-d'un caractиre et rйessaie de nouveau а partir de cet emplacement. Aussi
+complètement impossible de trouver une correspondance alors il avance
+d'un caractère et réessaie de nouveau а partir de cet emplacement. Aussi
 si vous utiliser 'a,b+?' il correspondra avec 'a,b', mais dans le cas de
-'a+?,b+?' ce 'n'est pas recommandй' (а cause du mode non-vorace) mais
+'a+?,b+?' ce 'n'est pas recommandé' (а cause du mode non-vorace) mais
 possible de correspondre а plus d'un 'a', aussi TRegExpr le fait mais le
-rйsultat obtenu ne sera pas une correspondance optimum. TRegExpr comme
-Perl ou les e.r. de Unix ne tente pas de bouger en avant et vйrifier
+résultat obtenu ne sera pas une correspondance optimum. TRegExpr comme
+Perl ou les e.r. de Unix ne tente pas de bouger en avant et vérifier
 qu'est-ce qu'il serait la meilleure correspondance. De plus, il ne peut
 comparer en terme 'plus ou moins bon'.
 

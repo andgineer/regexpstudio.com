@@ -35,10 +35,10 @@ inklusive dem letzten &lt;/html&gt;...
 
 ##### A.
 Aus Grunden der Abwarstkompatibilitat ist der [Modifikator
-/s](#regexp_syntax.html#modifier_s) standardmassig eingeschaltet.
+/s](regexp_syntax.html#modifier_s) standardmassig eingeschaltet.
 
 Schalte ihn aus und '.' findet alles ausser
-[Zeilenseparatoren](#regexp_syntax.html#syntax_line_separators) – Wie Du
+[Zeilenseparatoren](regexp_syntax.html#syntax_line_separators) – Wie Du
 es wunschst.
 
 BTW Ich schlage vor, Du nimmst '&lt;font (\[^\\n&gt;\]\*)&gt;', dann
@@ -125,4 +125,4 @@ UNIX geht TRegExpr nicht so weit, dass es nach einem Zeichen weitergeht
 im Zielstring und erneut prüft, ob es einen "noch besseren Treffer"
 gäbe. Zudem kann man hierbei überhaupt nicht von "schlechteren oder
 besseren Treffern" sprechen. Bitte lies den Abschnitt  für
-[Syntax](#regexp_syntax.html#mechanism) weitere Erläuterungen.
+[Syntax](regexp_syntax.html#mechanism) weitere Erläuterungen.

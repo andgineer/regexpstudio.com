@@ -160,4 +160,4 @@ A.
 е по-добро и кое – по-лошо.
 
 Мпля, прочетете секцията
-'[Syntax](#regexp_syntax.html#engine_internals)' за повече обяснения.
+'[Syntax](regexp_syntax.html#engine_internals)' за повече обяснения.

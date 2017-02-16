@@ -10,38 +10,38 @@ Projet Demo (TestRExp)
 
  
 
-Simple programme pour explorer et tester les e.r., distribuй en fichiers
-sources (projet TestRExp.dpr) et avec l'exйcutable TestRExp.exe.
+Simple programme pour explorer et tester les e.r., distribué en fichiers
+sources (projet TestRExp.dpr) et avec l'exécutable TestRExp.exe.
 
  
 
-Noter qu'il utilise les propriйtйs de plusieurs VCL qui existent
-seulement dans Delphi 4 ou plus rйcent. En compilant dans Delphi 3 ou
-Delphi 2 vous recevrez quelques message d'erreurs a propos de propriйtйs
-inconnues. Vous pouvez les ignorer, ces propriйtйs sont seulement
-nйcessaire lorsque vous redimmensionner la fenкtre du programme.
+Noter qu'il utilise les propriétés de plusieurs VCL qui existent
+seulement dans Delphi 4 ou plus récent. En compilant dans Delphi 3 ou
+Delphi 2 vous recevrez quelques message d'erreurs a propos de propriétés
+inconnues. Vous pouvez les ignorer, ces propriétés sont seulement
+nécessaire lorsque vous redimmensionner la fenêtre du programme.
 
  
 
-Avec l'aide de ce programme, vous pourrez aisйment dйterminer le nombre
-de sous expression que vous кtes en train de modifier, aller а n'importe
-quelle sous expression dйfinie (dans le code compilй de l'e.r. autant
-que dans le rйsultat des chaоnes d'entrйe), jouer avec les substituts,
-remplacer, sйparer et mкme plus.
+Avec l'aide de ce programme, vous pourrez aisément déterminer le nombre
+de sous expression que vous êtes en train de modifier, aller а n'importe
+quelle sous expression définie (dans le code compilé de l'e.r. autant
+que dans le résultat des chaînes d'entrée), jouer avec les substituts,
+remplacer, séparer et même plus.
 
  
 
-Et de plus, le projet inclus une bonne quantitй d'exemple - utiliser les
+Et de plus, le projet inclus une bonne quantité d'exemple - utiliser les
 pour apprendre la syntaxe des e.r. ou pour apprendre rapidement les
-avantages des fonctionnalitйs de TRegExpr.
+avantages des fonctionnalités de TRegExpr.
 
-Exemple: Dйcorateur HyperLinks
+Exemple: Décorateur HyperLinks
 
 Décorer les URLs   Décorer les E-Mails
 
  
 
-Fonctions pour dйcorer les liens hyperlinks en convertissant le texte
+Fonctions pour décorer les liens hyperlinks en convertissant le texte
 standard en format HTML.
 
  
@@ -52,13 +52,13 @@ href="http://anso.da.ru"&gt;anso.da.ru&lt;/a&gt;' ou 'anso@mail.ru'
 
  
 
-fonction Dйcorer les URLs
+fonction Décorer les URLs
 
  
 
 Trouve et remplace les liens comme 'http://...' ou 'ftp://..' aussi bien
 que les liens sans protocol, mais qui commence avec 'www.' Si vous
-voulez dйcorer les e-mails, vous pouvez utiliser la fonction
+voulez décorer les e-mails, vous pouvez utiliser la fonction
 DecorateEMails.
 
  
@@ -72,15 +72,15 @@ Description
 
  
 
-retourne le texte d'entrйe AText avec les liens hyperliens dйcorйs.
+retourne le texte d'entrée AText avec les liens hyperliens décorés.
 
  
 
-AFlags dйcris quelle partie de l'hyperlien lien doit кtre inclus dans la
+AFlags décris quelle partie de l'hyperlien lien doit être inclus dans la
 partie VISIBLE du lien:
 
 Par exemple, si \[durlAddr\]  alors  hyperlien
-'http://anso.da.ru/index.htm'  sera dйcorй comme  '&lt;a
+'http://anso.da.ru/index.htm'  sera décoré comme  '&lt;a
 href="http://anso.da.ru/index.htm"&gt;anso.da.ru&lt;/a&gt;'.
 
  
@@ -130,7 +130,7 @@ Value                                Meaning
 
  
 
-Fonction Dйcorer les EMails
+Fonction Décorer les EMails
 
  
 
@@ -148,6 +148,6 @@ Description
 
  
 
-Retourne le texte d'entrйe avec les dйcoration e-mails dans Atext.
+Retourne le texte d'entrée avec les décoration e-mails dans Atext.
 
  

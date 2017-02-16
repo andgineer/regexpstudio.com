@@ -106,7 +106,7 @@ Bereich oder eine Menge von Zeichen zu definieren. So definiert a-z alle
 Zeichen zwischen "a" and "z" inklusive.
 
 Falls das Zeichen "-" selbst ein Mitglied der Zeichenklasse sein soll,
-dann setze es als erstes oder letztes Zeichen in die Liste oder schьtze
+dann setze es als erstes oder letztes Zeichen in die Liste oder schütze
 es mit einem vorangestellten "\\" (escaping). Wenn das Zeichen "\]"
 ebenfalls Mitglied der Zeichenklasse sein soll, dann setze es als erstes
 Zeichen in die Liste oder escape es.
@@ -130,7 +130,7 @@ Beispiele:
 ### Metazeichen
 
 Metazeichen sind Zeichen mit speziellen Bedeutungen. Sie sind die Essenz
-der regulдren Ausdrьcke. Es gibt verschiedene Arten von Metazeichen wie
+der regulären Ausdrücke. Es gibt verschiedene Arten von Metazeichen wie
 unten beschrieben.
 
 ##### Metazeichen - Zeilenseparatoren
@@ -166,16 +166,16 @@ Zeilenseparatoren vor, so werden diese von "^" oder "$" nicht gefunden.
 Du kannst allerdings den Zielstring als mehrzeiligen Puffer behandeln,
 so dass "^" die Stelle unmittelbar nach, und "$" die Stelle unmittelbar
 vor irgendeinem Zeilenseparator findet. Du kannst diese Art der Suche
-einstellen mit dem [Modifikator /m](#regexp_syntax.html#modifier_m).
+einstellen mit dem [Modifikator /m](regexp_syntax.html#modifier_m).
 
 The \\A and \\Z are just like "^'' and "$'', except that they won't
 match multiple times when the [modifier
-/m](#regexp_syntax.html#modifier_m) is used, while "^'' and "$'' will
+/m](regexp_syntax.html#modifier_m) is used, while "^'' and "$'' will
 match at every internal line separator.
 
 Das ".'' Metazeichen findet standardmässig irgendein beliebiges Zeichen,
 also auch Zeilenseparatoren. Wenn Du den [Modifikator
-/s](#regexp_syntax.html#modifier_s)
+/s](regexp_syntax.html#modifier_s)
 
 ausschaltest, dann findet '.' keine Zeilenseparatoren mehr.
 
@@ -183,7 +183,7 @@ TRegExpr geht mit Zeilenseparatoren so um, wie es auf www.unicode.org
 (http://www.unicode.org/unicode/reports/tr18/) empfohlen ist:
 
 "^" ist am Anfang des Eingabestrings, und, falls der [Modifikator
-/m](#regexp_syntax.html#modifier_m) gesetzt ist, auch unmitelbar folgend
+/m](regexp_syntax.html#modifier_m) gesetzt ist, auch unmitelbar folgend
 einem Vorkommen von \\x0D\\x0A oder \\x0A or \\x0D (falls Du die
 [Unicode-Version](tregexpr_interface.html#unicode) von TregExpr
 benutzst, dann auch nach \\x2028 oder  \\x2029 oder \\x0B oder \\x0C
@@ -191,7 +191,7 @@ oder \\x85). Beachte, dass es keine leere Zeile gibt in den Sequence
 \\x0D\\x0A. Diese beiden Zeichen werden atomar behandelt.
 
 "$" ist am Anfang des Eingabestrings, und, falls der [Modifikator
-/m](#regexp_syntax.html#modifier_m) gesetzt ist, auch unmitelbar vor
+/m](regexp_syntax.html#modifier_m) gesetzt ist, auch unmitelbar vor
 einem Vorkommen von \\x0D\\x0A oder \\x0A or \\x0D (falls Du die
 [Unicode-Version](tregexpr_interface.html#unicode) von TregExpr
 benutzst, dann auch vor \\x2028 oder  \\x2029 oder \\x0B oder \\x0C oder
@@ -199,7 +199,7 @@ benutzst, dann auch vor \\x2028 oder  \\x2029 oder \\x0B oder \\x0C oder
 \\x0D\\x0A. Diese beiden Zeichen werden atomar behandelt.
 
 "." findet ein beliebiges Zeichen. Wenn Du aber den [Modifikator
-/s](#regexp_syntax.html#modifier_s) ausstellst, dann findet "." keine
+/s](regexp_syntax.html#modifier_s) ausstellst, dann findet "." keine
 Zeilensearaptoren \\x0D\\x0A und \\x0A und \\x0D mehr (falls Du die
 [Unicode-Version](tregexpr_interface.html#unicode) von TregExpr
 benutzst, dann auch \\x2028 und  \\x2029 und \\x0B und \\x0C and \\x85).
@@ -210,8 +210,8 @@ findet, aber es findet den Leerstring innerhalb der Sequenz \\x0A\\x0D.
 
 Die Behandlung des Zielstrings als mehrzeiliger String kann leicht
 Deinen Bedürfnissen angepasst werden dank der TregExpr-Eigenschaften
-[LineSeparators](#tregexpr_interface.html#lineseparators) und
-[LinePairedSeparator](#tregexpr_interface.html#linepairedseparator). Du
+[LineSeparators](tregexpr_interface.html#lineseparators) und
+[LinePairedSeparator](tregexpr_interface.html#linepairedseparator). Du
 kannst nur den UNIX-Stil Zeilenseparator \\n benutzen oder nur DOS-Stil
 Separatoren \\r\\n oder beide gelichzeitig (wie schon oben beschrieben
 und wie es als Standard gesetzt ist). Du kannst auch Deine eigenen
@@ -224,8 +224,8 @@ Zeilenseparatoren definieren!
 \\W  kein alphanumerisches Zeichen, auch kein "\_"
 \\d  ein numerisches Zeichen
 \\D  kein numerisches Zeichen
-\\s  irgendein wцrtertrennendes Zeichen (entspricht \[\\t\\n\\r\\f\])
-\\S  kein wцrtertrennendes Zeichen
+\\s  irgendein wörtertrennendes Zeichen (entspricht \[\\t\\n\\r\\f\])
+\\S  kein wörtertrennendes Zeichen
 ---  -----------------------------------------------------
 
 Du kannst \\w, \\d und \\s innerhalb Deiner selbstdefinierten
@@ -240,8 +240,8 @@ Beispiele:
 aber nicht 'foob1r', 'foob=r' etc.
 
 TRegExpr benutzt die Eigenschaften
-[SpaceChars](#tregexpr_interface.html#tregexpr.spacechars) und
-[WordChars](#tregexpr_interface.html#tregexpr.wordchars), um die
+[SpaceChars](tregexpr_interface.html#tregexpr.spacechars) und
+[WordChars](tregexpr_interface.html#tregexpr.wordchars), um die
 Zeichenklassen \\w, \\W, \\s, \\S zu definieren. Somit kannst Du sie
 auch leicht umdefinieren.
 
@@ -258,10 +258,10 @@ umgekehrt.
 
 Metazeichen - Iteratoren
 
-Jeder Teil eines regulдren Ausdruckes kann gefolgt werden von einer
+Jeder Teil eines regulären Ausdruckes kann gefolgt werden von einer
 anderen Art von Metazeichen – den Iteratoren. Dank dieser Metazeichen
-kannst Du die Hдufigkeit des Auftretens des Suchmusters im Zielstring
-definieren. Dies gilt jeweils fьr das vor diesem Metazeichen stehenden
+kannst Du die Häufigkeit des Auftretens des Suchmusters im Zielstring
+definieren. Dies gilt jeweils für das vor diesem Metazeichen stehenden
 Zeichen, das Metazeichen oder den Teilausdruck.
 
   \*     kein- oder mehrmaliges Vorkommen ("gierig"), gleichbedeutend
@@ -277,29 +277,29 @@ wie {0,}
 
   {n,}   mindestens n-maliges Vorkommen ("gierig")
 
-  {n,m} mindestens n-, aber hцchstens m-maliges Vorkommen ("gierig")
+  {n,m} mindestens n-, aber höchstens m-maliges Vorkommen ("gierig")
 
-  \*?     kein- oder mehrmaliges Vorkommen ("genьgsam"), gleichbedeutend
+  \*?     kein- oder mehrmaliges Vorkommen ("genügsam"), gleichbedeutend
 wie {0,}?
 
-  +?     ein oder mehrmaliges Vorkommen ("genьgsam"), gleichbedeutend
+  +?     ein oder mehrmaliges Vorkommen ("genügsam"), gleichbedeutend
 wie {1,}?
 
-  ??     kein- oder einmaliges Vorkommen ("genьgsam"), gleichbedeutend
+  ??     kein- oder einmaliges Vorkommen ("genügsam"), gleichbedeutend
 wie {0,1}?
 
-  {n}?   genau n-maliges Vorkommen ("genьgsam")
+  {n}?   genau n-maliges Vorkommen ("genügsam")
 
-  {n,}? Mindestens n-maliges Vorkommen ("genьgsam")
+  {n,}? Mindestens n-maliges Vorkommen ("genügsam")
 
-  {n,m}? mindestens n-, aber hцchstens m-maliges Vorkommen ("genьgsam")
+  {n,m}? mindestens n-, aber höchstens m-maliges Vorkommen ("genügsam")
 
 Also, die Ziffern in den geshcweiften Klammern in der Form {n,m} geben
 an, wieviele Male das Suchmuster im Zielstring gefunden muss, um einen
 Treffer zu ergeben. Die Angabe {n} ist gleichbedeutend wie {n,n} und
 findet genau n Vorkommen. Die Form {n,} findet n oder mehre Vorkommen.
-Es gibt keine Limiten fьr die Zahlen n und m. Aber je grцsser sie sind,
-desto mehr Speicher und Zeit wird benцtigt, um den regulдren Ausdruck
+Es gibt keine Limiten für die Zahlen n und m. Aber je grösser sie sind,
+desto mehr Speicher und Zeit wird benötigt, um den regulären Ausdruck
 auszuwerten.
 
 Falls eine geschweifte Klammer in einem anderen als dem eben
@@ -332,29 +332,29 @@ angewandut auf den Zielstring 'abbbbc' findet 'bbbb', 'b+?' findet 'b',
 'bbb'.
 
 Du kannst alle Iteratoren auf den genugsamen Modus umschalten mit dem
-[Modifier /g](#regexp_syntax.html#modifier_g).
+[Modifier /g](regexp_syntax.html#modifier_g).
 
 Metazeichen - Alternativen
 
-Du kannst eine Serie von Alternativen fьr eine Suchmuster angeben, indem
+Du kannst eine Serie von Alternativen für eine Suchmuster angeben, indem
 Du diese mit einem "|'' trennst. Auf diese Art findet das Suchmuster
 fee|fie|foe eines von "fee", "fie", oder "foe" im Zielstring – dies
-wьrde auch mit f(e|i|o)e ereicht.
+würde auch mit f(e|i|o)e ereicht.
 
 Die erste Alternative beinhaltet alles vom letzten Muster-Limiter ("(",
-"\[" oder natьrlich der Anfang des Suchmusters) bis zum ersten "|". Die
-letzte Alternative beinhaltet alles vom letzten "|" bis zum nдchsten
+"\[" oder natürlich der Anfang des Suchmusters) bis zum ersten "|". Die
+letzte Alternative beinhaltet alles vom letzten "|" bis zum nächsten
 Muster-Limiter. Aus diesem Grunde ist es allgemein eine gute Gewohnheit,
-die Alternativen in Klammern anzugeben, um mцglichen Missverstдndnissen
-darьber vorzubeugen, wo die Alternativen beginnen und enden.
+die Alternativen in Klammern anzugeben, um möglichen Missverständnissen
+darüber vorzubeugen, wo die Alternativen beginnen und enden.
 
-Alternativen werden von links nach rechts gepьrft, so dass der Treffer
+Alternativen werden von links nach rechts gepürft, so dass der Treffer
 im Zielstring zusammengesetzt ist aus den jeweils zuerst passenden
 Alternativen. Das bedeutet, dass Alternativen nicht notwendigerweise
 "gierig" sind. Ein Beispiel: Wenn man mit "(foo|foot)" im Zielstring
 "barefoot" sucht, so passt bereits die erste Variante. Diese Tatsache
-mag nicht besonders wichtig erscheinen, aber es ist natьrlich wichtig,
-wenn der gefundene Text weiterverwendet wird. Im Beispiel zuvor wьrde
+mag nicht besonders wichtig erscheinen, aber es ist natürlich wichtig,
+wenn der gefundene Text weiterverwendet wird. Im Beispiel zuvor würde
 der Benutzer nicht "foot" erhalten, wie er eventuell beabsichtigt hatte,
 sondern nur "foo".
 
@@ -366,21 +366,21 @@ Beispiele:
 
   foo(bar|foo) findet die Strings 'foobar' oder 'foofoo'.
 
-Metazeichen - Teilausdrьcke
+Metazeichen - Teilausdrücke
 
-Das KLammernkonstrukt (...) wird auch dazu benutzt, regulдre
-Teilausdrьcke zu definieren (nach dem Parsen findest Du Positionen,
-Lдngen und effektive Inhalte der regulдren Teilausdrьcke in den
+Das KLammernkonstrukt (...) wird auch dazu benutzt, reguläre
+Teilausdrücke zu definieren (nach dem Parsen findest Du Positionen,
+Längen und effektive Inhalte der regulären Teilausdrücke in den
 TRegExpr-Eigenschaften MatchPos, MatchLen und
-[Match](#tregexpr_interface.html#tregexpr.match) und kannst sie ersetzen
+[Match](tregexpr_interface.html#tregexpr.match) und kannst sie ersetzen
 mit den Template-Strings in
-[TRegExpr.Substitute](#tregexpr_interface.html#tregexpr.substitute)).
+[TRegExpr.Substitute](tregexpr_interface.html#tregexpr.substitute)).
 
-Teilausdrьcke werden nummeriert von links nach recht, jeweils in der
-Reihenfolge ihrer цffnenden Klammer. Der erste Teilausdruck hat die
-Nummer 1, der gesamte regulдre Ausdruck hat die Nummer 0 (der gesamte
+Teilausdrücke werden nummeriert von links nach recht, jeweils in der
+Reihenfolge ihrer öffnenden Klammer. Der erste Teilausdruck hat die
+Nummer 1, der gesamte reguläre Ausdruck hat die Nummer 0 (der gesamte
 Ausdruck kann ersetzt werden in
-[TRegExpr.Substitute](#tregexpr_interface.html#tregexpr.substitute) als
+[TRegExpr.Substitute](tregexpr_interface.html#tregexpr.substitute) als
 '$0' oder '$&').
 
 Beispiele:
@@ -391,10 +391,10 @@ beinhalten
   foob(\[0-9\]|a+)r findet 'foob0r', 'foob1r' , 'foobar', 'foobaar',
 'foobaar' etc.
 
-Metazeichen - Rьckwдrtsreferenzen
+Metazeichen - Rückwärtsreferenzen
 
 Die Metacharacters \\1 bis \\9 werden in Suchmustern interpretiert als
-Rьckwдrtsreferenzen. \\&lt;n&gt; findet einen zuvor bereits gefundenen
+Rückwärtsreferenzen. \\&lt;n&gt; findet einen zuvor bereits gefundenen
 Teilausdruck \#&lt;n&gt;.
 
 Beispiele:
@@ -408,49 +408,49 @@ oder auch 77, etc.
 
 Modifikatoren
 
-Modifikatoren sind dazu da, das Verhalten von TRegExpr zu verдndern.
+Modifikatoren sind dazu da, das Verhalten von TRegExpr zu verändern.
 
 Es gibt viele Wege, die weiter unten beschriebenen Modifikatoren zu
 nutzen. Jeder der Modifikatoren lann eingebettet werden im Suchmuster
-des regulдren Ausdruckes mittels des Konstruktes
-[(?...)](#regexp_syntax.html#inline_modifiers).
+des regulären Ausdruckes mittels des Konstruktes
+[(?...)](regexp_syntax.html#inline_modifiers).
 
 Du kannst allerdings auch die meisten Modifikatoren beeinflussen, indem
 Du den entsprechenden TRegExpr-Eigenschaften die passenden Werte zuweist
 (Beispiel: Zuweisung an
-[ModifierX](#tregexpr_interface.html#tregexpr.modifier_x) oder
-ModifierStr fьr alle Modifikatoren zugleich).
+[ModifierX](tregexpr_interface.html#tregexpr.modifier_x) oder
+ModifierStr für alle Modifikatoren zugleich).
 
-Die Standardwerte fьr neue Instanzen von TRegExpr-Objekte sind definiert
-in [globalen Variablen](#tregexpr_interface.html#modifier_defs).
+Die Standardwerte für neue Instanzen von TRegExpr-Objekte sind definiert
+in [globalen Variablen](#modifier_defs).
 Beispielsweise definiert die globale Variable RegExprModifierX das
 Verhalten des Modifikators X und damit die Einstellung der
 TRegExpr-Eigenschaft ModifierX bei neu instantiierten TRegExpr-Objekten.
 
 i
 
-Fьhre die Suche Schreibweisen-unabhдgig durch (allerdings abhдngig von
+Führe die Suche Schreibweisen-unabhägig durch (allerdings abhängig von
 den Einstellungen in Deinem System, Lokale Einstellungen), (beachte auch
-die [InvertCase](#tregexpr_interface.html#invertcase))
+die [InvertCase](tregexpr_interface.html#invertcase))
 
 m
 
-Behandle den Zielstring als mehrzeiligen String. Das bedeutet, дndere
+Behandle den Zielstring als mehrzeiligen String. Das bedeutet, ändere
 die Bedeutungen von "^" und "$": Statt nur den Anfang oder das Ende des
 Zielstrings zu finden, wird jeder Zeilenseparator innerhalb eines
 Strings erkannt (beachte auch die
-[Zeilenseparatoren](#tregexpr_interface.html#lineseparators))
+[Zeilenseparatoren](tregexpr_interface.html#lineseparators))
 
 s
 
 Behandle den Zielstring als einzelne Zeile. Das bedeutet, dass "." jedes
 beliebige Zeichen findet, sogar Zeilenseparatoren (beachte auch
-[Zeilenseparatoren](#tregexpr_interface.html#lineseparators)), die es
+[Zeilenseparatoren](tregexpr_interface.html#lineseparators)), die es
 normalerweise nicht findet.
 
 g
 
-Modifikator fьr den "Genьgsam"-Modus. Durch das Ausstellen werden alle
+Modifikator für den "Genügsam"-Modus. Durch das Ausstellen werden alle
 folgenden Operatoren in den "Genugsam"-Modus. Standardmassig sind alle
 Operatoren "gierig". Wenn also der Modifikator /g aus ist, dann arbeitet
 '+' wie '+?', '\*' als '\*?' etc.
@@ -458,7 +458,7 @@ Operatoren "gierig". Wenn also der Modifikator /g aus ist, dann arbeitet
 x
 
 Erweitert die Lesbarkeit des Suchmusters durch Whitespace und Kommentare
-(beachte die Erklдrung unten).
+(beachte die Erklärung unten).
 
 r
 
@@ -469,9 +469,9 @@ und а-Я beinhaltet alle russischen Symbole.
 Sorry für fremdsprachliche Benutzer, er ist gesetzt standardmässig.
 Falls Du ihn ausgeschaltet haben willst standardässig, dann setze die
 globale Variable
-[RegExprModifierR](#tregexpr_interface.html#modifier_defs) auf false.
+[RegExprModifierR](#modifier_defs) auf false.
 
-Der [Modifikator /x](#regexp_syntax.html#modifier_x) selbst braucht
+Der [Modifikator /x](regexp_syntax.html#modifier_x) selbst braucht
 etwas mehr Erklärung. Er sagt TRegExpr, dass er allen Whitespace
 ignorieren soll, der nicht escaped oder innerhalb einer Zeichenklasse
 ist. Du kannst ihn benutzen, um den regulären Ausdruck in kleinere,
@@ -483,7 +483,7 @@ Beispiel:
 
 (abc) \# Kommentar 1
 
-  |   \# Du kannst Leerschlдge zur Formatierung benutzen - TRegExpr
+  |   \# Du kannst Leerschläge zur Formatierung benutzen - TRegExpr
 ignoriert sie
 
 (efg) \# Kommentar 2
@@ -491,17 +491,17 @@ ignoriert sie
 )
 
 Dies bedeutet auch, wenn Du echten Whitespace oder das \# im Suchmuster
-haben mцchtest (ausserhalb einer Zeichenklasse, wo sie unbehelligt von
+haben möchtest (ausserhalb einer Zeichenklasse, wo sie unbehelligt von
 /x sind), dann muss der entweder escaped oder mit der hexadezimalen
-Schreibweise angegeben werden. Beides zusammen sorgt dafьr, dass
-regulдre Ausdrьcke besser lesbar werden.
+Schreibweise angegeben werden. Beides zusammen sorgt dafür, dass
+reguläre Ausdrücke besser lesbar werden.
 
 Perl Erweiterungen
 
 (?imsxr-imsxr)
 
-Dies kann benutzt werden in Regulдren Ausdrьcken, um Modifikatoren
-innerhalb eines Ausdruckes im Flug zu дndern. Wenn dieses Konstrukt
+Dies kann benutzt werden in Regulären Ausdrücken, um Modifikatoren
+innerhalb eines Ausdruckes im Flug zu ändern. Wenn dieses Konstrukt
 innerhalb eines Teilausdruckes erscheint, betriefft er auch nur diesen.
 
 Beispiele:
@@ -522,12 +522,12 @@ Beispiele:
 
 Ein Kommentar, der Text wird ignoriert. Beachte, dass TRegExpr den
 Kommentar abschliesst, sobald er eine ")" sieht. Es gibt also keine
-Mцglichkeit, das Zeichen ")" im Kommentar zu haben.
+Möglichkeit, das Zeichen ")" im Kommentar zu haben.
 
-Erklдrung der internen Mechanismen
+Erklärung der internen Mechanismen
 
 So, es scheint also, als möchtest Du einige Geheimnisse der internen
 Mechanismen von TRegExpr erklärt bekommen? Nun, dieser Abschnitt ist im
 Aufbau – bitte sei etwas geduldig. Bis heute empfehle ich Dir die
-[FAQ](#faq.html) (zu lesen, speziell zu den Fragen der Optimierungen
-beim ["genügsamen" Modus](#faq.html#nongreedyoptimization)).
+[FAQ](faq.html) (zu lesen, speziell zu den Fragen der Optimierungen
+beim ["genügsamen" Modus](faq.html#nongreedyoptimization)).

@@ -10,33 +10,33 @@ Proyecto Demo (TestRExp)
 
  
 
-Programa simple para explorar y probar e.r., distribuнda como cуdigo
+Programa simple para explorar y probar e.r., distribuída como cуdigo
 fuente (proyecto TestRExp.dpr) y TestRExp.exe.
 
  
 
 Nota: usa algunas propiedades de VCL que sуlo existen en Delphi 4 o
-superior. Mientras se compila en Delphi 3 o Delphi 2 se recibirбn
+superior. Mientras se compila en Delphi 3 o Delphi 2 se recibirán
 mensajes de error acerca de propiedades desconocidas. Se pueden ignorar,
 estas propiedades son sуlo para ajustar tamaсo y justificaciуn de
 componentes cuando el formulario cambia su tamaсo.
 
  
 
-Con la ayuda de este programa se puede determinar fбcilmente el nъmero
+Con la ayuda de este programa se puede determinar fácilmente el número
 de subexpresiones, saltar a cualquiera de ellas (en el cуdigo de la e.r.
 o en los resultados de la cadena exprorada), probar las funciones
 Substitute, Replace y Split.
 
  
 
-Ademбs se incluyen muchos ejemplos que se pueden usar mientras se
-aprende la sintaxis de e.r. o en la exploraciуn rбpida de las
+Además se incluyen muchos ejemplos que se pueden usar mientras se
+aprende la sintaxis de e.r. o en la exploraciуn rápida de las
 capacidades de TRegExpr.
 
 Ejemplo: Hyper Links Decorator
 
-Funciones para decorar hipervнnculos mientras se convierte texto puro en
+Funciones para decorar hipervínculos mientras se convierte texto puro en
 HTML.
 
  
@@ -51,10 +51,10 @@ href="http://anso.da.ru"&gt;anso.da.ru&lt;/a&gt;' o 'anso@mail.ru' con
 
 Funciуn DecorateURLs
 
-Busca y reemplaza hipervнnculos como 'http://...' or 'ftp://..' asн como
-vнnculos sin protocolo pero que comienzan con 'www.' Si quiere modificar
+Busca y reemplaza hipervínculos como 'http://...' or 'ftp://..' así como
+vínculos sin protocolo pero que comienzan con 'www.' Si quiere modificar
 direcciones de correo electrуnico tiene que usar la funciуn
-DecorateEmails (ver mбs abajo).
+DecorateEmails (ver más abajo).
 
  
 
@@ -67,15 +67,15 @@ Descripciуn
 
  
 
-Devuelve el texto AText con los hipervнnculos decorados.
+Devuelve el texto AText con los hipervínculos decorados.
 
  
 
-AFlags indica quй parte del hipervнnculo debe ser incluнda en la parte
+AFlags indica qué parte del hipervínculo debe ser incluída en la parte
 VISIBLE del link:
 
 Por ejemplo, si el flag es \[durlAddr\] entonces el link
-'http://anso.da.ru/index.htm' serб decorado como '&lt;a
+'http://anso.da.ru/index.htm' será decorado como '&lt;a
 href="http://anso.da.ru/index.htm"&gt;anso.da.ru&lt;/a&gt;'
 
  
@@ -110,14 +110,14 @@ durlProto                Protocolo (como 'ftp://' or 'http://')
 durlAddr                Direcciуn TCP o nombre de dominio (como
 'anso.da.ru')
 
-durlPort                Nъmero de puerto, si estб especificado (como
+durlPort                Número de puerto, si está especificado (como
 ':8080')
 
 durlPath                Ruta al documento (como 'index.htm')
 
 durlBMark                Book mark (como '\#mark')
 
-durlParam                Parбmetros de la URL (como '?ID=2&User=13')
+durlParam                Parámetros de la URL (como '?ID=2&User=13')
 
  
 

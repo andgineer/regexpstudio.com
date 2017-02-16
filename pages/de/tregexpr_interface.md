@@ -1,21 +1,20 @@
 ---
 layout: page
 lang: de
-ref: tregexpr_interface
+ref: interface
 title: TRegExpr Interface
 permalink: /de/tregexpr_interface.html
 ---
 
 ### Public Methoden und Eigenschaften von TRegExpr: 
 
-class function VersionMajor: integer;
-
-class function VersionMinor: integer;
+    class function VersionMajor: integer;
+    class function VersionMinor: integer;
 
 Sie geben die grosse und kleine Versionsummer zurück, Beispiel 0.944
 ergibt: VersionMajor = 0 und VersionMinor = 944
 
-property Expression : string
+    property Expression : string
 
 Regulärer Ausdruck
 
@@ -32,49 +31,49 @@ Falls ein Übersetzungsfehler auftaucht, wird die Methode Error
 aufgerufen. Diese erzeugt standardmässig eine Ausnahme vom Typ ERegExpr
 – siehe unten
 
-property ModifierStr : string
+    property ModifierStr : string
 
 Setze / hole die Standardwerte für die
-[Modifikatoren](#regexp_syntax.html#about_modifiers). Modifikatoren in
+[Modifikatoren](regexp_syntax.html#about_modifiers). Modifikatoren in
 Regulären Ausdrücken
-[(?ismx-ismx)](#regexp_syntax.html#inline_modifiers) ersetzen diese
+[(?ismx-ismx)](regexp_syntax.html#inline_modifiers) ersetzen diese
 Standardwerte. Falls Du nicht unterstützte Modifikatoren setzst, wird
 die Methode Error aufgerufen, die standardmässig eine Ausnahme vom Typ
 EregExpr erzeugt.
 
-property ModifierI : boolean
+    property ModifierI : boolean
 
-[Modifikator /i](#regexp_syntax.html#modifier_i) – Gross- oder
+Modifikator /i <a name="modifier_i"></a> – Gross- oder
 Kleinschreibweise wird nicht berücksichtigt. Standardmässig False
 
-property ModifierR : boolean
+    property ModifierR : boolean
 
-[Modiifikator /r](#regexp_syntax.html#modifier_r) – benutze die für
+Modiifikator /r <a name="#modifier_r"></a> – benutze die für
 Russen erweiterte Syntax. Standardmässig True. (war die Eigenschaft
 ExtSyntaxEnabled in früheren Versionen)
 
 property ModifierS : boolean
 
-[Modifikator /s](#regexp_syntax.html#modifier_s) - '.' findet jedes
+[Modifikator /s](regexp_syntax.html#modifier_s) - '.' findet jedes
 beliebige Zeichen (sonst wie \[^\\n\]). Standardmässig True.
 
 property ModifierG : boolean
 
-[Modifikator /g](#regexp_syntax.html#modifier_g) – schaltet alle
+[Modifikator /g](regexp_syntax.html#modifier_g) – schaltet alle
 Operatoren in den genügsamen Modus. Falls ModifierG False ist, dann
 arbeitet '\*' als '\*?', und '+' als '+?' und so weiter. Standardmässig
 True.
 
 property ModifierM : boolean
 
-[Modifikator /m](#regexp_syntax.html#modifier_m) – Behandelt den
+[Modifikator /m](regexp_syntax.html#modifier_m) – Behandelt den
 Zielstring als mehrzeiligen String. So finden "^" und "$" nicht mehr nur
 den Anfang und das Ende des Zielstringes, sondern auch Zeilenseparatoren
 innerhalb des Zielstrings. Standardmässig False.
 
 property ModifierX : boolean
 
-[Modifikator /x](#regexp_syntax.html#modifier_x) – Erweiterte Syntax,
+[Modifikator /x](regexp_syntax.html#modifier_x) – Erweiterte Syntax,
 erlaubt das Formatieren des regulärenm Ausdruckes zur besseren
 Lesbarkeit. Standardmässig False.
 
@@ -260,7 +259,7 @@ property LineSeparators : RegExprString
 Beinhaltet die Zeichen, die für Zeilenseparatoren wie \\n in UNIX
 verwendet werden. Anfänglich gefüllt mit der globalen Konstanten
 RegExprLineSeparators. Beachte auch
-[Zeilenseparatoren](#regexp_syntax.html#syntax_line_separators)
+[Zeilenseparatoren](regexp_syntax.html#syntax_line_separators)
 
 property LinePairedSeparators : RegExprString
 
@@ -268,7 +267,7 @@ Beinhaltet die Zeichen, die paarweise für Zeilenseparatoren wie \\r\\n
 in DOS/Windows verwendet werden. Es müssen genau zwei oder gar keine
 Zeichen sein. Anfänglich gefüllt mit der globalen Konstanten
 RegExprLinePairedSeparators. Beachte auch
-[Zeilenseparatoren](#regexp_syntax.html#syntax_line_separators)
+[Zeilenseparatoren](regexp_syntax.html#syntax_line_separators)
 
 Beispiel: Wenn Du den UNIX-Stil als Zeilenseparatoren haben möchtest,
 dann weise LineSeparators := \#$a (Newline Zeichen) und
@@ -281,7 +280,7 @@ Standardmässig ist der gemsichte Modus aktiv wie er definiert ist in den
 globalen Konstanten RegExprLine\[Paired\]Separator\[s\]: LineSeparators
 := \#$d\#$a; LinePairedSeparator := \#$d\#$a. Das Verhalten dieses Modus
 wird ausführlich im Abschnitt [Syntax
-besprochen](#regexp_syntax.html#syntax_line_separators).
+besprochen](regexp_syntax.html#syntax_line_separators).
 
 class function InvertCaseFunction  (const Ch : REChar) : REChar;
 
@@ -292,7 +291,7 @@ werden dafür benutzt.
 property InvertCase : TRegExprInvertCaseFunction;
 
 Setze diese Eigenschaft, wenn Du die
-[Umwandlungsfunktion](#regexp_syntax.html#modifier_i) zwischen der
+[Umwandlungsfunktion]<a name="modifier_i"></a> zwischen der
 Gross- oder Kleinschreibung durch eine eigene ersetzen möchtest.
 Standardmässig auf InvertCaseFunction gesetzt.
 
@@ -317,48 +316,29 @@ avoide ugly constructions
  // like '\\\\w+\\\\\\\\\\\\w+\\\\.\\\\w+' - just define EscChar='/' and
 use '/w+\\/w+/./w+'
 
-Standardmдssig fьr Modifikatoren
+<a name="modifier_defs"></a>
+Standardmässig für Modifikatoren
 
-RegExprModifierI : boolean = False;        //
-[TRegExpr.ModifierI](#tregexpr_interface.html#tregexpr.modifier_i)
+    RegExprModifierI : boolean = False;                // TRegExpr.ModifierI
+    RegExprModifierR : boolean = True;                // TRegExpr.ModifierR
+    RegExprModifierS : boolean = True;                // TRegExpr.ModifierS
+    RegExprModifierG : boolean = True;                // TRegExpr.ModifierG
+    RegExprModifierM : boolean = False;                //TRegExpr.ModifierM
+    RegExprModifierX : boolean = False;                //TRegExpr.ModifierX
 
-RegExprModifierR : boolean = True;        //
-[TRegExpr.ModifierR](#tregexpr_interface.html#tregexpr.modifier_r)
-
-RegExprModifierS : boolean = True;        //
-[TRegExpr.ModifierS](#tregexpr_interface.html#tregexpr.modifier_s)
-
-RegExprModifierG : boolean = True;        //
-[TRegExpr.ModifierG](#tregexpr_interface.html#tregexpr.modifier_g)
-
-RegExprModifierM : boolean = False;        //
-[TRegExpr.ModifierM](#tregexpr_interface.html#tregexpr.modifier_m)
-
-RegExprModifierX : boolean = False;        //
-[TRegExpr.ModifierX](#tregexpr_interface.html#tregexpr.modifier_x)
-
-RegExprSpaceChars : RegExprString = ' '\#$9\#$A\#$D\#$C;
-
- // Standardbelegung für die Eigenschaft SpaceChars
+RegExprSpaceChars : RegExprString = ' '\#$9\#$A\#$D\#$C; // Standardbelegung für die Eigenschaft SpaceChars
 
 RegExprWordChars : RegExprString =
-
     '0123456789'
-
  + 'abcdefghijklmnopqrstuvwxyz'
-
  + 'ABCDEFGHIJKLMNOPQRSTUVWXYZ\_';
-
  // Standardbelegung für die Eigenschaft WordChars
 
 RegExprLineSeparators : RegExprString =
-
  \#$D\#$A{$IFDEF UniCode}\#$B\#$C\#$2028\#$2029\#$85{$ENDIF};
-
  // Standardbelegung für die Eigenschaft LineSeparators
 
 RegExprLinePairedSeparators : RegExprString = ' '\#$D\#$A;
-
  // Standardbelegung für die Eigenschaft LinePairedSeparators
 
 RegExprInvertCaseFunction : TRegExprInvertCaseFunction =

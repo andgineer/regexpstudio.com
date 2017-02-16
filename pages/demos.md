@@ -31,10 +31,10 @@ see [description](#text2html.html)
  
 
 If You don't familiar with regular expression, please, take a look at
-the [r.e.syntax](#regexp_syntax.html) topic.
+the [r.e.syntax](regexp_syntax.html) topic.
 
 TRegExpr interface described in [TRegExpr
-interface](#tregexpr_interface.html).
+interface](tregexpr_interface.html).
 
  
 

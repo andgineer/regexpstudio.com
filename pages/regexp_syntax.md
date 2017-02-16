@@ -59,13 +59,9 @@ Examples:
 Note for C++ Builder users
 
 Please, read in FAQ answer on question [Why many r.e. work wrong in
-Borland C++ Builder?](#faq.html#cppbescchar)
+Borland C++ Builder?](faq.html#cppbescchar)
 
- 
-
-Escape sequences
-
- 
+### Escape sequences
 
 Characters may be specified using a escape sequences syntax much like
 that used in C and Perl: "\\n'' matches a newline, "\\t'' a tab, etc.
@@ -74,12 +70,10 @@ matches the character whose ASCII value is nn. If You need wide
 (Unicode) character code, You can use '\\x{nnnn}', where 'nnnn' - one or
 more hexadecimal digits.
 
- 
-
   \\xnn     char with hex code nn
 
   \\x{nnnn} char with hex code nnnn (one byte for plain text and two
-bytes for [Unicode](#tregexpr_interface.html#unicode_support))
+bytes for [Unicode](tregexpr_interface.html#unicode))
 
   \\t       tab (HT/TAB), same as \\x09
 
@@ -93,31 +87,19 @@ bytes for [Unicode](#tregexpr_interface.html#unicode_support))
 
   \\e       escape (ESC), same as \\x1b
 
- 
-
 Examples:
 
   foo\\x20bar   matchs 'foo bar' (note space in the middle)
 
   \\tfoobar     matchs 'foobar' predefined by tab
 
- 
-
- 
-
-Character classes
-
- 
+### Character classes
 
 You can specify a character class, by enclosing a list of characters in
 \[\], which will match any one character from the list.
 
- 
-
 If the first character after the "\['' is "^'', the class matches any
 character not in the list.
-
- 
 
 Examples:
 
@@ -127,18 +109,12 @@ Examples:
   foob\[^aeiou\]r find strings 'foobbr', 'foobcr' etc. but not 'foobar',
 'foober' etc.
 
- 
-
 Within a list, the "-'' character is used to specify a range, so that
 a-z represents all characters between "a'' and "z'', inclusive.
-
- 
 
 If You want "-'' itself to be a member of a class, put it at the start
 or end of the list, or escape it with a backslash. If You want '\]' you
 may place it at the start of list or escape it with a backslash.
-
- 
 
 Examples:
 
@@ -156,25 +132,13 @@ Examples:
 
   \[\]-a\]     matchs any char from '\]'..'a'.
 
- 
-
- 
-
-Metacharacters
-
- 
+### Metacharacters
 
 Metacharacters are special characters which are the essence of Regular
 Expressions. There are different types of metacharacters, described
 below.
 
- 
-
- 
-
-Metacharacters - line separators
-
- 
+#### Metacharacters - line separators
 
   ^     start of line
 
@@ -185,8 +149,6 @@ Metacharacters - line separators
   \\Z     end of text
 
   .     any character in line
-
- 
 
 Examples:
 
@@ -199,8 +161,6 @@ line
 
   foob.r     matchs strings like 'foobar', 'foobbr', 'foob1r' and so on
 
- 
-
 The "^" metacharacter by default is only guaranteed to match at the
 beginning of the input string/text, the "$" metacharacter only at the
 end. Embedded line separators will not be matched by "^'' or "$''.
@@ -208,73 +168,53 @@ end. Embedded line separators will not be matched by "^'' or "$''.
 You may, however, wish to treat a string as a multi-line buffer, such
 that the "^'' will match after any line separator within the string, and
 "$'' will match before any line separator. You can do this by switching
-On the [modifier /m](#regexp_syntax.html#modifier_m).
+On the [modifier /m](regexp_syntax.html#modifier_m).
 
 The \\A and \\Z are just like "^'' and "$'', except that they won't
 match multiple times when the [modifier
-/m](#regexp_syntax.html#modifier_m) is used, while "^'' and "$'' will
+/m](regexp_syntax.html#modifier_m) is used, while "^'' and "$'' will
 match at every internal line separator.
 
- 
-
 The ".'' metacharacter by default matches any character, but if You
-switch Off the [modifier /s](#regexp_syntax.html#modifier_s), then '.'
+switch Off the [modifier /s](regexp_syntax.html#modifier_s), then '.'
 won't match embedded line separators.
-
- 
 
 TRegExpr works with line separators as recommended at www.unicode.org (
 http://www.unicode.org/unicode/reports/tr18/ ):
 
- 
-
 "^" is at the beginning of a input string, and, if [modifier
-/m](#regexp_syntax.html#modifier_m) is On, also immediately following
+/m](regexp_syntax.html#modifier_m) is On, also immediately following
 any occurrence of \\x0D\\x0A or \\x0A or \\x0D (if You are using
-[Unicode version](#tregexpr_interface.html#unicode_support) of TRegExpr,
+[Unicode version](tregexpr_interface.html#unicode) of TRegExpr,
 then also \\x2028 or  \\x2029 or \\x0B or \\x0C or \\x85). Note that
 there is no empty line within the sequence \\x0D\\x0A.
-
- 
 
 "$" is at the end of a input string, and, if [modifier
-/m](#regexp_syntax.html#modifier_m) is On, also immediately preceding
+/m](regexp_syntax.html#modifier_m) is On, also immediately preceding
 any occurrence of  \\x0D\\x0A or \\x0A or \\x0D (if You are using
-[Unicode version](#tregexpr_interface.html#unicode_support) of TRegExpr,
+[Unicode version](tregexpr_interface.html#unicode) of TRegExpr,
 then also \\x2028 or  \\x2029 or \\x0B or \\x0C or \\x85). Note that
 there is no empty line within the sequence \\x0D\\x0A.
 
- 
-
 "." matchs any character, but if You switch Off [modifier
-/s](#regexp_syntax.html#modifier_s) then "." doesn't match \\x0D\\x0A
+/s](regexp_syntax.html#modifier_s) then "." doesn't match \\x0D\\x0A
 and \\x0A and \\x0D (if You are using [Unicode
-version](#tregexpr_interface.html#unicode_support) of TRegExpr, then
+version](tregexpr_interface.html#unicode) of TRegExpr, then
 also \\x2028 and  \\x2029 and \\x0B and \\x0C and \\x85).
-
- 
 
 Note that "^.\*$" (an empty line pattern) doesnot match the empty string
 within the sequence \\x0D\\x0A, but matchs the empty string within the
 sequence \\x0A\\x0D.
 
- 
-
 Multiline processing can be easely tuned for Your own purpose with help
 of TRegExpr properties
-[LineSeparators](#tregexpr_interface.html#lineseparators) and
-[LinePairedSeparator](#tregexpr_interface.html#linepairedseparator), You
+[LineSeparators](tregexpr_interface.html#lineseparators) and
+[LinePairedSeparator](tregexpr_interface.html#linepairedseparator), You
 can use only Unix style separators \\n or only DOS/Windows style \\r\\n
 or mix them together (as described above and used by default) or define
 Your own line separators!
 
- 
-
- 
-
-Metacharacters - predefined classes
-
- 
+#### Metacharacters - predefined classes
 
   \\w     an alphanumeric character (including "\_")
 
@@ -288,11 +228,7 @@ Metacharacters - predefined classes
 
   \\S     a non space
 
- 
-
 You may use \\w, \\d and \\s within custom character classes.
-
- 
 
 Examples:
 
@@ -302,46 +238,28 @@ Examples:
   foob\[\\w\\s\]r matchs strings like 'foobar', 'foob r', 'foobbr' and
 so on but not 'foob1r', 'foob=r' and so on
 
- 
-
 TRegExpr uses properties
-[SpaceChars](#tregexpr_interface.html#tregexpr.spacechars) and
-[WordChars](#tregexpr_interface.html#tregexpr.wordchars) to define
+[SpaceChars](tregexpr_interface.html#tregexpr.spacechars) and
+[WordChars](tregexpr_interface.html#tregexpr.wordchars) to define
 character classes \\w, \\W, \\s, \\S, so You can easely redefine it.
 
- 
-
- 
-
-Metacharacters - word boundaries
-
- 
+#### Metacharacters - word boundaries
 
   \\b     Match a word boundary
 
   \\B     Match a non-(word boundary)
-
- 
 
 A word boundary (\\b) is a spot between two characters that has a \\w on
 one side of it and a \\W on the other side of it (in either order),
 counting the imaginary characters off the beginning and end of the
 string as matching a \\W.
 
- 
-
- 
-
-Metacharacters - iterators
-
- 
+#### Metacharacters - iterators
 
 Any item of a regular expression may be followed by another type of
 metacharacters - iterators. Using this metacharacters You can specify
 number of occurences of previous character, metacharacter or
 subexpression.
-
- 
 
   \*     zero or more ("greedy"), similar to {0,}
 
@@ -367,20 +285,14 @@ subexpression.
 
   {n,m}? at least n but not more than m times ("non-greedy")
 
- 
-
 So, digits in curly brackets of the form {n,m}, specify the minimum
 number of times to match the item n and the maximum m. The form {n} is
 equivalent to {n,n} and matches exactly n times. The form {n,} matches n
 or more times. There is no limit to the size of n or m, but large
 numbers will chew up more memory and slow down r.e. execution.
 
- 
-
 If a curly bracket occurs in any other context, it is treated as a
 regular character.
-
- 
 
 Examples:
 
@@ -400,26 +312,16 @@ Examples:
   fooba{2,3}r matchs strings like 'foobaar', or 'foobaaar'  but not
 'foobaaaar'
 
- 
-
 A little explanation about "greediness". "Greedy" takes as many as
 possible, "non-greedy" takes as few as possible. For example, 'b+' and
 'b\*' applied to string 'abbbbc' return 'bbbb', 'b+?' returns 'b',
 'b\*?' returns empty string, 'b{2,3}?' returns 'bb', 'b{2,3}' returns
 'bbb'.
 
- 
-
 You can switch all iterators into "non-greedy" mode (see the [modifier
-/g](#regexp_syntax.html#modifier_g)).
+/g](regexp_syntax.html#modifier_g)).
 
- 
-
- 
-
-Metacharacters - alternatives
-
- 
+#### Metacharacters - alternatives
 
 You can specify a series of alternatives for a pattern using "|'' to
 separate them, so that fee|fie|foe will match any of "fee'', "fie'', or
@@ -443,38 +345,26 @@ Also remember that "|'' is interpreted as a literal within square
 brackets, so if You write \[fee|fie|foe\] You're really only matching
 \[feio|\].
 
- 
-
 Examples:
 
   foo(bar|foo) matchs strings 'foobar' or 'foofoo'.
 
- 
-
- 
-
-Metacharacters - subexpressions
-
- 
+#### Metacharacters - subexpressions
 
 The bracketing construct ( ... ) may also be used for define r.e.
 subexpressions (after parsing You can find subexpression positions,
 lengths and actual values in MatchPos, MatchLen and
-[Match](#tregexpr_interface.html#tregexpr.match) properties of TRegExpr,
+[Match](tregexpr_interface.html#tregexpr.match) properties of TRegExpr,
 and substitute it in template strings by
-[TRegExpr.Substitute](#tregexpr_interface.html#tregexpr.substitute)).
-
- 
+[TRegExpr.Substitute](tregexpr_interface.html#tregexpr.substitute)).
 
 Subexpressions are numbered based on the left to right order of their
 opening parenthesis.
 
 First subexpression has number '1' (whole r.e. match has number '0' -
 You can substitute it in
-[TRegExpr.Substitute](#tregexpr_interface.html#tregexpr.substitute) as
+[TRegExpr.Substitute](tregexpr_interface.html#tregexpr.substitute) as
 '$0' or '$&').
-
- 
 
 Examples:
 
@@ -484,18 +374,10 @@ the 'foobar'
   foob(\[0-9\]|a+)r matchs 'foob0r', 'foob1r' , 'foobar', 'foobaar',
 'foobaar' etc.
 
- 
-
- 
-
-Metacharacters - backreferences
-
- 
+#### Metacharacters - backreferences
 
 Metacharacters \\1 through \\9 are interpreted as backreferences.
 \\&lt;n&gt; matches previously matched subexpression \#&lt;n&gt;.
-
- 
 
 Examples:
 
@@ -506,29 +388,21 @@ Examples:
   (\['"\]?)(\\d+)\\1 matchs '"13" (in double quotes), or '4' (in single
 quotes) or 77 (without quotes) etc
 
- 
-
- 
-
-Modifiers
-
- 
+### Modifiers
 
 Modifiers are for changing behaviour of TRegExpr.
-
- 
 
 There are many ways to set up modifiers.
 
 Any of these modifiers may be embedded within the regular expression
-itself using the [(?...)](#regexp_syntax.html#inline_modifiers)
+itself using the [(?...)](regexp_syntax.html#inline_modifiers)
 construct.
 
 Also, You can assign to appropriate TRegExpr properties
-([ModifierX](#tregexpr_interface.html#tregexpr.modifier_x) for example
+([ModifierX](tregexpr_interface.html#tregexpr.modifier_x) for example
 to change /x, or ModifierStr to change all modifiers together). The
 default values for new instances of TRegExpr object defined in [global
-variables](#tregexpr_interface.html#modifier_defs), for example global
+variables](#modifier_defs), for example global
 variable RegExprModifierX defines value of new TRegExpr instance
 ModifierX property.
 
@@ -538,20 +412,20 @@ i
 
 Do case-insensitive pattern matching (using installed in you system
 locale settings), see also
-[InvertCase](#tregexpr_interface.html#invertcase).
+[InvertCase](tregexpr_interface.html#invertcase).
 
 m
 
 Treat string as multiple lines. That is, change "^'' and "$'' from
 matching at only the very start or end of the string to the start or end
 of any line anywhere within the string, see also [Line
-separators](#regexp_syntax.html#syntax_line_separators).
+separators](regexp_syntax.html#syntax_line_separators).
 
 s
 
 Treat string as single line. That is, change ".'' to match any character
 whatsoever, even a line separators (see also [Line
-separators](#regexp_syntax.html#syntax_line_separators)), which it
+separators](regexp_syntax.html#syntax_line_separators)), which it
 normally would not match.
 
 g
@@ -573,20 +447,14 @@ russian symbols.
 
 Sorry for foreign users, but it's set by default. If you want switch if
 off by default - set false to global variable
-[RegExprModifierR](#tregexpr_interface.html#modifier_defs).
+[RegExprModifierR](#modifier_defs).
 
- 
-
- 
-
-The [modifier /x](#regexp_syntax.html#modifier_x) itself needs a little
+The [modifier /x](regexp_syntax.html#modifier_x) itself needs a little
 more explanation. It tells the TRegExpr to ignore whitespace that is
 neither backslashed nor within a character class. You can use this to
 break up your regular expression into (slightly) more readable parts.
 The \# character is also treated as a metacharacter introducing a
 comment, for example:
-
- 
 
 (
 
@@ -598,29 +466,19 @@ comment, for example:
 
 )
 
- 
-
 This also means that if you want real whitespace or \# characters in the
 pattern (outside a character class, where they are unaffected by /x),
 that you'll either have to escape them or encode them using octal or hex
 escapes. Taken together, these features go a long way towards making
 regular expressions text more readable.
 
- 
-
- 
-
-Perl extensions
-
- 
+### Perl extensions
 
 (?imsxr-imsxr)
 
 You may use it into r.e. for modifying modifiers by the fly. If this
 construction inlined into subexpression, then it effects only into this
 subexpression
-
- 
 
 Examples:
 
@@ -636,28 +494,13 @@ Examples:
   ((?i)Saint-)?Petersburg   matchs 'saint-Petersburg', but not
 'saint-petersburg'
 
- 
-
- 
-
 (?\#text)
 
 A comment, the text is ignored. Note that TRegExpr closes the comment as
 soon as it sees a ")", so there is no way to put a literal ")" in the
 comment.
 
- 
 
- 
-
-Internal mechanism explanation
-
- 
-
-It seems You need some internal secrets of TRegExpr?
-
-Well, it's under constraction, please wait some time..
-
-Just now don't forget to read the [FAQ](#faq.html) (expecially
+Just now don't forget to read the [FAQ](faq.html) (expecially
 'non-greediness' optimization
-[question](#faq.html#nongreedyoptimization)).
+[question](faq.html#nongreedyoptimization)).

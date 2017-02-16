@@ -2,65 +2,43 @@
 layout: page
 lang: fr
 ref: syntax
-title: Syntax von Regulären Ausdrücken
+title: Syntaxe des Expressions Régulières
 permalink: /fr/regexp_syntax.html
 ---
 
-Syntaxe des Expressions Rйguliиres
+### Introduction
 
-Introduction
+Les Expressions Régulières sont grandement utilisées pour spécifier des
+type de recherches pour le texte. Les métacaractères spéciaux vous
+permettent de spécifier, par exemple, qu'une chaîne particulière que
+vous chercher se trouve au début ou а la fin d'une ligne, ou contient n
+récurrence d'un certain caractère.
 
- 
-
-Les Expressions Rйguliиres sont grandement utilisйes pour spйcifier des
-type de recherches pour le texte. Les mйtacaractиres spйciaux vous
-permettent de spйcifier, par exemple, qu'une chaоne particuliиre que
-vous chercher se trouve au dйbut ou а la fin d'une ligne, ou contient n
-rйcurrence d'un certain caractиre.
-
- 
-
-Les Expressions Rйguliиres ressemblent vraiment а du charabia pour les
-dйbutants, mais elles sont rйellement simples (bien, habituellement), et
+Les Expressions Régulières ressemblent vraiment а du charabia pour les
+débutants, mais elles sont réellement simples (bien, habituellement), et
 sont un outil pratique et puissant.
-
- 
 
 Je recommande fortement de vous amuser avec le demo
 [TestRExp.dpr](#tregexpr_testrexp.html) - il vous aidera а comprendre le
-concept principal. De plus, il y a plusieurs exemple prйdйfinis avec des
+concept principal. De plus, il y a plusieurs exemple prédéfinis avec des
 commentaires inclus dans TestRExp.
 
- 
+Commençons notre voyage d'apprentissage!
 
-Commenзons notre voyage d'apprentissage!
+### Simple comparaison
 
- 
+Un simple se compare а lui-même, sauf s'il est un métacaractère avec une
+spécification spéciale décris plus bas.
 
- 
+Une série de caractère se compare а la même série de caractère dans la
+chaîne de destination, aussi le gabarit "bluh" se compare а "bluh'' dans
+la chaîne de destination. Relativement simple, n'est-ce pas ?
 
-Simple comparaison
-
- 
-
-Un simple se compare а lui-mкme, sauf s'il est un mйtacaractиre avec une
-spйcification spйciale dйcris plus bas.
-
- 
-
-Une sйrie de caractиre se compare а la mкme sйrie de caractиre dans la
-chaоne de destination, aussi le gabarit "bluh" se compare а "bluh'' dans
-la chaоne de destination. Relativement simple, n'est-ce pas ?
-
- 
-
-Vous pouvez obliger les mйtacaractиres ou les Sйquences d'йchappements а
-кtre interprйtйs littйralement avec un 'йchappement' en les prйcйdents
-avec une barre oblique inverse "\\", par exemple: le mйtacaractиre "^"
-normalement se compare au dйbut de ligne, mais "\\^" se compare au
-caractиre "^", "\\\\" se compare а "\\" et ainsi de suite.
-
- 
+Vous pouvez obliger les métacaractères ou les Séquences d'échappements а
+être interprétés littéralement avec un 'échappement' en les précédents
+avec une barre oblique inverse "\\", par exemple: le métacaractère "^"
+normalement se compare au début de ligne, mais "\\^" se compare au
+caractère "^", "\\\\" se compare а "\\" et ainsi de suite.
 
 Exemples:
 
@@ -68,42 +46,32 @@ Exemples:
 
 [TABLE]
 
- 
+### Séquences d'échappements
 
- 
-
-Sйquences d'Йchappements
-
- 
-
-Les caractиres peuvent кtre spйcifiйs avec une Sйquence d'Йchappement
-comme celles utilisй dans le langage C et Perl: "\\n'' se compare а une
-nouvelle ligne, "\\t'' а une tabulation, etc... Plus gйnйralement,
-\\xnn, oщ nn est un nombre hexadйcimal, se compare aux caractиres ASCII
-avec une valeur dans nn. Si vous avez besoin des caractиres large (wide,
+Les caractères peuvent être spécifiés avec une Séquence d'échappement
+comme celles utilisé dans le langage C et Perl: "\\n'' se compare а une
+nouvelle ligne, "\\t'' а une tabulation, etc... Plus généralement,
+\\xnn, oщ nn est un nombre hexadécimal, se compare aux caractères ASCII
+avec une valeur dans nn. Si vous avez besoin des caractères large (wide,
 ou Unicode), vous pouvez utiliser '\\x{nnnn}', d'oщ 'nnnn' - un nombre
-de plus ou moins 4 caractиres numйrique hexadйcimal.
+de plus ou moins 4 caractères numérique hexadécimal.
 
- 
+  \\xnn     caractère hexa avec le code nn.
 
-  \\xnn     caractиre hexa avec le code nn.
-
-  \\x{nnnn} caractиre hexa avec un code nnnn (un octet pour le texte
+  \\x{nnnn} caractère hexa avec un code nnnn (un octet pour le texte
 ordinaire et 2 octets pour l'Unicode).
 
-  \\t       Tabulation horizontale (HT/TAB), mкme chose que \\x09.
+  \\t       Tabulation horizontale (HT/TAB), même chose que \\x09.
 
-  \\n       Nouvelle ligne (NL), mкme chose que \\x0a.
+  \\n       Nouvelle ligne (NL), même chose que \\x0a.
 
-  \\r       Retour de chariot (CR), mкme chose que \\x0d.
+  \\r       Retour de chariot (CR), même chose que \\x0d.
 
-  \\f       Avance page (FF), mкme chose que \\x0c.
+  \\f       Avance page (FF), même chose que \\x0c.
 
-  \\a       Alarme (bell) (BEL), mкme chose que \\x07.
+  \\a       Alarme (bell) (BEL), même chose que \\x07.
 
-  \\e       Йchappement (ESC), mкme chose que \\x1b.
-
- 
+  \\e       échappement (ESC), même chose que \\x1b.
 
 Exemples:
 
@@ -111,46 +79,30 @@ Exemples:
 
 [TABLE]
 
- 
+### Classes de Caractères
 
- 
-
-Classes de Caractиres
-
- 
-
-Vous pouvez spйcifier une Classe de caractиres, en insйrant une liste de
-caractиres dans \[\], lequel comparera tous les caractиres inclus dans
+Vous pouvez spécifier une Classe de caractères, en insérant une liste de
+caractères dans \[\], lequel comparera tous les caractères inclus dans
 la liste.
 
- 
-
-Si le premier caractиre aprиs "\['' est "^'', la classe se compare comme
-une nйgation en comparant tous les caractиres qui ne sont pas dans la
+Si le premier caractère après "\['' est "^'', la classe se compare comme
+une négation en comparant tous les caractères qui ne sont pas dans la
 liste.
 
- 
-
 Exemples:
 
 [TABLE]
 
 [TABLE]
 
- 
-
-Dans une liste, le caractиre "-'' est utilisй pour spйcifier une
-distance (range), aussi a-z reprйsente tous les caractиres entre ''a''
+Dans une liste, le caractère "-'' est utilisé pour spécifier une
+distance (range), aussi a-z représente tous les caractères entre ''a''
 et "z'', inclusivement.
 
- 
-
 Si vous voulez que "-'' soit membre de la classe, veuillez le mettre au
-dйbut ou а la fin de la liste, ou encore placer un йchappement ("\\")
-devant. Si vous voulez un '\]' vous pouvez le placer au dйbut de la
-liste ou le placer avec un йchappement "\\".
-
- 
+début ou а la fin de la liste, ou encore placer un échappement ("\\")
+devant. Si vous voulez un '\]' vous pouvez le placer au début de la
+liste ou le placer avec un échappement "\\".
 
 Exemples:
 
@@ -168,23 +120,13 @@ Exemples:
 
 [TABLE]
 
- 
+### Métacaractères
 
- 
+Les Métacaractères sont des caractères spéciaux qui sont l'essence même
+des expressions régulières. Il y a différents types de métacaractères,
+décris plus bas.
 
-Mйtacaractиres
-
- 
-
-Les Mйtacaractиres sont des caractиres spйciaux qui sont l'essence mкme
-des expressions rйguliиres. Il y a diffйrents types de mйtacaractиres,
-dйcris plus bas.
-
- 
-
-Mйtacaractиres - Sйparateurs de ligne
-
- 
+#### Métacaractères - Séparateurs de ligne
 
 [TABLE]
 
@@ -195,8 +137,6 @@ Mйtacaractиres - Sйparateurs de ligne
 [TABLE]
 
 [TABLE]
-
- 
 
 Exemples:
 
@@ -208,82 +148,58 @@ Exemples:
 
 [TABLE]
 
- 
-
-Le mйtacaractиre "^" par dйfaut garantie de trouver le mot seulement
-s'il est au dйbut de la chaоne ou du texte, le mйtacaractиre "$"
-seulement а la fin. Les sйparateurs de ligne inclus dans le texte ne
-sont pas considйrйs comme valable par "^'' ou "$'', donc la condition
+Le métacaractère "^" par défaut garantie de trouver le mot seulement
+s'il est au début de la chaîne ou du texte, le métacaractère "$"
+seulement а la fin. Les séparateurs de ligne inclus dans le texte ne
+sont pas considérés comme valable par "^'' ou "$'', donc la condition
 est fausse et la recherche n'est pas valide.
 
- 
-
-Vous pouvez, toutefois, dйsirer traiter une chaоne comme une chaоne de
-plusieurs ligne de texte, de cette faзon "^''  sera valable aprиs le
-sйparateur de ligne, et "$'' sera valable avant un sйparateur de ligne.
+Vous pouvez, toutefois, désirer traiter une chaîne comme une chaîne de
+plusieurs ligne de texte, de cette façon "^''  sera valable après le
+séparateur de ligne, et "$'' sera valable avant un séparateur de ligne.
 Vous pouvez faire ceci avec le modifier /m.
 
- 
-
-Les mйtacaractиres \\A et \\Z sont comme "^'' et "$'', exceptй qu'ils
+Les métacaractères \\A et \\Z sont comme "^'' et "$'', excepté qu'ils
 fonctionne seulement qu'une seule fois pour tout le texte quand le
 modifier /m est en usage, pendant que "^'' et "$'' recherchera а chaque
-sйparateur de ligne.
+séparateur de ligne.
 
- 
-
-Le mйtacaractиre ".'' par dйfaut se compare а n'importe quel caractиre,
-mais si vous mettez а off le modifier /s, les sйparateurs de ligne ne
+Le métacaractère ".'' par défaut se compare а n'importe quel caractère,
+mais si vous mettez а off le modifier /s, les séparateurs de ligne ne
 seront plus inclus pour '.'.
 
- 
-
-TRegExpr travaille avec les sйparateurs de lignes comme recommandй au
+TRegExpr travaille avec les séparateurs de lignes comme recommandé au
 site web www.unicode.org ( http://www.unicode.org/unicode/reports/tr18/
 ):
 
- 
-
- "^" est au dйbut de la chaоne d'entrйe, et si le modifier /m est а On,
-aussi suivant immйdiatement n'importe quelle occurrence de \\x0D\\x0A ou
+ "^" est au début de la chaîne d'entrée, et si le modifier /m est а On,
+aussi suivant immédiatement n'importe quelle occurrence de \\x0D\\x0A ou
 \\x0A ou \\x0D (si vous utiliser la Version Unicode de TRegExpr, et
 ensuite \\x2028 ou  \\x2029 ou \\x0B ou \\x0C ou \\x85). Noter qu'il n'y
-a pas de ligne vide dans la sйquence \\x0D\\x0A.
+a pas de ligne vide dans la séquence \\x0D\\x0A.
 
- 
-
-"$" est а la fin de la chaоne d'entrйe, et si le modifier /m est а On,
-aussi prйcйdant immйdiatement n'importe quelle occurrence de \\x0D\\x0A
+"$" est а la fin de la chaîne d'entrée, et si le modifier /m est а On,
+aussi précédant immédiatement n'importe quelle occurrence de \\x0D\\x0A
 ou \\x0A ou \\x0D (si vous utiliser la Version Unicode de TRegExpr, et
 ensuite \\x2028 ou  \\x2029 ou \\x0B ou \\x0C ou \\x85). Noter qu'il n'y
-a pas de ligne vide dans la sйquence \\x0D\\x0A.
+a pas de ligne vide dans la séquence \\x0D\\x0A.
 
- 
-
-"." se compare а n'importe quel caractиre, mais si le modifier /s est a
+"." se compare а n'importe quel caractère, mais si le modifier /s est a
 Off "." ne correspondra plus а \\x0D\\x0A et \\x0A et \\x0D (si vous
 utiliser la Version Unicode de TRegExpr, et ensuite \\x2028 et  \\x2029
 et \\x0B et \\x0C et \\x85).
 
- 
-
 Noter que "^.\*$" (un gabarit de ligne vide) ne correspond pas а une
-chaоne vide, mais se compare а une chaоne vide contenant la sйquence
+chaîne vide, mais se compare а une chaîne vide contenant la séquence
 \\x0A\\x0D.
 
- 
-
-Le traitement Multiligne peut facilement кtre ajustй selon vos besoins
-avec l'aide des propriйtйs LineSeparators et LinePairedSeparator de
+Le traitement Multiligne peut facilement être ajusté selon vos besoins
+avec l'aide des propriétés LineSeparators et LinePairedSeparator de
 TregExpr. Vous pouvez utiliser le style Unix "\\n" ou seulement le style
-DOS/Windows "\\r\\n" ou un mйlange des deux (comme dйcris plus haut et
-utilisй par dйfaut) ou dйfinir vos propres sйparateurs!
+DOS/Windows "\\r\\n" ou un mélange des deux (comme décris plus haut et
+utilisé par défaut) ou définir vos propres séparateurs!
 
- 
-
-Mйtacactиres - classes prйdйfinies
-
- 
+#### Métacactères - classes prédéfinies
 
 [TABLE]
 
@@ -297,12 +213,8 @@ Mйtacactиres - classes prйdйfinies
 
 [TABLE]
 
- 
-
-Vous pouvez utiliser \\w, \\d et \\s а l'intйrieur de la classe de
-caractиres.
-
- 
+Vous pouvez utiliser \\w, \\d et \\s а l'intérieur de la classe de
+caractères.
 
 Exemples:
 
@@ -310,24 +222,16 @@ Exemples:
 
 [TABLE]
 
- 
+TRegExpr utilise les propriétés SpaceChars et WordChars pour définir les
+classes de caractères \\w, \\W, \\s, \\S, aussi vous pouvez aisément les
+redéfinir.
 
-TRegExpr utilise les propriйtйs SpaceChars et WordChars pour dйfinir les
-classes de caractиres \\w, \\W, \\s, \\S, aussi vous pouvez aisйment les
-redйfinir.
+#### Métacaractères - itérateurs
 
- 
-
-Mйtacaractиres - itйrateurs
-
- 
-
-N'importe quel item d'une expression rйguliиre peut-кtre suivi par un
-autre type de mйtacaractиre - les itйrateurs. En utilisant ces
-mйtacaractиres vous pouvez spйcifier le nombre de fois que le caractиre
-prйcйdent sera reprйsentй, mйtacaractиres ou sous expression.
-
- 
+N'importe quel item d'une expression régulière peut-être suivi par un
+autre type de métacaractère - les itérateurs. En utilisant ces
+métacaractères vous pouvez spécifier le nombre de fois que le caractère
+précédent sera représenté, métacaractères ou sous expression.
 
 [TABLE]
 
@@ -353,21 +257,15 @@ prйcйdent sera reprйsentй, mйtacaractиres ou sous expression.
 
 [TABLE]
 
- 
-
-Donc, les nombres dans les accolades de la forme {n,m}, spйcifie le
+Donc, les nombres dans les accolades de la forme {n,m}, spécifie le
 nombre de fois minimum avec la lettre n et le nombre maximum avec la
-lettre m. La forme {n} est йquivalente а {n,n} et correspond exactement
+lettre m. La forme {n} est équivalente а {n,n} et correspond exactement
 а n fois. La forme {n,} correspond а n ou plus. Il n'y a aucune limite
 quand а la grosseur de n et m, mais les grands nombres prendront
-beaucoup plus de mйmoire et vont ralentir l'exйcution de l'e.r.
+beaucoup plus de mémoire et vont ralentir l'exécution de l'e.r.
 
- 
-
-Si les accolades apparaissent dans un autre contexte, ils sont traitйes
-comme un caractиre rйgulier.
-
- 
+Si les accolades apparaissent dans un autre contexte, ils sont traitées
+comme un caractère régulier.
 
 Exemples:
 
@@ -382,103 +280,69 @@ Exemples:
 [TABLE]
 
 [TABLE]
-
- 
 
 Une petite explication а propos de l'utilisation des termes "non-vorace"
 et "vorace". "Vorace" prend autant que possible, "non-vorace" prend
-aussi peu que possible. Par exemple, 'b+' et 'b\*' appliquй а la chaоne
-'abbbbc' retourne 'bbbb', 'b+?' retourne 'b', 'b\*?' retourne une chaоne
+aussi peu que possible. Par exemple, 'b+' et 'b\*' appliqué а la chaîne
+'abbbbc' retourne 'bbbb', 'b+?' retourne 'b', 'b\*?' retourne une chaîne
 vide, 'b{2,3}?' retourne 'bb', 'b{2,3}' retourne 'bbb'.
 
- 
-
-Vous pouvez changer tous les itйrateurs en mode "non-vorace" en
+Vous pouvez changer tous les itérateurs en mode "non-vorace" en
 utilisant le modifier /g.
 
- 
+#### Métacaractères - Alternatifs
 
- 
-
-Mйtacaractиres - Alternatifs
-
- 
-
-Vous pouvez spйcifier des alternatifs pour le modиle en utilisant "|''
-pour les sйparer, donc fee|fie|foe correspond а "fee'', "fie'', ou
-"foe'' dans la chaоne de destination (comme f(e|i|o)e le ferait). La
-premiиre alternative inclus tout du dйlimiteur prйcйdent ("('', "\['',
-ou le dйbut du modиle) jusqu'au premier "|'', et la derniиre alternative
-contient tout du dernier "|'' jusqu'au dernier dйlimiteur. Pour cette
+Vous pouvez spécifier des alternatifs pour le modèle en utilisant "|''
+pour les séparer, donc fee|fie|foe correspond а "fee'', "fie'', ou
+"foe'' dans la chaîne de destination (comme f(e|i|o)e le ferait). La
+première alternative inclus tout du délimiteur précédent ("('', "\['',
+ou le début du modèle) jusqu'au premier "|'', et la dernière alternative
+contient tout du dernier "|'' jusqu'au dernier délimiteur. Pour cette
 raison, il est de pratique courante d'inclure les alternatives dans des
-parenthиses, pour minimiser le risque de confusion pour savoir quand
-c'est le dйpart et quand c'est la fin.
+parenthèses, pour minimiser le risque de confusion pour savoir quand
+c'est le départ et quand c'est la fin.
 
- 
-
-Les alternatifs sont йvaluйs de gauche а droite, donc la premiиre
-alternative trouvй pour la correspondance est celle qui est choisi. Ceci
-signifie que les alternatives ne sont pas nйcessairement vorace. Par
+Les alternatifs sont évalués de gauche а droite, donc la première
+alternative trouvé pour la correspondance est celle qui est choisi. Ceci
+signifie que les alternatives ne sont pas nécessairement vorace. Par
 exemple : quand vous faites correspondre foo|foot а "barefoot'',
-seulement la partie "foo'' correspond, comme c'est la premiиre
-alternative essayйe, elle correspond exactement а la chaоne de
+seulement la partie "foo'' correspond, comme c'est la première
+alternative essayée, elle correspond exactement а la chaîne de
 destination. (Ceci ne semble pas important, mais ceci le deviens quand
-vous capturer du texte correspondant en utilisant les parenthиses.)
+vous capturer du texte correspondant en utilisant les parenthèses.)
 
- 
-
-Aussi rappeler vous que "|'' est interprйtй comme un littйral entre
-"\[\]", donc si vous йcrivez \[fee|fie|foe\] Vous rйellement rechercher
+Aussi rappeler vous que "|'' est interprété comme un littéral entre
+"\[\]", donc si vous écrivez \[fee|fie|foe\] Vous réellement rechercher
 pour \[feio|\].
 
- 
-
 Exemples:
 
-  foo(bar|foo) Trouve la chaоne 'foobar' ou 'foofoo'.
+  foo(bar|foo) Trouve la chaîne 'foobar' ou 'foofoo'.
 
- 
+#### Métacaractères - sous expressions
 
- 
-
-Mйtacaractиres - sous expressions
-
- 
-
-Les parenthиses ( ... ) peuvent aussi кtre utilisйes pour construire des
-sous expression rйguliиre. (aprиs  l'analyse, vous pouvez trouver les
+Les parenthèses ( ... ) peuvent aussi être utilisées pour construire des
+sous expression régulière. (après  l'analyse, vous pouvez trouver les
 positions des sous expressions, longueurs et valeurs actuelles dans
-MatchPos, MatchLen et les propriйtйs de Match dans TRegExpr, et les
-substituer dans les chaоnes du gabarit de TRegExpr.Substitute).
+MatchPos, MatchLen et les propriétés de Match dans TRegExpr, et les
+substituer dans les chaînes du gabarit de TRegExpr.Substitute).
 
- 
-
-Les Sous expressions sont numйrotйs de gauche а droite selon les
-ouvertures des parenthиses. La premiиre sous expression а le numйro '1'
-(l'e.r. complиte a le numйro '0' - vous pouvez le substituer dans
+Les Sous expressions sont numérotés de gauche а droite selon les
+ouvertures des parenthèses. La première sous expression а le numéro '1'
+(l'e.r. complète a le numéro '0' - vous pouvez le substituer dans
 TRegExpr.Substitute comme '$0' ou '$&').
 
- 
-
 Exemples:
 
 [TABLE]
 
 [TABLE]
 
-  
+#### Métacaractères - Références Précédentes
 
- 
-
-Mйtacaractиres - Rйfйrences Prйcйdentes
-
- 
-
-Les Mйtacaractиres \\1 jusqu'а \\9 sont interprйtйs comme des rйfйrences
-prйcйdentes. \\&lt;n&gt; compare la sous expression \#&lt;n&gt;
-prйcйdente trouvй.
-
- 
+Les Métacaractères \\1 jusqu'а \\9 sont interprétés comme des références
+précédentes. \\&lt;n&gt; compare la sous expression \#&lt;n&gt;
+précédente trouvé.
 
 Exemples:
 
@@ -489,83 +353,70 @@ Exemples:
   (\['"\]?)(\\d+)\\1 Trouve  '"13" (entre guillemets), ou '4' (en
 apostrophe) ou 77 (sans guillemet ou apostrophe), etc...
 
- 
-
- 
-
-Modifier
-
- 
+### Modifier
 
 Les Modifier existe dans le but de changer le comportement de TRegExpr.
 
- 
-
-Il y a plusieurs faзon d'ajuster ces modifier. N'importe quel de ces
-modifier peuvent кtre incorporй dans l'expression rйguliиre elle-mкme en
+Il y a plusieurs façon d'ajuster ces modifier. N'importe quel de ces
+modifier peuvent être incorporé dans l'expression régulière elle-même en
 utilisant la construction de (?...).
 
- 
-
-Aussi, vous pouvez changer la propriйtй adйquate de TRegExpr (ModifierX
+Aussi, vous pouvez changer la propriété adéquate de TRegExpr (ModifierX
 par exemple pour changer /x, ou ModifierStr pour changer tous les
-modificateurs ensemble). Les valeurs par dйfaut de la nouvelle instance
-de l'objet TRegExpr sont dйfinis dans les variables globales, par
-exemple la variable globale RegExprModifierX dйfinie la valeur
+modificateurs ensemble). Les valeurs par défaut de la nouvelle instance
+de l'objet TRegExpr sont définis dans les variables globales, par
+exemple la variable globale RegExprModifierX définie la valeur
 (ModifierX) d'une nouvelle instance de TRegExpr.
 
  
 
 i
 
-Faire des recherche sans йgard а la casse des caractиres (utilisant les
-ajustements locaux dйfinis dans votre systиme), voir aussi CasInversé.
+Faire des recherche sans égard а la casse des caractères (utilisant les
+ajustements locaux définis dans votre système), voir aussi CasInversé.
 
 m
 
-Traite les chaоnes comme des ligne multiples. Change la fonction de "^''
-et "$'' pour chercher uniquement а partir du dйbut ou de la fin de la
-chaоne, ce sera maintenant а partir du dйbut d'une ligne ou а la fin de
+Traite les chaînes comme des ligne multiples. Change la fonction de "^''
+et "$'' pour chercher uniquement а partir du début ou de la fin de la
+chaîne, ce sera maintenant а partir du début d'une ligne ou а la fin de
 la ligne, voir aussi Séparateurs de Ligne.
 
 s
 
-Traite les chaоnes comme une simple ligne de texte. Change la fonction
-de "." pour qu'il se compare а n'importe quel caractиre, mкme un
-sйparateur de ligne (voir aussi Séparateur de Ligne), normalement il
+Traite les chaînes comme une simple ligne de texte. Change la fonction
+de "." pour qu'il se compare а n'importe quel caractère, même un
+séparateur de ligne (voir aussi Séparateur de Ligne), normalement il
 ignorerait les sauts de ligne.
 
 g
 
-Modifier non standard. En le mettant а Off vous spйcifier de mettre tous
-les opйrateurs en mode non-vorace (par dйfaut, ce modifier est а On).
+Modifier non standard. En le mettant а Off vous spécifier de mettre tous
+les opérateurs en mode non-vorace (par défaut, ce modifier est а On).
 Aussi, si le modifier /g est а Off, alors '+' fonctionne comme '+?',
 '\*' comme '\*?' et ainsi de suite...
 
 x
 
-Йtend la lisibilitй du modиle en vous permettant des espaces et des
+étend la lisibilité du modèle en vous permettant des espaces et des
 commentaires (voir l'explication plus bas).
 
 r
 
-Modificateur non standard. Si ajustй, les distances additionnelles de
+Modificateur non standard. Si ajusté, les distances additionnelles de
 а-я inclus les lettres russe 'ё', А-Я  inclus additionnellement 'Ё', et
 а-Я inclus tous les symboles russe.
 
-Dйsolй pour les utilisateurs de l'extйrieur, mais ces valeurs sont
-ajustй par dйfaut. Si vous voulez les mettre а off par dйfaut - changer
+Désolé pour les utilisateurs de l'extérieur, mais ces valeurs sont
+ajusté par défaut. Si vous voulez les mettre а off par défaut - changer
 la valeur de la variable globale RegExprModifierR.
 
- 
-
- 
 
 Le modifier /x requiert des explications. Il dit а TRegExpr d'ignorer
-les espaces qui ne sont pas avec un йchappement ou qui ne sont pas dans
-une classe. Vous pouvez utiliser ceci pour casser l'expression rйguliиre
-en morceaux plus petit et plus lisible. Le caractиre \# est aussi traitй
-comme un mйtacaractиre qui introduit les commentaires, par exemple:
+les espaces qui ne sont pas avec un échappement ou qui ne sont pas dans
+une classe. Vous pouvez utiliser ceci pour casser l'expression régulière
+en morceaux plus petit et plus lisible. Le caractère \# est aussi traité
+comme un métacaractère qui introduit les commentaires, par exemple:
 
  
 
@@ -582,28 +433,20 @@ TRegExpr l'ignorera.
 
  
 
-Ceci signifie que si vous voulez avoir des espace ou des caractиres \#
-dans le modиle (а l'extйrieur de la classe, oщ ils ne sont pas affectйs
-par /x), que vous aurez а mettre des йchappements ou les encoder avec
-des valeurs octal ou hexadйcimale. Pris ensemble, cette option va plus
-loin pour l'йcriture d'expressions rйguliиre pour les rendent plus
+Ceci signifie que si vous voulez avoir des espace ou des caractères \#
+dans le modèle (а l'extérieur de la classe, oщ ils ne sont pas affectés
+par /x), que vous aurez а mettre des échappements ou les encoder avec
+des valeurs octal ou hexadécimale. Pris ensemble, cette option va plus
+loin pour l'écriture d'expressions régulière pour les rendent plus
 lisible.
 
- 
-
- 
-
-Extensions Perl
-
- 
+### Extensions Perl
 
 (?imsxr-imsxr)
 
 Vous pouvez l'utiliser dans les e.r. pour les modifier sur le champ. Si
-la construction est encapsulй dans une sous expression, alors seulement
-la sous expression sera affectй.
-
- 
+la construction est encapsulé dans une sous expression, alors seulement
+la sous expression sera affecté.
 
 Exemples:
 
@@ -615,31 +458,12 @@ Exemples:
 
 [TABLE]
 
- 
-
- 
-
 (?\#text)
 
-Un commentaire, le texte est ignorй. Veuillez noter que TRegExpr ferme
-le commentaire aussitфt qu'il voit une parenthиse ")", Aussi il n'y a
-aucune faзon de placer une parenthиse dans le commentaire sans fermer
+Un commentaire, le texte est ignoré. Veuillez noter que TRegExpr ferme
+le commentaire aussitфt qu'il voit une parenthèse ")", Aussi il n'y a
+aucune façon de placer une parenthèse dans le commentaire sans fermer
 celui-ci.
 
- 
-
- 
-
-Explication du mйcanisme interne
-
- 
-
-Vous voulez connaоtre les secrets interne de TRegExpr?
-
- 
-
-Bien, cette section est en construction, svp veuillez attendre quelque
-temps..
-
-N'oubliez pas de lire la [FAQ](#faq.html) (spйcifiquement la section
+N'oubliez pas de lire la [FAQ](faq.html) (spécifiquement la section
 'non-vorace' ou cette Question).

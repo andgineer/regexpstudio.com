@@ -11,7 +11,7 @@ permalink: /bg/tregexpr_testrexp.html
 #### Прости примери
 
 Ако не сте запознати с Regular Expressions, можете да прочетете моето
-описанието на техния [синтаксис](#regexp_syntax.html).
+описанието на техния [синтаксис](regexp_syntax.html).
 
 #### Използване на глобалните процедури
 

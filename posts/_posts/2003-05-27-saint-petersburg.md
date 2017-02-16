@@ -2,7 +2,6 @@
 layout: post
 lang: en
 title: "Saint-Petersburg 300-year anniversary"
-categories: Saint-Petersburg
 ---
 
 In 2003 we celebrate 300-year anniversary of our city.

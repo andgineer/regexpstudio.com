@@ -133,14 +133,14 @@ Perl) und es akzeptiert mehr als eine Ziffer. Falls Du die Zeichen $
 oder \\ als Literale in einem Template verwenden möchtest, nutze das
 vorangestellte Escape-Zeichen: Beispiel:
 
-   '1\\$ is $2\\\\rub\\\\' -&gt; '1$ is &lt;Match\[2\]&gt;\\rub\\'
+   '1\\$ is $2\\\\rub\\\\' -> '1$ is <Match\[2\]>\\rub\\'
 
 Falls Du eine Ziffer als Literal hinter einem $n plazieren möchtest,
 dann musst Du das n mit geschweiften Klammern {} begrenzen: Beispiel:
 
-   'a$12bc' -&gt; 'a&lt;Match\[12\]&gt;bc'
+   'a$12bc' -> 'a<Match\[12\]>bc'
 
-   'a${1}2bc' -&gt; 'a&lt;Match\[1\]&gt;2bc'.
+   'a${1}2bc' -> 'a<Match\[1\]>2bc'.
 
 procedure Split (AInputStr : string; APieces : TStrings);
 
@@ -386,7 +386,7 @@ corresponding opening '('.
 
  
 
-// Falls Result &lt;&gt; 0, dann könnten in ASubExprs auch leere Items
+// Falls Result <> 0, dann könnten in ASubExprs auch leere Items
 enthalten sein.
 
 ### Nützliche globale Functionen
@@ -453,7 +453,7 @@ ERegExpr = class (Exception)
   public
 
    ErrorCode : integer; // Error-Code. Übersetzungsfehler haben Codes
-&lt; 1000.
+< 1000.
 
    CompilerErrorPos : integer; // Position im Regulären Ausdruck, wo der
 Übersetzungsfehler auftauchte

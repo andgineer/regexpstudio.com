@@ -75,10 +75,10 @@ This unit contains functions to decorate hyper-links (see
 
  
 
-For example, replaces 'www.RegExpStudio.com' with '&lt;a
-href="http://www.RegExpStudio.com"&gt;www.RegExpStudio.com&lt;/a&gt;' or
-'anso@mail.ru' with '&lt;a
-href="mailto:anso@mail.ru"&gt;anso@mail.ru&lt;/a&gt;'.
+For example, replaces 'www.RegExpStudio.com' with '<a
+href="http://www.RegExpStudio.com">www.RegExpStudio.com</a>' or
+'anso@mail.ru' with '<a
+href="mailto:anso@mail.ru">anso@mail.ru</a>'.
 
  
 
@@ -110,8 +110,8 @@ AFlags describes, which parts of hyper-link must be included into
 VISIBLE part of the link:
 
 For example, if \[durlAddr\] then hyper link
-'www.RegExpStudio.com/contacts.htm' will be decorated as '&lt;a
-href="http://www.RegExpStudio.com/contacts.htm"&gt;www.RegExpStudio.com&lt;/a&gt;'
+'www.RegExpStudio.com/contacts.htm' will be decorated as '<a
+href="http://www.RegExpStudio.com/contacts.htm">www.RegExpStudio.com</a>'
 
  
 
@@ -160,10 +160,10 @@ function DecorateEMails
 
  
 
-Replaces all syntax correct e-mails with '&lt;a
-href="mailto:ADDR"&gt;ADDR&lt;/a&gt;'. For example, replaces
-'anso@mail.ru' with '&lt;a
-href="mailto:anso@mail.ru"&gt;anso@mail.ru&lt;/a&gt;'.
+Replaces all syntax correct e-mails with '<a
+href="mailto:ADDR">ADDR</a>'. For example, replaces
+'anso@mail.ru' with '<a
+href="mailto:anso@mail.ru">anso@mail.ru</a>'.
 
  
 

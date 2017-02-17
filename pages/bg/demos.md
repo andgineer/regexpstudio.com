@@ -2,11 +2,9 @@
 layout: page
 lang: bg
 ref: demos
-title: Демонстрационната програма
+title: Примери за използване
 permalink: /bg/tregexpr_testrexp.html
 ---
-
-### Примери за използване
 
 #### Прости примери
 

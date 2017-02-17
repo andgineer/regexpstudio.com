@@ -377,7 +377,7 @@ the 'foobar'
 #### Metacharacters - backreferences
 
 Metacharacters \\1 through \\9 are interpreted as backreferences.
-\\&lt;n&gt; matches previously matched subexpression \#&lt;n&gt;.
+\\<n> matches previously matched subexpression \#<n>.
 
 Examples:
 

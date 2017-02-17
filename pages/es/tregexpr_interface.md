@@ -135,13 +135,13 @@ por mayor compatibilidad con Perl) y acepta más de un dígito.
 Si es necesario incluir en la plantilla los símbolos '$' o '\\', usar el
 prefijo '\\'
 
-Ejemplo: '1\\$ es $2\\\\rub\\\\' -&gt; '1$ es &lt;Match\[2\]&gt;\\rub\\'
+Ejemplo: '1\\$ es $2\\\\rub\\\\' -> '1$ es <Match\[2\]>\\rub\\'
 
 Si hay que incluir un dígito después de '$n' se debe delimitar n con
 llaves '{}'.
 
-Ejemplo: 'a$12bc' -&gt; 'a&lt;Match\[12\]&gt;bc', 'a${1}2bc' -&gt;
-'a&lt;Match\[1\]&gt;2bc'.
+Ejemplo: 'a$12bc' -> 'a<Match\[12\]>bc', 'a${1}2bc' ->
+'a<Match\[1\]>2bc'.
 
  
 
@@ -496,7 +496,7 @@ cerrando sin el correspondiente '(' de apertura.
 
  
 
-Si el resultado es &lt;&gt; 0, entonces ASubExprs puede contener items
+Si el resultado es <> 0, entonces ASubExprs puede contener items
 vacíos o ilegales
 
  

@@ -394,8 +394,8 @@ beinhalten
 Metazeichen - Rückwärtsreferenzen
 
 Die Metacharacters \\1 bis \\9 werden in Suchmustern interpretiert als
-Rückwärtsreferenzen. \\&lt;n&gt; findet einen zuvor bereits gefundenen
-Teilausdruck \#&lt;n&gt;.
+Rückwärtsreferenzen. \\<n> findet einen zuvor bereits gefundenen
+Teilausdruck \#<n>.
 
 Beispiele:
 

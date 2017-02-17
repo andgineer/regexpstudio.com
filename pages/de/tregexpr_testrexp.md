@@ -37,8 +37,8 @@ Funktionen um reine URLs in HTML-Anker (aka Links) umzuwandeln.
 Beispiel: Ersetze 'http://regexpstudio.com' mit
 href="https://regexpstudio.com"'
 
-oder 'anso@mail.ru' mit '&lt;a
-href="mailto:anso@mail.ru"&gt;anso@mail.ru&lt;/a&gt;'.
+oder 'anso@mail.ru' mit '<a
+href="mailto:anso@mail.ru">anso@mail.ru</a>'.
 
 <a name="decorateurls"></a>
 ### Funktionen DecorateURLs
@@ -56,8 +56,8 @@ Gibt den Eingabetext AText mit umgewandelten URLs zurück
 
 AFlags welche gefundenen Teile der URL müssen in den sichtbaren Teil.
 Beispiel: Wenn \[durlAddr\] dann wird die URL
-'http://anso.da.ru/index.htm' zu '&lt;a
-href="http://anso.da.ru/index.htm"&gt;anso.da.ru&lt;/a&gt;'
+'http://anso.da.ru/index.htm' zu '<a
+href="http://anso.da.ru/index.htm">anso.da.ru</a>'
 
 type
 
@@ -88,9 +88,9 @@ durlParam        URL Parameters (wie '?ID=2&User=13')
  
 <a name="decorateemails"></a>
 ### Funktionen DecorateEMails
-Ersetzt alle korrekten E-Mails-URLs mit '&lt;a
-href="mailto:ADDR"&gt;ADDR&lt;/a&gt;' Beispiel: Ersetze 'anso@mail.ru'
-mit '&lt;a href="mailto:anso@mail.ru"&gt;anso@mail.ru&lt;/a&gt;'.
+Ersetzt alle korrekten E-Mails-URLs mit '<a
+href="mailto:ADDR">ADDR</a>' Beispiel: Ersetze 'anso@mail.ru'
+mit '<a href="mailto:anso@mail.ru">anso@mail.ru</a>'.
 
 function DecorateEMails (const AText : string) : string;
 

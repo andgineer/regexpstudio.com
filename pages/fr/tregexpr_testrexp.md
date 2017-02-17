@@ -46,9 +46,9 @@ standard en format HTML.
 
  
 
-Par exemple, remplace 'http://anso.da.ru'  avec  '&lt;a
-href="http://anso.da.ru"&gt;anso.da.ru&lt;/a&gt;' ou 'anso@mail.ru'
- avec  '&lt;a href="mailto:anso@mail.ru"&gt;anso@mail.ru&lt;/a&gt;'.
+Par exemple, remplace 'http://anso.da.ru'  avec  '<a
+href="http://anso.da.ru">anso.da.ru</a>' ou 'anso@mail.ru'
+ avec  '<a href="mailto:anso@mail.ru">anso@mail.ru</a>'.
 
  
 
@@ -80,8 +80,8 @@ AFlags décris quelle partie de l'hyperlien lien doit être inclus dans la
 partie VISIBLE du lien:
 
 Par exemple, si \[durlAddr\]  alors  hyperlien
-'http://anso.da.ru/index.htm'  sera décoré comme  '&lt;a
-href="http://anso.da.ru/index.htm"&gt;anso.da.ru&lt;/a&gt;'.
+'http://anso.da.ru/index.htm'  sera décoré comme  '<a
+href="http://anso.da.ru/index.htm">anso.da.ru</a>'.
 
  
 
@@ -134,9 +134,9 @@ Fonction Décorer les EMails
 
  
 
-Remplace les e-mails avec '&lt;a href="mailto:ADDR"&gt;ADDR&lt;/a&gt;'.
-Par exemple, remplace 'anso@mail.ru' avec '&lt;a
-href="mailto:anso@mail.ru"&gt;anso@mail.ru&lt;/a&gt;'.
+Remplace les e-mails avec '<a href="mailto:ADDR">ADDR</a>'.
+Par exemple, remplace 'anso@mail.ru' avec '<a
+href="mailto:anso@mail.ru">anso@mail.ru</a>'.
 
  
 

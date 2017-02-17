@@ -163,13 +163,13 @@ more Perl-compatibility) and accept more then one digit.
 
 If you want place into template raw '$' or '\\', use prefix '\\'
 
-Example: '1\\$ is $2\\\\rub\\\\' -&gt; '1$ is &lt;Match\[2\]&gt;\\rub\\'
+Example: '1\\$ is $2\\\\rub\\\\' -> '1$ is <Match\[2\]>\\rub\\'
 
 If you want to place raw digit after '$n' you must delimit n with curly
 braces '{}'.
 
-Example: 'a$12bc' -&gt; 'a&lt;Match\[12\]&gt;bc', 'a${1}2bc' -&gt;
-'a&lt;Match\[1\]&gt;2bc'.
+Example: 'a$12bc' -> 'a<Match\[12\]>bc', 'a${1}2bc' ->
+'a<Match\[1\]>2bc'.
 
  
 
@@ -543,7 +543,7 @@ corresponding opening '('.
 
  
 
-If Result &lt;&gt; 0, then ASubExprs can contain empty items or illegal
+If Result <> 0, then ASubExprs can contain empty items or illegal
 ones
 
  

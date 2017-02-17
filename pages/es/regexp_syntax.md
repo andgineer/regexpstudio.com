@@ -449,8 +449,8 @@ Ejemplos:
 #### Metacaracteres - memorias (backreferences)
 
 Los metacaracteres \\1 a \\9 son interpretados como memorias.
-\\&lt;n&gt; encuentra la subexpresiуn previamente encontrada
-\#&lt;n&gt;.
+\\<n> encuentra la subexpresiуn previamente encontrada
+\#<n>.
 
  
 

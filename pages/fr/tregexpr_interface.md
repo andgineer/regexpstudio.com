@@ -248,16 +248,16 @@ caractère numérique.
 Si vous voulez placer le gabarit dans le modèle '$' ou '\\', utiliser le
 préfixe '\\'.
 
-Exemple: '1\\$ is $2\\\\rub\\\\' -&gt; '1$ est
-&lt;Match\[2\]&gt;\\rub\\'
+Exemple: '1\\$ is $2\\\\rub\\\\' -> '1$ est
+<Match\[2\]>\\rub\\'
 
  
 
 Si vous voulez placer un caractère numérique après '$n' vous devez
 délimiter n avec des accolades '{}'.
 
-Exemple: 'a$12bc' -&gt; 'a&lt;Match\[12\]&gt;bc', 'a${1}2bc' -&gt;
-'a&lt;Match\[1\]&gt;2bc'.
+Exemple: 'a$12bc' -> 'a<Match\[12\]>bc', 'a${1}2bc' ->
+'a<Match\[1\]>2bc'.
 
  
 
@@ -682,7 +682,7 @@ exemple d'utilisation dans le projet
 
  
 
-Si le résultat &lt;&gt; 0, alors ASubExprs peut contenir des items vide
+Si le résultat <> 0, alors ASubExprs peut contenir des items vide
 ou de items illégaux.
 
  

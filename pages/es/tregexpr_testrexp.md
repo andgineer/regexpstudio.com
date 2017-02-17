@@ -41,9 +41,9 @@ HTML.
 
  
 
-Por ejemplo, reemplaza 'http://anso.da.ru' con  '&lt;a
-href="http://anso.da.ru"&gt;anso.da.ru&lt;/a&gt;' o 'anso@mail.ru' con
-'&lt;a href="mailto:anso@mail.ru"&gt;anso@mail.ru&lt;/a&gt;'.
+Por ejemplo, reemplaza 'http://anso.da.ru' con  '<a
+href="http://anso.da.ru">anso.da.ru</a>' o 'anso@mail.ru' con
+'<a href="mailto:anso@mail.ru">anso@mail.ru</a>'.
 
  
 
@@ -75,8 +75,8 @@ AFlags indica qué parte del hipervínculo debe ser incluída en la parte
 VISIBLE del link:
 
 Por ejemplo, si el flag es \[durlAddr\] entonces el link
-'http://anso.da.ru/index.htm' será decorado como '&lt;a
-href="http://anso.da.ru/index.htm"&gt;anso.da.ru&lt;/a&gt;'
+'http://anso.da.ru/index.htm' será decorado como '<a
+href="http://anso.da.ru/index.htm">anso.da.ru</a>'
 
  
 
@@ -131,10 +131,10 @@ Funciуn DecorateEMails
 
  
 
-Reemplaza todos los e-mails de sintaxis correcta con '&lt;a
-href="mailto:ADDR"&gt;ADDR&lt;/a&gt;'. Por ejemplo, reemplaza
-'anso@mail.ru' con '&lt;a
-href="mailto:anso@mail.ru"&gt;anso@mail.ru&lt;/a&gt;'.
+Reemplaza todos los e-mails de sintaxis correcta con '<a
+href="mailto:ADDR">ADDR</a>'. Por ejemplo, reemplaza
+'anso@mail.ru' con '<a
+href="mailto:anso@mail.ru">anso@mail.ru</a>'.
 
  
 

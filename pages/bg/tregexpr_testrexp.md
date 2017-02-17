@@ -37,9 +37,9 @@ DecorateURLs   DecorateEMails
 Функции за създаване на хипервръзки при конвертиране на обикновен текст
 в HTML.
 
-Например, заменя 'http://anso.da.ru'  с  '&lt;a
-href="http://anso.da.ru"&gt;anso.da.ru&lt;/a&gt;' или 'anso@mail.ru' с
-'&lt;a href="mailto:anso@mail.ru"&gt;anso@mail.ru&lt;/a&gt;'.
+Например, заменя 'http://anso.da.ru'  с  '<a
+href="http://anso.da.ru">anso.da.ru</a>' или 'anso@mail.ru' с
+'<a href="mailto:anso@mail.ru">anso@mail.ru</a>'.
 
 функция DecorateURLs
 
@@ -58,8 +58,8 @@ AFlags описва кои части от хипервръзката да се 
 част:
 
 Например, ако е \[durlAddr\], то хипервръзката
-'http://anso.da.ru/index.htm' ще се форматира като '&lt;a
-href="http://anso.da.ru/index.htm"&gt;anso.da.ru&lt;/a&gt;'
+'http://anso.da.ru/index.htm' ще се форматира като '<a
+href="http://anso.da.ru/index.htm">anso.da.ru</a>'
 
 type
 
@@ -89,9 +89,9 @@ durlParam                URL params (like '?ID=2&User=13')
 
 функция DecorateEMails
 
-Заменя всички синтактически правилни e-mail адреси с '&lt;a
-href="mailto:ADDR"&gt;ADDR&lt;/a&gt;'. Например, заменя 'anso@mail.ru'
- с '&lt;a href="mailto:anso@mail.ru"&gt;anso@mail.ru&lt;/a&gt;'.
+Заменя всички синтактически правилни e-mail адреси с '<a
+href="mailto:ADDR">ADDR</a>'. Например, заменя 'anso@mail.ru'
+ с '<a href="mailto:anso@mail.ru">anso@mail.ru</a>'.
 
 function DecorateEMails (const AText : string) : string;
 

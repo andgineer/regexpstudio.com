@@ -341,7 +341,7 @@ Exemples:
 #### Métacaractères - Références Précédentes
 
 Les Métacaractères \\1 jusqu'а \\9 sont interprétés comme des références
-précédentes. \\&lt;n&gt; compare la sous expression \#&lt;n&gt;
+précédentes. \\<n> compare la sous expression \#<n>
 précédente trouvé.
 
 Exemples:

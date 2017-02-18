@@ -62,12 +62,12 @@ begin
 end.
 {% endhighlight %}
 
-(\* Beachte: Die Übersetzung eines Regulären Ausdruckes beansprucht
+Beachte: Die Übersetzung eines Regulären Ausdruckes beansprucht
 etwas Zeit während der Zuweisung. Wenn Du also diese Funktion öfters
 ausführst, dann erzeugst Du damit unnötigen Aufwand. Wenn der Reguläre
 Ausdruck also konstant bleibt, dann kannst Du dies beträchtlich
 optimieren, indem Du diese Zuweisung nur während der
-Initialisierungsphase Deines Projektes ausführst. \*)
+Initialisierungsphase Deines Projektes ausführst.
 
 {% highlight pascal linenos %}
 // Dieses einfache Beispie extrahiert Telefonnummern und

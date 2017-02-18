@@ -1,0 +1,1 @@
+Thanks to "Simeon Lilov" <slilov@iks.nat.bg> for the translation

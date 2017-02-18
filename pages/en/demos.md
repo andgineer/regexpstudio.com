@@ -6,37 +6,34 @@ title: Demos
 permalink: /en/demos.html
 ---
 
-First of all I recommend You to read [article with usage illustrations](http://masterandrey.com/posts/en/text_processing_from_birds_eye_view/).
+First of all I recommend You to read 
+[article with usage illustrations](http://masterandrey.com/posts/en/text_processing_from_birds_eye_view/).
 
 Please, note that there are localized demos available (with comments in
-source code on national languages). This localized versions distributed
+source code on national languages). 
+
+This localized versions distributed
 in localized full TRegExpr packages, and in separate localized
 documentation packages (when You unpack this documentation package in
 TRegExpr directory the localized demos overwrite English ones).
 
-Demos\\TRegExprRoutines
+Demos\TRegExprRoutines
 
 very simple examples, see comments inside the unit
 
-Demos\\TRegExprClass
+Demos\TRegExprClass
 
 slightly more complex examples, see comments inside the unit
 
- 
-
-Demos\\Text2HTML
+Demos\Text2HTML
 
 see [description](#text2html.html)
-
- 
 
 If You don't familiar with regular expression, please, take a look at
 the [r.e.syntax](regexp_syntax.html) topic.
 
 TRegExpr interface described in [TRegExpr
 interface](tregexpr_interface.html).
-
- 
 
 Note
 
@@ -45,10 +42,6 @@ Delphi 4 or higher. While compiling in Delphi 3 or Delphi 2 you'll
 receive some error messages about unknown properties. You may ignore it
 - this properties is needed only for resizing and justification of
 components then form change it's size.
-
- 
-
- 
 
 Text2HTML
 =========

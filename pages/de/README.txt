@@ -1,0 +1,1 @@
+Thanks to "Martin Baur" <martin.baur@mindpower.com> for the translation

@@ -3,7 +3,7 @@ layout: page
 lang: bg
 ref: demos
 title: Примери за използване
-permalink: /bg/tregexpr_testrexp.html
+permalink: /bg/demos.html
 ---
 
 #### Прости примери
@@ -33,45 +33,51 @@ ReplaceRegExpr ('product', 'Take a look at product. product is the best
 
 Това дава в ръцете ви мощността на цялата библиотека.
 
-// Тази проста функция извлича всички e-mail адреси от входния стринг
-// и връща техният списък в резултантния стринг
+* 1
+
+Тази проста функция извлича всички e-mail адреси от входния стринг
+и връща техният списък в резултантния стринг:
 
 {% highlight pascal linenos %}
 function ExtractEmails (const AInputString : string) : string;
-const
+    const
          EmailRE = '\[\_a-zA-Z\\d\\-\\.\]+@\[\_a-zA-Z\\d\\-\]+(\\.\[\_a-zA-Z\\d\\-\]+)+'
-var
+    var
          r : TRegExpr;
-begin
+    begin
          Result := ";
          r := TRegExpr.Create; // Създаваме обекта
          try // гарантира освобождаването на паметта
-                         r.Expression := EmailRE;
-                         // при това присвояване RE се компилира автоматично
-                         // ако има грешка, възниква Exception
-                         if r.Exec (AInputString) then
-                                         REPEAT
-                                                         Result := Result + r.Match \[0\] + ', ';
-                                         UNTIL not r.ExecNext;
-                         finally r.Free;
+            r.Expression := EmailRE;
+            // при това присвояване RE се компилира автоматично
+            // ако има грешка, възниква Exception
+            if r.Exec (AInputString) then
+                REPEAT
+                    Result := Result + r.Match \[0\] + ', ';
+                UNTIL not r.ExecNext;
+            finally r.Free;
          end;
-end;
+    end;
 begin
          ExctractEmails ('My e-mails is anso@mail.ru and anso@usa.net');
          // връща 'anso@mail.ru, anso@usa.net, '
 end.
-
-// Забележка: компилирането на RE при присвояването й
-// отнема време. Затова ако използвате тази функция многократно,
-// ще се получи значително забавяне.
-// Значително оптимизиране се постига ако по-рано създадете
-// TRegExpr и още при инициализирането компилирате RE.
 {% endhighlight %}
+Забележка: компилирането на RE при присвояването й отнема време. 
+
+Затова ако използвате тази функция многократно,
+ще се получи значително забавяне.
+
+Значително оптимизиране се постига ако по-рано създадете
+TRegExpr и още при инициализирането компилирате RE.
+
+* 2
+
+Този прост пример извлича телефонен номер от входящия стринг
+и го разделя на съставни части (код на страната, на града и вътрешен номер).
+След това тези части се поставят в шаблон.
 
 {% highlight pascal linenos %}
-// Този прост пример извлича телефонен номер от входящия стринг
-// и го разделя на съставни части (код на страната, на града и вътрешен номер).
-// След това тези части се поставят в шаблон.
 function ParsePhone (const AInputString, ATemplate : string) : string;
 const
          IntPhoneRE = '(\\+\\d \*)?(\\(\\d+\\) \*)?\\d+(-\\d\*)\*';
@@ -102,10 +108,8 @@ end.
 TestRExp.dpr и [HyperLinkDecorator.pas](#hyperlinksdecorator.html).
 
 Вижте и статията ми в
-[Delphi3000.com](%60http://www.delphi3000.com/member.asp?ID=1300',%60',1)
-(на английски език) и [Delphi
-Kingdom](%60http://delphi.vitpc.com/mastering/strings_birds_eye_view.htm',%60',1)
- (на руски език).
+[на английски език](http://masterandrey.com/posts/en/text_processing_from_birds_eye_view/) 
+и [на руски език](http://masterandrey.com/posts/ru/text_processing_from_birds_eye_view/).
 
  
 

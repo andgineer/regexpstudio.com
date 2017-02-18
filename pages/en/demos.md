@@ -3,10 +3,10 @@ layout: page
 lang: en
 ref: demos
 title: Demos
-permalink: /demos.html
+permalink: /en/demos.html
 ---
 
-First of all I recommend You to read [article with usage illustrations](http://masterandrey.com/text_processing_from_birds_eye_view/).
+First of all I recommend You to read [article with usage illustrations](http://masterandrey.com/posts/en/text_processing_from_birds_eye_view/).
 
 Please, note that there are localized demos available (with comments in
 source code on national languages). This localized versions distributed

@@ -1,0 +1,118 @@
+de:
+  home:
+    name: "Kopf"
+    url: "/de/index.html"
+  syntax:
+    name: "Syntax"
+    url: "/de/regexp_syntax.html"
+  interface:
+    name: "Interface"
+    url: "/de/tregexpr_interface.html"
+  demos:
+    name: "Beispiele"
+    url: "/de/demos.html"
+  test:
+    name: "Demo-Projekt"
+    url: "/de/tregexpr_testrexp.html"
+  faq:
+    name: "FAQ"
+    url: "/de/faq.html"
+bg:
+  home:
+    name: "Основен"
+    url: "/bg/index.html"
+  syntax:
+    name: "Синтаксис"
+    url: "/bg/regexp_syntax.html"
+  interface:
+    name: "Интерфейс"
+    url: "/bg/tregexpr_interface.html"
+  demos:
+    name: "Примери"
+    url: "/bg/demos.html"
+  test:
+    name: "Демонстрационна програма"
+    url: "/bg/tregexpr_testrexp.html"
+  faq:
+    name: "FAQ"
+    url: "/bg/faq.html"
+fr:
+  home:
+    name: "Principal"
+    url: "/fr/index.html"
+  syntax:
+    name: "Syntax"
+    url: "/fr/regexp_syntax.html"
+  interface:
+    name: "Interface"
+    url: "/fr/tregexpr_interface.html"
+  demos:
+    name: "Illustrations"
+    url: "/fr/demos.html"
+  test:
+    name: "Projet Demo"
+    url: "/fr/tregexpr_testrexp.html"
+  faq:
+    name: "FAQ"
+    url: "/fr/faq.html"
+es:
+  home:
+    name: "Principal"
+    url: "/es/index.html"
+  syntax:
+    name: "Syntax"
+    url: "/es/regexp_syntax.html"
+  interface:
+    name: "Interface"
+    url: "/es/tregexpr_interface.html"
+  demos:
+    name: "Ejemplos"
+    url: "/es/demos.html"
+  test:
+    name: "Proyecto Demo"
+    url: "/es/tregexpr_testrexp.html"
+  faq:
+    name: "FAQ"
+    url: "/es/faq.html"
+en:
+  home:
+    name: "Home"
+    url: "/index.html"
+  syntax:
+    name: "Syntax"
+    url: "/regexp_syntax.html"
+  interface:
+    name: "Interface"
+    url: "/tregexpr_interface.html"
+  demos:
+    name: "Examples"
+    url: "/demos.html"
+  faq:
+    name: "FAQ"
+    url: "/faq.html"
+  about:
+    name: "About me"
+    url: "/about.html"
+ru:
+  home:
+    name: "Главная"
+    url: "/ru/index.html"
+  syntax:
+    name: "Синтаксис"
+    url: "/ru/regexp_syntax.html"
+  interface:
+    name: "Интерфейс"
+    url: "/ru/tregexpr_interface.html"
+  demos:
+    name: "Примеры"
+    url: "/ru/demos.html"
+  test:
+    name: "Демо-проект"
+    url: "/ru/tregexpr_testrexp.html"
+  faq:
+    name: "ЧаВо"
+    url: "/ru/faq.html"
+  about:
+    name: "Обо мне"
+    url: "/ru/about.html"
+

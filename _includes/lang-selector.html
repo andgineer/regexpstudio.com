@@ -2,7 +2,7 @@
 {% for p in posts %}
     {% if p.lang != page.lang%}
         <a href="{{ p.url }}" class="{{ p.lang }}">
-            <span class="badge">{{ site.lang_names[p.lang] }}</span>
+            <span class="badge">{{ site.data.languages[p.lang] }}</span>
         </a>
     {% endif %}
 {% endfor %}
@@ -11,7 +11,7 @@
 {% for p in pages %}
     {% if p.lang != page.lang %}
         <a href="{{ p.url }}" class="{{ p.lang }}">
-            <span class="badge">{{ site.lang_names[p.lang] }}</span>
+            <span class="badge">{{ site.data.languages[p.lang] }}</span>
         </a>
     {% endif %}
 {% endfor %}

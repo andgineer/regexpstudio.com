@@ -3,7 +3,7 @@ layout: page
 lang: en
 ref: about
 title: About
-permalink: /about.html
+permalink: /en/about.html
 ---
 
 I'm software developer from St-Petersburg, Russia

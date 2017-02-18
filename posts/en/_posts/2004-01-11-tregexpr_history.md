@@ -1,6 +1,6 @@
 ---
 layout: post
-lang: en
+lang: ru
 ref: tregexpr_history
 comments: false
 title: "TRegExpr history"
@@ -52,18 +52,18 @@ UseFirstCharSet mode) and FillFirstCharSet (many bugs).
 
  v. 0.947 2001.10.03
 ====================
-* (+) [Word boundary](#regexp_syntax.html#syntax_word_boundaries) (\\b &
+* (+) [Word boundary](regexp_syntax.html#syntax_word_boundaries) (\\b &
 \\B) metachar
 * (-) Bug in processing predefined char.classes in non-UseSetOfChar mode
 * (+) Spanish help - translated by Diego Calp (mail@diegocalp.com),
 Argentina
-* (+) [VersionMajor/Minor](#tregexpr_interface.html#tregexpr.version)
+* (+) [VersionMajor/Minor](tregexpr_interface.html#tregexpr.version)
 class method of TRegExpr ;)
 * (-) Bug in CompileRegExpr, Thanks to Oleg Orlov
 &lt;orlov@diasoft.ru&gt;
 * (^) Method RegExprSubExpressions wasn't compatible with D2-D3.
  Thanks to Eugene Tarasov for bug report.
-* (+) [Method Replace](#tregexpr_interface.html#tregexpr.replace) can now
+* (+) [Method Replace](tregexpr_interface.html#tregexpr.replace) can now
 do substitution as well
  Thanks to Warren Bare, Ken Friesen and many others who suggested it.
 * (+) Updated ReplaceRegExpr to use new Replace method functionality
@@ -92,13 +92,13 @@ only alpha as it was before. Thanks to Vadim Alexandrov.
 If You want to restore previous behaviour, reassign  RegExprWordChars
 (exclude '0123456789' from it).
 * (+) Full compatible with recommended at unicode.org implementation  of
-[modifier /m](#regexp_syntax.html#modifier_m), including DOS-styled line
+[modifier /m](regexp_syntax.html#modifier_m), including DOS-styled line
 separators (\\r\\n) mixed  with Unix styled (\\n) - see properties
-[LineSeparators](#regexp_syntax.html#syntax_line_separators),
+[LineSeparators](regexp_syntax.html#syntax_line_separators),
 LinePairedSeparator
 * (^) Attension! Behaviour of '.' was changed! Now if [modifier
-/s](#regexp_syntax.html#modifier_s) is off  it doesn't match all chars
-from [LineSeparators](#regexp_syntax.html#syntax_line_separators) and
+/s](regexp_syntax.html#modifier_s) is off  it doesn't match all chars
+from [LineSeparators](regexp_syntax.html#syntax_line_separators) and
 LinePairedSeparator (by  default \\r and \\n)
 * (^) Attension! To prevent unneeded recompilation of r.e., now
 assignment  to Expression or changing modifiers doesn't cause immidiate
@@ -107,14 +107,14 @@ wrong expression, but can  get exception while calling Exec\[Next\],
 Substitute, Dump, etc if there  are errors in Expression or other
 properties.
 * (+) Non-greedy style
-[iterators](#regexp_syntax.html#metacharacters_iterators) (like '\*?'),
-[modifier /g](#regexp_syntax.html#modifier_g).  Implemented with help
+[iterators](regexp_syntax.html#metacharacters_iterators) (like '\*?'),
+[modifier /g](regexp_syntax.html#modifier_g).  Implemented with help
 from Matthew Winter and Filip Jirsбk
-* (+) [modifier /x](#regexp_syntax.html#modifier_x) (eXtended syntax -
+* (+) [modifier /x](regexp_syntax.html#modifier_x) (eXtended syntax -
 allow formating r.e.)
 * (+) Procedure Compile to \[re\]compile r.e. Usefull for GUI r.e.
 editors  and so on (to check all properties validity).
-* (+) [FAQ](#faq.html) in documentation. I am too tired to answer to the
+* (+) [FAQ](faq.html) in documentation. I am too tired to answer to the
 same  questions again and again :(
 * (^) [DEMO project](#regexpstudio.html) have been significantly
 improved. Now this is the  real r.e. debugger! Thanks to Jon Smith for
@@ -127,11 +127,11 @@ example of TRegExpr using
 to Juergen Schroth
 * (^) 'ComplexBraces' now is defined by default
 * (+) Kit Eason sent to me many examples for
-"[syntax](#regexp_syntax.html)" help section and I decided to complitely
+"[syntax](regexp_syntax.html)" help section and I decided to complitely
 rewrite this section. I hope, You'll enjoy the results ;)
 * (+) The \\A and \\Z metacharacters are just like "^'' and "$'', except
 that they won't match multiple times when the [modifier
-/m](#regexp_syntax.html#modifier_m) is used
+/m](regexp_syntax.html#modifier_m) is used
 
  v. 0.938 2000.07.23
 ====================
@@ -152,7 +152,7 @@ didn't catch right strings.
  v. 0.936 2000.04.22
 ====================
 * (+) Back references, like '&lt;font size=(\['"\]?)(\\d+)\\1&gt;' see
-[syntax description](#regexp_syntax.html)
+[syntax description](regexp_syntax.html)
 * (+) Wide hex char support, like '\\x{263a}'
 
  v. 0.935 2000.04.19 (by Yury Finkel)
@@ -231,16 +231,16 @@ too short in time. Wait for future versions of TRegExpr or
     implement it by youself and share with me ;)
 * (+) implemented case-insensitive modifier and way to work with other
 modifiers - see properties     Modifiers, ModifierR, ModifierI and
-[(?ismxr-ismxr)](#regexp_syntax.html#inline_modifiers)Perl extension.
+[(?ismxr-ismxr)](regexp_syntax.html#inline_modifiers)Perl extension.
 You may use global variables
-[RegExpr\*](#tregexpr_interface.html#modifier_defs) for assigning
+[RegExpr\*](tregexpr_interface.html#modifier_defs) for assigning
  default modifier values.
 * (+) property ExtSyntaxEnabled changed to 'r'-modifier (russian
-extensions - [see documentation](#regexp_syntax.html#modifier_r))
-* (+) implemented [(?\#comment)](#regexp_syntax.html#inline_comment)Perl
+extensions - [see documentation](regexp_syntax.html#modifier_r))
+* (+) implemented [(?\#comment)](regexp_syntax.html#inline_comment)Perl
 extension - very hard and usefull work ;)
 * (^) property MatchCount renamed to
-[SubExprMatchCount](#tregexpr_interface.html#subexprmatchcount). Sorry
+[SubExprMatchCount](tregexpr_interface.html#subexprmatchcount). Sorry
 for any inconvenients, but it's because new version works slightly
 different and if you used MatchCount in your programms you have to
 rethink it ! (see comments to this property)

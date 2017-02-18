@@ -3,7 +3,7 @@ layout: page
 lang: en
 ref: interface
 title: TRegExr interface
-permalink: /tregexpr_interface.html
+permalink: /en/tregexpr_interface.html
 ---
 
 ### Public methods and properties of TRegExpr class:

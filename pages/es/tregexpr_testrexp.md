@@ -2,13 +2,9 @@
 layout: page
 lang: es
 ref: tregexpr_testrexp
-title: Das Demo-Projekt (TestRExp)
+title: Proyecto Demo (TestRExp)
 permalink: /es/tregexpr_testrexp.html
 ---
-
-Proyecto Demo (TestRExp)
-
- 
 
 Programa simple para explorar y probar e.r., distribuída como cуdigo
 fuente (proyecto TestRExp.dpr) y TestRExp.exe.

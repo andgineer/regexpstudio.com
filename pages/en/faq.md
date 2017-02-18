@@ -3,7 +3,7 @@ layout: page
 lang: en
 ref: faq
 title: FAQ
-permalink: /faq.html
+permalink: /en/faq.html
 ---
 
 ### Q. I found a terrible bug: TRegExpr raises Access Violation exception!

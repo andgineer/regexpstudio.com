@@ -3,9 +3,9 @@
         <div class="container">
             <div class="row">
             <div class="col-sm-5">
-                <a href="{{ site.baseurl }}/" class="site-avatar"><img  class="avatar-img" src="{{ site.avatar }}" /></a>
+                <a href="{{ site.baseurl }}/{{ page.lang }}/index.html" class="site-avatar"><img  class="avatar-img" src="{{ site.avatar }}" /></a>
                 <div class="site-info">
-                    <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
+                    <h1 class="site-name"><a href="{{ site.baseurl }}/{{ page.lang }}/index.html">{{ site.name }}</a></h1>
                     <p class="site-description">{{ site.description }}</p>
                 </div>
             </div>
@@ -13,7 +13,7 @@
                 <div class="row">
                     <div class="col-sm-9">
                         <nav>
-                            {% for menu_item in site.top_menu[page.lang] %}
+                            {% for menu_item in site.data.menu[page.lang] %}
                                 <a href="{{ menu_item[1].url }}">{{ menu_item[1].name }}</a>
                             {% endfor %}
                         </nav>

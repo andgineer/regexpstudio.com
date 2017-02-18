@@ -95,13 +95,13 @@ begin
 end.
 {% endhighlight %}
 
-Etwas komplexere Beispiele 
+### Etwas komplexere Beispiele 
 
 Du findest komplexere Beispiele für den Gebrauch von TRegExpr in den
 Projekten [TestRExp.dpr](tregexpr_testrexp.html) und
 [HyperLinkDecorator.pas](hyperlinksdecorator.html).
 
-Beachte bitte auch meine kleinen [Artikel](http://masterandrey.com/text_processing_from_birds_eye_view/).
+Beachte bitte auch meine kleinen [Artikel](http://masterandrey.com/posts/en/text_processing_from_birds_eye_view/).
 
 Ausführliche Erklärung
 

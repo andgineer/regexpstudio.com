@@ -2,12 +2,9 @@
 layout: page
 lang: bg
 ref: tregexpr_testrexp
-title: Das Demo-Projekt (TestRExp)
+title: Демонстрационна програма (TestRExp)
 permalink: /bg/tregexpr_testrexp.html
 ---
-
-Демонстрационна програма (TestRExp)
-===================================
 
 Това е проста програма, която можете да използвате за изследване и
 тестване на RE. Разпространява се като сорс (проекта TestRExpr.dpr) и

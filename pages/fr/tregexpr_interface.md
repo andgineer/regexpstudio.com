@@ -60,7 +60,7 @@ RegExprModifierR.
 
 Valeur par Défaut True
  
-property ModifierS : boolean
+    property ModifierS : boolean
 
 Fonction
 
@@ -68,25 +68,9 @@ Modifier /s - '.' veut dire n'importe quel caractère (normalement il ne
 comprend pas les LinesSeparators et LinePairedSeparator), initialisé
 avec la valeur RegExprModifierS.
 
-Valeurs Possible
+Valeur par Défaut True
 
-[TABLE]
-
-[TABLE]
-
-Valeur par Défaut
-
-True
-
-Erreur
-
-Aucune
-
- 
-
- 
-
-property ModifierG : boolean;
+    property ModifierG : boolean;
 
 Fonction
 
@@ -95,23 +79,9 @@ non-vorace, donc si ModifierG = Faux, alors '\*' est comme '\*?', tous
 les '+' comme '+?' et ainsi de suite, initialisé avec la valeur
 RegExprModifierG.
 
-Valeurs Possible
+Valeur par Défaut True
 
-[TABLE]
-
-[TABLE]
-
-Valeur par Défaut
-
-True
-
-Erreur
-
-Aucune
-
- 
-
-property ModifierM : boolean;
+    property ModifierM : boolean;
 
 Fonction
 
@@ -120,50 +90,18 @@ changer \`^' et \`$' de correspondre au début ou а la fin de la chaîne,
 а partir d'une nouvelle ligne ou а la fin d'une ligne, initialisé avec
 la valeur RegExprModifierM.
 
-Valeurs Possible
+Valeur par Défaut False
 
-[TABLE]
-
-[TABLE]
-
-Valeur par Défaut
-
-False
-
-Erreur
-
-Aucune
-
- 
-
- 
-
-property ModifierX : boolean;
+    property ModifierX : boolean;
 
 Fonction
 
 Modifier /x - ("syntaxe étendue"), initialisé avec la
 valeurRegExprModifierX.
 
-Valeurs Possible
+Valeur par Défaut False
 
-[TABLE]
-
-[TABLE]
-
-Valeur par Défaut
-
-False
-
-Erreur
-
-Aucune
-
- 
-
- 
-
-function Exec (const AInputString : string) : boolean;
+    function Exec (const AInputString : string) : boolean;
 
 Fonction
 
@@ -173,11 +111,8 @@ Note
 
 La fonction Exec stocke AInputString dans la propriété InputString.
 
- 
 
- 
-
-function ExecNext : boolean;
+    function ExecNext : boolean;
 
 Fonction
 
@@ -189,17 +124,12 @@ fonctionne comme
 
 Exec (AString);
 
-if MatchLen \[0\] = 0 then ExecPos(MatchPos \[0\] + 1)
-
-else ExecPos (MatchPos \[0\] + MatchLen \[0\]);
+    if MatchLen \[0\] = 0 then ExecPos(MatchPos \[0\] + 1)
+        else ExecPos (MatchPos \[0\] + MatchLen \[0\]);
 
 mais est plus simple !
 
- 
-
- 
-
-function ExecPos (AOffset: integer = 1) : boolean;
+    function ExecPos (AOffset: integer = 1) : boolean;
 
 Fonction
 
@@ -207,11 +137,7 @@ Trouve une occurrence de recherche pour de départ de InputString а
 partir de la position Aoffset (AOffset=1 - premier caractère de
 InputString).
 
- 
-
- 
-
-property InputString : string;
+    property InputString : string;
 
 Fonction
 
@@ -222,11 +148,7 @@ Note
 
 Une modification а cette propriété efface les propriétés Match\* !
 
- 
-
- 
-
-function Substitute (const ATemplate : string) : string;
+    function Substitute (const ATemplate : string) : string;
 
 Fonction
 
@@ -243,27 +165,21 @@ Depuis la  v.0.929 '$' utiliser plutфt '\\' (pour les futures extensions
 et pour plus de compatibilité avec Perl) pour accepter plus d'un
 caractère numérique.
 
- 
-
 Si vous voulez placer le gabarit dans le modèle '$' ou '\\', utiliser le
 préfixe '\\'.
 
-Exemple: '1\\$ is $2\\\\rub\\\\' -> '1$ est
-<Match\[2\]>\\rub\\'
-
- 
+Exemple:
+    
+    '1\\$ is $2\\\\rub\\\\' -> '1$ est <Match\[2\]>\\rub\\'
 
 Si vous voulez placer un caractère numérique après '$n' vous devez
 délimiter n avec des accolades '{}'.
 
-Exemple: 'a$12bc' -> 'a<Match\[12\]>bc', 'a${1}2bc' ->
-'a<Match\[1\]>2bc'.
+Exemple: 
 
- 
+    'a$12bc' -> 'a<Match\[12\]>bc', 'a${1}2bc' -> 'a<Match\[1\]>2bc'.
 
- 
-
-procedure Split (AInputStr : string; APieces : TStrings);
+    procedure Split (AInputStr : string; APieces : TStrings);
 
 Fonction
 
@@ -273,12 +189,7 @@ Note
 
 Appelé au niveau interne Exec\[Next\].
 
- 
-
- 
-
-function Replace (AInputStr : string; const AReplaceStr : string) :
-string;
+    function Replace (AInputStr : string; const AReplaceStr : string) : string;
 
 Fonction
 
@@ -289,11 +200,7 @@ Note
 
 Appelé au niveau interne Exec\[Next\].
 
- 
-
- 
-
-property SubExprMatchCount : integer; // LectureSeulement
+    property SubExprMatchCount : integer; // LectureSeulement
 
 Fonction
 
@@ -307,31 +214,19 @@ trouvé (Exec\* а retourné vrai), alors SubExprMatchCount=0, si aucune
 sous expression et aucune e.r. complète a été trouvé (Exec\* retourne
 Faux) alors SubExprMatchCount=-1.
 
- 
-
 Noter que quelques sous expressions peuvent ne pas être trouvées et pour
 de telles sous expressions, MathPos=MatchLen=-1 and Match=''.
 
- 
+Par exemple: 
 
-Par exemple: L'Expression := '(1)?2(3)?';
+    L'Expression := '(1)?2(3)?';
+    Exec ('123'): SubExprMatchCount=2, Match\[0\]='123', \[1\]='1', \[2\]='3'
+    Exec ('12'): SubExprMatchCount=1, Match\[0\]='12', \[1\]='1'
+    Exec ('23'): SubExprMatchCount=2, Match\[0\]='23', \[1\]='', \[2\]='3'
+    Exec ('2'): SubExprMatchCount=0, Match\[0\]='2'
+    Exec ('7') - return False: SubExprMatchCount=-1
 
-Exec ('123'): SubExprMatchCount=2, Match\[0\]='123', \[1\]='1',
-\[2\]='3'
-
-Exec ('12'): SubExprMatchCount=1, Match\[0\]='12', \[1\]='1'
-
-Exec ('23'): SubExprMatchCount=2, Match\[0\]='23', \[1\]='', \[2\]='3'
-
-Exec ('2'): SubExprMatchCount=0, Match\[0\]='2'
-
-Exec ('7') - return False: SubExprMatchCount=-1
-
- 
-
- 
-
-property MatchPos \[Idx : integer\] : integer; // LectureSeulement
+    property MatchPos \[Idx : integer\] : integer; // LectureSeulement
 
 Fonction
 
@@ -348,11 +243,7 @@ Valeur de Retour
 Retourne -1 si dans l'e.r. il n'y a pas de sous expression trouvée dans
 la chaîne.
 
- 
-
- 
-
-property MatchLen \[Idx : integer\] : integer; // Lecture Seulement
+    property MatchLen \[Idx : integer\] : integer; // Lecture Seulement
 
 Fonction
 
@@ -365,11 +256,7 @@ Valeur de Retour
 Retourne -1 si dans l'e.r. il n'y a pas de sous expression ou que cette
 expression n'as pas été trouvé dans la chaîne.
 
- 
-
- 
-
-property Match \[Idx : integer\] : string; // Lecture Seulement
+    property Match \[Idx : integer\] : string; // Lecture Seulement
 
 Fonction
 
@@ -380,11 +267,7 @@ Valeur de Retour
 Retourne '' si dans l'e.r. il n'y a pas de sous expression ou que la
 sous expression n'as pas été trouvé dans la chaîne.
 
- 
-
- 
-
-function LastError : integer;
+    function LastError : integer;
 
 Fonction
 
@@ -392,54 +275,34 @@ Retourne l'ID de la dernière erreur, 0 s'il y a aucune erreur
 (inutilisable si l'erreur a générée une erreur d'exception) et efface la
 valeur interne а 0 (pas d'erreur).
 
- 
-
- 
-
-function ErrorMsg (AErrorID : integer) : string; virtual;
+    function ErrorMsg (AErrorID : integer) : string; virtual;
 
 Fonction
 
 Retourne un message d'erreur pour l'erreur avec ID = AErrorID.
 
- 
-
- 
-
-property CompilerErrorPos : integer; // Lecture Seulement
+    property CompilerErrorPos : integer; // Lecture Seulement
 
 Fonction
 
 Retourne la position dans l'e.r. ou le compilateur a stoppé. Très
 pratique pour diagnostiquer les erreurs.
 
- 
-
- 
-
-property SpaceChars : RegExprString
+    property SpaceChars : RegExprString
 
 Fonction
 
 Contient les caractères  traités comme \\s (initialement remplit avec
 les valeurs de la variable globale RegExprSpaceChars).
 
- 
-
- 
-
-property WordChars : RegExprString;
+    property WordChars : RegExprString;
 
 Fonction
 
 Contient les caractères traités comme  \\w (initialement remplit avec
 les valeurs de la variable globale RegExprWordChars).
 
- 
-
- 
-
-property LineSeparators : RegExprString
+    property LineSeparators : RegExprString
 
 Fonction
 
@@ -447,11 +310,7 @@ Les séparateurs de ligne (comme Unix \\n), initialement remplit avec les
 valeurs de la variable globale RegExprLineSeparators). Voir aussi a
 propos des séparateurs de ligne.
 
- 
-
- 
-
-property LinePairedSeparator : RegExprString
+    property LinePairedSeparator : RegExprString
 
 Fonction
 
@@ -470,29 +329,19 @@ accepter les séparateurs "\\x0D\\x0A" mais pas "\\x0D" ou "\\x0A" seul,
 alors assigner LineSeparators := '' (chaîne vide) et LinePairedSeparator
 := \#$d\#$a.
 
- 
-
 Par défaut le mode 'mixe' est utilisé (définit par défaut dans les
 constantes globales RegExprLine\[Paired\]Separator\[s\]): LineSeparators
 := \#$d\#$a; LinePairedSeparator := \#$d\#$a. Le comportement de ce mode
 est décris dans la section syntaxe.
 
- 
-
- 
-
-class function InvertCaseFunction  (const Ch : REChar) : REChar;
+    class function InvertCaseFunction  (const Ch : REChar) : REChar;
 
 Fonction
 
 Convertit Ch en majuscule si c'est minuscule et vice-versa (en utilisant
 les ajustement du système local).
 
- 
-
- 
-
-property InvertCase : TRegExprInvertCaseFunction;
+    property InvertCase : TRegExprInvertCaseFunction;
 
 Fonction
 
@@ -504,33 +353,19 @@ Note
 Crée une interdiction а la fonction RegExprInvertCaseFunction
 (InvertCaseFunction par défaut).
 
- 
-
- 
-
-procedure Compile;
+    procedure Compile;
 
 Fonction
 
 \[Re\]compile l'e.r. Très pratique pour les applications qui utilise les
 éditeurs graphique pour vérifier la validité des propriétés.
 
- 
-
- 
-
-function Dump : string;
+    function Dump : string;
 
 Fonction
 
 Crée pour le visionnement une e.r. compilée en une forme plus
 compréhensive.
-
- 
-
- 
-
- 
 
 ### Constantes Globales
 
@@ -565,26 +400,14 @@ Valeurs par défaut des Modifiers:
 
   // Valeur par défaut pour la propriété LinePairedSeparator
 
- 
-
- 
-
  RegExprInvertCaseFunction : TRegExprInvertCaseFunction =
 TRegExpr.InvertCaseFunction;
 
   // Valeur par défaut pour la propriété InvertCase
 
- 
+### Fonctions globales pratiques
 
- 
-
-Fonctions globales pratiques
-
- 
-
- 
-
-function ExecRegExpr (const ARegExpr, AInputStr : string) : boolean;
+    function ExecRegExpr (const ARegExpr, AInputStr : string) : boolean;
 
 Fonction
 
@@ -595,34 +418,20 @@ Note
 
 !Va lever une exception s'il y a une erreur de syntaxe dans ARegExpr.
 
- 
-
- 
-
-procedure SplitRegExpr (const ARegExpr, AInputStr : string; APieces :
-TStrings);
+    procedure SplitRegExpr (const ARegExpr, AInputStr : string; APieces : TStrings);
 
 Fonction
 
 Sépare AInputStr en pièces dans APieces par les occurrences de l'e.r.
 ARegExpr.
 
- 
-
- 
-
-function ReplaceRegExpr (const ARegExpr, AInputStr, AReplaceStr :
-string) : string;
+    function ReplaceRegExpr (const ARegExpr, AInputStr, AReplaceStr : string) : string;
 
 Fonction
 
 Retourne AInputStr avec l'occurrence de l'e.r. remplacé par AReplaceStr.
 
- 
-
- 
-
-function QuoteRegExprMetaChars (const AStr : string) : string;
+    function QuoteRegExprMetaChars (const AStr : string) : string;
 
 Fonction
 
@@ -634,12 +443,8 @@ Note
 Cette fonction est très pratique pour l'autogénération d'e.r. а partir
 d'entrée utilisateur.
 
- 
-
- 
-
-function RegExprSubExpressions (const ARegExpr : string; ASubExprs :
-TStrings; AExtendedSyntax : boolean = False) : integer;
+    function RegExprSubExpressions (const ARegExpr : string; ASubExprs :
+        TStrings; AExtendedSyntax : boolean = False) : integer;
 
 Fonction
 
@@ -650,76 +455,39 @@ Note
 Dans ASubExps chaque item représente une sous expression, а partir de la
 première jusqu'а la dernière, dans le format:
 
-[TABLE]
-
-[TABLE]
-
-[TABLE]
-
-[TABLE]
-
- 
+    Chaоne		-		texte de sous expression (sans les '()').
+    bas mot de l'objet		-		position de dйpart dans ARegExpr, incluant  '(' s'il existe ! (la premiиre position est 1).
+    haut mot de l'objet		-		La longueur, incluant le dйpart '(' et la fin ')' s'il existent!
+    AExtendedSyntax		-		Doit кtre Vrai si le modifier /x est а On durant l'utilisation de l'e.r.
 
 Utile pour les éditeurs avec interface graphique (Vous pouvez trouver un
 exemple d'utilisation dans le projet
-[TestRExp.dpr](#tregexpr_testrexp.html)).
+[TestRExp.dpr](tregexpr_testrexp.html)).
 
- 
+Code Résultat		Sens
 
-[TABLE]
-
- 
-
- 
-
-[TABLE]
-
-[TABLE]
-
-[TABLE]
-
-[TABLE]
+0 				Succčs. Pas de parenthčse non balancées trouvé.
+-1 				Il n'a pas assez de parenthčse de fermeture.
+-(n+1) 				Ŕ la position n était trouvé '[' sans fermeture ']'.
+n 				Ŕ la position n était trouvé  ')' sans ouverture '('.
 
  
 
 Si le résultat <> 0, alors ASubExprs peut contenir des items vide
 ou de items illégaux.
 
- 
-
- 
-
- 
-
-Type d'exception
-
- 
-
- 
+### Type d'exception
 
 Routine par Défaut des erreurs d'exception pour TRegExpr:
 
- 
+    ERegExpr = class (Exception)
+       public
+        ErrorCode : integer; // code d'erreur. Les erreurs de compilation du code sont avant 1000.
+        CompilerErrorPos : integer; // Position dans l'e.r. oщ l'erreur est survenue.
+      end;
 
-ERegExpr = class (Exception)
-
-   public
-
-    ErrorCode : integer; // code d'erreur. Les erreurs de compilation du
-code sont avant 1000.
-
-    CompilerErrorPos : integer; // Position dans l'e.r. oщ l'erreur est
-survenue.
-
-  end;
-
- 
-
- 
 <a name="unicode"></a>
 ### Comment utiliser les Unicode
-
- 
 
 TRegExpr supporte maintenant les UniCode, mais il travaille très
 lentement.

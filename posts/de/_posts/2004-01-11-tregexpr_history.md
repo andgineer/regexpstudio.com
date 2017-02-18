@@ -1,6 +1,6 @@
 ---
 layout: post
-lang: ru
+lang: de
 ref: tregexpr_history
 comments: false
 title: "TRegExpr history"

@@ -36,48 +36,38 @@ la chaîne de destination. Relativement simple, n'est-ce pas ?
 
 Vous pouvez obliger les métacaractères ou les Séquences d'échappements а
 être interprétés littéralement avec un 'échappement' en les précédents
-avec une barre oblique inverse "\\", par exemple: le métacaractère "^"
-normalement se compare au début de ligne, mais "\\^" se compare au
-caractère "^", "\\\\" se compare а "\\" et ainsi de suite.
+avec une barre oblique inverse "\", par exemple: le métacaractère "^"
+normalement se compare au début de ligne, mais "\^" se compare au
+caractère "^", "\\" se compare а "\" et ainsi de suite.
 
 Exemples:
-
-[TABLE]
-
-[TABLE]
+    foobar		compare la chaоne 'foobar'
+    \^FooBarPtr		compare la chaоne '^FooBarPtr'
 
 ### Séquences d'échappements
 
 Les caractères peuvent être spécifiés avec une Séquence d'échappement
-comme celles utilisé dans le langage C et Perl: "\\n'' se compare а une
-nouvelle ligne, "\\t'' а une tabulation, etc... Plus généralement,
-\\xnn, oщ nn est un nombre hexadécimal, se compare aux caractères ASCII
+comme celles utilisé dans le langage C et Perl: "\n'' se compare а une
+nouvelle ligne, "\t'' а une tabulation, etc... Plus généralement,
+\xnn, oщ nn est un nombre hexadécimal, se compare aux caractères ASCII
 avec une valeur dans nn. Si vous avez besoin des caractères large (wide,
-ou Unicode), vous pouvez utiliser '\\x{nnnn}', d'oщ 'nnnn' - un nombre
+ou Unicode), vous pouvez utiliser '\x{nnnn}', d'oщ 'nnnn' - un nombre
 de plus ou moins 4 caractères numérique hexadécimal.
 
-  \\xnn     caractère hexa avec le code nn.
-
-  \\x{nnnn} caractère hexa avec un code nnnn (un octet pour le texte
+  \xnn     caractère hexa avec le code nn.
+  \x{nnnn} caractère hexa avec un code nnnn (un octet pour le texte
 ordinaire et 2 octets pour l'Unicode).
-
-  \\t       Tabulation horizontale (HT/TAB), même chose que \\x09.
-
-  \\n       Nouvelle ligne (NL), même chose que \\x0a.
-
-  \\r       Retour de chariot (CR), même chose que \\x0d.
-
-  \\f       Avance page (FF), même chose que \\x0c.
-
-  \\a       Alarme (bell) (BEL), même chose que \\x07.
-
-  \\e       échappement (ESC), même chose que \\x1b.
+  \t       Tabulation horizontale (HT/TAB), même chose que \x09.
+  \n       Nouvelle ligne (NL), même chose que \x0a.
+  \r       Retour de chariot (CR), même chose que \x0d.
+  \f       Avance page (FF), même chose que \x0c.
+  \a       Alarme (bell) (BEL), même chose que \x07.
+  \e       échappement (ESC), même chose que \x1b.
 
 Exemples:
 
-[TABLE]
-
-[TABLE]
+    foo\x20bar		Se compare а 'foo bar' (noter l'espace dans le milieu).
+    \tfoobar		Se compare а 'foobar' prйdйfinis avec une tabulation.
 
 ### Classes de Caractères
 
@@ -91,9 +81,8 @@ liste.
 
 Exemples:
 
-[TABLE]
-
-[TABLE]
+    foob[aeiou]r		Trouve les chaоnes 'foobar', 'foober' etc... Mais pas 'foobbr', 'foobcr' etc...
+    foob[^aeiou]r		Trouve les chaоnes 'foobbr', 'foobcr' etc. Mais pas 'foobar', 'foober' etc...
 
 Dans une liste, le caractère "-'' est utilisé pour spécifier une
 distance (range), aussi a-z représente tous les caractères entre ''a''
@@ -106,19 +95,13 @@ liste ou le placer avec un échappement "\\".
 
 Exemples:
 
-[TABLE]
-
-[TABLE]
-
-[TABLE]
-
-[TABLE]
-
-[TABLE]
-
-[TABLE]
-
-[TABLE]
+    [-az]		Compare 'a', 'z' et '-.'
+    [az-]		Compare 'a', 'z' et '-.'
+    [a\-z]		Compare 'a', 'z' and '-.'
+    [a-z]		Trouve tous les 26 petits caractиres de 'a' а 'z'.
+    [\n-\x0D]		Trouve tous les #10,#11,#12,#13.
+    [\d-t]		Trouve n'importe quel caractиre numйrique, '-' ou 't'. 
+    []-a]		Trouve n'importe quel caractиre de ']' а 'a'.
 
 ### Métacaractères
 
@@ -128,25 +111,18 @@ décris plus bas.
 
 #### Métacaractères - Séparateurs de ligne
 
-[TABLE]
-
-[TABLE]
-
-[TABLE]
-
-[TABLE]
-
-[TABLE]
+    ^		Au dйbut.
+    $		А la fin.
+    \A		Dйbut du texte.
+    \Z		Fin du texte.
+    .		N'importe quel caractиre dans une ligne.
 
 Exemples:
 
-[TABLE]
-
-[TABLE]
-
-[TABLE]
-
-[TABLE]
+    ^foobar		Trouve la chaоne 'foobar' seulement s'il est au dйbut.
+    foobar$		Trouve la chaоne 'foobar' seulement s'il est а la fin.
+    ^foobar$		Trouve la chaоne 'foobar' seulement s'il y a ce mot.
+    foob.r		Trouve les chaоnes comme 'foobar', 'foobbr', 'foob1r' et ainsi de suite.
 
 Le métacaractère "^" par défaut garantie de trouver le mot seulement
 s'il est au début de la chaîne ou du texte, le métacaractère "$"
@@ -201,26 +177,21 @@ utilisé par défaut) ou définir vos propres séparateurs!
 
 #### Métacactères - classes prédéfinies
 
-[TABLE]
-
-[TABLE]
-
-[TABLE]
-
-[TABLE]
-
-[TABLE]
-
-[TABLE]
+  \w		Un caractиre alphanumйrique (incluant "_").
+  \W		Un caractиre non alphanumйrique.
+  \d		Un caractиre numйrique.
+  \D		Un caractиre non numйrique.
+  \s		N'importe quel espace (mкme chose que [ \t\n\r\f]).
+  \S		Tout ce qui n'est pas un espace.
 
 Vous pouvez utiliser \\w, \\d et \\s а l'intérieur de la classe de
 caractères.
 
 Exemples:
 
-[TABLE]
+    foob\dr		Trouve les chaоne comme 'foob1r', ''foob6r', ... Mais pas 'foobar', 'foobbr', ...
+    foob[\w\s]r		Trouve les chaоne comme 'foobar', 'foob r', 'foobbr', ... Mais pas 'foob1r', 'foob=r', ...
 
-[TABLE]
 
 TRegExpr utilise les propriétés SpaceChars et WordChars pour définir les
 classes de caractères \\w, \\W, \\s, \\S, aussi vous pouvez aisément les
@@ -233,29 +204,18 @@ autre type de métacaractère - les itérateurs. En utilisant ces
 métacaractères vous pouvez spécifier le nombre de fois que le caractère
 précédent sera représenté, métacaractères ou sous expression.
 
-[TABLE]
-
-[TABLE]
-
-[TABLE]
-
-[TABLE]
-
-[TABLE]
-
-[TABLE]
-
-[TABLE]
-
-[TABLE]
-
-[TABLE]
-
-[TABLE]
-
-[TABLE]
-
-[TABLE]
+  *		Zйro ou plus ("vorace"), similaire а {0,}.
+  +		Un ou plus ("vorace"), similaire а {1,}.
+  ?		Zйro or un ("vorace"), similaire а {0,1}.
+  {n}		Exactement n fois ("vorace").
+  {n,}		Au moins n fois ("vorace").
+  {n,m}		Au moins n fois mais pas plus de m fois ("vorace").
+  *?		Zйro ou plus ("non-vorace"), similaire а {0,}?.
+  +?		Un ou plus ("non-vorace"), similaire а {1,}?.
+  ??		Zйro ou un ("non-vorace"), similaire а {0,1}?.
+  {n}?		Exactement n fois ("non-vorace").
+  {n,}?		Au moins n fois ("non-vorace").
+  {n,m}?		Au moins n fois mais pas plus de m fois ("non-vorace").
 
 Donc, les nombres dans les accolades de la forme {n,m}, spécifie le
 nombre de fois minimum avec la lettre n et le nombre maximum avec la
@@ -269,17 +229,12 @@ comme un caractère régulier.
 
 Exemples:
 
-[TABLE]
-
-[TABLE]
-
-[TABLE]
-
-[TABLE]
-
-[TABLE]
-
-[TABLE]
+    foob.*r		Se compare а 'foobar',  'foobalkjdflkj9r' et 'foobr'.
+    foob.+r		Se compare а 'foobar', 'foobalkjdflkj9r' mais pas 'foobr'.
+    foob.?r		Se compare а 'foobar', 'foobbr' et 'foobr', mais pas 'foobalkj9r'.
+    fooba{2}r		Se compare а 'foobaar'.
+    fooba{2,}r		Se compare а 'foobaar', 'foobaaar', 'foobaaaar', etc...
+    fooba{2,3}r		Se compare а 'foobaar', ou 'foobaaar', mais pas 'foobaaaar'.
 
 Une petite explication а propos de l'utilisation des termes "non-vorace"
 et "vorace". "Vorace" prend autant que possible, "non-vorace" prend
@@ -334,9 +289,9 @@ TRegExpr.Substitute comme '$0' ou '$&').
 
 Exemples:
 
-[TABLE]
+    (foobar){8,10}		Se compare aux chaоnes qui contiennent 8, 9 ou 10 instances de 'foobar'.
+    foob([0-9]|a+)r		Trouve la chaоne 'foob0r', 'foob1r' , 'foobar', 'foobaar', 'foobaar', etc...
 
-[TABLE]
 
 #### Métacaractères - Références Précédentes
 
@@ -450,13 +405,11 @@ la sous expression sera affecté.
 
 Exemples:
 
-[TABLE]
+    (?i)Saint-Petersburg		Trouve 'Saint-petersburg' et 'Saint-Petersburg'.
+    (?i)Saint-(?-i)Petersburg		Trouve 'Saint-Petersburg' mais pas 'Saint-petersburg'.
+    (?i)(Saint-)?Petersburg		Trouve 'Saint-petersburg' et 'saint-petersburg'.
+    ((?i)Saint-)?Petersburg		Trouve 'saint-Petersburg', mais pas 'saint-petersburg' .
 
-[TABLE]
-
-[TABLE]
-
-[TABLE]
 
 (?\#text)
 

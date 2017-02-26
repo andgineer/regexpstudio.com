@@ -25,28 +25,26 @@ Et de plus, le projet inclus une bonne quantité d'exemple - utiliser les
 pour apprendre la syntaxe des e.r. ou pour apprendre rapidement les
 avantages des fonctionnalités de TRegExpr.
 
-Exemple: Décorateur HyperLinks
-
-Décorer les URLs   Décorer les E-Mails
+### Exemple: Décorateur HyperLinks
 
 Fonctions pour décorer les liens hyperlinks en convertissant le texte
 standard en format HTML.
 
-Par exemple, remplace 'http://anso.da.ru'  avec  '<a
-href="http://anso.da.ru">anso.da.ru</a>' ou 'anso@mail.ru'
- avec  '<a href="mailto:anso@mail.ru">anso@mail.ru</a>'.
+Par exemple, remplace `http://anso.da.ru`  avec  `<a
+href="http://anso.da.ru">anso.da.ru</a>` ou `anso@mail.ru`
+ avec  `<a href="mailto:anso@mail.ru">anso@mail.ru</a>`.
 
 ### fonction Décorer les URLs
 
-Trouve et remplace les liens comme 'http://...' ou 'ftp://..' aussi bien
-que les liens sans protocol, mais qui commence avec 'www.' Si vous
+Trouve et remplace les liens comme `http://...` ou `ftp://..` aussi bien
+que les liens sans protocol, mais qui commence avec `www.` Si vous
 voulez décorer les e-mails, vous pouvez utiliser la fonction
 DecorateEMails.
 
     function DecorateURLs (const AText : string; AFlags :
         TDecorateURLsFlagSet = \[durlAddr, durlPath\]) : string;
 
-Description
+#### Description
 
 retourne le texte d'entrée AText avec les liens hyperliens décorés.
 
@@ -54,34 +52,43 @@ AFlags décris quelle partie de l'hyperlien lien doit être inclus dans la
 partie VISIBLE du lien:
 
 Par exemple, si \[durlAddr\]  alors  hyperlien
-'http://anso.da.ru/index.htm'  sera décoré comme  '<a
-href="http://anso.da.ru/index.htm">anso.da.ru</a>'.
+`http://anso.da.ru/index.htm`  sera décoré comme  `<a
+href="http://anso.da.ru/index.htm">anso.da.ru</a>`.
 
     type
      TDecorateURLsFlags = (durlProto, durlAddr, durlPort, durlPath, durlBMark, durlParam);
      TDecorateURLsFlagSet = jeux de TDecorateURLsFlags;
 
-Description
+#### Description
 
 Voici les valeurs possibles pour TDecorateURLsFlagSet:
 
-Value                                Meaning
+durlProto
+: Protocole (comme `ftp://` ou `http://`).
 
-durlProto		Protocole (comme 'ftp://' ou 'http://').
-durlAddr		Adresse TCP ou nom de domaine (comme 'anso.da.ru').
-durlPort		Numйro de port si spйcifiй (comme ':8080').
-durlPath		Chemin au document (comme 'index.htm').
-durlBMark		Bookmark (comme '#mark').
-durlParam		Paramиtres URL (comme '?ID=2&User=13').
+durlAddr
+: Adresse TCP ou nom de domaine (comme `anso.da.ru`).
+
+durlPort
+: Numéro de port si spécifié (comme `:8080`).
+
+durlPath
+: Chemin au document (comme `index.htm`).
+
+durlBMark
+: Bookmark (comme `#mark`).
+
+durlParam
+: Paramètres URL (comme `?ID=2&User=13`).
 
 ### Fonction Décorer les EMails
 
-Remplace les e-mails avec '<a href="mailto:ADDR">ADDR</a>'.
-Par exemple, remplace 'anso@mail.ru' avec '<a
-href="mailto:anso@mail.ru">anso@mail.ru</a>'.
+Remplace les e-mails avec `<a href="mailto:ADDR">ADDR</a>`.
+Par exemple, remplace `anso@mail.ru` avec `<a
+href="mailto:anso@mail.ru">anso@mail.ru</a>`.
 
     function DecorateEMails (const AText : string) : string;
 
-Description
+#### Description
 
 Retourne le texte d'entrée avec les décoration e-mails dans Atext.

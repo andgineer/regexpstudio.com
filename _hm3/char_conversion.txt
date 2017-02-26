@@ -1,3 +1,5 @@
+Conversion from 8-bits Russian Win1251 into Europian 8859-3
+
 German
 д - ä
 ь - ü
@@ -12,4 +14,4 @@ Spanish, French
 к - ê
 з - ç
 о - î
-
+щ - ù

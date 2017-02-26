@@ -271,9 +271,9 @@ propiedad WordChars : RegExprString;
 Contiene los caracteres que son tratados como \\w (inicializada con la
 constante global RegExprWordChars)
 
- 
+<a name="line_separators"></a> 
 
-propiedad LineSeparators : RegExprString
+    propiedad LineSeparators : RegExprString
 
 Caracteres que son separadores de línea (como \\n en Unix), inicializada
 con la constante global RegExprLineSeparators)

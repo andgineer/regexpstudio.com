@@ -312,9 +312,9 @@ property WordChars : RegExprString;
 Содержит символы, трактуемые как \\w (инициализируется из глобальной
 константы RegExprWordChars)
 
- 
+<a name="line_separators"></a> 
 
-property LineSeparators : RegExprString
+    property LineSeparators : RegExprString
 
 Разделители строк (например, \\n для Unix) (инициализируется из
 глобальной константы RegExprLineSeparators)

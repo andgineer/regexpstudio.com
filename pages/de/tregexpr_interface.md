@@ -254,7 +254,9 @@ property WordChars : RegExprString
 Beinhaltet die Zeichen, die für das Metazeichen \\w verwendet werden.
 Anfänglich gefüllt mit der globalen Konstanten RegExprWordChars.
 
-property LineSeparators : RegExprString
+<a name="line_separators"></a>
+
+    property LineSeparators : RegExprString
 
 Beinhaltet die Zeichen, die für Zeilenseparatoren wie \\n in UNIX
 verwendet werden. Anfänglich gefüllt mit der globalen Konstanten

@@ -310,8 +310,9 @@ Contains chars, treated as \\w (initially filled with RegExprWordChars
 global constant)
 
  
+<a name="line_separators"></a>
 
-property LineSeparators : RegExprString
+    property LineSeparators : RegExprString
 
 line separators (like \\n in Unix), initially filled with
 RegExprLineSeparators global constant)

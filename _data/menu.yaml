@@ -77,22 +77,22 @@ es:
 en:
   home:
     name: "Home"
-    url: "/index.html"
+    url: "/en/index.html"
   syntax:
     name: "Syntax"
-    url: "/regexp_syntax.html"
+    url: "/en/regexp_syntax.html"
   interface:
     name: "Interface"
-    url: "/tregexpr_interface.html"
+    url: "/en/tregexpr_interface.html"
   demos:
     name: "Examples"
-    url: "/demos.html"
+    url: "/en/demos.html"
   faq:
     name: "FAQ"
-    url: "/faq.html"
+    url: "/en/faq.html"
   about:
     name: "About me"
-    url: "/about.html"
+    url: "/en/about.html"
 ru:
   home:
     name: "Главная"

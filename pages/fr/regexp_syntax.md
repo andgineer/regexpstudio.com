@@ -18,8 +18,9 @@ Les Expressions Régulières ressemblent vraiment а du charabia pour les
 débutants, mais elles sont réellement simples (bien, habituellement), et
 sont un outil pratique et puissant.
 
-Je recommande fortement de vous amuser avec le demo
-[TestRExp.dpr](#tregexpr_testrexp.html) - il vous aidera а comprendre le
+Je recommande fortement de vous amuser avec le demo Windows 
+[REStudio](https://github.com/masterandrey/TRegExpr/releases/download/0.952b/REStudio.exe) - 
+il vous aidera а comprendre le
 concept principal. De plus, il y a plusieurs exemple prédéfinis avec des
 commentaires inclus dans TestRExp.
 

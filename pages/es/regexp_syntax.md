@@ -18,8 +18,9 @@ Las expresiones regulares lucen incomprensibles para los novatos, pero
 en realidad son muy simples (bueno, usualmente simples ;) ), y son una
 herramienta práctica y poderosa.
 
-Les recomiendo especialmente hacer pruebas con e.r. usando
-[TestRExp.dpr](#tregexpr_testrexp.html) - ayuda a comprender muchos
+Les recomiendo especialmente hacer pruebas con e.r. usando Windows 
+[REStudio](https://github.com/masterandrey/TRegExpr/releases/download/0.952b/REStudio.exe) - 
+ayuda a comprender muchos
 conceptos. Además hay muchos ejemplos predefinidos con comentarios,
 incluidos en este proyecto.
 

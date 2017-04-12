@@ -9,11 +9,8 @@ permalink: /en/regexp_syntax.html
 ## Important note
 
 Below is the description of regular expressions implemented in freeware
-library [TRegExpr](http://RegExpStudio.com/tregexpr_syntax.html). Please note, that the
-library widely used in many free and commertial software products. The
-author of TRegExpr library cannot answer direct questions from this
-products' users. Please, send Your questions to the product's support
-first.
+library [TRegExpr](http://regexpstudio.com). 
+The library was widely used in many free and commertial software products. 
 
 ## Introduction
 
@@ -26,8 +23,9 @@ character.
 Regular expressions look ugly for novices, but really they are very
 simple (well, usually simple ;) ), handly and powerfull tool.
 
-I recommend You to play with regular expressions using [RegExp
-Studio](#regexpstudio.html) - it'll help You to uderstand main
+I recommend You to play with regular expressions using Windows 
+[REStudio](https://github.com/masterandrey/TRegExpr/releases/download/0.952b/REStudio.exe) - 
+it'll help You to uderstand main
 conceptions. Moreover, there are many predefined examples with comments
 included into repository of R.e. visual debugger.
 

@@ -8,24 +8,24 @@ permalink: /es/tregexpr_interface.html
 
 ### Métodos públicos y propiedades de TRegExpr:
 
-    funciуn VersionMajor  : integer;
-    funciуn VersionMinor : integer;
+    función VersionMajor  : integer;
+    función VersionMinor : integer;
 
 Devuelve versiones mayor y menor, por ejemplo, para v. 0.944
 VersionMajor = 0 y VersionMinor = 944
 
     propiedad Expression : string
 
-Expresiуn regular.
+Expresión regular.
 
-Para optimizaciуn, TRegExpr la compilará automáticamente en 'P-code' (se
+Para optimización, TRegExpr la compilará automáticamente en 'P-code' (se
 puede ver con el método Dump) y la almacena en estructuras internas. La
-\[re\]compilaciуn real ocurre sуlo cuando es necesario - al llamar a
-Exec\[Next\], Substitute, Dump, etc y sуlo si Expression u otra
-propiedad P-code fue modificada después de la última \[re\]compilaciуn.
+\[re\]compilación real ocurre sólo cuando es necesario - al llamar a
+Exec\[Next\], Substitute, Dump, etc y sólo si Expression u otra
+propiedad P-code fue modificada después de la última \[re\]compilación.
 
-Si se produce cualquier error durante la \[re\]compilaciуn de llama al
-método Error (por defecto Error genera una excepciуn - ver abajo)
+Si se produce cualquier error durante la \[re\]compilación de llama al
+método Error (por defecto Error genera una excepción - ver abajo)
 
     propiedad ModifierStr : string
 
@@ -34,7 +34,7 @@ cadena es similar a (?ismx-ismx). Por ejemplo ModifierStr := 'i-x'
 activa el modificador /i, desactiva /x y deja sin cambios el resto.
 
 Si se intenta cambiar un modificador inexistente, se llamará al
-procedimiento Error (por defecto Error genera una excepciуn ERegExpr).
+procedimiento Error (por defecto Error genera una excepción ERegExpr).
 
     propiedad ModifierI : boolean
 
@@ -68,7 +68,7 @@ el valor de RegExprModifierG.
 propiedad ModifierM : boolean;
 
 Modificador /m Tratamiento de cadenas como líneas múltiples. Esto es,
-cambia \`^' y \`$' de encontrar sуlo al inicio o final de la cadena al
+cambia \`^' y \`$' de encontrar sólo al inicio o final de la cadena al
 inicio o final de cualquier salto de línea DENTRO de la cadena,
 inicializado con el valor de RegExprModifierM.
 
@@ -81,14 +81,14 @@ RegExprModifierX.
 
  
 
-funciуn Exec (const AInputString : string) : boolean;
+función Exec (const AInputString : string) : boolean;
 
 ejecuta el programa sobre la cadena AInputString. Exec guarda
 AInputString en la propiedad InputString.
 
  
 
-funciуn ExecNext : boolean;
+función ExecNext : boolean;
 
 busca la siguiente coincidencia:
 
@@ -106,9 +106,9 @@ pero es más simple !
 
  
 
-funciуn ExecPos (AOffset: integer = 1) : boolean;
+función ExecPos (AOffset: integer = 1) : boolean;
 
-busca coincidencias en InputString comenzando el la posiciуn AOffset
+busca coincidencias en InputString comenzando el la posición AOffset
 
 (AOffset=1 - primer caracter de InputString)
 
@@ -117,17 +117,17 @@ busca coincidencias en InputString comenzando el la posiciуn AOffset
 propiedad InputString : string;
 
 devuelve la cadena corriente (desde la última llamada a Exec o la última
-asignaciуn a esta propiedad).
+asignación a esta propiedad).
 
-Cualquier asignaciуn de esta propiedad limpia las propiedades Match\* !
+Cualquier asignación de esta propiedad limpia las propiedades Match\* !
 
  
 
-funciуn Substitute (const ATemplate : string) : string;
+función Substitute (const ATemplate : string) : string;
 
 Devuelve ATemplate con '$&' o '$0' reemplazados por la ocurrencia
 completa de la e.r. y '$n' reemplazado por la ocurrencia de la
-subexpresiуn \#n.
+subexpresión \#n.
 
 Desde la v.0.929 '$' se usa en vez de '\\' (para ampliaciones futuras y
 por mayor compatibilidad con Perl) y acepta más de un dígito.
@@ -163,7 +163,7 @@ Devuelve AInputStr con las ocurrencias de la e.r. reemplazadas por
 AReplaceStr
 
 Si AUseSubstitution es verdadero se usa AReplaceStr como plantilla para
-métodos de sustituciуn.
+métodos de sustitución.
 
 Por ejemplo:
 
@@ -186,9 +186,9 @@ propiedad SubExprMatchCount : integer; // ReadOnly
 Número de subexpresiones que han sido encontradas en la última llamada a
 Exec\*.
 
-Si no hay subexpresiones pero se encontrу la expresiуn entera (Exec\*
-devolviу True), entonces SubExprMatchCount=0, si no hay subexpresiones
-ni expresiуn completa de la e.r. encontradas (Exec\* devolviу False)
+Si no hay subexpresiones pero se encontró la expresión entera (Exec\*
+devolvió True), entonces SubExprMatchCount=0, si no hay subexpresiones
+ni expresión completa de la e.r. encontradas (Exec\* devolvió False)
 entonces SubExprMatchCount=-1.
 
 Por ejemplo: Expression := '(1)?2(3)?';
@@ -208,8 +208,8 @@ Exec ('7') - devuelve False: SubExprMatchCount=-1
 
 propiedad MatchPos \[Idx : integer\] : integer; // ReadOnly
 
-Ubicaciуn de inicio de la subexpresiуn número \#Idx en la ejecuciуn de
-la última llamada a Exec\*. La primera subexpresiуn tiene Idx=1, la
+Ubicación de inicio de la subexpresión número \#Idx en la ejecución de
+la última llamada a Exec\*. La primera subexpresión tiene Idx=1, la
 última es igual a MatchCount, la e.r. completa tiene Idx=0.
 
 Devuelve -1 si en la e.r. no hay subexpresiones o no se encontraron en
@@ -219,8 +219,8 @@ la cadena ingresada.
 
 propiedad MatchLen \[Idx : integer\] : integer; // ReadOnly
 
-Longitud de la cadena de la subexpresion número Idx en la ejecuciуn de
-la última llamada a Exec\*. La primera subexpresiуn tiene Idx=1, la
+Longitud de la cadena de la subexpresion número Idx en la ejecución de
+la última llamada a Exec\*. La primera subexpresión tiene Idx=1, la
 última es igual a MatchCount, la e.r. completa tiene Idx=0.
 
 Devuelve -1 si en la e.r. no hay subexpresiones o no se encontraron en
@@ -237,23 +237,23 @@ la cadena ingresada.
 
  
 
-funciуn LastError : integer;
+función LastError : integer;
 
-Devuelve el cуdigo de identificaciуn del último error, 0 si no hay
-errores (No se puede usar si el método Error genera una excepciуn) y
+Devuelve el código de identificación del último error, 0 si no hay
+errores (No se puede usar si el método Error genera una excepción) y
 limpia el status interno a 0 (sin errores).
 
  
 
-funciуn ErrorMsg (AErrorID : integer) : string; virtual;
+función ErrorMsg (AErrorID : integer) : string; virtual;
 
-Devuelve el mensaje de error de cуdigo AErrorID.
+Devuelve el mensaje de error de código AErrorID.
 
  
 
 propiedad CompilerErrorPos : integer; // ReadOnly
 
-Devuelve la posiciуn en la e.r. donde se detuvo el compilador.
+Devuelve la posición en la e.r. donde se detuvo el compilador.
 
 Util para diagnosticar errores.
 
@@ -304,14 +304,14 @@ LineSeparators := \#$a (caracter de línea nueva) y a LinePairedSeparator
 Por defecto se usa el modo 'mixto' (definido en las constantes globales
 RegExprLine\[Paired\]Separator\[s\]): LineSeparators := \#$d\#$a;
 LinePairedSeparator := \#$d\#$a. El comportamiento de este modo es
-descripto con más detalle en la secciуn sintaxis.
+descripto con más detalle en la sección sintaxis.
 
  
 
-funciуn de clase InvertCaseFunction  (const Ch : REChar) : REChar;
+función de clase InvertCaseFunction  (const Ch : REChar) : REChar;
 
 Convierte Ch en mayúsculas si está en minúsculas o en minúsculas si está
-en mayúsculas (usa la configuraciуn local corriente)
+en mayúsculas (usa la configuración local corriente)
 
  
 
@@ -332,7 +332,7 @@ validez de todas las propiedades).
 
  
 
-funciуn Dump : string;
+función Dump : string;
 
 Descarga una e.r. compilada en una forma vagamente comprensible.
 
@@ -365,7 +365,7 @@ RegExprWordChars : RegExprString =
 
  //NOTA AYUDA EN ESPAСOL
 
- // agregar áéíуúсС
+ // agregar áéíóúсС
 
  
 
@@ -398,11 +398,11 @@ Funciones globales prácticas
 
  
 
-funciуn ExecRegExpr (const ARegExpr, AInputStr : string) : boolean;
+función ExecRegExpr (const ARegExpr, AInputStr : string) : boolean;
 
 True si la cadena AInputString es encontrada en la e.r. ARegExpr
 
-Se genera una excepciуn si hay errores de sintaxis en ARegExpr
+Se genera una excepción si hay errores de sintaxis en ARegExpr
 
  
 
@@ -414,7 +414,7 @@ e.r. ARegExpr
 
  
 
-funciуn ReplaceRegExpr (const ARegExpr, AInputStr, AReplaceStr : string;
+función ReplaceRegExpr (const ARegExpr, AInputStr, AReplaceStr : string;
 
 AUseSubstitution : boolean = False) : string;
 
@@ -422,7 +422,7 @@ Devuelve AInputStr con las ocurrencias de la e.r. reemplazadas por
 AReplaceStr
 
 Si AUseSubstitution es verdadero AReplaceStr será usado como plantilla
-para los métodos de sustituciуn.
+para los métodos de sustitución.
 
 Por ejemplo:
 
@@ -442,28 +442,28 @@ devolverá:  def "$1" value "$2"
 
  
 
-funciуn QuoteRegExprMetaChars (const AStr : string) : string;
+función QuoteRegExprMetaChars (const AStr : string) : string;
 
-Reemplaza todos los metacaracteres por su representaciуn segura , por
+Reemplaza todos los metacaracteres por su representación segura , por
 ejemplo 'abc$cd.(' es convertida  en 'abc\\$cd\\.\\('
 
-Esta funciуn es práctica para autogeneraciуn de e.r. a partir de datos
+Esta función es práctica para autogeneración de e.r. a partir de datos
 del usuario.
 
  
 
-funciуn RegExprSubExpressions (const ARegExpr : string;
+función RegExprSubExpressions (const ARegExpr : string;
 
 ASubExprs : TStrings; AExtendedSyntax : boolean = False) : integer;
 
 Genera una lista de subexpresiones encontradas en la e.r. ARegExpr
 
-En ASubExps cada item representa una subexpresiуn, en el formato:
+En ASubExps cada item representa una subexpresión, en el formato:
 
- String - texto de la subexpresiуn (sin '()')
+ String - texto de la subexpresión (sin '()')
 
- low word of Object - posiciуn inicial en ARegExpr, incluyendo '(' si
-existe! (la primera posiciуn es 1)
+ low word of Object - posición inicial en ARegExpr, incluyendo '(' si
+existe! (la primera posición es 1)
 
  high word of Object - longitud, incluyendo el '(' inicial y el ')'
 final si existen!
@@ -508,7 +508,7 @@ Exception type
  
 
 El administrador de errores por defecto de TRegExpr genera una
-excepciуn:
+excepción:
 
  
 
@@ -516,11 +516,11 @@ ERegExpr = class (Exception)
 
   public
 
-   ErrorCode : integer; // cуdigo de error. Los errores de compilaciуn
+   ErrorCode : integer; // código de error. Los errores de compilación
 son menores a 1000.
 
-   CompilerErrorPos : integer; // Posiciуn en la e.r. donde se ocurriу
-el error de compilaciуn
+   CompilerErrorPos : integer; // Posición en la e.r. donde se ocurrió
+el error de compilación
 
  end;
 
@@ -528,7 +528,7 @@ el error de compilaciуn
 
  
 <a name="unicode"></a>
-### Cуmo usar Unicode
+### Cómo usar Unicode
 
  
 

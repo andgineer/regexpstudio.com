@@ -8,23 +8,23 @@ permalink: /es/index.html
 
 TRegExpr es una herramienta poderosa y fácil de usar para controlar
 entrada de datos de cadenas de caracteres en base a plantillas (en DBMS
-y aplicaciones para web), búsqueda y sustituciуn de texto, utilidades
+y aplicaciones para web), búsqueda y sustitución de texto, utilidades
 tipo egrep, etc.
 
-Se puede verificar fácilmente una direcciуn de e-mail, extraer un número
-de teléfono o cуdigo postal de texto sin formato, cualquier tipo de
-informaciуn de una página web, y todo lo que pueda imaginar!. Las reglas
+Se puede verificar fácilmente una dirección de e-mail, extraer un número
+de teléfono o código postal de texto sin formato, cualquier tipo de
+información de una página web, y todo lo que pueda imaginar!. Las reglas
 (plantillas) pueden ser modificadas sin recompilar el programa!
 
-Esta librería freeware es una versiуn extendida para Delphi de las
+Esta librería freeware es una versión extendida para Delphi de las
 rutinas V8 de Henry Spencer,. Trabajan con un subconjunto de las
 [Expresiones Regulares](regexp_syntax.html) de Perl.
 
-TRegExpr está programado en Pascal puro, con el cуdigo fuente completo
+TRegExpr está programado en Pascal puro, con el código fuente completo
 gratis.
 
 El original en C ha sido mejorado y encapsulado completamente en la
-clase [TRegExpr](tregexpr_interface.html) implementada en un sуlo
+clase [TRegExpr](tregexpr_interface.html) implementada en un sólo
 archivo: RegExpr.pas.
 
 Por lo tanto, no se necesita ninguna DLL!

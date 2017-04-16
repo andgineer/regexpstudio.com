@@ -6,7 +6,7 @@ title: Sintaxis de las Expresiones Regulares
 permalink: /es/regexp_syntax.html
 ---
 
-## Introducciуn
+## Introducción
 
 Las Expresiones Regulares son un método ampliamente empleado para
 especificar "plantillas" de texto a buscar. Los metacaracteres
@@ -53,11 +53,11 @@ Algunos casos especiales pueden ser especificados usando sintaxis de
 secuencias de escape como las empleadas en C y Perl: `\n` significa
 nueva línea, `\t` equivale a tab, etc. Más generalmente, `\xnn`, donde
 nn es un número hexadecimal, encuentra el caracter cuyo valor  ASCII es
-nn. Para usar cуdigos dobles de Unicode, se puede especificar
+nn. Para usar códigos dobles de Unicode, se puede especificar
 `\x{nnnn}`, donde `nnnn` - es uno o más valores hexadecimales.
 
-     \xnn     caracter con cуdigo hexadecimal nn
-     \x{nn} caracter con cуdigo hexadecimal nnnn (un byte para texto común y dos para [Unicode](tregexpr_interface.html))
+     \xnn     caracter con código hexadecimal nn
+     \x{nn} caracter con código hexadecimal nnnn (un byte para texto común y dos para [Unicode](tregexpr_interface.html))
      \t       tab (HT/TAB), lo mismo que \x09
      \n       línea nueva (NL), lo mismo que \x0a
      \r       retorno de carro (CR), lo mismo que \x0d
@@ -118,13 +118,13 @@ Expresiones Regulares. Hay diferentes tipos:
 
 #### Ejemplos:
 
-     ^foobar     encuentra 'foobar' sуlo si está al principio de una línea
-     foobar$     encuentra 'foobar' sуlo si está al final de una línea
-     ^foobar$   encuentra 'foobar' sуlo si es la única cadena en la línea
+     ^foobar     encuentra 'foobar' sólo si está al principio de una línea
+     foobar$     encuentra 'foobar' sólo si está al final de una línea
+     ^foobar$   encuentra 'foobar' sólo si es la única cadena en la línea
      foob.r     encuentra cadenas tipo 'foobar', 'foobbr', 'foob1r'
 
-El metacaracter `^` por defecto sуlo garantiza encontrar coincidencias
-al principio de la cadena/texto analizados, y `$` sуlo al final. Los
+El metacaracter `^` por defecto sólo garantiza encontrar coincidencias
+al principio de la cadena/texto analizados, y `$` sólo al final. Los
 separadores de línea intermedios no son encontrados por `^` o `$`.
 
 Sin embargo, se puede tratar una cadena como multilínea, de esta forma
@@ -146,20 +146,20 @@ de []www.unicode.org](http://www.unicode.org/unicode/reports/tr18/):
 
 `^` al inicio de la cadena ingresada, y si el modificador `/m` está
 activado, también inmediatamente después de toda ocurrencia de
-`\x0D\x0A`, `\x0A` o `\x0D` (si se usa la versiуn
+`\x0D\x0A`, `\x0A` o `\x0D` (si se usa la versión
 [Unicode](tregexpr_interface.html) de TRegExpr, también `\x2028`,
  `\x2029`, `\x0B`, `\x0C` o `\x85`). Notar que no hay una línea vacía dentro
 de la secuencia `\x0D\x0A`.
 
 `$` al final de la cadena ingresada, y si el modificador /m está
 activado, también inmediatamente antes de toda ocurrencia de
- `\x0D\x0A`, `\x0A`, o `\x0D` (si se usa la versiуn Unicode de TRegExpr,
+ `\x0D\x0A`, `\x0A`, o `\x0D` (si se usa la versión Unicode de TRegExpr,
 también `\x2028`,  `\x2029`, `\x0B`, `\x0C` o `\x85`). Notar que no hay una
 línea vacía dentro de la secuencia `\x0D\x0A`.
 
 `.` encuentra cualquier caracter, pero si se desactiva el modificador /s
 entonces `.` no encuentra `\x0D\x0A`, `\x0A` y `\x0D` (si se usa la
-versiуn Unicode de TRegExpr, también `\x2028`,  `\x2029`, `\x0B`, `\x0C` y
+versión Unicode de TRegExpr, también `\x2028`,  `\x2029`, `\x0B`, `\x0C` y
 `\x85`).
 
 Notar que `^.*$` (plantilla de línea vacía) no encuentra la cadena
@@ -167,9 +167,9 @@ vacía dentro de la secuencia `\x0D\x0A`, pero sí dentro de la secuencia
 `\x0A\x0D`.
 
 El procesamiento multilínea puede ser fácilmenet afinado para sus
-propуsitos con la ayuda de las propiedades LineSeparators y
-LinePairedSeparator de TRegExpr. Se pueden usar sуlo separadores tipo
-Unix ( `\n` ) o sуlo tipo DOS/Windows ( `\r\n`) o todos juntos (como se
+propósitos con la ayuda de las propiedades LineSeparators y
+LinePairedSeparator de TRegExpr. Se pueden usar sólo separadores tipo
+Unix ( `\n` ) o sólo tipo DOS/Windows ( `\r\n`) o todos juntos (como se
 describe arriba y usado por defecto), o incluso definir sus propios
 deparadores de línea !
 
@@ -203,7 +203,7 @@ conjunto de caracteres:
 
 Para nuestro idioma lo correcto sería:
 
-    WordChars = '0123456789aábcdeéfghiíjklmnсoуpqrstuúvwxyzAáBCDEéFGHIJKLMNСOУPQRSTUúVWXYZ\_'
+    WordChars = '0123456789aábcdeéfghiíjklmnсoópqrstuúvwxyzAáBCDEéFGHIJKLMNСOУPQRSTUúVWXYZ\_'
 
 ### Metacaracteres - límites de palabras
 
@@ -217,7 +217,7 @@ coincidencias con `\W`.
 
 ### Metacaracteres - iteradores
 
-Cualquier item de una expresiуn regular puede ser seguido por otro tipo
+Cualquier item de una expresión regular puede ser seguido por otro tipo
 de metacaracteres, los iteradores. Usando estos metacaracteres se puede
 especificar el número de ocurrencias del caracter previo, de un
 metacaracter o de una subexpresion.
@@ -239,7 +239,7 @@ Entonces, los dígitos entre llaves de la forma `{n,m}`, especifican el
 mínimo número de ocurrencias en `n` y el máximo en `m`. La forma `{n}` es
 equivalente a `{n,n}` y coincide exactamente `n` veces. La forma `{n,}`
 encuentra ocurrencias de `n` o más veces. No hay límites para los número `n`
-o `m`, pero si son muy grandes se consume más memoria y la ejecuciуn de la
+o `m`, pero si son muy grandes se consume más memoria y la ejecución de la
 e.r. se hace más lenta.
 
 Si una llave aparece en otro contexto se la trata como un caracter
@@ -271,15 +271,15 @@ Se puede especificar una serie de alternativas para una plantilla usando
 primera alternativa incluye todo desde el ultimo delimitador ( "('',
 `[`, o el inicio de la plantilla) hasta el primer `|`, y la última
 alternativa contiene todo desde el último `|` hasta el siguiente
-delimitador de plantilla. Por esta razуn es una práctica común incluir
-las alternativas entre paréntesis, para minimizar la confusiуn de dуnde
-se inician y dуnde terminan.
+delimitador de plantilla. Por esta razón es una práctica común incluir
+las alternativas entre paréntesis, para minimizar la confusión de dónde
+se inician y dónde terminan.
 
 Las alternativas son evaluadas de izquierda a derecha, por lo tanto la
-primera alternativa que coincide plenamente con la expresiуn analizada
+primera alternativa que coincide plenamente con la expresión analizada
 es la que se selecciona. Esto significa que las alternativas no son
 necesariamente voraces. Por ejemplo: si se buscam foo|foot en
-`barefoot`, sуlo la parte `foo` da resultado positivo, porque es la
+`barefoot`, sólo la parte `foo` da resultado positivo, porque es la
 primera alternativa probada, y porque tiene éxito en la búsqueda de la
 cadena analizada. (Esto puede no parecer importante, pero lo es cuando
 se está capturando el texto buscado usando paréntesis.)
@@ -294,14 +294,14 @@ encuentra es `[feio|]`.
 
 ### Metacaracteres - subexpresiones
 
-La construcciуn `( ... )` también puede ser empleada para definir
+La construcción `( ... )` también puede ser empleada para definir
 subexpresiones de e.r. (después del análisis se obtienen las posiciones
 de las subexpresiones, su longitud y el valor actual en las propiedades
 MatchPos, MatchLen y Match de TRegExpr; y se pueden substituir en
 cadenas de plantillas con TRegExpr.Substitute).
 
 Las subexpresiones son numeradas de izquierda a derecha en base al orden
-de sus paréntesis de apertura. La primera subexpresiуn es la '1' (la
+de sus paréntesis de apertura. La primera subexpresión es la '1' (la
 e.r. completa tiene el número '0' - Se puede substituir en
 TRegExpr.Substitute como '$0' o '$&').
 
@@ -315,7 +315,7 @@ TRegExpr.Substitute como '$0' o '$&').
 ### Metacaracteres - memorias (backreferences)
 
 Los metacaracteres `\1` a `\9` son interpretados como memorias.
-`\<n>` encuentra la subexpresiуn previamente encontrada
+`\<n>` encuentra la subexpresión previamente encontrada
 `#<n>`.
 
 #### Ejemplos:
@@ -356,7 +356,7 @@ de cada línea dentro de la cadena, ver también Separadores de líneas.
 <a name="modifier_s"></a>
 ### s
 
-Tratamiento de cadenas cуmo línea simple. Esto es, cambia `.` para
+Tratamiento de cadenas cómo línea simple. Esto es, cambia `.` para
 encontrar cualquier caracter en cualquier lado, incluso separadores de
 línea (ver Separadores de línea), que  normalmente no son encontradod.
 
@@ -372,7 +372,7 @@ como `+?`, `*` como `*?`, etc.
 ### x
 
 Aumenta la legibilidad de las plantillas al permitir espacios en blanco
-y comentarios (ver la explicaciуn más abajo).
+y comentarios (ver la explicación más abajo).
 
 <a name="modifier_r"></a>
 ### r
@@ -380,11 +380,11 @@ y comentarios (ver la explicaciуn más abajo).
 Modificador no standard para incluir letras rusas en el rango de
 caracteres.
 
-Perdуn a los usuarios extranjeros, pero está activado por defecto. Para
+Perdón a los usuarios extranjeros, pero está activado por defecto. Para
 desactivarlo por defecto cambiar a False la variable global
 RegExprModifierR.
 
-El modificador `/x` necesita un poco más de explicaciуn. Le dice a
+El modificador `/x` necesita un poco más de explicación. Le dice a
 TRegExpr que ignore los espacios blancos que no están precedidos por
 `\` o no incluídos en una clase de caracteres. Se puede usar para
 separar las expresiones regulares en partes más legibles. El caracter `#`
@@ -406,8 +406,8 @@ hexadecimal.
 ### (?imsxr-imsxr)
 
 Se pueden usar dentro de las e.r. para cambiar modificaciones
-instantáneamente. Si esta construcciуn está incluída dentro de una
-subexpresiуn, entonces sуlo afecta a la subexpresiуn.
+instantáneamente. Si esta construcción está incluída dentro de una
+subexpresión, entonces sólo afecta a la subexpresión.
 
 #### Ejemplos:
 

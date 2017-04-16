@@ -6,28 +6,28 @@ title: Proyecto Demo (TestRExp)
 permalink: /es/tregexpr_testrexp.html
 ---
 
-Programa simple para explorar y probar e.r., distribuída como cуdigo
+Programa simple para explorar y probar e.r., distribuída como código
 fuente (proyecto TestRExp.dpr) y TestRExp.exe.
 
  
 
-Nota: usa algunas propiedades de VCL que sуlo existen en Delphi 4 o
+Nota: usa algunas propiedades de VCL que sólo existen en Delphi 4 o
 superior. Mientras se compila en Delphi 3 o Delphi 2 se recibirán
 mensajes de error acerca de propiedades desconocidas. Se pueden ignorar,
-estas propiedades son sуlo para ajustar tamaсo y justificaciуn de
+estas propiedades son sólo para ajustar tamaсo y justificación de
 componentes cuando el formulario cambia su tamaсo.
 
  
 
 Con la ayuda de este programa se puede determinar fácilmente el número
-de subexpresiones, saltar a cualquiera de ellas (en el cуdigo de la e.r.
+de subexpresiones, saltar a cualquiera de ellas (en el código de la e.r.
 o en los resultados de la cadena exprorada), probar las funciones
 Substitute, Replace y Split.
 
  
 
 Además se incluyen muchos ejemplos que se pueden usar mientras se
-aprende la sintaxis de e.r. o en la exploraciуn rápida de las
+aprende la sintaxis de e.r. o en la exploración rápida de las
 capacidades de TRegExpr.
 
 Ejemplo: Hyper Links Decorator
@@ -45,11 +45,11 @@ href="http://anso.da.ru">anso.da.ru</a>' o 'anso@mail.ru' con
 
  
 
-Funciуn DecorateURLs
+Función DecorateURLs
 
 Busca y reemplaza hipervínculos como 'http://...' or 'ftp://..' así como
 vínculos sin protocolo pero que comienzan con 'www.' Si quiere modificar
-direcciones de correo electrуnico tiene que usar la funciуn
+direcciones de correo electrónico tiene que usar la función
 DecorateEmails (ver más abajo).
 
  
@@ -59,7 +59,7 @@ TDecorateURLsFlagSet = \[durlAddr, durlPath\]) : string;
 
  
 
-Descripciуn
+Descripción
 
  
 
@@ -85,7 +85,7 @@ durlBMark, durlParam);
 
  
 
-Descripciуn
+Descripción
 
  
 
@@ -103,7 +103,7 @@ Valor                                Significado
 
 durlProto                Protocolo (como 'ftp://' or 'http://')
 
-durlAddr                Direcciуn TCP o nombre de dominio (como
+durlAddr                Dirección TCP o nombre de dominio (como
 'anso.da.ru')
 
 durlPort                Número de puerto, si está especificado (como
@@ -123,7 +123,7 @@ durlParam                Parámetros de la URL (como '?ID=2&User=13')
 
  
 
-Funciуn DecorateEMails
+Función DecorateEMails
 
  
 
@@ -138,7 +138,7 @@ function DecorateEMails (const AText : string) : string;
 
  
 
-Descripciуn
+Descripción
 
  
 

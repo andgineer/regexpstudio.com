@@ -2,14 +2,14 @@
 layout: page
 lang: es
 ref: demos
-title: Cуmo funciona
+title: Cómo funciona
 permalink: /es/demos.html
 ---
 
 ### Ejemplos simples
 
 Si no tiene experiencia con las expresiones regulares, por favor vea la
-secciуn [sintaxis](regexp_syntax.html).
+sección [sintaxis](regexp_syntax.html).
 
 ### Usando las rutinas globales
 
@@ -34,7 +34,7 @@ devuelve 'Pruebe TRegExpr. TRegExpr es el mejor !'; ;)
 Se obtiene todo el poder de la librería
 
 {% highlight pascal linenos %}
-// Esta simple funciуn extrae todas las direcciones de email de la cadena ingresada
+// Esta simple función extrae todas las direcciones de email de la cadena ingresada
 // y devuelve una lista de estos email en el resultado
 function ExtraeEmails (const AInputString : string) : string;
 const
@@ -44,7 +44,7 @@ var
 begin
          Result := '';
          r := TRegExpr.Create; // Crea el objeto
-         try // asegura la liberaciуn de memoria
+         try // asegura la liberación de memoria
                          r.Expression := EmailRE;
                          // La e.r. se compila automáticamente en estructuras internas
                          // cuando se asigna la propiedad Expression
@@ -59,16 +59,16 @@ begin
          ExtraeEmails ('Mis e-mails son anso@mail.ru y anso@usa.net');
          // devuelve 'anso@mail.ru, anso@usa.net, '
 end.
-// Nota: la compilaciуn de la r.e. realizada al asignar ;a propiedad Expression
-// toma cierto tiempo, si se usa esta funciуn muchas veces
+// Nota: la compilación de la r.e. realizada al asignar ;a propiedad Expression
+// toma cierto tiempo, si se usa esta función muchas veces
 // se sobrecarga inútilmente.
 // Esto se puede optimizar significativamente creando el objeto TRegExpr
-// y precompilando la expresiуn durante la inicializaciуn del programa.
+// y precompilando la expresión durante la inicialización del programa.
 {% endhighlight %}
  
 {% highlight pascal linenos %}
 // Este ejemplo extrae números de teléfono
-// y los descompone en partes (cуdigos de Ciudad y país, númerotelefуnico                ).
+// y los descompone en partes (códigos de Ciudad y país, númerotelefónico                ).
 // Después substituye estas partes en la máscara ingresada.
 function ParseTel (const AInputString, ATemplate : string) : string;
 const
@@ -77,7 +77,7 @@ var
          r : TRegExpr;
 begin
          r := TRegExpr.Create; // Crea el objeto
-         try // asegura la liberaciуn de memoria
+         try // asegura la liberación de memoria
                          r.Expression := IntPhoneRE;
                          // La e.r. se compila automáticamente en estructuras internas
                          // cuando se asigna la propiedad Expression
@@ -89,8 +89,8 @@ begin
 end;
 begin
          ParseTel ('El teléfono de AlkorSoft (proyecto PayCash) es +7(812) 329-44-69',
-         'Cуdigo de País $1, cуdigo de ciudad $2. El número telefуnico completo es $&.');
-         // devuelve 'Cуdigo de País +7, cуdigo de ciudad (812) . El número telefуnico completo es +7(812) 329-44-69.'
+         'Código de País $1, código de ciudad $2. El número telefónico completo es $&.');
+         // devuelve 'Código de País +7, código de ciudad (812) . El número telefónico completo es +7(812) 329-44-69.'
 end.
 {% endhighlight %}
 
@@ -109,7 +109,7 @@ Kingdom](%60http://delphi.vitpc.com/mastering/strings_birds_eye_view.htm',%60',1
 
  
 
-### Explicaciуn detallada
+### Explicación detallada
 
 Por favor, ver la [descripcion](tregexpr_interface.html) de la
 interface de TRegExpr.

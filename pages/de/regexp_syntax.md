@@ -105,7 +105,7 @@ Zeichen in die Liste oder escape es.
      [az-]     findet 'a', 'z' und '-'
      [a\-z]     findet 'a', 'z' und '-'
      [a-z]     findet alle 26 Kleinbuchstaben von 'a' bis 'z'
-     [\n-\x0D] findet eines der Zeichen  \#10, \#11, \#12 oder \#13.
+     [\n-\x0D] findet eines der Zeichen  #10, #11, #12 oder #13.
      [\d-t]     findet irgendeine Ziffer, '-' oder 't'.
      []-a]     findet irgendein Zeichen von '\]'..'a'.
 

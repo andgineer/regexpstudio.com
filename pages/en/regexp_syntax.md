@@ -49,7 +49,7 @@ match beginning of string, but `\^` match character `^`, `\\` match
 #### Examples:
 
      foobar         matchs string 'foobar'
-     \\^FooBarPtr     matchs '^FooBarPtr'
+     \^FooBarPtr     matchs '^FooBarPtr'
 
 ### Note for C++ Builder users
 
@@ -66,7 +66,7 @@ matches the character whose ASCII value is nn. If You need wide
 more hexadecimal digits.
 
      \xnn     char with hex code nn
-     \x{nnnn} char with hex code nnnn (one byte for plain text and two bytes for [Unicode](tregexpr_interface.html#unicode))
+     \x{nnnn} char with hex code nnnn (one byte for plain text and two bytes for Unicode
      \t       tab (HT/TAB), same as \x09
      \n       newline (NL), same as \x0a
      \r       car.return (CR), same as \x0d
@@ -105,7 +105,7 @@ may place it at the start of list or escape it with a backslash.
      [az-]     matchs 'a', 'z' and '-'
      [a\-z]     matchs 'a', 'z' and '-'
      [a-z]     matchs all twenty six small characters from 'a' to 'z'
-     [\n-\x0D] matchs any of \#10,\#11,\#12,\#13.
+     [\n-\x0D] matchs any of #10,#11,#12,#13.
      [\d-t]     matchs any digit, '-' or 't'.
      []-a]     matchs any char from ']'..'a'.
 
@@ -171,7 +171,7 @@ and `\x0A` and `\x0D` (if You are using [Unicode
 version](tregexpr_interface.html#unicode) of TRegExpr, then
 also `\x2028` and  `\x2029` and `\x0B` and `\x0C` and `\x85`).
 
-Note that `^.\*$` (an empty line pattern) doesnot match the empty string
+Note that `^.*$` (an empty line pattern) doesnot match the empty string
 within the sequence `\x0D\x0A`, but matchs the empty string within the
 sequence `\x0A\x0D`.
 
@@ -318,8 +318,8 @@ Metacharacters `\1` through `\9` are interpreted as backreferences.
 
 #### Examples:
 
-     (.)\\1+         matchs 'aaaa' and 'cc'.
-     (.+)\\1+       also match 'abab' and '123123'
+     (.)\1+         matchs 'aaaa' and 'cc'.
+     (.+)\1+       also match 'abab' and '123123'
 
   `(['"]?)(\d+)\1` matchs `"13"` (in double quotes), or `'4'` (in single
 quotes) or `77` (without quotes) etc

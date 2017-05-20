@@ -41,7 +41,6 @@ If you try to set unsupported modifier, Error will be called (by defaul
 Error raises exception ERegExpr).
 
  
-
     property ModifierI : boolean
 
 Modifier /i <a name="modifier_i"></a> - ("caseinsensitive"),
@@ -49,7 +48,6 @@ initialized with
 [RegExprModifierI](#modifier_defs) value.
 
  
-
     property ModifierR : boolean
 
 Modifier /r <a name="#modifier_r"></a> - ("Russian.syntax
@@ -57,8 +55,7 @@ extensions), initialized with
 [RegExprModifierR](#modifier_defs) value.
 
  
-
-property ModifierS : boolean
+    property ModifierS : boolean
 
 [Modifier /s](regexp_syntax.html#modifier_s) - '.' works as any char
 (else doesn't match
@@ -68,17 +65,15 @@ initialized with
 [RegExprModifierS](#modifier_defs) value.
 
  
-
-property ModifierG : boolean;
+    property ModifierG : boolean;
 
 [Modifier /g](regexp_syntax.html#modifier_g) Switching off modifier /g
 switchs all operators in non-greedy style, so if ModifierG = False, then
 all '\*' works as '\*?', all '+' as '+?' and so on, initialized with
 [RegExprModifierG](#modifier_defs) value.
 
- 
 
-property ModifierM : boolean;
+    property ModifierM : boolean;
 
 [Modifier /m](regexp_syntax.html#modifier_m) Treat string as multiple
 lines. That is, change \`^' and \`$' from matching at only the very
@@ -87,16 +82,13 @@ within the string, initialized with
 [RegExprModifierM](#modifier_defs) value.
 
  
-
-property ModifierX : boolean;
+    property ModifierX : boolean;
 
 [Modifier /x](regexp_syntax.html#modifier_x) - ("eXtended syntax"),
 initialized with
 [RegExprModifierX](#modifier_defs) value.
 
- 
-
-function Exec (const AInputString : string) : boolean;
+    function Exec (const AInputString : string) : boolean;
 
 match a programm against a string AInputString
 
@@ -104,56 +96,51 @@ match a programm against a string AInputString
 
 For Delphi 5 and higher available overloaded versions:
 
-function Exec : boolean;
+    function Exec : boolean;
 
 without parameter (uses already assigned to InputString property value)
 
-function Exec (AOffset: integer) : boolean;
+    function Exec (AOffset: integer) : boolean;
 
 is same as ExecPos
 
- 
 
-function ExecNext : boolean;
+    function ExecNext : boolean;
 
 Find next match:
 
-   ExecNext;
+    ExecNext;
 
 Works same as
 
-   if MatchLen \[0\] = 0 then ExecPos (MatchPos \[0\] + 1)
-
-    else ExecPos (MatchPos \[0\] + MatchLen \[0\]);
+    if MatchLen \[0\] = 0 then ExecPos (MatchPos \[0\] + 1)
+      else ExecPos (MatchPos \[0\] + MatchLen \[0\]);
 
 but it's more simpler !
 
 Raises exception if used without preceeding successful call to
+Exec\* (Exec, ExecPos, ExecNext). 
 
-Exec\* (Exec, ExecPos, ExecNext). So You always must use something like
+So You always must use something like
 
-if Exec (InputString) then repeat { proceed results} until not ExecNext;
+    if Exec (InputString) then repeat { proceed results} until not ExecNext;
 
- 
+.
 
-function ExecPos (AOffset: integer = 1) : boolean;
+    function ExecPos (AOffset: integer = 1) : boolean;
 
 find match for InputString starting from AOffset position
 
 (AOffset=1 - first char of InputString)
 
- 
-
-property InputString : string;
+    property InputString : string;
 
 returns current input string (from last Exec call or last assign to this
 property).
 
 Any assignment to this property clear Match\* properties !
 
- 
-
-function Substitute (const ATemplate : string) : string;
+    function Substitute (const ATemplate : string) : string;
 
 Returns ATemplate with '$&' or '$0' replaced by whole r.e. occurence and
 '$n' replaced by occurence of subexpression \#n.
@@ -171,29 +158,22 @@ braces '{}'.
 Example: 'a$12bc' -> 'a<Match\[12\]>bc', 'a${1}2bc' ->
 'a<Match\[1\]>2bc'.
 
- 
 
-procedure Split (AInputStr : string; APieces : TStrings);
+    procedure Split (AInputStr : string; APieces : TStrings);
 
 Split AInputStr into APieces by r.e. occurencies
 
 Internally calls Exec\[Next\]
 
- 
 
-function Replace (AInputStr : RegExprString;
+    function Replace (AInputStr : RegExprString; const AReplaceStr : RegExprString;
+      AUseSubstitution : boolean = False) : RegExprString;
 
- const AReplaceStr : RegExprString;
+    function Replace (AInputStr : RegExprString;
+      AReplaceFunc : TRegExprReplaceFunction) : RegExprString;
 
- AUseSubstitution : boolean = False) : RegExprString;
-
-function Replace (AInputStr : RegExprString;
-
- AReplaceFunc : TRegExprReplaceFunction) : RegExprString;
-
-function ReplaceEx (AInputStr : RegExprString;
-
- AReplaceFunc : TRegExprReplaceFunction)  : RegExprString;
+    function ReplaceEx (AInputStr : RegExprString;
+      AReplaceFunc : TRegExprReplaceFunction)  : RegExprString;
 
 Returns AInputStr with r.e. occurencies replaced by AReplaceStr
 
@@ -203,13 +183,12 @@ as template for Substitution methods.
 
 For example:
 
- Expression := '({-i}block|var)\\s\*\\(\\s\*(\[^ \]\*)\\s\*\\)\\s\*';
-
- Replace ('BLOCK( test1)', 'def "$1" value "$2"', True);
+    Expression := '({-i}block|var)\\s\*\\(\\s\*(\[^ \]\*)\\s\*\\)\\s\*';
+    Replace ('BLOCK( test1)', 'def "$1" value "$2"', True);
 
   will return:  def 'BLOCK' value 'test1'
 
- Replace ('BLOCK( test1)', 'def "$1" value "$2"', False)
+    Replace ('BLOCK( test1)', 'def "$1" value "$2"', False)
 
   will return:  def "$1" value "$2"
 
@@ -219,9 +198,8 @@ Overloaded version and ReplaceEx operate with call-back function,
 
 so You can implement really complex functionality.
 
- 
 
-property SubExprMatchCount : integer; // ReadOnly
+    property SubExprMatchCount : integer; // ReadOnly
 
 Number of subexpressions has been found in last Exec\* call.
 
@@ -232,79 +210,72 @@ found (Exec\* returned false) then SubExprMatchCount=-1.
 Note, that some subexpr. may be not found and for such subexpr.
 MathPos=MatchLen=-1 and Match=''.
 
-For example: Expression := '(1)?2(3)?';
+For example: 
 
-Exec ('123'): SubExprMatchCount=2, Match\[0\]='123', \[1\]='1',
-\[2\]='3'
+    Expression := '(1)?2(3)?';
+    Exec ('123'): SubExprMatchCount=2, Match[0]='123', [1]='1', [2]='3'
 
-Exec ('12'): SubExprMatchCount=1, Match\[0\]='12', \[1\]='1'
+    Exec ('12'): SubExprMatchCount=1, Match[0]='12', [1]='1'
 
-Exec ('23'): SubExprMatchCount=2, Match\[0\]='23', \[1\]='', \[2\]='3'
+    Exec ('23'): SubExprMatchCount=2, Match[0]='23', [1]='', [2]='3'
 
-Exec ('2'): SubExprMatchCount=0, Match\[0\]='2'
+    Exec ('2'): SubExprMatchCount=0, Match[0]='2'
 
-Exec ('7') - return False: SubExprMatchCount=-1
+    Exec ('7') - return False: SubExprMatchCount=-1
 
- 
+. 
 
-property MatchPos \[Idx : integer\] : integer; // ReadOnly
+    property MatchPos [Idx : integer] : integer; // ReadOnly
 
-pos of entrance subexpr. \#Idx into tested in last Exec\* string. First
-subexpr. have Idx=1, last - MatchCount, whole r.e. have Idx=0.
+pos of entrance subexpr. `#Idx` into tested in last `Exec*` string. First
+subexpr. have `Idx=1`, last - `MatchCount`, whole r.e. have `Idx=0`.
+
+Returns `-1` if in r.e. no such subexpr. or this subexpr. not found in
+input string.
+
+
+    property MatchLen [Idx : integer] : integer; // ReadOnly
+
+len of entrance subexpr. `#Idx` r.e. into tested in last `Exec*` string.
+First subexpr. have `Idx=1`, last - MatchCount, whole r.e. have `Idx=0`.
 
 Returns -1 if in r.e. no such subexpr. or this subexpr. not found in
 input string.
 
- 
 
-property MatchLen \[Idx : integer\] : integer; // ReadOnly
+    property Match [Idx : integer] : string; // ReadOnly
 
-len of entrance subexpr. \#Idx r.e. into tested in last Exec\* string.
-First subexpr. have Idx=1, last - MatchCount, whole r.e. have Idx=0.
-
-Returns -1 if in r.e. no such subexpr. or this subexpr. not found in
-input string.
-
- 
-
-property Match \[Idx : integer\] : string; // ReadOnly
-
-== copy (InputString, MatchPos \[Idx\], MatchLen \[Idx\])
+    == copy (InputString, MatchPos [Idx], MatchLen [Idx])
 
 Returns '' if in r.e. no such subexpr. or this subexpr. not found in
 input string.
 
- 
 
-function LastError : integer;
+    function LastError : integer;
 
 Returns ID of last error, 0 if no errors (unusable if Error method
 raises exception) and clear internal status into 0 (no errors).
 
- 
 
-function ErrorMsg (AErrorID : integer) : string; virtual;
+    function ErrorMsg (AErrorID : integer) : string; virtual;
 
 Returns Error message for error with ID = AErrorID.
 
- 
 
-property CompilerErrorPos : integer; // ReadOnly
+    property CompilerErrorPos : integer; // ReadOnly
 
 Returns pos in r.e. there compiler stopped.
 
 Usefull for error diagnostics
 
- 
 
-property SpaceChars : RegExprString
+    property SpaceChars : RegExprString
 
 Contains chars, treated as \\s (initially filled with RegExprSpaceChars
 global constant)
 
- 
 
-property WordChars : RegExprString;
+    property WordChars : RegExprString;
 
 Contains chars, treated as \\w (initially filled with RegExprWordChars
 global constant)
@@ -314,17 +285,16 @@ global constant)
 
     property LineSeparators : RegExprString
 
-line separators (like \\n in Unix), initially filled with
+line separators (like `\n` in Unix), initially filled with
 RegExprLineSeparators global constant)
 
 see also [about line
 separators](regexp_syntax.html#syntax_line_separators)
 
- 
 
-property LinePairedSeparator : RegExprString
+    property LinePairedSeparator : RegExprString
 
-paired line separator (like \\r\\n in DOS and Windows).
+paired line separator (like `\r\n` in DOS and Windows).
 
 must contain exactly two chars or no chars at all, initially filled with
 RegExprLinePairedSeparator global constant)
@@ -332,32 +302,30 @@ RegExprLinePairedSeparator global constant)
 see also [about line
 separators](regexp_syntax.html#syntax_line_separators)
 
- 
 
 For example, if You need Unix-style behaviour, assign LineSeparators :=
 \#$a (newline character) and LinePairedSeparator := '' (empty string),
-if You want to accept as line separators only \\x0D\\x0A but not \\x0D
-or \\x0A alone, then assign LineSeparators := '' (empty string) and
-LinePairedSeparator := \#$d\#$a.
-
- 
+if You want to accept as line separators only `\x0D\x0A` but not `\x0D`
+or `\x0A` alone, then assign `LineSeparators := ''` (empty string) and
+`LinePairedSeparator := #$d#$a`.
 
 By default 'mixed' mode is used (defined in
-RegExprLine\[Paired\]Separator\[s\] global constants): LineSeparators :=
-\#$d\#$a; LinePairedSeparator := \#$d\#$a. Behaviour of this mode is
-detailed described in the [syntax
+RegExprLine\[Paired\]Separator\[s\] global constants): 
+
+    LineSeparators := #$d#$a; 
+    LinePairedSeparator := #$d#$a
+    
+Behaviour of this mode is detailed described in the [syntax
 section](regexp_syntax.html#syntax_line_separators).
 
- 
 
-class function InvertCaseFunction  (const Ch : REChar) : REChar;
+    class function InvertCaseFunction  (const Ch : REChar) : REChar;
 
 Converts Ch into upper case if it in lower case or in lower if it in
 upper (uses current system local setings)
 
- 
 
-property InvertCase : TRegExprInvertCaseFunction;
+    property InvertCase : TRegExprInvertCaseFunction;
 
 Set this property if you want to override case-insensitive
 functionality.
@@ -365,26 +333,20 @@ functionality.
 Create set it to RegExprInvertCaseFunction (InvertCaseFunction by
 default)
 
- 
 
-procedure Compile;
+    procedure Compile;
 
 \[Re\]compile r.e. Usefull for example for GUI r.e. editors (to check
 all properties validity).
 
- 
 
-function Dump : string;
+    function Dump : string;
 
 dump a compiled regexp in vaguely comprehensible form
 
- 
-
- 
 
 ### Global constants
 
- 
 
  EscChar = '\\';  // 'Escape'-char ('\\' in common r.e.) used for
 escaping metachars (\\w, \\d etc).
@@ -445,33 +407,24 @@ TRegExpr.InvertCaseFunction;
 
 // default for InvertCase property
 
- 
 
- 
+### Usefull global functions
 
-Usefull global functions
 
- 
-
-function ExecRegExpr (const ARegExpr, AInputStr : string) : boolean;
+    function ExecRegExpr (const ARegExpr, AInputStr : string) : boolean;
 
 true if string AInputString match regular expression ARegExpr
 
 ! will raise exeption if syntax errors in ARegExpr
 
- 
 
-procedure SplitRegExpr (const ARegExpr, AInputStr : string; APieces :
-TStrings);
+    procedure SplitRegExpr (const ARegExpr, AInputStr : string; APieces : TStrings);
 
 Split AInputStr into APieces by r.e. ARegExpr occurencies
 
- 
 
-function ReplaceRegExpr (const ARegExpr, AInputStr, AReplaceStr :
-string;
-
-AUseSubstitution : boolean = False) : string;
+    function ReplaceRegExpr (const ARegExpr, AInputStr, AReplaceStr : string;
+      AUseSubstitution : boolean = False) : string;
 
 Returns AInputStr with r.e. occurencies replaced by AReplaceStr.
 
@@ -480,32 +433,27 @@ for Substitution methods.
 
 For example:
 
-ReplaceRegExpr ('({-i}block|var)\\s\*\\(\\s\*(\[^ \]\*)\\s\*\\)\\s\*',
-
- 'BLOCK( test1)', 'def "$1" value "$2"', True)
+    ReplaceRegExpr ('({-i}block|var)\\s\*\\(\\s\*(\[^ \]\*)\\s\*\\)\\s\*',
+      'BLOCK( test1)', 'def "$1" value "$2"', True)
 
 will return:  def 'BLOCK' value 'test1'
 
-ReplaceRegExpr ('({-i}block|var)\\s\*\\(\\s\*(\[^ \]\*)\\s\*\\)\\s\*',
-
- 'BLOCK( test1)', 'def "$1" value "$2"')
+    ReplaceRegExpr ('({-i}block|var)\\s\*\\(\\s\*(\[^ \]\*)\\s\*\\)\\s\*',
+      'BLOCK( test1)', 'def "$1" value "$2"')
 
  will return:  def "$1" value "$2"
 
- 
 
-function QuoteRegExprMetaChars (const AStr : string) : string;
+    function QuoteRegExprMetaChars (const AStr : string) : string;
 
 Replace all metachars with its safe representation, for example
 'abc$cd.(' converts into 'abc\\$cd\\.\\('
 
 This function usefull for r.e. autogeneration from user input
 
- 
 
-function RegExprSubExpressions (const ARegExpr : string;
-
-ASubExprs : TStrings; AExtendedSyntax : boolean = False) : integer;
+    function RegExprSubExpressions (const ARegExpr : string;
+      ASubExprs : TStrings; AExtendedSyntax : boolean = False) : integer;
 
 Makes list of subexpressions found in ARegExpr r.e.
 
@@ -526,7 +474,6 @@ r.e.
 Usefull for GUI editors of r.e. etc (You can find example of using in
 [TestRExp.dpr](#regexpstudio.html) project)
 
- 
 
 Result code        Meaning
 
@@ -547,33 +494,22 @@ corresponding opening '('.
 If Result <> 0, then ASubExprs can contain empty items or illegal
 ones
 
- 
 
- 
 
-Exception type
+### Exception type
 
- 
 
 Default error handler of TRegExpr raise exception:
 
  
 
-ERegExpr = class (Exception)
+    ERegExpr = class (Exception)
+      public
+       ErrorCode : integer; // error code. Compilation error codes are before 1000
+       CompilerErrorPos : integer; // Position in r.e. where compilation error occured
+     end;
 
-  public
 
-   ErrorCode : integer; // error code. Compilation error codes are
-before 1000.
-
-   CompilerErrorPos : integer; // Position in r.e. where compilation
-error occured
-
- end;
-
- 
-
- 
 <a name="unicode"></a>
 ### How to use Unicode
 
@@ -583,7 +519,7 @@ Who want to optimize it ? ;)
 
 Use it only if you really need Unicode support !
 
-Remove '.' in {.$DEFINE UniCode} in regexpr.pas. After that all strings
+Remove `.` in `{.$DEFINE UniCode}` in regexpr.pas. After that all strings
 will be treated as WideString.
 
  

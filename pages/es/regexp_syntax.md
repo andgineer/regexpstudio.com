@@ -45,7 +45,7 @@ especiales.
 #### Ejemplos:
 
       foobar         encuentra la cadena 'foobar'
-      \\^FooBarPtr     encuentra '^FooBarPtr'
+      \^FooBarPtr     encuentra '^FooBarPtr'
 
 ## Secuencias de escape
 
@@ -98,7 +98,7 @@ lista hay que ubicarlo al inicio de la lista o usar la secuencia `\]`.
      [az-]     encuentra 'a', 'z' y '-'
      [a\-z]     encuentra 'a', 'z' y '-'
      [a-z]     encuentra todas las minúsculas de 'a' hasta 'z'
-     [\n-\x0D] encuentra cualquiera de \#10,\#11,\#12,\#13.
+     [\n-\x0D] encuentra cualquiera de #10,#11,#12,#13.
      [\d-t]     encuentra cualquier dígito, '-' or 't'.
      []-a]     encuentra cualquier caracter de ']' hasta 'a'.
 

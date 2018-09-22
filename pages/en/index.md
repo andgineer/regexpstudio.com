@@ -32,7 +32,7 @@ Installation is very simple, the implementation encapsulated completely into cla
 [TRegExpr](/tregexpr_interface/).
 
 [Demos projects](https://github.com/masterandrey/TRegExpr/tree/master/examples) and
-[usage articles](http://masterandrey.com/posts/en/text_processing_from_birds_eye_view/) illustrate simplicity and power of text processing with the library.
+[usage articles](http://masterandrey.com/posts/en/text_processing_from_birds_eye_view.html) illustrate simplicity and power of text processing with the library.
 
 
 If You need Unicode (so called 'WideString' in Delphi) - see

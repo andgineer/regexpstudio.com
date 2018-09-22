@@ -7,7 +7,7 @@ permalink: /en/demos.html
 ---
 
 First of all I recommend You to read 
-[article with usage illustrations](http://masterandrey.com/posts/en/text_processing_from_birds_eye_view/).
+[article with usage illustrations](http://masterandrey.com/posts/en/text_processing_from_birds_eye_view.html).
 
 Ready to run Windows application
 [REStudio](https://github.com/masterandrey/TRegExpr/releases/download/0.952b/REStudio.exe)

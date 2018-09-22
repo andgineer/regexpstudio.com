@@ -108,8 +108,8 @@ end.
 TestRExp.dpr и [HyperLinkDecorator.pas](#hyperlinksdecorator.html).
 
 Вижте и статията ми в
-[на английски език](http://masterandrey.com/posts/en/text_processing_from_birds_eye_view/) 
-и [на руски език](http://masterandrey.com/posts/ru/text_processing_from_birds_eye_view/).
+[на английски език](http://masterandrey.com/posts/en/text_processing_from_birds_eye_view.html) 
+и [на руски език](http://masterandrey.com/posts/ru/text_processing_from_birds_eye_view.html).
 
  
 

@@ -1,5 +1,7 @@
 ---
-layout: page
+layout: redirected
+redirect_to: https://regex.masterandrey.com/en/latest/tregexpr.html
+sitemap: false
 lang: en
 ref: interface
 title: TRegExr interface

@@ -123,7 +123,32 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/pages/en/about.md">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/pages/en/demos.md">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/pages/en/faq.md">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/pages/en/index.md">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/pages/en/regexp_syntax.md">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/pages/en/tregexpr_interface.md">
           <value>
             <set />
           </value>

@@ -1,5 +1,7 @@
 ---
-layout: page
+layout: redirected
+redirect_to: https://masterandrey.com/posts/en/about.html
+sitemap: false
 lang: en
 ref: about
 title: About

@@ -1,5 +1,7 @@
 ---
-layout: page
+layout: redirected
+redirect_to: https://regex.masterandrey.com/en/latest/demos.html
+sitemap: false
 lang: en
 ref: demos
 title: Demos

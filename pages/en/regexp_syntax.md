@@ -1,6 +1,6 @@
 ---
 layout: redirected
-redirect_to: https://regex.masterandrey.com/en/latest/regular_expressions.html
+redirect_to: https://regex.sorokin.engineer/en/latest/regular_expressions.html
 sitemap: false
 title: Regular expressions syntax
 permalink: /en/regexp_syntax.html

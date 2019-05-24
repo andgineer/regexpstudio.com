@@ -1,6 +1,6 @@
 ---
 layout: redirected
-redirect_to: https://masterandrey.com/posts/en/about.html
+redirect_to: https://sorokin.engineer/posts/en/about.html
 sitemap: false
 lang: en
 ref: about

@@ -1,5 +1,5 @@
 ---
 layout: redirect
-redirect: http://regexpstudio.com/ru/regexp_syntax.html
+redirect: https://regex.sorokin.engineer/ru/latest/regular_expressions.html
 permalink: ru/TRegExpr/Help/regexp_syntax.html
 ---

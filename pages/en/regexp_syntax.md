@@ -11,7 +11,7 @@ ref: syntax
 ## Important note
 
 Below is the description of regular expressions implemented in freeware
-library [TRegExpr](http://regexpstudio.com). 
+library [TRegExpr](https://regex.sorokin.engineer). 
 The library was widely used in many free and commertial software products. 
 
 ## Introduction

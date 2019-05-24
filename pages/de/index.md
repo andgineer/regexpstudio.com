@@ -58,7 +58,7 @@ unter "[Wie wird Unicode
 benutzt?](tregexpr_interface.html#unicode)".
 
 Wirf auch einen Blick auf die [Was gibt's
-Neues](http://regexpstudio.com) web-Sektion für die neuesten Änderungen.
+Neues](https://regex.sorokin.engineer) web-Sektion für die neuesten Änderungen.
 
 Und natürlich sind Kommentare, Ideen, Vorschläge und sogar Bug Reports
 [willkommen](#author.html).

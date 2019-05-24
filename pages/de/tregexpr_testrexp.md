@@ -34,7 +34,7 @@ Example: Hyper Links Decorator
 
 Funktionen um reine URLs in HTML-Anker (aka Links) umzuwandeln.
 
-Beispiel: Ersetze 'http://regexpstudio.com' mit
+Beispiel: Ersetze 'https://regex.sorokin.engineer' mit
 href="https://regexpstudio.com"'
 
 oder 'anso@mail.ru' mit '<a

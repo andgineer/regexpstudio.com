@@ -30,7 +30,7 @@ permalink: /ru/regexp_syntax.html
 
 Ниже дается описание подмножества синтаксиса регулярных выражений,
 которое работает практически во всех реализациях, и поддерживается
-моей Delphi-библиотекой [TRegExpr](http://regexpstudio.com/ru/index.html)
+моей Delphi-библиотекой [TRegExpr](https://regex.sorokin.engineer/ru/latest/)
 вошедшей как стандарт в [Lazarus (Free Pascal)](http://wiki.freepascal.org/Regexpr). 
 
 Давайте начнем наше знакомство с регулярными выражениями!

@@ -28,7 +28,7 @@ The library source code is compatible with Delphi 2-7, Borland C++ Builder 3-6, 
 (if You see any incompatibility problems, please. drop the bug-report to [author](/about)).
 
 Documentation in English, Russian, German, Bulgarian, French and Spanish available at TRegExpr
-<a href="http://regexpstudio.com/tregexpr/TRegExpr.html" target="_blank">home page</a>
+<a href="https://regex.sorokin.engineer/tregexpr/TRegExpr.html" target="_blank">home page</a>
 
 Installation is very simple, the implementation encapsulated completely into class
 [TRegExpr](/tregexpr_interface/).

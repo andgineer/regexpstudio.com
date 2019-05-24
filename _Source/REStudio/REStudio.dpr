@@ -7,7 +7,7 @@ program REStudio;
  (c) 1999-2004 Andrey V. Sorokin
   Saint Petersburg, Russia
   anso@mail.ru, anso@paycash.ru
-  http://regexpstudio.com
+  https://regex.sorokin.engineer
   http://anso.da.ru
 }
 

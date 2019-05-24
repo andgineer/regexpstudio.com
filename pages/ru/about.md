@@ -41,6 +41,6 @@ Tools: Anything and everywhere 8-)
 Крым..
 
 ### Контакты
-* [Блог](http://masterandrey.com/index_ru.html)
+* [Блог](https://sorokin.engineer/index_ru.html)
 * [Андрей Владимирович Сорокин, anso@mail.ru](mailto:anso@mail.ru)
 

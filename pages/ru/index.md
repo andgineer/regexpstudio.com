@@ -31,7 +31,7 @@ TRegExpr это простой и мощный инструмент для ра�
 
 [Описание интерфейса TRegExpr](tregexpr_interface.html).
 
-[Статья](http://masterandrey.com/posts/ru/text_processing_from_birds_eye_view.html) дающая
+[Статья](https://sorokin.engineer/posts/ru/text_processing_from_birds_eye_view.html) дающая
 несколько примеров использования.
 
 Для использования Unicode см соотвествующую секцию

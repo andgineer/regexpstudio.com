@@ -101,7 +101,7 @@ Du findest komplexere Beispiele für den Gebrauch von TRegExpr in den
 Projekten [TestRExp.dpr](tregexpr_testrexp.html) und
 [HyperLinkDecorator.pas](hyperlinksdecorator.html).
 
-Beachte bitte auch meine kleinen [Artikel](http://masterandrey.com/posts/en/text_processing_from_birds_eye_view.html).
+Beachte bitte auch meine kleinen [Artikel](https://sorokin.engineer/posts/en/text_processing_from_birds_eye_view.html).
 
 Ausführliche Erklärung
 

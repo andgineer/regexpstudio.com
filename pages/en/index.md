@@ -1,5 +1,7 @@
 ---
-layout: index
+layout: redirected
+redirect_to: https://regex.masterandrey.com/en/latest/index.html
+sitemap: false
 lang: en
 ref: index
 title:

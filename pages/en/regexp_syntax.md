@@ -1,9 +1,11 @@
 ---
-layout: page
-lang: en
-ref: syntax
+layout: redirected
+redirect_to: https://regex.masterandrey.com/en/latest/regular_expressions.html
+sitemap: false
 title: Regular expressions syntax
 permalink: /en/regexp_syntax.html
+lang: en
+ref: syntax
 ---
 
 ## Important note

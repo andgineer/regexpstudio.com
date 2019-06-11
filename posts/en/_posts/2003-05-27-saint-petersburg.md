@@ -1,5 +1,7 @@
 ---
-layout: post
+layout: redirected
+redirect_to: https://sorokin.engineer/posts/en/saint-petersburg.html
+sitemap: false
 lang: en
 title: "Saint-Petersburg 300-year anniversary"
 ---

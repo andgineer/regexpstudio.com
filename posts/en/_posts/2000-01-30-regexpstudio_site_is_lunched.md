@@ -1,5 +1,7 @@
 ---
-layout: post
+layout: redirected
+redirect_to: https://sorokin.engineer/posts/en/regexpstudio_site_is_lunched.html
+sitemap: false
 lang: en
 ref: regexpstudio_site_is_lunched
 comments: false

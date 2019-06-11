@@ -1,5 +1,7 @@
 ---
-layout: index
+layout: redirected
+redirect_to: https://regex.sorokin.engineer/ru/latest/
+sitemap: false
 lang: ru
 ref: index
 title:

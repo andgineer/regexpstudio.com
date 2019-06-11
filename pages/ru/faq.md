@@ -1,5 +1,7 @@
 ---
-layout: page
+layout: redirected
+redirect_to: https://regex.sorokin.engineer/ru/latest/faq.html
+sitemap: false
 lang: ru
 ref: faq
 title: ЧАсто задаваемые ВОпросы

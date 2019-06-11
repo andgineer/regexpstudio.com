@@ -1,5 +1,7 @@
 ---
-layout: post
+layout: redirected
+redirect_to: https://regex.sorokin.engineer/en/latest/index.html
+sitemap: false
 lang: en
 ref: tregexpr_history
 comments: false

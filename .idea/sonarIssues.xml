@@ -38,7 +38,22 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../TRegExpr/docs/demos.rst">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../TRegExpr/docs/faq.rst">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../TRegExpr/docs/index.md">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../TRegExpr/docs/index.rst">
           <value>
             <set />
           </value>
@@ -74,6 +89,31 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/../TRegExpr/docs/push_docs.sh">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../TRegExpr/docs/regular_expressions.rst">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../TRegExpr/docs/translation_help.rst">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../TRegExpr/docs/translations_list.rst">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../TRegExpr/docs/tregexpr.rst">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../TRegExpr/docs/tregexpr_testrexp.rst">
           <value>
             <set />
           </value>
@@ -158,12 +198,82 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/pages/ru/about.md">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/pages/ru/demos.md">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/pages/ru/faq.md">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/pages/ru/index.md">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/pages/ru/regexp_syntax.md">
           <value>
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/pages/ru/tregexpr_interface.md">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/pages/ru/tregexpr_testrexp.md">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/posts/en/_posts/2000-01-30-regexpstudio_site_is_lunched.md">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/posts/en/_posts/2003-05-27-saint-petersburg.md">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/posts/en/_posts/2004-01-11-tregexpr_history.md">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/posts/ru/_posts/2000-01-30-regexpstudio_site_is_lunched.md">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/posts/ru/_posts/2004-01-11-tregexpr_history.md">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="/work/compbiovis/backend/api/swagger.yaml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="/work/compbiovis/backend/dev_docker.sh">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="/work/compbiovis/backend/rabbit.sh">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="/work/compbiovis/backend/rabbit_create_users.sh">
           <value>
             <set />
           </value>
@@ -183,6 +293,11 @@
             <set />
           </value>
         </entry>
+        <entry key="/work/compbiovis/backend/server/controllers/projects/profile/update.py">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="/work/compbiovis/backend/server/db/models/project.py">
           <value>
             <set />
@@ -194,6 +309,21 @@
           </value>
         </entry>
         <entry key="/work/compbiovis/backend/tests/test_project_create.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="/work/compbiovis/backend/tests/test_project_profile.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="/work/compbiovis/backend/tests/test_project_profile_update_by_shared.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="/work/compbiovis/worker/src/chop_chop.py">
           <value>
             <set />
           </value>

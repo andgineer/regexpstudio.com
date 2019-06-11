@@ -1,5 +1,7 @@
 ---
-layout: page
+layout: redirected
+redirect_to: https://regex.sorokin.engineer/ru/latest/tregexpr.html
+sitemap: false
 lang: ru
 ref: interface
 title: Интерфейс TRegExr

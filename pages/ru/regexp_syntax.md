@@ -1,5 +1,7 @@
 ---
-layout: page
+layout: redirected
+redirect_to: https://regex.sorokin.engineer/ru/latest/regular_expressions.html
+sitemap: false
 lang: ru
 ref: syntax
 title: Синтаксис регулярных выражений

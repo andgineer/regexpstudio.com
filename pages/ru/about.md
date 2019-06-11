@@ -1,5 +1,7 @@
 ---
-layout: page
+layout: redirected
+redirect_to: https://sorokin.engineer/posts/ru/about.html
+sitemap: false
 lang: ru
 ref: about
 title: Обо мне

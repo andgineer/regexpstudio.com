@@ -1,5 +1,7 @@
 ---
-layout: index
+layout: redirected
+redirect_to: https://regex.sorokin.engineer/fr/latest/index.html
+sitemap: false
 lang: fr
 ref: index
 title: A propos

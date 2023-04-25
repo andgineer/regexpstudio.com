@@ -1,1 +1,3 @@
-TRegExpr docs site https://regex.sorokin.engineer
+Old version of site https://regex.sorokin.engineer
+
+Now it generated from https://github.com/andgineer/TRegExpr/docs

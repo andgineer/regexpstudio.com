@@ -1,0 +1,53 @@
+name: build-test
+
+on:
+  pull_request:
+  push:
+    paths-ignore: [ "README.md" ]
+    branches: [ "master", "main" ]
+
+jobs:
+  build:
+    runs-on: ${{ matrix.operating-system }}
+    strategy:
+      fail-fast: false
+      matrix:
+        operating-system: [ubuntu-latest, ubuntu-20.04, windows-latest, macos-latest]
+        lazarus-versions: [dist, stable, 2.2.6]
+
+    steps:
+    - name: Checkout source code
+      uses: actions/checkout@v4
+
+    - name: Install Lazarus
+      uses: gcarreno/setup-lazarus@v3.2.17
+      with:
+        lazarus-version: ${{ matrix.lazarus-versions }}
+        with-cache: false
+
+    - name: Run tests (Windows)
+      if: ${{ matrix.operating-system == 'windows-latest' }}
+      run: |
+        lazbuild -B --bm=Release "tests/test_fpc.lpi"
+        ls -la
+        test_fpc.exe "--help"
+        test_fpc.exe "--all" "--format=plain"
+
+    - name: Build tests (Ubuntu)
+      if: ${{ matrix.operating-system == 'ubuntu-latest' }}
+      run: |
+        echo Building with GTK2
+        lazbuild -B --bm=Release "tests/test_fpc.lpi"
+        echo Installing Qt5 Dev
+        sudo apt update
+        sudo apt install libqt5pas-dev -y
+        echo Building with Qt5
+        test_fpc "--all" "--format=plain"
+        lazbuild -B --bm=Release --ws=qt5 "tests/test_fpc.lpi"
+        test_fpc "--all" "--format=plain"
+
+    - name: Build tests (macOS)
+      if: ${{ matrix.operating-system == 'macos-latest' }}
+      run: |
+        lazbuild -B --bm=Release --ws=cocoa "tests/test_fpc.lpi"
+        test_fpc "--all" "--format=plain"

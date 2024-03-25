@@ -49,7 +49,7 @@ jobs:
         ls test
         test/test_fpc "--all" "--format=plain"
         lazbuild -B --ws=qt5 "test/test_fpc.lpi"
-        test_fpc "--all" "--format=plain"
+        test/test_fpc "--all" "--format=plain"
 
     - name: Run tests (macOS)
       if: ${{ matrix.operating-system == 'macos-latest' }}

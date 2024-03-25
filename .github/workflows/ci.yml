@@ -28,8 +28,9 @@ jobs:
     - name: Run tests (Windows)
       if: ${{ matrix.operating-system == 'windows-latest' }}
       run: |
-        lazbuild -B --bm=Release "tests/test_fpc.lpi"
+        lazbuild -B --bm=Release "test/test_fpc.lpi"
         ls -la
+        ls -la test
         test_fpc.exe "--help"
         test_fpc.exe "--all" "--format=plain"
 
@@ -37,17 +38,17 @@ jobs:
       if: ${{ matrix.operating-system == 'ubuntu-latest' }}
       run: |
         echo Building with GTK2
-        lazbuild -B --bm=Release "tests/test_fpc.lpi"
+        lazbuild -B --bm=Release "test/test_fpc.lpi"
         echo Installing Qt5 Dev
         sudo apt update
         sudo apt install libqt5pas-dev -y
         echo Building with Qt5
         test_fpc "--all" "--format=plain"
-        lazbuild -B --bm=Release --ws=qt5 "tests/test_fpc.lpi"
+        lazbuild -B --bm=Release --ws=qt5 "test/test_fpc.lpi"
         test_fpc "--all" "--format=plain"
 
     - name: Build tests (macOS)
       if: ${{ matrix.operating-system == 'macos-latest' }}
       run: |
-        lazbuild -B --bm=Release --ws=cocoa "tests/test_fpc.lpi"
+        lazbuild -B --bm=Release --ws=cocoa "test/test_fpc.lpi"
         test_fpc "--all" "--format=plain"

@@ -13,7 +13,8 @@ jobs:
       fail-fast: false
       matrix:
         operating-system: [ubuntu-latest, windows-latest, macos-latest]
-        lazarus-versions: [dist, stable, 2.2.6]
+        lazarus-versions: [dist, stable]
+        build-modes: [ "Default", "quick" ]
 
     steps:
     - name: Checkout source code
@@ -28,33 +29,19 @@ jobs:
     - name: Run tests (Windows)
       if: ${{ matrix.operating-system == 'windows-latest' }}
       run: |
-        lazbuild -B "test/test_fpc.lpi"
-        ls
-        ls test
+        lazbuild -B --bm=${{ matrix.build-modes }} "test/test_fpc.lpi"
         test/test_fpc.exe
-        test/test_fpc.exe "--all" "--format=plain"
-        lazbuild -B --bm=Unicode "test/test_fpc.lpi"
-        lazbuild -B --bm=UnicodeAndChars "test/test_fpc.lpi"
 
     - name: Run tests (Ubuntu)
       if: ${{ matrix.operating-system == 'ubuntu-latest' }}
       run: |
-        echo Building with GTK2
-        lazbuild -B "test/test_fpc.lpi"
-        echo Installing Qt5 Dev
-        sudo apt update
-        sudo apt install libqt5pas-dev -y
-        echo Building with Qt5
-        ls
-        ls test
-        test/test_fpc "--all" "--format=plain"
-        lazbuild -B --ws=qt5 "test/test_fpc.lpi"
-        test/test_fpc "--all" "--format=plain"
+        lazbuild -B --bm=${{ matrix.build-modes }} "test/test_fpc.lpi"
+        test/test_fpc
 
     - name: Run tests (macOS)
       if: ${{ matrix.operating-system == 'macos-latest' }}
       run: |
-        lazbuild -B --ws=cocoa "test/test_fpc.lpi"
+        lazbuild -B --bm=${{ matrix.build-modes }} --ws=cocoa "test/test_fpc.lpi"
         ls
         ls test
-        test/test_fpc "--all" "--format=plain"
+        test/test_fpc

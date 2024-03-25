@@ -12,7 +12,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        operating-system: [ubuntu-latest, ubuntu-20.04, windows-latest, macos-latest]
+        operating-system: [ubuntu-latest, windows-latest, macos-latest]
         lazarus-versions: [dist, stable, 2.2.6]
 
     steps:
@@ -28,17 +28,19 @@ jobs:
     - name: Run tests (Windows)
       if: ${{ matrix.operating-system == 'windows-latest' }}
       run: |
-        lazbuild -B --bm=Release "test/test_fpc.lpi"
-        ls -la
-        ls -la test
+        lazbuild -B "test/test_fpc.lpi"
+        ls
+        ls test
         test_fpc.exe "--help"
         test_fpc.exe "--all" "--format=plain"
+        lazbuild -B --bm=Unicode "test/test_fpc.lpi"
+        lazbuild -B --bm=UnicodeAndChars "test/test_fpc.lpi"
 
     - name: Build tests (Ubuntu)
       if: ${{ matrix.operating-system == 'ubuntu-latest' }}
       run: |
         echo Building with GTK2
-        lazbuild -B --bm=Release "test/test_fpc.lpi"
+        lazbuild -B "test/test_fpc.lpi"
         echo Installing Qt5 Dev
         sudo apt update
         sudo apt install libqt5pas-dev -y

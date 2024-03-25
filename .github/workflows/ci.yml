@@ -29,9 +29,7 @@ jobs:
       if: ${{ matrix.operating-system == 'windows-latest' }}
       run: |
         lazbuild -B "test/test_fpc.lpi"
-        ls
-        ls test
-        test_fpc.exe "--help"
+        test_fpc.exe
         test_fpc.exe "--all" "--format=plain"
         lazbuild -B --bm=Unicode "test/test_fpc.lpi"
         lazbuild -B --bm=UnicodeAndChars "test/test_fpc.lpi"
@@ -45,6 +43,8 @@ jobs:
         sudo apt update
         sudo apt install libqt5pas-dev -y
         echo Building with Qt5
+        ls
+        ls test
         test_fpc "--all" "--format=plain"
         lazbuild -B --bm=Release --ws=qt5 "test/test_fpc.lpi"
         test_fpc "--all" "--format=plain"
@@ -53,4 +53,6 @@ jobs:
       if: ${{ matrix.operating-system == 'macos-latest' }}
       run: |
         lazbuild -B --bm=Release --ws=cocoa "test/test_fpc.lpi"
+        ls
+        ls test
         test_fpc "--all" "--format=plain"
